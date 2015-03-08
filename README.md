@@ -23,7 +23,7 @@ composer install
 
 ## Architecture
 
-###Le dossier app regroupe les controllers, les vues, les models, les configurations et les routes
-###Le dossier core contiendra toutes les classes personnalisées qu'on pourra utilisé
-###Le dossier public contiendra le JS et le CSS mais également le fichier index.php
-###Le dossier vendor regroupe toutes les dépendances, et particulièrement Slim
+    - Le dossier app regroupe les controllers, les vues, les models, les configurations et les routes
+    - Le dossier core contiendra toutes les classes personnalisées qu'on pourra utilisé
+    - Le dossier public contiendra le JS et le CSS mais également le fichier index.php
+    - Le dossier vendor regroupe toutes les dépendances, et particulièrement Slim
