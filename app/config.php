@@ -1,0 +1,8 @@
+<?php
+
+return array(
+    'host'     => 'localhost',
+    'user'     => 'root',
+    'password' => 'root',
+    'db_name'  => 'Map'
+);
