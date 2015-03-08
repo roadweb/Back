@@ -1,0 +1,14 @@
+{
+    "name": "emweb/cms",
+    "description": "Le CMS pour le projet en collaborations avec les eleves de l'emweb",
+    "require-dev": {
+        "slim/slim": "~2.6"
+    },
+    "authors": [
+        {
+            "name": "MarquesDev",
+            "email": "marques.developpement@gmail.com"
+        }
+    ],
+    "require": {}
+}

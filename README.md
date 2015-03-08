@@ -9,3 +9,6 @@ Le Back Office est découpé en deux parties.
 
 Une partie CMS, dans laquelle on devra se logger pour pouvoir gérer les contenus sur le site.
 Une partie API qui se chargera d'envoyer une réponse en fonction d'une requête.
+
+## Starter & Downloads
+
