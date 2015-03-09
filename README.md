@@ -15,6 +15,10 @@ Une partie API qui se chargera d'envoyer une réponse en fonction d'une requête
 ### Installez composer 
 https://getcomposer.org/doc/00-intro.md
 
+Pour les utilisateur de WAMP il est impératif de se rendre dans le fichier php.ini (..\wamp\bin\php\php5.4.12\php.ini)
+et de "décommenter" la ligne ;extension=php_openssl.dll en supprimant le point virgule (;).
+ Ensuite, enregistrer, quitter et installer composer.
+ 
 ### Installer les dépendences
 ```
 # Vous allez dans la racine du projet et vous executez cette ligne de code
