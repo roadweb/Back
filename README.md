@@ -27,3 +27,12 @@ composer install
 - Le dossier **core** contiendra toutes les classes personnalisées qu'on pourra utilisé
 - Le dossier **public** contiendra le JS et le CSS mais également le fichier index.php
 - Le dossier **vendor** regroupe toutes les dépendances, et particulièrement Slim
+
+## Classes personnalisées
+
+Il existe la classe **Router** qui permet d'appeler un Controller en fonction d'une route.
+```php
+$route = new Router($app); //On injecte la dépendence $app pour qu'on puisse l'utiliser dans la classe
+
+$route->get('/home', 'HomeController@index'); // On appel le HomeController et on execute la methode index
+```
