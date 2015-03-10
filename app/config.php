@@ -4,5 +4,5 @@ return array(
     'host'     => 'localhost',
     'user'     => 'root',
     'password' => 'root',
-    'db_name'  => 'Map'
+    'db_name'  => 'CMS'
 );

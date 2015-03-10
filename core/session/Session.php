@@ -2,7 +2,6 @@
 
 class Session
 {
-
     protected $connected;
 
     public function __construct()

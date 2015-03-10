@@ -5,17 +5,12 @@ class HomeController extends Controller
 
     public function index()
     {
-
         $session = new Session();
         $connected = $session->isConnected();
 
         if ($connected) {
-            $wars = new Wars;
-            $wars = $wars->getAll();
-
-            $app = $this->app;
             $this->app->render('layout/header.php');
-            $this->app->render('home.php', compact('app', 'wars'));
+            $this->app->render('home.php');
             $this->app->render('layout/footer.php');
         } else {
             $this->app->render('login.php');
@@ -25,8 +20,8 @@ class HomeController extends Controller
     public function login()
     {
         if (isset($_POST['username']) && isset($_POST['password'])) {
-            $user = new User();
-            $test = $user->getUser($_POST['username'], $_POST['password']);
+            $user = new Admin();
+            $test = $user->getAdmin($_POST['username'], $_POST['password']);
             if ($test) {
                 $session = new Session();
                 $session->connection();
