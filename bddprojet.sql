@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 13 Mars 2015 à 23:06
+-- Généré le :  Sam 14 Mars 2015 à 10:56
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -119,10 +119,9 @@ CREATE TABLE IF NOT EXISTS `navigation` (
 
 CREATE TABLE IF NOT EXISTS `page` (
   `id_page` int(11) NOT NULL AUTO_INCREMENT,
-  `page_link` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `cat_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `page_section` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `page_cat` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `page_link` varchar(255) DEFAULT NULL,
+  `page_cat` varchar(50) DEFAULT NULL,
+  `page_section` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -134,13 +133,13 @@ CREATE TABLE IF NOT EXISTS `page` (
 
 CREATE TABLE IF NOT EXISTS `posts` (
   `id_post` int(11) NOT NULL AUTO_INCREMENT,
-  `post_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `post_tittle` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `post_visuel` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `post_text` longtext CHARACTER SET utf8 COLLATE utf8_bin,
-  `tag_label` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `tag_label_2` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `tag_label_3` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `post_type` varchar(50) DEFAULT NULL,
+  `post_tittle` varchar(100) DEFAULT NULL,
+  `post_visuel` varchar(255) DEFAULT NULL,
+  `post_text` longtext,
+  `tag_label` varchar(50) DEFAULT NULL,
+  `tag_label_2` varchar(50) DEFAULT NULL,
+  `tag_label_3` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_post`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -181,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `souscriptions` (
   `id_compte` int(11) NOT NULL,
   `date_inscription` datetime NOT NULL,
   PRIMARY KEY (`id_user`,`id_compte`),
-  KEY `FK_Souscription_id_user` (`id_user`)
+  KEY `FK_Souscription_id_compte` (`id_compte`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -205,15 +204,15 @@ CREATE TABLE IF NOT EXISTS `tags` (
 
 CREATE TABLE IF NOT EXISTS `users_infos` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `user_last_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_first_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_log` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_pwd` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_city` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `user_country` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `user_last_name` varchar(50) DEFAULT NULL,
+  `user_first_name` varchar(50) DEFAULT NULL,
+  `user_log` varchar(50) DEFAULT NULL,
+  `user_pwd` varchar(50) DEFAULT NULL,
+  `user_email` varchar(100) DEFAULT NULL,
+  `user_city` varchar(50) DEFAULT NULL,
+  `user_country` varchar(50) DEFAULT NULL,
   `user_bday` date DEFAULT NULL,
-  `user_avatar` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `user_avatar` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -241,12 +240,6 @@ ALTER TABLE `publications`
 --
 ALTER TABLE `relatedpost`
   ADD CONSTRAINT `FK_RelatedPost_id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id_post`);
-
---
--- Contraintes pour la table `souscriptions`
---
-ALTER TABLE `souscriptions`
-  ADD CONSTRAINT `souscriptions_id_compte` FOREIGN KEY (`id_user`) REFERENCES `comptes` (`id_compte`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
