@@ -4,5 +4,5 @@ return array(
     'host'     => 'localhost',
     'user'     => 'root',
     'password' => 'root',
-    'db_name'  => 'CMS'
+    'db_name'  => 'emweb'
 );
