@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 20 Mars 2015 à 16:38
+-- Généré le :  Sam 21 Mars 2015 à 20:43
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -23,18 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `abos`
---
-
-CREATE TABLE IF NOT EXISTS `abos` (
-  `abos_id` int(10) NOT NULL AUTO_INCREMENT,
-  `abo_name` varchar(30) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`abos_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `articles`
 --
 
@@ -47,6 +35,32 @@ CREATE TABLE IF NOT EXISTS `articles` (
   PRIMARY KEY (`article_id`),
   UNIQUE KEY `FK_articles_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `autorisations`
+--
+
+CREATE TABLE IF NOT EXISTS `autorisations` (
+  `auto_id` int(2) NOT NULL AUTO_INCREMENT,
+  `auto_name` varchar(10) NOT NULL,
+  `auto_create` tinyint(1) NOT NULL,
+  `auto_read` tinyint(1) NOT NULL,
+  `auto_update` tinyint(1) NOT NULL,
+  `auto_delete` tinyint(1) NOT NULL,
+  PRIMARY KEY (`auto_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `autorisations`
+--
+
+INSERT INTO `autorisations` (`auto_id`, `auto_name`, `auto_create`, `auto_read`, `auto_update`, `auto_delete`) VALUES
+(1, 'r', 0, 1, 0, 0),
+(2, 'cr', 1, 1, 0, 0),
+(3, 'cru', 1, 1, 1, 0),
+(4, 'crud', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -90,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `pages_tags` (
   PRIMARY KEY (`page_id`,`tag_id`),
   KEY `FK_pages_tags_page_id` (`page_id`),
   KEY `FK_pages_tags_tag_id` (`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -117,19 +131,34 @@ CREATE TABLE IF NOT EXISTS `posts` (
 
 CREATE TABLE IF NOT EXISTS `roles` (
   `role_id` int(10) NOT NULL AUTO_INCREMENT,
-  `role_name` varchar(3) NOT NULL,
+  `role_name` varchar(30) NOT NULL,
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `roles`
 --
 
 INSERT INTO `roles` (`role_id`, `role_name`) VALUES
-(1, 'c'),
-(2, 'r'),
-(3, 'u'),
-(4, 'd');
+(1, 'user_public'),
+(2, 'user_abo'),
+(3, 'emweb_student'),
+(4, 'emweb_abo'),
+(5, 'user_admin');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `roles_autorisations`
+--
+
+CREATE TABLE IF NOT EXISTS `roles_autorisations` (
+  `role_id` int(11) NOT NULL,
+  `auto_id` int(11) NOT NULL,
+  PRIMARY KEY (`role_id`,`auto_id`),
+  KEY `FK_role_auto_role_id` (`role_id`),
+  KEY `FK_role_auto_auto_id` (`auto_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -161,23 +190,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_city` varchar(50) NOT NULL,
   `user_country` varchar(50) NOT NULL,
   `user_bday` date NOT NULL,
+  `user_date_abo` date NOT NULL,
   `user_avatar` varchar(50) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `users_abos`
---
-
-CREATE TABLE IF NOT EXISTS `users_abos` (
-  `abo_id` int(10) NOT NULL,
-  `user_id` int(10) NOT NULL,
-  PRIMARY KEY (`abo_id`,`user_id`),
-  KEY `FK_users_abos_user_id` (`user_id`),
-  KEY `FK_users_abos_abo_id` (`abo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -191,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `users_roles` (
   PRIMARY KEY (`user_id`,`role_id`),
   KEY `FK_users_roles_role_id` (`role_id`),
   KEY `FK_users_roles_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
