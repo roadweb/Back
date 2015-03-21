@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 14 Mars 2015 à 10:56
+-- Généré le :  Ven 20 Mars 2015 à 16:38
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -23,92 +23,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `acces`
+-- Structure de la table `abos`
 --
 
-CREATE TABLE IF NOT EXISTS `acces` (
-  `id_compte` int(11) NOT NULL,
-  `id_page` int(11) NOT NULL,
-  `id_post` int(11) NOT NULL,
-  `id_comment` int(11) NOT NULL,
-  PRIMARY KEY (`id_compte`,`id_page`,`id_post`,`id_comment`),
-  KEY `FK_Acces_id_compte` (`id_compte`),
-  KEY `FK_Acces_id_page` (`id_page`),
-  KEY `FK_Acces_id_post` (`id_post`),
-  KEY `FK_Acces_id_comment` (`id_comment`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `commenter`
---
-
-CREATE TABLE IF NOT EXISTS `commenter` (
-  `id_post` int(11) NOT NULL,
-  `id_comment` int(11) NOT NULL,
-  `date_comment` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_post`,`id_comment`),
-  KEY `FK_Commenter_id_post` (`id_post`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `comments`
---
-
-CREATE TABLE IF NOT EXISTS `comments` (
-  `id_comment` int(11) NOT NULL AUTO_INCREMENT,
-  `comment_text` varchar(1024) NOT NULL,
-  PRIMARY KEY (`id_comment`)
+CREATE TABLE IF NOT EXISTS `abos` (
+  `abos_id` int(10) NOT NULL AUTO_INCREMENT,
+  `abo_name` varchar(30) CHARACTER SET latin1 NOT NULL,
+  PRIMARY KEY (`abos_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comptes`
+-- Structure de la table `articles`
 --
 
-CREATE TABLE IF NOT EXISTS `comptes` (
-  `id_compte` int(11) NOT NULL AUTO_INCREMENT,
-  `compte_name` varchar(20) NOT NULL,
-  `droits_admin` varchar(20) NOT NULL,
-  `droits_blog` varchar(20) NOT NULL,
-  `droits_forum` varchar(20) NOT NULL,
-  `droits_tuto` varchar(20) NOT NULL,
-  `droits_exo` varchar(20) NOT NULL,
-  `droits_cv` varchar(20) NOT NULL,
-  `droits_annuaire` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_compte`)
+CREATE TABLE IF NOT EXISTS `articles` (
+  `article_id` int(10) NOT NULL AUTO_INCREMENT,
+  `article_picture` varchar(150) NOT NULL,
+  `article_video` varchar(150) NOT NULL,
+  `article_citation` varchar(250) NOT NULL,
+  `page_id` int(10) NOT NULL,
+  PRIMARY KEY (`article_id`),
+  UNIQUE KEY `FK_articles_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `liste_tags`
+-- Structure de la table `commentaires`
 --
 
-CREATE TABLE IF NOT EXISTS `liste_tags` (
-  `id_post` int(11) NOT NULL,
-  `id_tag` int(11) NOT NULL,
-  PRIMARY KEY (`id_post`,`id_tag`),
-  UNIQUE KEY `FK_Liste_tags_id_post` (`id_post`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `navigation`
---
-
-CREATE TABLE IF NOT EXISTS `navigation` (
-  `id_page` int(11) NOT NULL AUTO_INCREMENT,
-  `id_post` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  PRIMARY KEY (`id_page`,`id_post`,`id_user`),
-  KEY `FK_Navigation_id_post` (`id_post`),
-  KEY `FK_Navigation_id_user` (`id_user`)
+CREATE TABLE IF NOT EXISTS `commentaires` (
+  `commentaire_id` int(11) NOT NULL AUTO_INCREMENT,
+  `commentaire_level` varchar(200) NOT NULL,
+  `page_id` int(10) NOT NULL,
+  PRIMARY KEY (`commentaire_id`),
+  UNIQUE KEY `FK_commentaires_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -118,12 +69,28 @@ CREATE TABLE IF NOT EXISTS `navigation` (
 --
 
 CREATE TABLE IF NOT EXISTS `page` (
-  `id_page` int(11) NOT NULL AUTO_INCREMENT,
-  `page_link` varchar(255) DEFAULT NULL,
-  `page_cat` varchar(50) DEFAULT NULL,
-  `page_section` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_page`)
+  `page_id` int(10) NOT NULL AUTO_INCREMENT,
+  `page_title` varchar(50) NOT NULL,
+  `page_pub_date` datetime NOT NULL,
+  `page_text` varchar(1024) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  PRIMARY KEY (`page_id`),
+  UNIQUE KEY `FK_pages_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `pages_tags`
+--
+
+CREATE TABLE IF NOT EXISTS `pages_tags` (
+  `page_id` int(10) NOT NULL,
+  `tag_id` int(10) NOT NULL,
+  PRIMARY KEY (`page_id`,`tag_id`),
+  KEY `FK_pages_tags_page_id` (`page_id`),
+  KEY `FK_pages_tags_tag_id` (`tag_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -132,56 +99,37 @@ CREATE TABLE IF NOT EXISTS `page` (
 --
 
 CREATE TABLE IF NOT EXISTS `posts` (
-  `id_post` int(11) NOT NULL AUTO_INCREMENT,
-  `post_type` varchar(50) DEFAULT NULL,
-  `post_tittle` varchar(100) DEFAULT NULL,
-  `post_visuel` varchar(255) DEFAULT NULL,
-  `post_text` longtext,
-  `tag_label` varchar(50) DEFAULT NULL,
-  `tag_label_2` varchar(50) DEFAULT NULL,
-  `tag_label_3` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_post`)
+  `post_id` int(10) NOT NULL AUTO_INCREMENT,
+  `post_picture` varchar(150) NOT NULL,
+  `post_video` varchar(150) NOT NULL,
+  `post_sound` varchar(150) NOT NULL,
+  `post_flux_rss` varchar(150) NOT NULL,
+  `page_id` int(10) NOT NULL,
+  PRIMARY KEY (`post_id`),
+  UNIQUE KEY `FK_posts_page_id` (`page_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `publications`
+-- Structure de la table `roles`
 --
 
-CREATE TABLE IF NOT EXISTS `publications` (
-  `id_post` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) NOT NULL,
-  `publication_date` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_post`,`id_user`),
-  KEY `FK_Publications_id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `roles` (
+  `role_id` int(10) NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(3) NOT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Structure de la table `relatedpost`
+-- Contenu de la table `roles`
 --
 
-CREATE TABLE IF NOT EXISTS `relatedpost` (
-  `id_post` int(11) NOT NULL AUTO_INCREMENT,
-  `id_post_RelatedPost` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_post`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `souscriptions`
---
-
-CREATE TABLE IF NOT EXISTS `souscriptions` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `id_compte` int(11) NOT NULL,
-  `date_inscription` datetime NOT NULL,
-  PRIMARY KEY (`id_user`,`id_compte`),
-  KEY `FK_Souscription_id_compte` (`id_compte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+INSERT INTO `roles` (`role_id`, `role_name`) VALUES
+(1, 'c'),
+(2, 'r'),
+(3, 'u'),
+(4, 'd');
 
 -- --------------------------------------------------------
 
@@ -190,56 +138,60 @@ CREATE TABLE IF NOT EXISTS `souscriptions` (
 --
 
 CREATE TABLE IF NOT EXISTS `tags` (
-  `id_tag` int(11) NOT NULL AUTO_INCREMENT,
-  `tag_name` varchar(37) NOT NULL,
-  `tag_qte` int(11) NOT NULL,
-  PRIMARY KEY (`id_tag`)
+  `tag_id` int(10) NOT NULL AUTO_INCREMENT,
+  `tag_name` varchar(30) NOT NULL,
+  `tag_count` int(10) NOT NULL,
+  PRIMARY KEY (`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users_infos`
+-- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users_infos` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `user_last_name` varchar(50) DEFAULT NULL,
-  `user_first_name` varchar(50) DEFAULT NULL,
-  `user_log` varchar(50) DEFAULT NULL,
-  `user_pwd` varchar(50) DEFAULT NULL,
-  `user_email` varchar(100) DEFAULT NULL,
-  `user_city` varchar(50) DEFAULT NULL,
-  `user_country` varchar(50) DEFAULT NULL,
-  `user_bday` date DEFAULT NULL,
-  `user_avatar` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_user`)
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_first_name` varchar(50) NOT NULL,
+  `user_last_name` varchar(50) NOT NULL,
+  `user_log` varchar(50) NOT NULL,
+  `user_pwd` varchar(50) NOT NULL,
+  `user_email` varchar(80) NOT NULL,
+  `user_adr` varchar(100) NOT NULL,
+  `user_city` varchar(50) NOT NULL,
+  `user_country` varchar(50) NOT NULL,
+  `user_bday` date NOT NULL,
+  `user_avatar` varchar(50) NOT NULL,
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Contraintes pour les tables exportées
---
+-- --------------------------------------------------------
 
 --
--- Contraintes pour la table `navigation`
+-- Structure de la table `users_abos`
 --
-ALTER TABLE `navigation`
-  ADD CONSTRAINT `FK_Acces_id_page` FOREIGN KEY (`id_page`) REFERENCES `page` (`id_page`),
-  ADD CONSTRAINT `FK_Acces_id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id_post`),
-  ADD CONSTRAINT `FK_Acces_id_user` FOREIGN KEY (`id_user`) REFERENCES `users_infos` (`id_user`);
+
+CREATE TABLE IF NOT EXISTS `users_abos` (
+  `abo_id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  PRIMARY KEY (`abo_id`,`user_id`),
+  KEY `FK_users_abos_user_id` (`user_id`),
+  KEY `FK_users_abos_abo_id` (`abo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 
 --
--- Contraintes pour la table `publications`
+-- Structure de la table `users_roles`
 --
-ALTER TABLE `publications`
-  ADD CONSTRAINT `FK_Publications_id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id_post`),
-  ADD CONSTRAINT `FK_Publications_id_user` FOREIGN KEY (`id_user`) REFERENCES `users_infos` (`id_user`);
 
---
--- Contraintes pour la table `relatedpost`
---
-ALTER TABLE `relatedpost`
-  ADD CONSTRAINT `FK_RelatedPost_id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id_post`);
+CREATE TABLE IF NOT EXISTS `users_roles` (
+  `user_id` int(10) NOT NULL,
+  `role_id` int(10) NOT NULL,
+  PRIMARY KEY (`user_id`,`role_id`),
+  KEY `FK_users_roles_role_id` (`role_id`),
+  KEY `FK_users_roles_user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
