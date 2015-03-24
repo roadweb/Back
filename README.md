@@ -19,6 +19,8 @@ Pour les utilisateur de WAMP il est impératif de se rendre dans le fichier php.
 et de "décommenter" la ligne ;extension=php_openssl.dll en supprimant le point virgule (;).
  Ensuite, enregistrer, quitter et installer composer.
  
+Si vous vous rendez compte que vous ne pouvez pas afficher les pages php (message d'erreur suivant : Internal Server Error  The server encountered an internal error or misconfiguration and was unable to complete your request. etc.), il suffit d'activer le module rewrite_module dans WAMP - APACHE - MODULES APACHE.
+ 
 ### Installer les dépendences
 ```
 # Vous allez dans la racine du projet et vous executez cette ligne de code
