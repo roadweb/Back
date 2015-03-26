@@ -3,6 +3,10 @@
 class HomeController extends Controller
 {
 
+    /**
+     * Page d'index
+     * Si non connecté, on attérit sur la page de login
+     */
     public function index()
     {
         $session = new Session();
@@ -17,6 +21,9 @@ class HomeController extends Controller
         }
     }
 
+    /**
+     * La page de login
+     */
     public function login()
     {
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -35,6 +42,9 @@ class HomeController extends Controller
         }
     }
 
+    /**
+     * La méthode pour se déconnecter
+     */
     public function logout()
     {
         $session = new Session();

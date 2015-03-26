@@ -12,6 +12,7 @@ $route->get('/', 'HomeController@index')->name('home');
 $route->get('/logout', 'HomeController@logout');
 $route->get('/blog', 'BlogController@index');
 $route->get('/blog/add', 'BlogController@add');
+//Todo: Mettre à jour le controller pour qu'il prenne en compte le paramètre
 $route->get('/blog/edit/{id}', 'BlogController@edit');
 
 /** Les routes en POST */
