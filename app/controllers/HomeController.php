@@ -20,7 +20,7 @@ class HomeController extends Controller
     public function login()
     {
         if (isset($_POST['username']) && isset($_POST['password'])) {
-            $user = new Admin();
+            $user = new User();
             $test = $user->getAdmin($_POST['username'], $_POST['password']);
             if ($test) {
                 $session = new Session();
