@@ -1,9 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class PostsController extends Controller
 {
@@ -15,8 +18,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
-
+        $posts = Post::with('author')->with('category')->get();
         return view('posts.index', compact('posts'));
     }
 
@@ -27,7 +29,10 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $auth_id = Auth::user()->id;
+        $categories = Category::lists('name', 'id');
+
+        return view('posts.create', compact('auth_id', 'categories'));
     }
 
     /**
@@ -37,7 +42,9 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        Post::create($request->all());
 
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -48,7 +55,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        dd('Show');
     }
 
     /**
@@ -59,7 +66,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -81,7 +88,10 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        return redirect(route('posts.index'));
     }
 
 }
