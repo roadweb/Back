@@ -1,0 +1,5 @@
+@import "compass";
+
+.thumbnail {
+	@include box-shadow(0 2px rgba(black, 0.05));
+}

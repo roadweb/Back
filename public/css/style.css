@@ -1,0 +1,6 @@
+/* line 3, sass/style.scss */
+.thumbnail {
+  -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+}
