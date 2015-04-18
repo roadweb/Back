@@ -9,7 +9,10 @@
                     <div class="row">
                         <div class="col-sm-8">
                             <div class="panel panel-default">
-                                <div class="panel-heading">{{ $post->title }}</div>
+                                <div class="panel-heading">
+                                    {{ $post->title }}
+                                    <span class="pull-right"><small>Mis à jour le : {{ $post->updated_at }}</small></span>
+                                </div>
                                 <div class="panel-body">
                                     {{ $post->content }}
                                 </div>
@@ -17,16 +20,19 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Auteur: {{ $post->author->name }} <span class="pull-right"><span
-                                                class="label label-default">{{ $post->category->name }}</span></span></div>
+                                <div class="panel-heading">
+                                    Auteur: {{ $post->author->name }}
+                                    <span class="pull-right">
+                                        <span class="label label-default">{{ $post->category->name }}</span>
+                                    </span>
+                                </div>
                                 <div class="panel-body">
-                                    <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-default">Editer</a>
                                     {!! Form::open([
                                         'url' => route('posts.destroy', $post->id),
                                         'method' => 'DELETE',
                                     ]) !!}
-
-                                    <button class="btn btn-danger" type="submit">Supprimer</button>
+                                    <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-default">Editer</a>
+                                    <button class="btn btn-danger" type="submit">Suprimer</button>
                                     {!! Form::close() !!}
                                 </div>
                             </div>

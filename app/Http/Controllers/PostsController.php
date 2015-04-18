@@ -19,6 +19,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::with('author')->with('category')->get();
+
         return view('posts.index', compact('posts'));
     }
 
