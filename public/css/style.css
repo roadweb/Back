@@ -1,6 +1,13 @@
 /* line 3, sass/style.scss */
+.theme-header {
+  -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 7, sass/style.scss */
 .thumbnail {
-  -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
 }

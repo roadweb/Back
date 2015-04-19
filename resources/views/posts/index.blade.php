@@ -21,9 +21,9 @@
                         <div class="col-sm-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    Auteur: {{ $post->author->name }}
+                                    Auteur: {{ $post->author->last_name }} {{ $post->author->first_name }}
                                     <span class="pull-right">
-                                        <span class="label label-default">{{ $post->category->name }}</span>
+                                        <span class="label label-info">{{ $post->category->name }}</span>
                                     </span>
                                 </div>
                                 <div class="panel-body">

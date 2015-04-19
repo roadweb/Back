@@ -8,7 +8,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="thumbnail">
                         <div class="clearfix">
-                            <span class="label label-primary text-right">Admin</span>
+                            <div class="label label-primary">Admin</div>
                             <strong class="small pull-right">{{ $user->username }}</strong>
                         </div>
                         <img src="http://i2.wp.com/forum.frandroid.com/public/style_images/Humanoid_Reset/profile/default_large.png"
@@ -19,15 +19,15 @@
 
                             <p>{{ $user->email }}</p>
 
-                            <p>
-                                <button class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></button>
-                                <a href="#" class="btn btn-default" role="button">Button</a>
-                            </p>
+                            <button class="btn btn-default" data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Les articles qu'il a publiés">
+                                <span class="glyphicon glyphicon-edit"></span> 12
+                            </button>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
-
 @endsection
