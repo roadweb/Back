@@ -26,7 +26,7 @@
                     @endif
                     <form action="{{ route('posts.store') }}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="author_id" value="{{ $auth_id }}">
+                        <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
                         <div class="form-group">
                             <label for="type">Le type d'article</label>

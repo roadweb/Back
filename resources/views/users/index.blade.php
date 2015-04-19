@@ -22,7 +22,7 @@
                             <button class="btn btn-default" data-toggle="tooltip"
                                     data-placement="top"
                                     title="Les articles qu'il a publiés">
-                                <span class="glyphicon glyphicon-edit"></span> 12
+                                <span class="glyphicon glyphicon-edit"></span>  {{ $user->posts->count() }}
                             </button>
                         </div>
                     </div>

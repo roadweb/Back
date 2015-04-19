@@ -16,9 +16,16 @@ class PostsController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with('author')->with('category')->get();
+        if ($request->has('filterBy')) {
+            $posts = Post::with('user')
+                ->with('category')
+                ->where($request->get('filterBy') . '_id', $request->get('category'))
+                ->get();
+        } else {
+            $posts = Post::with('user')->with('category')->get();
+        }
 
         return view('posts.index', compact('posts'));
     }
