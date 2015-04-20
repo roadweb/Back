@@ -35,7 +35,7 @@ class PostsController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
