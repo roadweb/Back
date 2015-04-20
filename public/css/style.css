@@ -1,11 +1,21 @@
-/* line 3, sass/style.scss */
+/* line 1, sass/utils/_helper.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 1, sass/utils/_colors.scss */
+.btn-neutral {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 6, sass/style.scss */
 .theme-header {
   -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 7, sass/style.scss */
+/* line 10, sass/style.scss */
 .thumbnail {
   -moz-box-shadow: 0 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 2px rgba(0, 0, 0, 0.1);

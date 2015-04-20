@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-10">
+            <div class="col-sm-12">
                 @if(count($posts) > 0)
                     @include('posts.components.articles', ['posts' => $posts])
                 @else
@@ -12,9 +12,6 @@
                         Aucun article n'a encore été publiés.
                     </div>
                 @endif
-            </div>
-            <div class="col-sm-2">
-                <a href="{{ route('posts.create') }}" class="btn btn-success">Créer un nouvel article</a>
             </div>
         </div>
     </div>

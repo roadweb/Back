@@ -83,9 +83,16 @@ class PostsController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update($id)
+    public function update($id, Request $request)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        if($request->has('publication')) {
+            $post->published = $request->get('publication');
+            $post->save();
+        }
+
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -100,6 +107,18 @@ class PostsController extends Controller
         $post->delete();
 
         return redirect(route('posts.index'));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+
+    public function publish($id)
+    {
+        dd($id);
     }
 
 }

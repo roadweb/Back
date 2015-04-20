@@ -35,9 +35,11 @@
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ route('posts.index') }}">Articles</a></li>
                 <li><a href="{{ route('users.index') }}">Utilisateurs</a></li>
+                <li><a href="{{ route('users.index') }}">Statistiques</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li class="bg-success"><a href="{{ route('posts.create') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Écrire un article</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}">Se connecter</a></li>
                     <li><a href="{{ url('/auth/register') }}">Créer un compte</a></li>
@@ -46,7 +48,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">{{ Auth::user()->last_name }} {{ Auth::user()->first_name }} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+                            <li><a href="{{ url('/auth/logout') }}">Se déconnecter</a></li>
                         </ul>
                     </li>
                 @endif
@@ -60,6 +62,7 @@
 <!-- Scripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="{{ asset('/javascript/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/app.js') }}"></script>
 </body>
 </html>
