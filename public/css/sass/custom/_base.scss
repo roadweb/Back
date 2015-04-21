@@ -1,12 +1,11 @@
-@import "compass";
-
-@import "utils/helper";
-@import "utils/colors";
-
 .theme-header {
 	@include box-shadow(0 2px rgba(black, 0.1));
 }
 
-.thumbnail {
+.thumbnail, .panel {
+	@include box-shadow(0 2px rgba(black, 0.1));
+}
+
+.btn:not(.btn-default) {
 	@include box-shadow(0 2px rgba(black, 0.1));
 }

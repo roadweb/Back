@@ -13,11 +13,13 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::resource('posts', 'PostsController');
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('posts', 'PostsController');
+    Route::resource('users', 'UsersController');
+});
 
-Route::resource('users', 'UsersController');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
