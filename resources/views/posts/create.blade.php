@@ -29,31 +29,64 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
-                    <div class="form-group">
-                        <label for="type">Le domaine lié de l'article</label>
-                        {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Les informations sur l'article
+                            </h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="type">Le domaine lié de l'article</label>
+                                {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Le type d'article</label>
+                                {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="type">Le type d'article</label>
-                        {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+
+                    <!--
+                    |--------------------------------------------------------------------------
+                    | Le contenu de l'article
+                    |--------------------------------------------------------------------------
+                    *-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Le contenu de l'article</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Le titre du tutoriel</label>
+                                <input type="text" name="title" class="form-control"
+                                       placeholder="Entrez le titre ici...">
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Le résumé de l'article</label>
+                                    <textarea class="form-control"
+                                              name="content"
+                                              cols="30"
+                                              rows="3"
+                                              placeholder="Tapez votre texte ici..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Le texte de l'article</label>
+                                    <textarea class="form-control"
+                                              name="content"
+                                              cols="30"
+                                              rows="10"
+                                              placeholder="Tapez votre texte ici..."></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Le titre du tutoriel</label>
-                        <input type="text" name="title" class="form-control" placeholder="Entrez le titre ici...">
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Le texte du tutoriel</label>
-                            <textarea class="form-control"
-                                      name="content"
-                                      cols="30"
-                                      rows="10"
-                                      placeholder="Tapez votre texte ici..."></textarea>
-                    </div>
+
                     <div class="checkbox checkbox-success">
-                        <input  id="checkbox1"
-                                type="checkbox"
-                                class="checkbox checkbox-success"
-                                name="published">
+                        <input id="checkbox1"
+                               type="checkbox"
+                               class="checkbox checkbox-success"
+                               name="published">
                         <label for="checkbox1">
                             Publier l'article ?
                         </label>

@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('title');
+            $table->string('resume');
             $table->longText('content');
             $table->string('published')->default(false);
 			$table->timestamps();
