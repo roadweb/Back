@@ -29,7 +29,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="infos">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 Les informations sur l'article
@@ -37,13 +37,20 @@
                         </div>
 
                         <div class="panel-body">
-                            <div class="form-group">
-                                <label for="type">Le domaine lié de l'article</label>
-                                {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
-                            </div>
-                            <div class="form-group">
-                                <label for="type">Le type d'article</label>
-                                {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="type">Le domaine lié de l'article</label>
+                                        {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="type">Le type d'article</label>
+                                        {!! Form::select('category_id', $categories, null, ['class' => 'form-control'])
+                                        !!}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,7 +60,7 @@
                     | Le contenu de l'article
                     |--------------------------------------------------------------------------
                     *-->
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="content">
                         <div class="panel-heading">
                             <h3 class="panel-title">Le contenu de l'article</h3>
                         </div>
@@ -95,10 +102,23 @@
             </div>
 
             <div class="col-xs-3">
-                <div class="panel panel-default">
+                <div class="panel panel-default" data-spy="affix" data-offset-top="100">
                     <div class="panel-heading">Action</div>
-                    <div class="panel-body">
-                        <button type="submit" form="form-main" class="btn btn-success">Sauvegarder</button>
+                    <div class="panel-body" id="list">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation">
+                                <a href="#infos"><span class="glyphicon glyphicon-question-sign"></span> Infos</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="submit" form="form-main" class="btn btn-success">
+                            <span class="glyphicon glyphicon-download-alt"></span> Sauvegarder
+                        </button>
                         <button type="reset" form="form-main" class="btn btn-default" href="#">Reset</button>
                     </div>
                 </div>

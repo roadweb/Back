@@ -332,9 +332,20 @@ input[type="checkbox"] .styled:checked + label::after {
   display: inline-block;
 }
 
+/* line 5, sass/utils/_helper.scss */
+.relative {
+  position: relative;
+}
+
 /* line 1, sass/utils/_colors.scss */
 .btn-neutral {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 1, sass/utils/_affix.scss */
+.affix {
+  position: fixed;
+  top: 20px;
 }
 
 /*
