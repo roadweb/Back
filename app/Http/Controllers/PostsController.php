@@ -21,10 +21,10 @@ class PostsController extends Controller
         if ($request->has('filterBy')) {
             $posts = Post::with('user')
                 ->with('category')
-                ->where($request->get('filterBy') . '_id', $request->get('category'))
+                ->where($request->get('filterBy') . '_id', $request->get('id'))
                 ->get();
         } else {
-            $posts = Post::with('user')->with('category')->get();
+            $posts = Post::with('user')->with('category')->orderBy('updated_at', 'desc')->get();
         }
 
         return view('posts.index', compact('posts'));

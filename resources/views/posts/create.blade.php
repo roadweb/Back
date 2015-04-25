@@ -46,7 +46,10 @@
                                       placeholder="Tapez votre texte ici..."></textarea>
                     </div>
                     <div class="checkbox checkbox-success">
-                        <input  id="checkbox1" type="checkbox" class="checkbox checkbox-success" name="published">
+                        <input  id="checkbox1"
+                                type="checkbox"
+                                class="checkbox checkbox-success"
+                                name="published">
                         <label for="checkbox1">
                             Publier l'article ?
                         </label>

@@ -36,6 +36,7 @@
                 <li {{ active('posts') }}><a href="{{ route('posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('users.index') }}">Statistiques</a></li>
+                <li {{ active('stats') }}><a href="{{ route('users.index') }}">Questions</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
