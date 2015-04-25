@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration {
 
         Schema::table('posts', function(Blueprint $table){
             $table->integer('category_id')->unsigned()->index();
+            $table->integer('job_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
         });
 	}

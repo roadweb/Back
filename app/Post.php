@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Request;
 class Post extends Model
 {
 
-    protected $fillable = ['title', 'content', 'published', 'user_id', 'category_id'];
+    protected $fillable = ['title', 'content', 'published', 'user_id', 'category_id', 'job_id'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -14,6 +14,14 @@ class Post extends Model
     public function category()
     {
         return $this->belongsTo('App\Category');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function job()
+    {
+        return $this->belongsTo('App\Job');
     }
 
     /**

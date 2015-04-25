@@ -3,6 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Question;
+use App\State;
 use Illuminate\Http\Request;
 
 class QuestionsController extends Controller {
@@ -12,9 +14,18 @@ class QuestionsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		return view('questions.index');
+        if ($request->has('filterBy')) {
+            $questions = Question::with('state')
+                ->where($request->get('filterBy') . '_id', $request->get('id'))
+                ->get();
+        } else {
+            $questions = Question::orderBy('likes', 'desc')->with('state')->get();
+        }
+
+        $states = State::lists('name', 'id');
+		return view('questions.index', compact('questions', 'states'));
 	}
 
 	/**
@@ -65,9 +76,13 @@ class QuestionsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+        $question = Question::findOrFail($id);
+        $question->state_id = $request->get('state_id');
+        $question->save();
+
+        return redirect(route('questions.index'));
 	}
 
 	/**

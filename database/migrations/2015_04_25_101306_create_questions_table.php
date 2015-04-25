@@ -22,6 +22,7 @@ class CreateQuestionsTable extends Migration
 
         Schema::table('questions', function (Blueprint $table) {
             $table->integer('job_id')->unsigned()->index();
+            $table->integer('state_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
         });
 
@@ -42,5 +43,4 @@ class CreateQuestionsTable extends Migration
     {
         Schema::drop('questions');
     }
-
 }

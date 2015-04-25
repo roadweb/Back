@@ -3,6 +3,7 @@
 use App\Category;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Job;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,14 +19,11 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
+        $req = Post::with('user')->with('category')->with('job')->orderBy('updated_at', 'desc');
         if ($request->has('filterBy')) {
-            $posts = Post::with('user')
-                ->with('category')
-                ->where($request->get('filterBy') . '_id', $request->get('id'))
-                ->get();
-        } else {
-            $posts = Post::with('user')->with('category')->orderBy('updated_at', 'desc')->get();
+            $req->where($request->get('filterBy') . '_id', $request->get('id'));
         }
+        $posts = $req->get();
 
         return view('posts.index', compact('posts'));
     }
@@ -39,8 +37,10 @@ class PostsController extends Controller
     {
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
+        $jobs = Job::lists('name', 'id');
 
-        return view('posts.create', compact('auth_id', 'categories'));
+
+        return view('posts.create', compact('auth_id', 'categories', 'jobs'));
     }
 
     /**
@@ -87,7 +87,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        if($request->has('publication')) {
+        if ($request->has('publication')) {
             $post->published = $request->get('publication');
             $post->save();
         }

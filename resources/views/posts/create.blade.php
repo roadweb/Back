@@ -30,6 +30,10 @@
                     <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
                     <div class="form-group">
+                        <label for="type">Le domaine lié de l'article</label>
+                        {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group">
                         <label for="type">Le type d'article</label>
                         {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
                     </div>
