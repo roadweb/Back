@@ -3,7 +3,8 @@
 
 
         <div class="col-sm-8">
-            <div class="panel panel-default">
+            <div class="panel panel-{{ sticky($post->is_sticky, 'danger') }}">
+
                 <div class="panel-heading">
                     {{ $post->title }}
                     @if($post->published)
@@ -13,6 +14,7 @@
                     @endif
                     <span class="pull-right label">Mis à jour : {{ $post->updated_at }}</span>
                 </div>
+
                 <div class="panel-body">
                     {!! $post->content !!}
                 </div>

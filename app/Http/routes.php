@@ -11,12 +11,40 @@
 |
 */
 
+use App\Post;
+
+/*
+|--------------------------------------------------------------------------
+| CMS
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/', 'HomeController@index');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('posts', 'PostsController');
     Route::resource('users', 'UsersController');
     Route::resource('questions', 'QuestionsController');
+    Route::get('stats', 'StatsController@index');
+});
+
+
+
+/*
+|--------------------------------------------------------------------------
+| API
+|--------------------------------------------------------------------------
+*/
+
+Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
+    Route::get('posts', function(){
+        $posts = Post::get();
+        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+    });
+    Route::get('posts/{id}', function($id){
+        $posts = Post::find($id);
+        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+    });
 });
 
 

@@ -63,12 +63,42 @@
 
                     <!--
                     |--------------------------------------------------------------------------
+                    | Mise en avant
+                    |--------------------------------------------------------------------------
+                    *-->
+
+                    <div class="panel panel-default" id="sticky">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Mise en avant</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="checkbox checkbox-success">
+                                    <input id="sticky-check"
+                                           type="checkbox"
+                                           class="checkbox checkbox-success"
+                                           name="is_sticky">
+                                    <label for="sticky-ckeck">
+                                        Mettre en avant ?
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sticky">Fin de mise en avant</label>
+                                <input type="date" name="sticky_end" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    |--------------------------------------------------------------------------
                     | Le contenu de l'article
                     |--------------------------------------------------------------------------
                     *-->
                     <div class="panel panel-default" id="content">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span> Le contenu de l'article</h3>
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span> Le contenu de
+                                l'article</h3>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -79,13 +109,14 @@
                             <div class="form-group">
                                 <label for="content">Le résumé de l'article (200 max)</label>
                                     <textarea class="form-control"
-                                              name="content"
+                                              name="resume"
                                               cols="30"
                                               rows="3"
                                               placeholder="Tapez votre texte ici..."></textarea>
                             </div>
                             <div class="form-group" ng-app="app" ng-controller="textArea">
                                 <label for="text">Le texte de l'article</label>
+
                                 <div name="content" text-angular="text-angular"></div>
                             </div>
 
@@ -108,13 +139,34 @@
                     | Optimisation référencement
                     |--------------------------------------------------------------------------
                     *-->
-                    
+
                     <div class="panel panel-default" id="referencement">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span> Optimisation du référencement</h3>
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span> Optimisation du
+                                référencement</h3>
                         </div>
                         <div class="panel-body">
-
+                            <div class="form-group">
+                                <label>Mots clés référencement image</label>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Écrire ici..."
+                                       name="ref_thumb"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Balise title</label>
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Écrire ici..."
+                                       name="ref_title"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Balise description</label>
+                                <textarea name="ref_description"
+                                          rows="5"
+                                          class="form-control"
+                                          placeholder="Écrire ici..."></textarea>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -129,11 +181,14 @@
                                 <a href="#infos"><span class="glyphicon glyphicon-question-sign"></span> Infos</a>
                             </li>
                             <li role="presentation">
-                                <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu
-                                </a>
+                                <a href="#sticky"><span class="glyphicon glyphicon-question-sign"></span> Mise en avant</a>
                             </li>
                             <li role="presentation">
-                                <a href="#referencement"><span class="glyphicon glyphicon-screenshot"></span> Référencement
+                                <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#referencement"><span class="glyphicon glyphicon-screenshot"></span>
+                                    Référencement
                                 </a>
                             </li>
                         </ul>

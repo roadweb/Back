@@ -15,3 +15,16 @@ function active($path)
 
     return false;
 }
+
+/**
+ * Permet d'ajouter la classe active en fonction de la route
+ * @param $post
+ * @param string $class
+ * @return bool|string
+ */
+function sticky($post, $class = 'default')
+{
+    if($post) return $class;
+
+    return 'default';
+}

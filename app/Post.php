@@ -6,7 +6,19 @@ use Illuminate\Support\Facades\Request;
 class Post extends Model
 {
 
-    protected $fillable = ['title', 'content', 'published', 'user_id', 'category_id', 'job_id'];
+    protected $fillable = [
+        'title',
+        'content',
+        'published',
+        'user_id',
+        'category_id',
+        'is_sticky',
+        'job_id',
+        'sticky_end',
+        'ref_thumb',
+        'ref_title',
+        'ref_description'
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -39,6 +51,15 @@ class Post extends Model
     public function scopePublished($query)
     {
         return $query->where('published', 'on');
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeSticked($query)
+    {
+        return $query->where('is_sticky', 'on');
     }
 
     /**
