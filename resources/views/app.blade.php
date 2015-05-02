@@ -15,6 +15,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body class="relative">
 <nav class="navbar navbar-default theme-header">
@@ -63,6 +64,14 @@
 <!-- Scripts -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="{{ asset('/bower_components/angular/angular.min.js') }}"></script>
+
+{{-- TextAngular --}}
+<link rel='stylesheet' href="{{asset('/bower_components/textAngular/src/textAngular.css')}}">
+<script src="{{asset('/bower_components/textAngular/dist/textAngular-rangy.min.js')}}"></script>
+<script src="{{asset('/bower_components/textAngular/dist/textAngular-sanitize.min.js')}}"></script>
+<script src="{{asset('/bower_components/textAngular/dist/textAngular.min.js')}}"></script>
+
 <script src="{{ asset('/javascript/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/app.js') }}"></script>
 </body>

@@ -14,7 +14,7 @@
                     <span class="pull-right label">Mis à jour : {{ $post->updated_at }}</span>
                 </div>
                 <div class="panel-body">
-                    {{ $post->content }}
+                    {!! $post->content !!}
                 </div>
             </div>
         </div>

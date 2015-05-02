@@ -29,6 +29,12 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
+                    <!--
+                    |--------------------------------------------------------------------------
+                    | Informations sur l'article
+                    |--------------------------------------------------------------------------
+                    *-->
+
                     <div class="panel panel-default" id="infos">
                         <div class="panel-heading">
                             <h3 class="panel-title">
@@ -62,41 +68,54 @@
                     *-->
                     <div class="panel panel-default" id="content">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Le contenu de l'article</h3>
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span> Le contenu de l'article</h3>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Le titre du tutoriel</label>
+                                <label for="title">Le titre de l'article (100 max)</label>
                                 <input type="text" name="title" class="form-control"
                                        placeholder="Entrez le titre ici...">
                             </div>
                             <div class="form-group">
-                                <label for="text">Le résumé de l'article</label>
+                                <label for="content">Le résumé de l'article (200 max)</label>
                                     <textarea class="form-control"
                                               name="content"
                                               cols="30"
                                               rows="3"
                                               placeholder="Tapez votre texte ici..."></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" ng-app="app" ng-controller="textArea">
                                 <label for="text">Le texte de l'article</label>
-                                    <textarea class="form-control"
-                                              name="content"
-                                              cols="30"
-                                              rows="10"
-                                              placeholder="Tapez votre texte ici..."></textarea>
+                                <div name="content" text-angular="text-angular"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox checkbox-success">
+                                    <input id="checkbox1"
+                                           type="checkbox"
+                                           class="checkbox checkbox-success"
+                                           name="published">
+                                    <label for="checkbox1">
+                                        Publier l'article ?
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="checkbox checkbox-success">
-                        <input id="checkbox1"
-                               type="checkbox"
-                               class="checkbox checkbox-success"
-                               name="published">
-                        <label for="checkbox1">
-                            Publier l'article ?
-                        </label>
+                    <!--
+                    |--------------------------------------------------------------------------
+                    | Optimisation référencement
+                    |--------------------------------------------------------------------------
+                    *-->
+                    
+                    <div class="panel panel-default" id="referencement">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span> Optimisation du référencement</h3>
+                        </div>
+                        <div class="panel-body">
+
+                        </div>
                     </div>
                 </form>
             </div>
@@ -111,6 +130,10 @@
                             </li>
                             <li role="presentation">
                                 <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#referencement"><span class="glyphicon glyphicon-screenshot"></span> Référencement
                                 </a>
                             </li>
                         </ul>

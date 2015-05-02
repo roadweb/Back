@@ -1,28 +1,39 @@
-(function(){
+(function () {
     'use strict';
+
+    angular
+        .module('app', ['textAngular'])
+        .config(function ($interpolateProvider) {
+            $interpolateProvider.startSymbol('<%').endSymbol('%>');
+        })
+        .controller('textArea', textArea);
+
+    function textArea($scope) {
+
+    }
 
     $('[data-toggle="tooltip"]').tooltip();
 
     $('[data-confirm="delete"]').confirm({
-        confirm: function(element){
+        confirm: function (element) {
             return element.parent().submit();
         },
-        post: true
+        post   : true
     });
 
-    $('[data-spy="affix"]').on('affix.bs.affix', function(){
+    $('[data-spy="affix"]').on('affix.bs.affix', function () {
         var widthElement = $(this).width() + 'px';
-         $(this).css({
-             'width': widthElement
-         });
+        $(this).css({
+            'width': widthElement
+        });
     });
 
-    $('[data-spy="affix"]').on('affix-top.bs.affix', function(){
-         $(this).css({
-             'width': ''
-         });
+    $('[data-spy="affix"]').on('affix-top.bs.affix', function () {
+        $(this).css({
+            'width': ''
+        });
     });
 
-    $('body').scrollspy({ target: '#list' });
+    $('body').scrollspy({target: '#list'});
 
 })();
