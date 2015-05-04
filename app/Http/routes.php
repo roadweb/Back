@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('posts', 'PostsController');
     Route::resource('users', 'UsersController');
     Route::resource('questions', 'QuestionsController');
-    Route::get('stats', 'StatsController@index');
+    Route::resource('stats', 'StatsController@index');
 });
 
 

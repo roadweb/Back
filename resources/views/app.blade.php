@@ -36,7 +36,7 @@
                 <li {{ active('/') }}><a href="{{ url('/') }}">Home</a></li>
                 <li {{ active('posts') }}><a href="{{ route('posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('users.index') }}">Utilisateurs</a></li>
-                <li {{ active('stats') }}><a href="{{ route('users.index') }}">Statistiques</a></li>
+                <li {{ active('stats') }}><a href="{{ route('stats.index') }}">Statistiques</a></li>
                 <li {{ active('questions') }}><a href="{{ route('questions.index') }}">Questions</a></li>
             </ul>
 
