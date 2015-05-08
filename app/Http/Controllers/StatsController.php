@@ -1,12 +1,17 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
+use App\Category;
+use App\Job;
+use App\Question;
 use App\Post;
+use App\User;
+
 use Illuminate\Http\Request;
 
-class StatsController extends Controller {
+class StatsController extends Controller
+{
 
 	/**
 	 * Display a listing of the resource.
@@ -16,8 +21,20 @@ class StatsController extends Controller {
 	public function index()
 	{
 		$posts_published = Post::published()->count();
+        $posts_editing = Post::where('published', '0')->count();
+        $posts_sticky = Post::where('is_sticky', 'on')->count();
         $posts = Post::count();
 
-        return view('stats.index', compact('posts', 'posts_published'));
+
+        $users = User::count();
+
+
+        $jobs = Job::count();
+
+        $questions = Question::count();
+
+        $categories = Category::count();
+
+        return view('stats.index', compact('posts', 'posts_published', 'posts_sticky', 'posts_editing', 'users', 'jobs', 'questions', 'categories'));
 	}
 }
