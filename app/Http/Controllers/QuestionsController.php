@@ -16,9 +16,9 @@ class QuestionsController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-        if ($request->has('filterBy')) {
+        if ($request->has('filter_by')) {
             $questions = Question::with('state')
-                ->where($request->get('filterBy') . '_id', $request->get('id'))
+                ->where($request->get('filter_by') . '_id', $request->get('id'))
                 ->get();
         } else {
             $questions = Question::orderBy('likes', 'desc')->with('state')->get();

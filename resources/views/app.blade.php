@@ -35,14 +35,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li {{ active('/') }}><a href="{{ url('/') }}">Home</a></li>
-                <li {{ active('posts') }}><a href="{{ route('posts.index') }}">Articles</a></li>
-                <li {{ active('users') }}><a href="{{ route('users.index') }}">Utilisateurs</a></li>
+                <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
+                <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats/') }}><a href="{{ url('/stats/') }}">Statistiques</a></li>
-                <li {{ active('questions') }}><a href="{{ route('questions.index') }}">Questions</a></li>
+                <li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="bg-success"><a href="{{ route('posts.create') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Écrire un article</a></li>
+                <li class="bg-success"><a href="{{ route('admin.posts.create') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Écrire un article</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}">Se connecter</a></li>
                     <li><a href="{{ url('/auth/register') }}">Créer un compte</a></li>

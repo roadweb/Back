@@ -14,7 +14,7 @@
                         'class' => 'inline-block',
                         'id' => 'filter'
                         ]) !!}
-                        <input type="hidden" name="filterBy" value="state"/>
+                        <input type="hidden" name="filter_by" value="state"/>
                         {!! Form::select('id', $states, null, ['class' => 'form-control']) !!}
                         {!! Form::close() !!}
 
