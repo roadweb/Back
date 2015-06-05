@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('posts.index') }}">Articles</a></li>
+                    <li><a href="{{ route('admin.posts.index') }}">Articles</a></li>
                     <li class="active">Création</li>
                 </ol>
             </div>
@@ -25,7 +25,7 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('posts.store') }}" method="post" id="form-main">
+                <form action="{{ route('admin.posts.store') }}" method="post" id="form-main">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="user_id" value="{{ $auth_id }}">
 

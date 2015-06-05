@@ -34,24 +34,24 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li {{ active('/') }}><a href="{{ url('/') }}">Home</a></li>
-                <li {{ active('posts') }}><a href="{{ route('posts.index') }}">Articles</a></li>
-                <li {{ active('users') }}><a href="{{ route('users.index') }}">Utilisateurs</a></li>
-                <li {{ active('stats/') }}><a href="{{ url('/stats/') }}">Statistiques</a></li>
-                <li {{ active('questions') }}><a href="{{ route('questions.index') }}">Questions</a></li>
+                <li {{ active('home') }}><a href="{{ route('admin.home') }}">Home</a></li>
+                <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
+                <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
+                <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
+                <li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="bg-success"><a href="{{ route('posts.create') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Écrire un article</a></li>
+                <li class="bg-success"><a href="{{ route('admin.posts.create') }}"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Écrire un article</a></li>
                 @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}">Se connecter</a></li>
-                    <li><a href="{{ url('/auth/register') }}">Créer un compte</a></li>
+                    <li><a href="{{ url('/admin/auth/login') }}">Se connecter</a></li>
+                    <li><a href="{{ url('/admin/auth/register') }}">Créer un compte</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false">{{ Auth::user()->last_name }} {{ Auth::user()->first_name }} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/auth/logout') }}">Se déconnecter</a></li>
+                            <li><a href="{{ url('/admin/auth/logout') }}">Se déconnecter</a></li>
                         </ul>
                     </li>
                 @endif

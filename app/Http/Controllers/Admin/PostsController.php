@@ -52,7 +52,7 @@ class PostsController extends Controller
     {
         Post::create($request->all());
 
-        return redirect(route('posts.index'));
+        return redirect(route('admin.posts.index'));
     }
 
     /**
@@ -92,7 +92,7 @@ class PostsController extends Controller
             $post->save();
         }
 
-        return redirect(route('posts.index'));
+        return redirect(route('admin.posts.index'));
     }
 
     /**
@@ -106,19 +106,6 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return redirect(route('posts.index'));
+        return redirect(route('admin.posts.index'));
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
-
-    public function publish($id)
-    {
-        dd($id);
-    }
-
 }

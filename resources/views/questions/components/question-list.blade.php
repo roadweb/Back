@@ -8,7 +8,7 @@
             </div>
             <div class="panel-body">
                 {!! Form::open([
-                'url' => route('questions.update', $question->id),
+                'url' => route('admin.questions.update', $question->id),
                 'method' => 'PUT',
                 'class' => 'form-inline inline-block'
                 ]) !!}

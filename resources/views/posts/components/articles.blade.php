@@ -36,19 +36,19 @@
                 </div>
                 <div class="panel-body">
                     {!! Form::open([
-                    'url' => route('posts.destroy', $post->id),
+                    'url' => route('admin.posts.destroy', $post->id),
                     'method' => 'DELETE',
                     'class' => 'inline-block'
                     ]) !!}
 
-                    <a href="{{ route('posts.show', $post->id) }}"
+                    <a href="{{ route('admin.posts.show', $post->id) }}"
                        class="btn btn-sm btn-info"
                        data-toggle="tooltip"
                        title="Voir l'article"
                        data-placement="top">
                         <span class="glyphicon glyphicon-eye-open"></span>
                     </a>
-                    <a href="{{ route('posts.edit', $post->id) }}"
+                    <a href="{{ route('admin.posts.edit', $post->id) }}"
                        class="btn btn-sm btn-warning"
                        data-toggle="tooltip"
                        title="Éditer l'article"
@@ -67,7 +67,7 @@
                     {!! Form::close() !!}
 
                     {!! Form::open([
-                    'url' => route('posts.update', $post->id),
+                    'url' => route('admin.posts.update', $post->id),
                     'method' => 'PUT',
                     'class' => 'inline-block'
                     ]) !!}
