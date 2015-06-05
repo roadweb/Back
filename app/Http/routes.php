@@ -19,13 +19,13 @@ use App\Post;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'Admin\HomeController@index');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('posts', 'PostsController');
-    Route::resource('users', 'UsersController');
-    Route::resource('questions', 'QuestionsController');
-    Route::get('stats', 'StatsController@index');
+    Route::resource('posts', 'Admin\PostsController');
+    Route::resource('users', 'Admin\UsersController');
+    Route::resource('questions', 'Admin\QuestionsController');
+    Route::get('stats', 'Admin\StatsController@index');
 });
 
 

@@ -1,6 +1,7 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller as Controller;
 
 class HomeController extends Controller {
 

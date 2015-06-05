@@ -1,8 +1,8 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller as Controller;
 use App\Job;
 use App\Post;
 use Illuminate\Http\Request;
