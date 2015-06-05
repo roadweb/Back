@@ -19,21 +19,14 @@ use App\Post;
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('/', 'HomeController@index');
-    Route::controllers([
-        'auth'     => 'Auth\AuthController',
-        'password' => 'Auth\PasswordController',
-    ]);
+Route::get('/', 'HomeController@index');
 
-    Route::group(['middleware' => 'auth'], function () {
-        Route::resource('posts', 'PostsController');
-        Route::resource('users', 'UsersController');
-        Route::resource('questions', 'QuestionsController');
-        Route::get('stats', 'StatsController@index');
-    });
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('posts', 'PostsController');
+    Route::resource('users', 'UsersController');
+    Route::resource('questions', 'QuestionsController');
+    Route::get('stats', 'StatsController@index');
 });
-
 
 
 
@@ -53,3 +46,9 @@ Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
         return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
     });
 });
+
+
+Route::controllers([
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
