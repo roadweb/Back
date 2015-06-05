@@ -35,3 +35,7 @@ En fonction de vos configurations locales, il faut modifier le fichier `.env` da
 
 Si vous êtes nouveaux dans Laravel, Grafikart fait une formation gratuite et ultra complète pour vous aider !
 http://www.grafikart.fr/formations/laravel
+
+### Allez voir le Wiki du projet !
+
+Voici le lien du Wiki pour avoir plus d'informations sur l'organisation du projet : https://github.com/emweb-project/Roadweb/wiki/Organisation-des-branches
