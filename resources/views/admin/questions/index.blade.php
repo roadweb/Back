@@ -1,4 +1,4 @@
-@extends('app')
+@extends('admin.app')
 
 @section('content')
     <div class="container-fluid">
@@ -29,7 +29,7 @@
             </div>
             <div class="col-sm-10">
                 @foreach($questions as $question)
-                    @include('questions.components.question-list')
+                    @include('admin.questions.components.question-list')
                 @endforeach
             </div>
         </div>

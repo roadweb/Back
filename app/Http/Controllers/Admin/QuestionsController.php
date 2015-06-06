@@ -27,7 +27,7 @@ class QuestionsController extends Controller
 
         $states = State::lists('name', 'id');
 
-        return view('questions.index', compact('questions', 'states'));
+        return view('admin.questions.index', compact('questions', 'states'));
     }
 
     /**
@@ -84,7 +84,7 @@ class QuestionsController extends Controller
         $question->state_id = $request->get('state_id');
         $question->save();
 
-        return redirect(route('questions.index'));
+        return redirect(route('admin.questions.index'));
     }
 
     /**

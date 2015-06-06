@@ -36,6 +36,6 @@ class StatsController extends Controller
 
         $categories = Category::count();
 
-        return view('stats.index', compact('posts', 'posts_published', 'posts_sticky', 'posts_editing', 'users', 'jobs', 'questions', 'categories'));
+        return view('admin.stats.index', compact('posts', 'posts_published', 'posts_sticky', 'posts_editing', 'users', 'jobs', 'questions', 'categories'));
 	}
 }

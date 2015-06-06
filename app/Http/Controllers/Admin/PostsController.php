@@ -25,7 +25,7 @@ class PostsController extends Controller
         }
         $posts = $req->get();
 
-        return view('posts.index', compact('posts'));
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -40,7 +40,7 @@ class PostsController extends Controller
         $jobs = Job::lists('name', 'id');
 
 
-        return view('posts.create', compact('auth_id', 'categories', 'jobs'));
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs'));
     }
 
     /**
