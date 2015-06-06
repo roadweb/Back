@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class BlogController extends Controller
 {
 
     /**
@@ -15,12 +15,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home.index');
+        return view('pages.blog.index');
     }
 
-    public function landing()
+    public function article($id)
     {
-        return view('pages.landing.index');
+        return view('pages.blog.article');
     }
-
 }

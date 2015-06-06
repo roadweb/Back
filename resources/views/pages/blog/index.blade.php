@@ -1,5 +1,5 @@
 @extends('pages.app')
 
 @section('content')
-    <p>Je suis la home</p>
+    <p>Je suis le blog</p>
 @stop

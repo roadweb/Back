@@ -43,9 +43,17 @@ Route::group(['prefix' => 'admin'], function() {
 | Site web
 |--------------------------------------------------------------------------
 |
-|
+| Les routes vers les pages du site
 |
 */
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/landing', 'HomeController@landing');
+
+Route::get('/blog', 'BlogController@index');
+
+Route::get('/blog/{id}', 'BlogController@article');
 
 
 /*
