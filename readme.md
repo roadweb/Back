@@ -5,7 +5,7 @@
 Vous vous trouvez dans le projet Roadweb.
 Ici, on va développer le site, en passant par le CMS.
 Les fichiers qui afficheront le site web se trouvent dans le dossier `ressources/view/pages`.
-Pour les intégrateurs, ne touchez pas au code PHP. S'il y a un problème que vous rencontrez, signalez le a un développeur, ou dans la partie fixes de github.
+Pour les intégrateurs, ne touchez pas au code PHP. S'il y a un problème que vous rencontrez, signalez le a un développeur, ou dans la partie issues de github.
 
 
 ## Starter & Downloads
@@ -28,6 +28,8 @@ composer install
 ### Modifier le fichier .env
 
 En fonction de vos configurations locales, il faut modifier le fichier `.env` dans la section base de donnée.
+Ensuite lancer la commande de migration `php artisan migrate`.
+
 
 ## Tutorials
 
