@@ -1,14 +1,12 @@
-# CMS-API
+# Roadweb - Readme
 
 ## Explication
 
-Vous êtes dans la section "Back Office".
-On développe ici tout le systyème de gestion de contenu, édition, création, gestion etc...
+Vous vous trouvez dans le projet Roadweb.
+Ici, on va développer le site, en passant par le CMS.
+Les fichiers qui afficheront le site web se trouvent dans le dossier `ressources/view/pages`.
+Pour les intégrateurs, ne touchez pas au code PHP. S'il y a un problème que vous rencontrez, signalez le a un développeur, ou dans la partie fixes de github.
 
-Le Back Office est découpé en deux parties.
-
-Une partie CMS, dans laquelle on devra se logger pour pouvoir gérer les contenus sur le site.
-Une partie API qui se chargera d'envoyer une réponse en fonction d'une requête.
 
 ## Starter & Downloads
 
