@@ -27,7 +27,7 @@ composer install
 
 ### Modifier le fichier .env
 
-Il faut modifier renommer le fichier `.envexample` et ensuite en fonction de vos configurations locales, il faut modifier le fichier `.env` dans la section base de donnée.
+Il faut modifier renommer le fichier `.env.example` et ensuite en fonction de vos configurations locales, il faut modifier le fichier `.env` dans la section base de donnée.
 Ensuite lancer la commande de migration `php artisan migrate`.
 
 
