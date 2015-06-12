@@ -189,7 +189,6 @@ body {
 .rw-index-article-min-date {
   padding: 0px;
   height: 50px;
-  line-height: 13px;
   display: inline-block;
   vertical-align: top;
   border-radius: 0px;
@@ -197,14 +196,14 @@ body {
 }
 
 /* line 172, index_last_articles.scss */
-/* line 174, index_last_articles.scss */
+/* line 173, index_last_articles.scss */
 .rw-index-article-min-link {
   display: inline-block;
   vertical-align: top;
 }
 
 /* line 175, index_last_articles.scss */
-/* line 179, index_last_articles.scss */
+/* line 178, index_last_articles.scss */
 .rw-index-article-min-link a {
   text-decoration: none;
   color: black;
