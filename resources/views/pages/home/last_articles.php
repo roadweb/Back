@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>DERNIERS ARTICLES INDEX</title>
-<link href="../../public/css/sass/index_last_articles.css" rel="stylesheet" type="text/css">
+<link href="../../../../public/css/sass/index_last_articles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

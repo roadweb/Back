@@ -7,7 +7,7 @@ body {
 }
 
 /*variables*/
-/* line 29, index_last_articles.scss */
+/* line 35, index_last_articles.scss */
 .rw-index-last-articles-container, .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: #ebebe6;
   box-sizing: border-box;
@@ -17,15 +17,16 @@ body {
   margin: 0 auto;
   padding: 1px 30px 0px 30px;
 }
-/* line 36, index_last_articles.scss */
+/* line 42, index_last_articles.scss */
 .rw-index-last-articles-container h1, .rw-index-open-articles-container h1, .rw-index-open-articles-container-min h1 {
   color: #c1392b;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
+  font-weight: 300;
 }
 
-/* line 44, index_last_articles.scss */
+/* line 51, index_last_articles.scss */
 .rw-index-last-article, .rw-index-open-article, .rw-index-open-article-min {
   display: inline-block;
   box-sizing: border-box;
@@ -51,48 +52,48 @@ body {
   border: 4px solid white;
   margin-right: 86px;
 }
-/* line 60, index_last_articles.scss */
+/* line 67, index_last_articles.scss */
 .rw-index-last-article h1, .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: black;
   text-shadow: 2px 2px 2px #fff;
 }
-/* line 67, index_last_articles.scss */
+/* line 74, index_last_articles.scss */
 .rw-index-last-article p, .rw-index-open-article p, .rw-index-open-article-min p {
   text-align: center;
   color: black;
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 74, index_last_articles.scss */
+/* line 81, index_last_articles.scss */
 .rw-index-last-article:last-child, .rw-index-open-article:last-child, .rw-index-open-article-min:last-child {
   margin-right: 0px;
 }
 
-/* line 78, index_last_articles.scss */
+/* line 85, index_last_articles.scss */
 .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: transparent;
 }
 
-/* line 83, index_last_articles.scss */
+/* line 90, index_last_articles.scss */
 .rw-index-open-article, .rw-index-open-article-min {
   border: 0px solid white;
   background: transparent;
   padding: 0px;
 }
-/* line 88, index_last_articles.scss */
+/* line 95, index_last_articles.scss */
 .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: #c1392b;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
 }
-/* line 94, index_last_articles.scss */
+/* line 101, index_last_articles.scss */
 .rw-index-open-article p, .rw-index-open-article-min p {
   text-align: center;
   color: black;
 }
 
-/* line 101, index_last_articles.scss */
+/* line 108, index_last_articles.scss */
 .rw-index-open-article-date, .rw-index-article-min-date {
   background-color: white;
   border-radius: 60px;
@@ -101,19 +102,19 @@ body {
   padding: 10px;
   margin: 0 auto;
 }
-/* line 108, index_last_articles.scss */
+/* line 115, index_last_articles.scss */
 .rw-index-open-article-date p, .rw-index-article-min-date p {
   color: black;
   font-size: 12px;
   line-height: 13px;
 }
-/* line 112, index_last_articles.scss */
+/* line 119, index_last_articles.scss */
 .rw-index-open-article-date p .rw-index-day, .rw-index-article-min-date p .rw-index-day {
   color: #c1392b;
   font-size: 14px;
 }
 
-/* line 119, index_last_articles.scss */
+/* line 126, index_last_articles.scss */
 .rw-index-open-article-tuto, .rw-index-open-article-codo, .rw-index-open-article-outi {
   height: 300px;
   -moz-box-shadow: 2px 2px 10px 0px #ebebe6;
@@ -138,17 +139,17 @@ body {
   border-bottom: 4px solid #3598db;
 }
 
-/* line 136, index_last_articles.scss */
+/* line 143, index_last_articles.scss */
 .rw-index-open-article-codo {
   border-bottom: 4px solid #16a086;
 }
 
-/* line 141, index_last_articles.scss */
+/* line 148, index_last_articles.scss */
 .rw-index-open-article-outi {
   border-bottom: 4px solid #f4c40c;
 }
 
-/* line 150, index_last_articles.scss */
+/* line 157, index_last_articles.scss */
 .rw-index-open-article-min {
   -moz-box-shadow: 2px 2px 10px 0px #ebebe6;
   -webkit-box-shadow: 2px 2px 10px 0px #ebebe6;
@@ -159,7 +160,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 161, index_last_articles.scss */
+/* line 168, index_last_articles.scss */
 .rw-index-article-min-date {
   padding: 0px;
   height: 50px;
@@ -170,12 +171,12 @@ body {
   background-color: #ebebe6;
 }
 
-/* line 172, index_last_articles.scss */
+/* line 179, index_last_articles.scss */
 .rw-index-article-min-link {
   display: inline-block;
   vertical-align: top;
 }
-/* line 175, index_last_articles.scss */
+/* line 182, index_last_articles.scss */
 .rw-index-article-min-link a {
   text-decoration: none;
   color: black;
