@@ -1,8 +1,14 @@
-@extends('pages.app')
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DERNIERS ARTICLES INDEX</title>
+<link href="../../public/css/sass/index_last_articles.css" rel="stylesheet" type="text/css">
+</head>
 
-@section('content')
+<body>
 
-    <section class="rw-index-last-articles-container">
+<section class="rw-index-last-articles-container">
 
 	<h1>Derniers articles du blog</h1>
 
@@ -90,5 +96,7 @@
 	</article>
 </section>
 
+</body>
+</html>
 
-@stop
+
