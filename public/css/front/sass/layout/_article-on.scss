@@ -1,86 +1,20 @@
-@charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  width: 100%;
-  font-family: 'Open Sans', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/*************************
-couleurs métiers
-**************************/
 /*************************
 block de l'article
 **************************/
 .rw-blog-article-container {
   width: 70%;
   height: auto;
-  margin: 50px;
-  /* margin à enlever lors de l'intégration finale*/
-  border: 2px solid #36A7DE;
+
+  margin: 50px; /* margin à enlever lors de l'intégration finale*/
+  border: 2px solid $ColorDesignFonce;
+
   /* triangle bas d'article fait en image. A voir pour le faire en CSS*/
   background: url(../../img/triangledesign.png) scroll no-repeat right bottom;
   padding-bottom: 2%;
 }
 
 /* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
+
 /*
 .rw-blog-article-container-arrow {
   width: 0;
@@ -100,30 +34,24 @@ block de l'article
   top: 97%;
 
 }*/
+
+
+
 /*************************
 Block Titre de l'article
 **************************/
 .rw-blog-article-header {
-  background-image: -webkit-linear-gradient(#fff, #EBEBE6);
-  background-image: linear-gradient(#fff, #EBEBE6);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  background-image:linear-gradient(#fff, $GrisClair);
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .rw-blog-article-header-date {
   width: 100px;
   padding: 15px 10px;
   text-align: center;
-  background-color: #EBEBE6;
+  background-color: $GrisClair;
   font-size: 14px;
 }
 
@@ -142,20 +70,24 @@ Block Titre de l'article
 /*************************
 jour date et nombre commentaires en rouge
 **************************/
+
 .rw-blog-article-header-date-red {
-  color: #BF382A;
+  color: $Rouge;
   font-size: 20px;
 }
 
 .rw-blog-article-comment-nbr-red {
-  color: #BF382A;
+  color: $Rouge;
   font-size: 24px;
   font-weight: bold;
 }
 
+
+
 /*************************
 Block contenu de l'article
 **************************/
+
 .rw-blog-article-content {
   width: 100%;
   padding: 10px;
@@ -172,16 +104,19 @@ Block contenu de l'article
   margin: 0 5%;
   width: 90%;
   padding: 10px;
+
 }
 
 .rw-blog-article-content h4 {
-  color: #72CFF5;
+  color: $ColorDesignClair;
   font-weight: bold;
+
 }
 
 /*************************
 Block commentaire de l'article
 **************************/
+
 .rw-blog-article-comment-nbr {
   width: 150px;
   text-align: center;
@@ -189,12 +124,14 @@ Block commentaire de l'article
   margin: 0 5%;
 }
 
+
 .rw-blog-article-comment-arrow {
   width: 0;
   height: 0;
   margin: 10px auto;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
+
   border-top: 25px solid #000000;
 }
 
@@ -203,7 +140,9 @@ Block commentaire de l'article
   width: 90%;
   margin: 2% 5%;
   padding: 10px;
-  box-shadow: 0 3px 2px #EBEBE6;
+
+  box-shadow: 0 3px 2px $GrisClair; // design amélioré par rapport à la maquette pour une meilleure visibilité
+
 }
 
 .rw-blog-article-comment-cmt-ord img {
