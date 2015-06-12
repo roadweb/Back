@@ -39,7 +39,7 @@
 				<p><font class="rw-index-day">12</font><br>
 			Janvier<br> 2015</p>
 		</div>
-			<p>titre de l'article</p>
+			<p class="rw-index-open-article-bcg">titre de l'article</p>
 		</div>
 	</article>
 	<article class="rw-index-open-article">
@@ -50,7 +50,7 @@
 				<p><font class="rw-index-day">12</font><br>
 			Janvier<br> 2015</p>
 		</div>
-			<p>titre de l'article</p>
+			<p class="rw-index-open-article-bcg">titre de l'article</p>
 		</div>
 	</article>
 	<article class="rw-index-open-article">
@@ -61,7 +61,7 @@
 			Janvier <br>2015</p>
 			</div>
 			<img src="../../../../public/images/open_article_test.jpg" alt="">
-			<p>titre de l'article blabla blabla blabla blabla blabla test</p>
+			<p class="rw-index-open-article-bcg">titre de l'article blabla blabla blabla blabla blabla test</p>
 		</div>
 	</article>
 </section>
