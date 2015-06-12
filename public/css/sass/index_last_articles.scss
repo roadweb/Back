@@ -83,7 +83,8 @@ $gradientArticleTop:#fff;
 		text-align:center;
 		color:$colorMain;
 		font-family:$fontFamily;
-		font-size:14px;
+		font-size:13px;
+		padding:0px 20px 5px 20px;
 	}
 }
 
@@ -105,6 +106,9 @@ $gradientArticleTop:#fff;
 		color:$colorTitle;
 		line-height: 20px;
 		font-size:$fontSizeTitle;
+	}
+	p {
+		font-size:14px;
 	}
 	img {
 		width:300px;

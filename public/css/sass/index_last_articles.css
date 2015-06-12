@@ -71,32 +71,37 @@ body {
   text-align: center;
   color: black;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  padding: 0px 20px 5px 20px;
 }
 
-/* line 90, index_last_articles.scss */
+/* line 91, index_last_articles.scss */
 .rw-index-last-article:last-child, .rw-index-open-article:last-child, .rw-index-open-article-min:last-child {
   margin-right: 0px;
 }
 
-/* line 94, index_last_articles.scss */
+/* line 95, index_last_articles.scss */
 .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: transparent;
 }
 
-/* line 99, index_last_articles.scss */
+/* line 100, index_last_articles.scss */
 .rw-index-open-article, .rw-index-open-article-min {
   border: 0px solid white;
   background: transparent;
   padding: 0px;
 }
-/* line 104, index_last_articles.scss */
+/* line 105, index_last_articles.scss */
 .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: #c1392b;
   line-height: 20px;
   font-size: 25px;
 }
-/* line 109, index_last_articles.scss */
+/* line 110, index_last_articles.scss */
+.rw-index-open-article p, .rw-index-open-article-min p {
+  font-size: 14px;
+}
+/* line 113, index_last_articles.scss */
 .rw-index-open-article img, .rw-index-open-article-min img {
   width: 300px;
   height: 224px;
@@ -105,7 +110,7 @@ body {
   border-bottom: 1px solid #808b8f;
 }
 
-/* line 118, index_last_articles.scss */
+/* line 122, index_last_articles.scss */
 .rw-index-open-article-date {
   background-color: white;
   border-radius: 60px;
@@ -127,19 +132,19 @@ body {
   -o-box-shadow: 2px 2px 10px 0px #e0e0e0;
   box-shadow: 2px 2px 10px 0px #e0e0e0;
 }
-/* line 134, index_last_articles.scss */
+/* line 138, index_last_articles.scss */
 .rw-index-open-article-date p {
   color: black;
   font-size: 11px;
   line-height: 12px;
 }
-/* line 138, index_last_articles.scss */
+/* line 142, index_last_articles.scss */
 .rw-index-open-article-date p .rw-index-day {
   color: #c1392b;
   font-size: 14px;
 }
 
-/* line 145, index_last_articles.scss */
+/* line 149, index_last_articles.scss */
 .rw-index-open-article-tuto, .rw-index-open-article-codo, .rw-index-open-article-outi {
   height: 300px;
   -moz-box-shadow: 5px -5px 10px 0px #e0e0e0;
@@ -166,17 +171,17 @@ body {
   z-index: 1;
 }
 
-/* line 164, index_last_articles.scss */
+/* line 168, index_last_articles.scss */
 .rw-index-open-article-codo {
   border-bottom: 4px solid #16a086;
 }
 
-/* line 169, index_last_articles.scss */
+/* line 173, index_last_articles.scss */
 .rw-index-open-article-outi {
   border-bottom: 4px solid #f4c40c;
 }
 
-/* line 179, index_last_articles.scss */
+/* line 183, index_last_articles.scss */
 .rw-index-open-article-min {
   -moz-box-shadow: 1px -1px 6px 1px #e0e0e0;
   -webkit-box-shadow: 1px -1px 6px 1px #e0e0e0;
@@ -187,7 +192,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 190, index_last_articles.scss */
+/* line 194, index_last_articles.scss */
 .rw-index-article-min-date {
   width: 60px;
   height: 50px;
@@ -198,7 +203,7 @@ body {
   padding: 5px;
   box-sizing: border-box;
 }
-/* line 199, index_last_articles.scss */
+/* line 203, index_last_articles.scss */
 .rw-index-article-min-date p {
   display: block;
   margin: 0 auto;
@@ -206,20 +211,20 @@ body {
   font-size: 11px;
   line-height: 12px;
 }
-/* line 206, index_last_articles.scss */
+/* line 210, index_last_articles.scss */
 .rw-index-article-min-date p .rw-index-day {
   color: #c1392b;
   font-size: 14px;
 }
 
-/* line 213, index_last_articles.scss */
+/* line 217, index_last_articles.scss */
 .rw-index-article-min-link {
   display: inline-block;
   vertical-align: top;
   width: 236px;
   height: 50px;
 }
-/* line 218, index_last_articles.scss */
+/* line 222, index_last_articles.scss */
 .rw-index-article-min-link a {
   display: block;
   float: left;
@@ -233,7 +238,7 @@ body {
   padding: 5px;
   text-align: center;
 }
-/* line 231, index_last_articles.scss */
+/* line 235, index_last_articles.scss */
 .rw-index-article-min-link img {
   float: right;
   height: 50px;

@@ -25,7 +25,7 @@
 	<article class="rw-index-last-article">
 		<h1>Titre de l'article</h1>
 		<img src="../../../../public/images/last_article_test.jpg" alt="">
-		<p>description de l'article</p>
+		<p>description de l'article blabla blabla blabla blabla blabla test</p>
 	</article>
 
 </section>
@@ -61,7 +61,7 @@
 			Janvier <br>2015</p>
 			</div>
 			<img src="../../../../public/images/open_article_test.jpg" alt="">
-			<p>titre de l'article</p>
+			<p>titre de l'article blabla blabla blabla blabla blabla test</p>
 		</div>
 	</article>
 </section>
