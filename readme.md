@@ -1,14 +1,12 @@
-# CMS-API
+# Roadweb - Readme - With Remote
 
 ## Explication
 
-Vous êtes dans la section "Back Office".
-On développe ici tout le systyème de gestion de contenu, édition, création, gestion etc...
+Vous vous trouvez dans le projet Roadweb.
+Ici, on va développer le site, en passant par le CMS.
+Les fichiers qui afficheront le site web se trouvent dans le dossier `ressources/view/pages`.
+Pour les intégrateurs, ne touchez pas au code PHP. S'il y a un problème que vous rencontrez, signalez le a un développeur, ou dans la partie issues de github.
 
-Le Back Office est découpé en deux parties.
-
-Une partie CMS, dans laquelle on devra se logger pour pouvoir gérer les contenus sur le site.
-Une partie API qui se chargera d'envoyer une réponse en fonction d'une requête.
 
 ## Starter & Downloads
 
@@ -29,9 +27,15 @@ composer install
 
 ### Modifier le fichier .env
 
-En fonction de vos configurations locales, il faut modifier le fichier `.env` dans la section base de donnée.
+Il faut modifier renommer le fichier `.env.example` et ensuite en fonction de vos configurations locales, il faut modifier le fichier `.env` dans la section base de donnée.
+Ensuite lancer la commande de migration `php artisan migrate`.
 
-### Tutorials
+
+## Tutorials
 
 Si vous êtes nouveaux dans Laravel, Grafikart fait une formation gratuite et ultra complète pour vous aider !
 http://www.grafikart.fr/formations/laravel
+
+## Allez voir le Wiki du projet !
+
+Voici le lien du Wiki pour avoir plus d'informations sur l'organisation du projet : https://github.com/emweb-project/Roadweb/wiki/Organisation-des-branches

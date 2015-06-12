@@ -1,38 +1,26 @@
 <?php namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-class HomeController extends Controller {
+use Illuminate\Http\Request;
 
-	/*
-	|--------------------------------------------------------------------------
-	| Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
-	|
-	*/
+class HomeController extends Controller
+{
 
-	/*
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        return view('pages.home.index');
+    }
 
-	/**
-	 * Show the application dashboard to the user.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return view('home');
-	}
+    public function landing()
+    {
+        return view('pages.landing.index');
+    }
 
 }

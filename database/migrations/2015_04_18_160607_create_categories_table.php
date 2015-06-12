@@ -20,7 +20,6 @@ class CreateCategoriesTable extends Migration {
             $table->timestamps();
 		});
 
-        Category::create(['name' => 'Article']);
         Category::create(['name' => 'Blog']);
         Category::create(['name' => 'Tutoriel']);
 	}

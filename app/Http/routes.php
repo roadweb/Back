@@ -15,25 +15,54 @@ use App\Post;
 
 /*
 |--------------------------------------------------------------------------
-| CMS
+| CMS - Admin
 |--------------------------------------------------------------------------
+|
+| Ici se trouvent les routes vers l'administration du site
+|
+*/
+
+Route::group(['prefix' => 'admin'], function() {
+
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/', ['as' => 'admin.home', 'uses' => 'Admin\HomeController@index']);
+        Route::resource('posts', 'Admin\PostsController');
+        Route::resource('users', 'Admin\UsersController');
+        Route::resource('questions', 'Admin\QuestionsController');
+        Route::resource('stats', 'Admin\StatsController');
+    });
+
+    Route::controllers([
+        'auth'     => 'Auth\AuthController',
+        'password' => 'Auth\PasswordController',
+    ]);
+});
+
+/*
+|--------------------------------------------------------------------------
+| Site web
+|--------------------------------------------------------------------------
+|
+| Les routes vers les pages du site
+|
 */
 
 Route::get('/', 'HomeController@index');
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::resource('posts', 'PostsController');
-    Route::resource('users', 'UsersController');
-    Route::resource('questions', 'QuestionsController');
-    Route::get('stats', 'StatsController@index');
-});
+Route::get('/landing', 'HomeController@landing');
 
+Route::get('/blog', 'BlogController@index');
+
+Route::get('/blog/{id}', 'BlogController@article');
 
 
 /*
 |--------------------------------------------------------------------------
 | API
 |--------------------------------------------------------------------------
+|
+| Il s'agit des routes liées à l'API
+|
 */
 
 Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
@@ -46,9 +75,3 @@ Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
         return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
     });
 });
-
-
-Route::controllers([
-    'auth'     => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-]);

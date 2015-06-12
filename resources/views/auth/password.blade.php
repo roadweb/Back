@@ -1,4 +1,4 @@
-@extends('app')
+@extends('admin.app')
 
 @section('content')
 <div class="container-fluid">
@@ -24,7 +24,7 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/password/email') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
