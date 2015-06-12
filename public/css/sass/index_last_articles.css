@@ -7,7 +7,7 @@ body {
 }
 
 /*variables*/
-/* line 35, index_last_articles.scss */
+/* line 38, index_last_articles.scss */
 .rw-index-last-articles-container, .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: #ebebe6;
   box-sizing: border-box;
@@ -17,16 +17,17 @@ body {
   margin: 0 auto;
   padding: 1px 30px 0px 30px;
 }
-/* line 42, index_last_articles.scss */
+/* line 45, index_last_articles.scss */
 .rw-index-last-articles-container h1, .rw-index-open-articles-container h1, .rw-index-open-articles-container-min h1 {
   color: #c1392b;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 25px;
 }
 
-/* line 51, index_last_articles.scss */
+/* line 55, index_last_articles.scss */
 .rw-index-last-article, .rw-index-open-article, .rw-index-open-article-min {
   display: inline-block;
   box-sizing: border-box;
@@ -52,75 +53,99 @@ body {
   border: 4px solid white;
   margin-right: 86px;
 }
-/* line 67, index_last_articles.scss */
+/* line 71, index_last_articles.scss */
 .rw-index-last-article h1, .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: black;
   text-shadow: 2px 2px 2px #fff;
+  font-size: 16px;
 }
-/* line 74, index_last_articles.scss */
+/* line 76, index_last_articles.scss */
+.rw-index-last-article img, .rw-index-open-article img, .rw-index-open-article-min img {
+  width: 200px;
+  height: 206px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 82, index_last_articles.scss */
 .rw-index-last-article p, .rw-index-open-article p, .rw-index-open-article-min p {
   text-align: center;
   color: black;
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
-/* line 81, index_last_articles.scss */
+/* line 90, index_last_articles.scss */
 .rw-index-last-article:last-child, .rw-index-open-article:last-child, .rw-index-open-article-min:last-child {
   margin-right: 0px;
 }
 
-/* line 85, index_last_articles.scss */
+/* line 94, index_last_articles.scss */
 .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: transparent;
 }
 
-/* line 90, index_last_articles.scss */
+/* line 99, index_last_articles.scss */
 .rw-index-open-article, .rw-index-open-article-min {
   border: 0px solid white;
   background: transparent;
   padding: 0px;
 }
-/* line 95, index_last_articles.scss */
+/* line 104, index_last_articles.scss */
 .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: #c1392b;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
   line-height: 20px;
+  font-size: 25px;
 }
-/* line 101, index_last_articles.scss */
-.rw-index-open-article p, .rw-index-open-article-min p {
-  text-align: center;
-  color: black;
+/* line 109, index_last_articles.scss */
+.rw-index-open-article img, .rw-index-open-article-min img {
+  width: 300px;
+  height: 224px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #808b8f;
 }
 
-/* line 108, index_last_articles.scss */
-.rw-index-open-article-date, .rw-index-article-min-date {
+/* line 118, index_last_articles.scss */
+.rw-index-open-article-date {
   background-color: white;
   border-radius: 60px;
   width: 60px;
   height: 60px;
-  padding: 10px;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  /* la moitié de la hauteur du bloc qui la contient  */
+  left: 50%;
+  /* la moitié de la largeur du bloc qui la contient  */
+  margin-top: -50px;
+  /* la moitié de la hauteur de l'image + 20px */
+  margin-left: -30px;
+  /* la moitié de la largeur de l'image  */
+  z-index: 2;
+  -moz-box-shadow: 2px 2px 10px 0px #e0e0e0;
+  -webkit-box-shadow: 2px 2px 10px 0px #e0e0e0;
+  -o-box-shadow: 2px 2px 10px 0px #e0e0e0;
+  box-shadow: 2px 2px 10px 0px #e0e0e0;
 }
-/* line 115, index_last_articles.scss */
-.rw-index-open-article-date p, .rw-index-article-min-date p {
+/* line 134, index_last_articles.scss */
+.rw-index-open-article-date p {
   color: black;
-  font-size: 12px;
-  line-height: 13px;
+  font-size: 11px;
+  line-height: 12px;
 }
-/* line 119, index_last_articles.scss */
-.rw-index-open-article-date p .rw-index-day, .rw-index-article-min-date p .rw-index-day {
+/* line 138, index_last_articles.scss */
+.rw-index-open-article-date p .rw-index-day {
   color: #c1392b;
   font-size: 14px;
 }
 
-/* line 126, index_last_articles.scss */
+/* line 145, index_last_articles.scss */
 .rw-index-open-article-tuto, .rw-index-open-article-codo, .rw-index-open-article-outi {
   height: 300px;
-  -moz-box-shadow: 2px 2px 10px 0px #ebebe6;
-  -webkit-box-shadow: 2px 2px 10px 0px #ebebe6;
-  -o-box-shadow: 2px 2px 10px 0px #ebebe6;
-  box-shadow: 2px 2px 10px 0px #ebebe6;
+  -moz-box-shadow: 5px -5px 10px 0px #e0e0e0;
+  -webkit-box-shadow: 5px -5px 10px 0px #e0e0e0;
+  -o-box-shadow: 5px -5px 10px 0px #e0e0e0;
+  box-shadow: 5px -5px 10px 0px #e0e0e0;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=$boxshadowColorArticle, Direction=134, Strength=10);
   background: -moz-linear-gradient(top, white 0%, #ebebe6 100%);
   /* FF3.6+ */
@@ -137,48 +162,83 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradientArticleTop', endColorstr='$gradientArticleBottom',GradientType=0 );
   /* IE6-9 */
   border-bottom: 4px solid #3598db;
+  position: relative;
+  z-index: 1;
 }
 
-/* line 143, index_last_articles.scss */
+/* line 164, index_last_articles.scss */
 .rw-index-open-article-codo {
   border-bottom: 4px solid #16a086;
 }
 
-/* line 148, index_last_articles.scss */
+/* line 169, index_last_articles.scss */
 .rw-index-open-article-outi {
   border-bottom: 4px solid #f4c40c;
 }
 
-/* line 157, index_last_articles.scss */
+/* line 179, index_last_articles.scss */
 .rw-index-open-article-min {
-  -moz-box-shadow: 2px 2px 10px 0px #ebebe6;
-  -webkit-box-shadow: 2px 2px 10px 0px #ebebe6;
-  -o-box-shadow: 2px 2px 10px 0px #ebebe6;
-  box-shadow: 2px 2px 10px 0px #ebebe6;
+  -moz-box-shadow: 1px -1px 6px 1px #e0e0e0;
+  -webkit-box-shadow: 1px -1px 6px 1px #e0e0e0;
+  -o-box-shadow: 1px -1px 6px 1px #e0e0e0;
+  box-shadow: 1px -1px 6px 1px #e0e0e0;
   height: 50px;
   width: 300px;
   box-sizing: border-box;
 }
 
-/* line 168, index_last_articles.scss */
+/* line 190, index_last_articles.scss */
 .rw-index-article-min-date {
-  padding: 0px;
+  width: 60px;
   height: 50px;
-  line-height: 13px;
   display: inline-block;
   vertical-align: top;
   border-radius: 0px;
   background-color: #ebebe6;
+  padding: 5px;
+  box-sizing: border-box;
+}
+/* line 199, index_last_articles.scss */
+.rw-index-article-min-date p {
+  display: block;
+  margin: 0 auto;
+  color: black;
+  font-size: 11px;
+  line-height: 12px;
+}
+/* line 206, index_last_articles.scss */
+.rw-index-article-min-date p .rw-index-day {
+  color: #c1392b;
+  font-size: 14px;
 }
 
-/* line 179, index_last_articles.scss */
+/* line 213, index_last_articles.scss */
 .rw-index-article-min-link {
   display: inline-block;
   vertical-align: top;
+  width: 236px;
+  height: 50px;
 }
-/* line 182, index_last_articles.scss */
+/* line 218, index_last_articles.scss */
 .rw-index-article-min-link a {
+  display: block;
+  float: left;
   text-decoration: none;
   color: black;
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+}
+/* line 231, index_last_articles.scss */
+.rw-index-article-min-link img {
+  float: right;
+  height: 50px;
+  width: 26px;
+  border-bottom: 0px solid #000;
+  margin-right: 0px;
+  display: inline;
 }
