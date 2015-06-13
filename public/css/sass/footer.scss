@@ -9,26 +9,15 @@ body{
 
 /*variables*/
 $bcgContainer:#ebebe6;
-$bcgDate:#fff;
+$bcgContact:#fff;
+$bcgSubsc:#7e8c8d;
 
-$borderColorArticle:#fff;
-$borderColorTuto:#3598db;
-
-$borderColorCodo:#16a086;
-$borderColorOuti:#f4c40c;
-
-$boxshadowColorArticle:#e0e0e0;
-
-$colorLastArticleTitle:#000;
 $colorTitle:#c1392b;
-$colorA:#000;
 $colorMain:#000;
-$colorDay:#c1392b;
+$colorBtnSubsc:#fff;
 
 $fontFamily:'Open Sans', sans-serif;
 $fontTitle:'Open Sans', sans-serif;
-$fontSizeDate:11px;
-$fontSizeDay:14px;
 $fontSizeTitle:25px;
 
 $gradientArticleBottom:#ebebe6;
@@ -40,8 +29,120 @@ footer {
 	width:100%;
 	background-color:$bcgContainer;
 	box-sizing:border-box;
-	padding:30px;
+	padding:25px 30px 15px 30px;
+
+	p {
+		font-family:$fontFamily;
+	}
 }
 
+.rw-index-footer-contact {
+	background-color:$bcgContact;
+	float:left;
+	width:68%;
+	height:80px;
+	padding:0px 150px 0px 50px;
+	box-sizing:border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	p {
+		text-align:left;
+		font-size:13px;
+		line-height:25px;
+		a {
+			text-decoration:none;
+			color:#bf3a27;
+		}
+	}
+}
 
+.rw-index-footer-btn-subscription {
+	width:345px;
+	height:80px;
+	background-color:$bcgSubsc;
+	float:right;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	a {
+		display:block;
+		font-family:$fontFamily;
+		line-height:80px;
+		margin:0 auto;
+		text-align:center;
+		color:$colorBtnSubsc;
+		font-size:20px;
+		text-decoration:none;
+	}
+}
 
+.rw-index-footer-nav {
+	margin-top:20px;
+	width:100%;
+	display:block;
+
+	/*test en attendant d'avoir l'image*/
+	.rw-index-footer-test {
+		float:left;
+		width:65px;
+		height:65px;
+		background-color:#c1392b;
+		margin-right:20px;
+	}
+
+	p {
+		color:#c1392b;
+		font-size:20px;
+		line-height:65px;
+		margin:0 auto;
+		float:left;
+		width:200px;
+		display:block;
+	}
+	img {
+		float:left;
+		width:65px;
+		height:65px;
+	}
+
+	ul {
+
+		height:65px;
+		float:left;
+		margin:0 auto;
+		padding-left:0px;
+		li {
+			height:65px;
+			display:block;
+			float:left;
+			list-style:none;
+			margin:15px;
+			a {
+				display:block;
+				font-family:$fontFamily;
+				text-decoration:none;
+				color:#bec3c9;
+				font-size:20px;
+				img {
+					width:40px;
+					height:40px;
+				}
+			}
+		}
+		
+		&:last-child{
+			float:right;
+			li {
+				padding-top:4px;
+				&:last-child {
+					margin-right:0px;
+				}
+			}
+		}
+	}
+}
+
+.clear {
+	clear:both;
+}

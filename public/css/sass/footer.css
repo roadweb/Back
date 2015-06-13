@@ -7,11 +7,138 @@ body {
 }
 
 /*variables*/
-/* line 38, footer.scss */
+/* line 27, footer.scss */
 footer {
   height: 210px;
   width: 100%;
   background-color: #ebebe6;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 25px 30px 15px 30px;
+}
+/* line 34, footer.scss */
+footer p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 39, footer.scss */
+.rw-index-footer-contact {
+  background-color: white;
+  float: left;
+  width: 68%;
+  height: 80px;
+  padding: 0px 150px 0px 50px;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 49, footer.scss */
+.rw-index-footer-contact p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 25px;
+}
+/* line 53, footer.scss */
+.rw-index-footer-contact p a {
+  text-decoration: none;
+  color: #bf3a27;
+}
+
+/* line 60, footer.scss */
+.rw-index-footer-btn-subscription {
+  width: 345px;
+  height: 80px;
+  background-color: #7e8c8d;
+  float: right;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 68, footer.scss */
+.rw-index-footer-btn-subscription a {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  line-height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* line 80, footer.scss */
+.rw-index-footer-nav {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  /*test en attendant d'avoir l'image*/
+}
+/* line 86, footer.scss */
+.rw-index-footer-nav .rw-index-footer-test {
+  float: left;
+  width: 65px;
+  height: 65px;
+  background-color: #c1392b;
+  margin-right: 20px;
+}
+/* line 94, footer.scss */
+.rw-index-footer-nav p {
+  color: #c1392b;
+  font-size: 20px;
+  line-height: 65px;
+  margin: 0 auto;
+  float: left;
+  width: 200px;
+  display: block;
+}
+/* line 103, footer.scss */
+.rw-index-footer-nav img {
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+/* line 109, footer.scss */
+.rw-index-footer-nav ul {
+  height: 65px;
+  float: left;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+/* line 115, footer.scss */
+.rw-index-footer-nav ul li {
+  height: 65px;
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 15px;
+}
+/* line 121, footer.scss */
+.rw-index-footer-nav ul li a {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #bec3c9;
+  font-size: 20px;
+}
+/* line 127, footer.scss */
+.rw-index-footer-nav ul li a img {
+  width: 40px;
+  height: 40px;
+}
+/* line 134, footer.scss */
+.rw-index-footer-nav ul:last-child {
+  float: right;
+}
+/* line 136, footer.scss */
+.rw-index-footer-nav ul:last-child li {
+  padding-top: 4px;
+}
+/* line 138, footer.scss */
+.rw-index-footer-nav ul:last-child li:last-child {
+  margin-right: 0px;
+}
+
+/* line 146, footer.scss */
+.clear {
+  clear: both;
 }

@@ -136,6 +136,8 @@ $gradientArticleTop:#fff;
 
 .rw-index-open-article-date {
 	background-color:$bcgDate;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
 	border-radius:60px;
 	width:60px;
 	height:60px;
@@ -211,6 +213,8 @@ $gradientArticleTop:#fff;
 	display:inline-block;
 	vertical-align:top;
 	border-radius:0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
 	background-color:$bcgContainer;
 	padding:5px;
 	box-sizing:border-box;
