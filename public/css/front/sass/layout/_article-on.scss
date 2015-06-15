@@ -6,7 +6,7 @@ block de l'article
   height: auto;
 
   margin: 50px; /* margin à enlever lors de l'intégration finale*/
-  border: 2px solid $ColorDesignFonce;
+  border: 2px solid $colorDesignFonce;
 
   /* triangle bas d'article fait en image. A voir pour le faire en CSS*/
   background: url(../../img/triangledesign.png) scroll no-repeat right bottom;
@@ -26,7 +26,7 @@ block de l'article
   position: absolute;
   bottom: 0;
   right: 0;
-  border-top: 25px solid $ColorDesignFonce;
+  border-top: 25px solid $colorDesignFonce;
 
   transform: rotate(-45deg);
 
@@ -41,30 +41,30 @@ block de l'article
 Block Titre de l'article
 **************************/
 .rw-blog-article-header {
-  background-image:linear-gradient(#fff, $GrisClair);
+  background-image:linear-gradient($color4, $color2);
   display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
+
+    p{ padding: 2%;}
 }
 
 .rw-blog-article-header-date {
   width: 100px;
   padding: 15px 10px;
   text-align: center;
-  background-color: $GrisClair;
+  background-color: $color2;
   font-size: 14px;
 }
 
-.rw-blog-article-header-date p {
-  padding: 2%;
-}
+
 
 .rw-blog-article-header h3 {
   text-align: left;
   width: 90%;
   margin: 0 auto;
   padding: 10px;
-  text-shadow: 2px 2px 2px #fff;
+  text-shadow: 2px 2px 2px $color4;
 }
 
 /*************************
@@ -72,12 +72,12 @@ jour date et nombre commentaires en rouge
 **************************/
 
 .rw-blog-article-header-date-red {
-  color: $Rouge;
+  color: $color3;
   font-size: 20px;
 }
 
 .rw-blog-article-comment-nbr-red {
-  color: $Rouge;
+  color: $color4;
   font-size: 24px;
   font-weight: bold;
 }
@@ -108,7 +108,7 @@ Block contenu de l'article
 }
 
 .rw-blog-article-content h4 {
-  color: $ColorDesignClair;
+  color: $colorDesignClair;
   font-weight: bold;
 
 }
@@ -132,7 +132,7 @@ Block commentaire de l'article
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
 
-  border-top: 25px solid #000000;
+  border-top: 25px solid $color5;
 }
 
 .rw-blog-article-comment-cmt-ord {
@@ -141,7 +141,7 @@ Block commentaire de l'article
   margin: 2% 5%;
   padding: 10px;
 
-  box-shadow: 0 3px 2px $GrisClair; // design amélioré par rapport à la maquette pour une meilleure visibilité
+  box-shadow: 0 3px 2px $color2; // design amélioré par rapport à la maquette pour une meilleure visibilité
 
 }
 
