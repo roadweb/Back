@@ -4,8 +4,13 @@ body{
 	width:1200px;
 	margin:0 auto;
 	/*border:1px solid black;*/
-	}
+}
 
+* {
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
 
 /*variables*/
 $bcgContainer:#ebebe6;
@@ -20,17 +25,11 @@ $fontFamily:'Open Sans', sans-serif;
 $fontTitle:'Open Sans', sans-serif;
 $fontSizeTitle:25px;
 
-$gradientArticleBottom:#ebebe6;
-$gradientArticleTop:#fff;
-
-
 footer {
 	height:210px;
 	width:100%;
 	background-color:$bcgContainer;
-	box-sizing:border-box;
-	padding:25px 30px 15px 30px;
-
+	padding:20px 30px;
 	p {
 		font-family:$fontFamily;
 	}
@@ -41,14 +40,13 @@ footer {
 	float:left;
 	width:68%;
 	height:80px;
-	padding:0px 150px 0px 50px;
-	box-sizing:border-box;
+	padding:10px 160px 10px 60px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	p {
 		text-align:left;
-		font-size:13px;
+		font-size:14px;
 		line-height:25px;
 		a {
 			text-decoration:none;
@@ -107,7 +105,6 @@ footer {
 	}
 
 	ul {
-
 		height:65px;
 		float:left;
 		margin:0 auto;

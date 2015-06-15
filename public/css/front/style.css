@@ -1,3 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    color: red;
+    width: 1000px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+}
+
+.rw-header_container {
+    width: 100%;
+    min-height: 2000px;
+    border: grey thin solid;
+}
+
+.rw-clear {
+    clear: both;
+}
+
+.rw-header_top {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 136px;
+    margin-bottom: 55px;
+}
+
+.rw-logo {
+    display: block;
+    position: absolute;
+    height: 100px;
+    left: 30px;
+    bottom: 0;
+}
+
+.rw-slogan {
+    position: absolute;
+    display: block;
+    padding: 0;
+    left: 155px;
+    bottom: 0;
+    line-height: 100px;
+    font-size: 32px;
+}
+
+.rw-slogan em {
+    color: #ef382a;
+    font-style: normal;
+}
+
+/*barre de recherche*/
+.rw-search {
+    position: absolute;
+    height: 50px;
+    bottom: -25px;
+    right: 0;
+    width: 30%;
+}
+
+.rw-search .rw-loupe {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ef382a;
+}
+
+.rw-search input[type=search] {
+    display: block;
+    background-color: #ebebe6;
+    float: right;
+    padding-left: 52px;
+    margin-left: -50px;
+    height: 50px;
+    width: 100%;
+}
+
+/*pour tout le nav*/
+.rw-nav {
+    height: 90px;
+    margin-top: 30px;
+    font-size: 0;
+    background-color: #ebebe6;
+}
+
+.rw-nav ul, .rw-nav li {
+    display: inline-block;
+}
+
+.rw-nav .rw-ul_grey {
+    background-color: #ebebe6;
+    width: 70%;
+    text-align: right;
+}
+
+.rw-nav .rw-ul_grey li:first-child a {
+    color: #ef382a;
+}
+
+.rw-nav .rw-ul_grey a {
+    margin-right: 8px;
+}
+
+.rw-nav .rw-ul_red {
+    background-color: #ef382a;
+    width: 30%;
+}
+
+.rw-nav .rw-ul_red a {
+    margin-left: 8px;
+    color: white;
+}
+
+.rw-nav li {
+    list-style-type: none;
+    line-height: 90px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.rw-nav a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 90px;
+    color: black;
+    margin: 0 20px;
 }

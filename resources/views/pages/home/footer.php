@@ -16,12 +16,12 @@
 	<div class="rw-index-footer-test"></div><!-- quand l'image sera disponible <img src="" alt="">-->
 	<p>Nos Réseaux Sociaux</p>
 	<ul>
-		<li><a href=""><img src="../../../../public/images/linkedin.png" alt=""></a></li>
-		<li><a href=""><img src="../../../../public/images/twitter.png" alt=""></a></li>
-		<li><a href=""><img src="../../../../public/images/facebook.png" alt=""></a></li>
-		<li><a href=""><img src="../../../../public/images/pinterest.png" alt=""></a></li>
-		<li><a href=""><img src="../../../../public/images/google-plus.png" alt=""></a></li>
-		<li><a href=""><img src="../../../../public/images/behance.png" alt=""></a></li>
+		<li><a href=""><img src="../../../../public/images/linkedin.png" alt="linkedin"></a></li>
+		<li><a href=""><img src="../../../../public/images/twitter.png" alt="twitter"></a></li>
+		<li><a href=""><img src="../../../../public/images/facebook.png" alt="facebook"></a></li>
+		<li><a href=""><img src="../../../../public/images/pinterest.png" alt="pinterest"></a></li>
+		<li><a href=""><img src="../../../../public/images/google-plus.png" alt="google +"></a></li>
+		<li><a href=""><img src="../../../../public/images/behance.png" alt="behance"></a></li>
 	</ul>
 	<ul>
 		<li><a href="">Mentions légales</a></li>
