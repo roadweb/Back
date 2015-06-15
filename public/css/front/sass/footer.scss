@@ -1,9 +1,27 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+
+/*variables*/
+
+$color1 : #7e8b8c; /*gris foncé */
+$color2 : #ebebe6; /*gris clair*/
+$color3 : #bf382a; /*rouge*/
+$color4 : #fff; /*blanc*/
+$color5 : #000; /*noir*/
+$color6 : #bec3c9; /*gris très clair footer*/
+
+$fontFamily : 'Open Sans', sans-serif;
+
+
 
 body{
 	width:1200px;
 	margin:0 auto;
-	/*border:1px solid black;*/
+	font-family:$fontFamily;
+	color:$color5;
+	a {
+		text-decoration:none;
+	}
 }
 
 * {
@@ -12,31 +30,16 @@ body{
 	margin:0;
 }
 
-/*variables*/
-$bcgContainer:#ebebe6;
-$bcgContact:#fff;
-$bcgSubsc:#7e8c8d;
-
-$colorTitle:#c1392b;
-$colorMain:#000;
-$colorBtnSubsc:#fff;
-
-$fontFamily:'Open Sans', sans-serif;
-$fontTitle:'Open Sans', sans-serif;
-$fontSizeTitle:25px;
 
 footer {
 	height:210px;
 	width:100%;
-	background-color:$bcgContainer;
+	background-color:$color2;
 	padding:20px 30px;
-	p {
-		font-family:$fontFamily;
-	}
 }
 
 .rw-index-footer-contact {
-	background-color:$bcgContact;
+	background-color:$color4;
 	float:left;
 	width:68%;
 	height:80px;
@@ -49,8 +52,7 @@ footer {
 		font-size:14px;
 		line-height:25px;
 		a {
-			text-decoration:none;
-			color:#bf3a27;
+			color:$color3;
 		}
 	}
 }
@@ -58,39 +60,37 @@ footer {
 .rw-index-footer-btn-subscription {
 	width:345px;
 	height:80px;
-	background-color:$bcgSubsc;
+	background-color:$color1;
 	float:right;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	a {
 		display:block;
-		font-family:$fontFamily;
 		line-height:80px;
 		margin:0 auto;
 		text-align:center;
-		color:$colorBtnSubsc;
+		color:$color4;
 		font-size:20px;
-		text-decoration:none;
+		font-weight:600;
 	}
 }
 
 .rw-index-footer-nav {
 	margin-top:20px;
 	width:100%;
-	display:block;
-
-	/*test en attendant d'avoir l'image*/
-	.rw-index-footer-test {
+	.rw-index-footer-nav-bcg-icon {
 		float:left;
 		width:65px;
 		height:65px;
-		background-color:#c1392b;
+		background-color:$color3;
+		background-image:url('../../../../public/images/reseaux-sociaux.png');
+		background-position: center;
+		background-repeat:no-repeat;
 		margin-right:20px;
 	}
-
 	p {
-		color:#c1392b;
+		color:$color3;
 		font-size:20px;
 		line-height:65px;
 		margin:0 auto;
@@ -98,12 +98,6 @@ footer {
 		width:200px;
 		display:block;
 	}
-	img {
-		float:left;
-		width:65px;
-		height:65px;
-	}
-
 	ul {
 		height:65px;
 		float:left;
@@ -117,9 +111,7 @@ footer {
 			margin:15px;
 			a {
 				display:block;
-				font-family:$fontFamily;
-				text-decoration:none;
-				color:#bec3c9;
+				color:$color6;
 				font-size:20px;
 				img {
 					width:40px;
@@ -127,7 +119,6 @@ footer {
 				}
 			}
 		}
-		
 		&:last-child{
 			float:right;
 			li {

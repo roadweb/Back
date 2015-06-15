@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>DERNIERS ARTICLES INDEX</title>
-<link href="../../../../public/css/sass/index_last_articles.css" rel="stylesheet" type="text/css">
+<link href="../../../../public/css/front/sass/index_last_articles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -33,29 +33,29 @@
 <section class="rw-index-open-articles-container">
 	<article class="rw-index-open-article">
 		<h1>Tutoriels</h1>
-		<div class="rw-index-open-article-tuto">
+		<div class="rw-index-open-article-content">
 			<img src="../../../../public/images/open_article_test.jpg" alt="">
 			<div class="rw-index-open-article-date">
 				<p><font class="rw-index-day">12</font><br>
 			Janvier<br> 2015</p>
-		</div>
+			</div>
 			<p class="rw-index-open-article-bcg">titre de l'article</p>
 		</div>
 	</article>
 	<article class="rw-index-open-article">
 		<h1>Codothèque</h1>
-		<div class="rw-index-open-article-codo">
+		<div class="rw-index-open-article-content">
 			<img src="../../../../public/images/open_article_test.jpg" alt="">
 			<div class="rw-index-open-article-date">
 				<p><font class="rw-index-day">12</font><br>
 			Janvier<br> 2015</p>
-		</div>
+			</div>
 			<p class="rw-index-open-article-bcg">titre de l'article</p>
 		</div>
 	</article>
 	<article class="rw-index-open-article">
 		<h1>Outils</h1>
-		<div class="rw-index-open-article-outi">
+		<div class="rw-index-open-article-content">
 			<div class="rw-index-open-article-date">
 				<p><font class="rw-index-day">12</font><br>
 			Janvier <br>2015</p>

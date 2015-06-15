@@ -1,21 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
-/* line 3, index_last_articles.scss */
+/* variables */
+/* line 34, index_last_articles.scss */
 body {
   width: 1200px;
   margin: 0 auto;
-  /*border:1px solid black;*/
+  font-family: "Open Sans", sans-serif;
+  color: black;
 }
 
-/* line 9, index_last_articles.scss */
+/* line 41, index_last_articles.scss */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-/*variables*/
 /*DERNIERS ARTICLES*/
-/* line 44, index_last_articles.scss */
+/* line 49, index_last_articles.scss */
 .rw-index-last-articles-container, .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: #ebebe6;
   width: 1140px;
@@ -24,22 +25,21 @@ body {
   margin: 0 auto;
   padding: 0px 30px;
 }
-/* line 50, index_last_articles.scss */
+/* line 55, index_last_articles.scss */
 .rw-index-last-articles-container h1, .rw-index-open-articles-container h1, .rw-index-open-articles-container-min h1 {
-  color: #c1392b;
+  color: #bf382a;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 2px 2px 2px #fff;
+  text-shadow: 2px 2px 2px white;
   margin: 10px 2px;
 }
 
-/* line 61, index_last_articles.scss */
+/* line 65, index_last_articles.scss */
 .rw-index-last-article, .rw-index-open-article, .rw-index-open-article-min {
   display: inline-block;
   vertical-align: top;
-  background: #ffffff;
+  background: white;
   /* Old browsers */
   background: -moz-linear-gradient(top, white 0%, #ebebe6 100%);
   /* FF3.6+ */
@@ -53,75 +53,82 @@ body {
   /* IE10+ */
   background: linear-gradient(to bottom, #ffffff 0%, #ebebe6 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradientArticleTop', endColorstr='$gradientArticleBottom',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color4', endColorstr='$color2',GradientType=0 );
   /* IE6-9 */
   width: 300px;
   height: 320px;
   border: 4px solid white;
   margin-right: 86px;
 }
-/* line 76, index_last_articles.scss */
+/* line 80, index_last_articles.scss */
 .rw-index-last-article h1, .rw-index-open-article h1, .rw-index-open-article-min h1 {
   color: black;
   font-size: 15px;
   margin: 5px 2px;
 }
-/* line 81, index_last_articles.scss */
+/* line 85, index_last_articles.scss */
 .rw-index-last-article img, .rw-index-open-article img, .rw-index-open-article-min img {
   width: 200px;
   height: 206px;
   display: block;
   margin: 0 auto;
 }
-/* line 87, index_last_articles.scss */
+/* line 91, index_last_articles.scss */
 .rw-index-last-article p, .rw-index-open-article p, .rw-index-open-article-min p {
   text-align: center;
-  color: black;
-  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   padding: 10px 20px;
 }
 
-/* line 96, index_last_articles.scss */
+/* line 98, index_last_articles.scss */
 .rw-index-last-article:last-child, .rw-index-open-article:last-child, .rw-index-open-article-min:last-child {
   margin-right: 0px;
 }
 
 /*ARTICLES OUVERTS*/
-/* line 101, index_last_articles.scss */
+/* line 103, index_last_articles.scss */
 .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: transparent;
 }
 
-/* line 106, index_last_articles.scss */
+/* line 108, index_last_articles.scss */
 .rw-index-open-article {
   border: 0px solid white;
   background: transparent;
   height: 300px;
   padding-top: 20px;
 }
-/* line 112, index_last_articles.scss */
+/* line 114, index_last_articles.scss */
 .rw-index-open-article h1 {
-  color: #c1392b;
+  color: #bf382a;
   margin: 10px 2px;
   font-size: 30px;
 }
-/* line 117, index_last_articles.scss */
-.rw-index-open-article p {
-  font-size: 14px;
+
+/* line 121, index_last_articles.scss */
+.rw-index-open-article-content {
+  height: 300px;
+  -moz-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  -webkit-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  -o-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  box-shadow: 2px 2px 10px 0px #7e8b8c;
+  border-bottom: 5px solid #f6d432;
+  position: relative;
 }
-/* line 120, index_last_articles.scss */
-.rw-index-open-article img {
+/* line 129, index_last_articles.scss */
+.rw-index-open-article-content img {
   width: 300px;
   height: 224px;
   display: block;
   margin: 0 auto;
-  border-bottom: 1px solid #808b8f;
+  border-bottom: 1px solid #7e8b8c;
 }
-/* line 128, index_last_articles.scss */
-.rw-index-open-article p.rw-index-open-article-bcg {
+/* line 136, index_last_articles.scss */
+.rw-index-open-article-content p.rw-index-open-article-bcg {
   height: 72px;
   padding: 15px;
+  background: white;
+  /* Old browsers */
   background: -moz-linear-gradient(top, white 0%, #ebebe6 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #ebebe6));
@@ -134,11 +141,12 @@ body {
   /* IE10+ */
   background: linear-gradient(to bottom, #ffffff 0%, #ebebe6 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradientArticleTop', endColorstr='$gradientArticleBottom',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color4', endColorstr='$color2',GradientType=0 );
   /* IE6-9 */
+  font-size: 14px;
 }
 
-/* line 141, index_last_articles.scss */
+/* line 151, index_last_articles.scss */
 .rw-index-open-article-date {
   background-color: white;
   -webkit-border-radius: 60px;
@@ -157,64 +165,41 @@ body {
   margin-left: -30px;
   /* la moitié de la largeur de l'image  */
   z-index: 2;
-  -moz-box-shadow: 2px 2px 10px 0px #e0e0e0;
-  -webkit-box-shadow: 2px 2px 10px 0px #e0e0e0;
-  -o-box-shadow: 2px 2px 10px 0px #e0e0e0;
-  box-shadow: 2px 2px 10px 0px #e0e0e0;
+  -moz-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  -webkit-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  -o-box-shadow: 2px 2px 10px 0px #7e8b8c;
+  box-shadow: 2px 2px 10px 0px #7e8b8c;
 }
-/* line 159, index_last_articles.scss */
+/* line 169, index_last_articles.scss */
 .rw-index-open-article-date p {
   padding: 10px;
-  color: black;
   font-size: 11px;
   line-height: 12px;
 }
-/* line 164, index_last_articles.scss */
+/* line 173, index_last_articles.scss */
 .rw-index-open-article-date p .rw-index-day {
-  color: #c1392b;
+  color: #bf382a;
   font-size: 14px;
 }
 
-/* line 171, index_last_articles.scss */
-.rw-index-open-article-tuto, .rw-index-open-article-codo, .rw-index-open-article-outi {
-  height: 300px;
-  -moz-box-shadow: 5px -5px 10px 0px #e0e0e0;
-  -webkit-box-shadow: 5px -5px 10px 0px #e0e0e0;
-  -o-box-shadow: 5px -5px 10px 0px #e0e0e0;
-  box-shadow: 5px -5px 10px 0px #e0e0e0;
-  border-bottom: 4px solid #3598db;
-  position: relative;
-  z-index: 1;
-}
-
-/* line 182, index_last_articles.scss */
-.rw-index-open-article-codo {
-  border-bottom: 4px solid #16a086;
-}
-
-/* line 187, index_last_articles.scss */
-.rw-index-open-article-outi {
-  border-bottom: 4px solid #f4c40c;
-}
-
 /*ARTICLES OUVERTS MINIS*/
-/* line 193, index_last_articles.scss */
+/* line 181, index_last_articles.scss */
 .rw-index-open-articles-container-min {
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
-/* line 198, index_last_articles.scss */
+/* line 186, index_last_articles.scss */
 .rw-index-open-article-min {
-  -moz-box-shadow: 1px -1px 6px 1px #e0e0e0;
-  -webkit-box-shadow: 1px -1px 6px 1px #e0e0e0;
-  -o-box-shadow: 1px -1px 6px 1px #e0e0e0;
-  box-shadow: 1px -1px 6px 1px #e0e0e0;
+  -moz-box-shadow: 1px -1px 6px 1px #7e8b8c;
+  -webkit-box-shadow: 1px -1px 6px 1px #7e8b8c;
+  -o-box-shadow: 1px -1px 6px 1px #7e8b8c;
+  box-shadow: 1px -1px 6px 1px #7e8b8c;
   height: 50px;
   width: 300px;
-  border: 0px solid #fff;
+  border: 0px solid #f6d432;
 }
 
-/* line 209, index_last_articles.scss */
+/* line 197, index_last_articles.scss */
 .rw-index-article-min-date {
   width: 60px;
   height: 50px;
@@ -226,35 +211,33 @@ body {
   background-color: #ebebe6;
   padding: 5px;
 }
-/* line 219, index_last_articles.scss */
+/* line 207, index_last_articles.scss */
 .rw-index-article-min-date p {
   display: block;
   margin: 0 auto;
   padding: 0px;
-  color: black;
   font-size: 11px;
   line-height: 12px;
 }
-/* line 226, index_last_articles.scss */
+/* line 213, index_last_articles.scss */
 .rw-index-article-min-date p .rw-index-day {
-  color: #c1392b;
+  color: #bf382a;
   font-size: 14px;
 }
 
-/* line 233, index_last_articles.scss */
+/* line 220, index_last_articles.scss */
 .rw-index-article-min-link {
   display: inline-block;
   vertical-align: top;
   width: 236px;
   height: 50px;
 }
-/* line 238, index_last_articles.scss */
+/* line 225, index_last_articles.scss */
 .rw-index-article-min-link a {
   display: block;
   float: left;
   text-decoration: none;
   color: black;
-  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   margin: 0 auto;
   height: 50px;
@@ -262,7 +245,7 @@ body {
   padding: 5px;
   text-align: center;
 }
-/* line 251, index_last_articles.scss */
+/* line 237, index_last_articles.scss */
 .rw-index-article-min-link img {
   float: right;
   height: 50px;

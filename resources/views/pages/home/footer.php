@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <title>FOOTER INDEX</title>
-<link href="../../../../public/css/sass/footer.css" rel="stylesheet" type="text/css">
+<link href="../../../../public/css/front/sass/footer.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
 <footer>
-<div class="rw-index-footer-contact"><p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="">formulaire</a> du site. Nous vous répondrons le plus rapidement possible.</p></div>
+<div class="rw-index-footer-contact"><p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="#">formulaire</a> du site. Nous vous répondrons le plus rapidement possible.</p></div>
 <div class="rw-index-footer-btn-subscription"><a href="#">Abonnement à Roadweb</a></div>
 <div class="clear"></div>
 <div class="rw-index-footer-nav">
-	<div class="rw-index-footer-test"></div><!-- quand l'image sera disponible <img src="" alt="">-->
+	<div class="rw-index-footer-nav-bcg-icon"></div>
 	<p>Nos Réseaux Sociaux</p>
 	<ul>
 		<li><a href=""><img src="../../../../public/images/linkedin.png" alt="linkedin"></a></li>
@@ -29,7 +29,6 @@
 		<li><a href="">Abonnement</a></li>
 	</ul>
 </div>
-
 </footer>
 
 </body>

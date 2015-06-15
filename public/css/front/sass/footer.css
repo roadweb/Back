@@ -1,32 +1,39 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
-/* line 3, footer.scss */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+/*variables*/
+/*gris foncé */
+/*gris clair*/
+/*rouge*/
+/*blanc*/
+/*noir*/
+/*gris très clair footer*/
+/* line 17, footer.scss */
 body {
   width: 1200px;
   margin: 0 auto;
-  /*border:1px solid black;*/
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+/* line 22, footer.scss */
+body a {
+  text-decoration: none;
 }
 
-/* line 9, footer.scss */
+/* line 27, footer.scss */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-/*variables*/
-/* line 28, footer.scss */
+/* line 34, footer.scss */
 footer {
   height: 210px;
   width: 100%;
   background-color: #ebebe6;
   padding: 20px 30px;
 }
-/* line 33, footer.scss */
-footer p {
-  font-family: "Open Sans", sans-serif;
-}
 
-/* line 38, footer.scss */
+/* line 41, footer.scss */
 .rw-index-footer-contact {
   background-color: white;
   float: left;
@@ -37,58 +44,57 @@ footer p {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 47, footer.scss */
+/* line 50, footer.scss */
 .rw-index-footer-contact p {
   text-align: left;
   font-size: 14px;
   line-height: 25px;
 }
-/* line 51, footer.scss */
+/* line 54, footer.scss */
 .rw-index-footer-contact p a {
-  text-decoration: none;
-  color: #bf3a27;
+  color: #bf382a;
 }
 
-/* line 58, footer.scss */
+/* line 60, footer.scss */
 .rw-index-footer-btn-subscription {
   width: 345px;
   height: 80px;
-  background-color: #7e8c8d;
+  background-color: #7e8b8c;
   float: right;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 66, footer.scss */
+/* line 68, footer.scss */
 .rw-index-footer-btn-subscription a {
   display: block;
-  font-family: "Open Sans", sans-serif;
   line-height: 80px;
   margin: 0 auto;
   text-align: center;
   color: white;
   font-size: 20px;
-  text-decoration: none;
+  font-weight: 600;
 }
 
-/* line 78, footer.scss */
+/* line 79, footer.scss */
 .rw-index-footer-nav {
   margin-top: 20px;
   width: 100%;
-  display: block;
-  /*test en attendant d'avoir l'image*/
 }
-/* line 84, footer.scss */
-.rw-index-footer-nav .rw-index-footer-test {
+/* line 82, footer.scss */
+.rw-index-footer-nav .rw-index-footer-nav-bcg-icon {
   float: left;
   width: 65px;
   height: 65px;
-  background-color: #c1392b;
+  background-color: #bf382a;
+  background-image: url("../../../../public/images/reseaux-sociaux.png");
+  background-position: center;
+  background-repeat: no-repeat;
   margin-right: 20px;
 }
 /* line 92, footer.scss */
 .rw-index-footer-nav p {
-  color: #c1392b;
+  color: #bf382a;
   font-size: 20px;
   line-height: 65px;
   margin: 0 auto;
@@ -97,19 +103,13 @@ footer p {
   display: block;
 }
 /* line 101, footer.scss */
-.rw-index-footer-nav img {
-  float: left;
-  width: 65px;
-  height: 65px;
-}
-/* line 107, footer.scss */
 .rw-index-footer-nav ul {
   height: 65px;
   float: left;
   margin: 0 auto;
   padding-left: 0px;
 }
-/* line 112, footer.scss */
+/* line 106, footer.scss */
 .rw-index-footer-nav ul li {
   height: 65px;
   display: block;
@@ -117,33 +117,31 @@ footer p {
   list-style: none;
   margin: 15px;
 }
-/* line 118, footer.scss */
+/* line 112, footer.scss */
 .rw-index-footer-nav ul li a {
   display: block;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
   color: #bec3c9;
   font-size: 20px;
 }
-/* line 124, footer.scss */
+/* line 116, footer.scss */
 .rw-index-footer-nav ul li a img {
   width: 40px;
   height: 40px;
 }
-/* line 131, footer.scss */
+/* line 122, footer.scss */
 .rw-index-footer-nav ul:last-child {
   float: right;
 }
-/* line 133, footer.scss */
+/* line 124, footer.scss */
 .rw-index-footer-nav ul:last-child li {
   padding-top: 4px;
 }
-/* line 135, footer.scss */
+/* line 126, footer.scss */
 .rw-index-footer-nav ul:last-child li:last-child {
   margin-right: 0px;
 }
 
-/* line 143, footer.scss */
+/* line 134, footer.scss */
 .clear {
   clear: both;
 }
