@@ -32,10 +32,22 @@ body{
 
 
 footer {
+	width:100%;
+}
+
+.rw-index-footer-bcg {
+	margin:0 auto;
+	display:block;
+	z-index:2;
+}
+
+.rw-index-footer-container {
 	height:210px;
 	width:100%;
 	background-color:$color2;
 	padding:20px 30px;
+	z-index:1;
+	margin-top:-10px;
 }
 
 .rw-index-footer-contact {
