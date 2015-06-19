@@ -62,7 +62,14 @@
 	}
 }
 
-.rw-nav {
+.fixNavigation{ 
+	z-index: 9999; 
+	position: fixed; 
+	top: -30px; /* Mise en forme */ 
+	width: 100%; /* <-- Largeur de votre site */ 
+} 
+
+#rw-nav {
 	height: 90px;
 	margin-top: 30px;
 	font-size: 0;
@@ -102,7 +109,6 @@
 
 	a {
 		display: inline-block;
-		text-decoration: none;
 		line-height: 90px;
 		color: black;
 		margin: 0 20px;

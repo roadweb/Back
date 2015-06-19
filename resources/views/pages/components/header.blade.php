@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="rw-clear"></div>
-    <nav class="rw-nav">
+    <nav id="rw-nav">
         <ul class="rw-ul_grey">
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Forum</a></li>

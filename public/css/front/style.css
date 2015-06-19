@@ -74,6 +74,14 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -103,9 +111,7 @@ footer {
   float: left;
   width: 68%;
   height: 80px;
-  padding: 10px 160px 10px 60px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  padding: 10px 60px;
   border-radius: 3px;
 }
 
@@ -124,15 +130,12 @@ footer {
   height: 80px;
   background-color: #7e8b8c;
   float: right;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
   border-radius: 8px;
 }
 
 .rw-index-footer-btn-subscription a {
   display: block;
   line-height: 80px;
-  margin: 0 auto;
   text-align: center;
   color: #ebebe6;
   font-size: 20px;
@@ -148,7 +151,7 @@ footer {
   float: left;
   width: 65px;
   height: 65px;
-  background: #bf382a url("images/reseaux-sociaux.png") no-repeat center;
+  background: #bf382a url("../../images/reseaux-sociaux.png") no-repeat center;
   margin-right: 20px;
 }
 
@@ -179,7 +182,7 @@ footer {
 
 .rw-index-footer-nav ul li a {
   display: block;
-  color: red;
+  color: #ccc;
   font-size: 20px;
 }
 
@@ -198,10 +201,6 @@ footer {
 
 .rw-index-footer-nav ul:last-child li:last-child {
   margin-right: 0px;
-}
-
-.clear {
-  clear: both;
 }
 
 .rw-header_container {
@@ -268,51 +267,59 @@ footer {
   width: 100%;
 }
 
-.rw-nav {
+.fixNavigation {
+  z-index: 9999;
+  position: fixed;
+  top: -30px;
+  /* Mise en forme */
+  width: 100%;
+  /* <-- Largeur de votre site */
+}
+
+#rw-nav {
   height: 90px;
   margin-top: 30px;
   font-size: 0;
   background-color: #ebebe6;
 }
 
-.rw-nav ul, .rw-nav li {
+#rw-nav ul, #rw-nav li {
   display: inline-block;
 }
 
-.rw-nav .rw-ul_grey {
+#rw-nav .rw-ul_grey {
   background-color: #ebebe6;
   width: 70%;
   text-align: right;
 }
 
-.rw-nav .rw-ul_grey li:first-child a {
+#rw-nav .rw-ul_grey li:first-child a {
   color: #bf382a;
 }
 
-.rw-nav .rw-ul_grey a {
+#rw-nav .rw-ul_grey a {
   margin-right: 8px;
 }
 
-.rw-nav .rw-ul_red {
+#rw-nav .rw-ul_red {
   background-color: #bf382a;
   width: 30%;
 }
 
-.rw-nav .rw-ul_red a {
+#rw-nav .rw-ul_red a {
   margin-left: 8px;
   color: white;
 }
 
-.rw-nav li {
+#rw-nav li {
   list-style-type: none;
   line-height: 90px;
   margin: 0;
   font-size: 18px;
 }
 
-.rw-nav a {
+#rw-nav a {
   display: inline-block;
-  text-decoration: none;
   line-height: 90px;
   color: black;
   margin: 0 20px;
@@ -326,11 +333,10 @@ footer {
 /*DERNIERS ARTICLES*/
 .rw-index-last-articles-container, .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   background-color: #ebebe6;
-  width: 1140px;
-  /*largeur du site - 2x marge de 30px*/
+  width: 100%;
   height: 400px;
-  margin: 0 auto;
-  padding: 0px 30px;
+  margin: 10px 0px;
+  padding: 10px 40px;
 }
 
 .rw-index-last-articles-container h1, .rw-index-open-articles-container h1, .rw-index-open-articles-container-min h1 {
@@ -338,39 +344,36 @@ footer {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
-  text-shadow: 2px 2px 2px red;
-  margin: 10px 2px;
+  text-shadow: 2px 2px 2px white;
+  margin: 8px 0px 15px 0px;
 }
 
 .rw-index-last-article, .rw-index-open-article, .rw-index-open-article-min {
   display: inline-block;
   vertical-align: top;
-  background: red;
+  background: white;
   /* Old browsers */
-  background: -moz-linear-gradient(top, red 0%, #ebebe6 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, #ebebe6));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #ebebe6));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, red 0%, #ebebe6 100%);
+  background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, red 0%, #ebebe6 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, red 0%, #ebebe6 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, red 0%, #ebebe6 100%);
+  background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='$color2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0);
   /* IE6-9 */
   width: 300px;
   height: 320px;
-  border: 4px solid red;
-  margin-right: 86px;
+  border: 4px solid white;
+  margin-right: 105px;
 }
 
 .rw-index-last-article h1, .rw-index-open-article h1, .rw-index-open-article-min h1 {
-  color: red;
+  color: black;
   font-size: 15px;
-  margin: 5px 2px;
+  margin: 10px 0px;
 }
 
 .rw-index-last-article img, .rw-index-open-article img, .rw-index-open-article-min img {
@@ -396,7 +399,7 @@ footer {
 }
 
 .rw-index-open-article {
-  border: 0px solid red;
+  border: 0px solid white;
   background: transparent;
   height: 300px;
   padding-top: 20px;
@@ -404,14 +407,12 @@ footer {
 
 .rw-index-open-article h1 {
   color: #bf382a;
-  margin: 10px 2px;
+  margin: 8px 0px 15px 0px;
   font-size: 30px;
 }
 
 .rw-index-open-article-content {
   height: 300px;
-  -moz-box-shadow: 2px 2px 10px 0px #7e8b8c;
-  -webkit-box-shadow: 2px 2px 10px 0px #7e8b8c;
   -o-box-shadow: 2px 2px 10px 0px #7e8b8c;
   box-shadow: 2px 2px 10px 0px #7e8b8c;
   border-bottom: 5px solid #F6D432;
@@ -429,27 +430,22 @@ footer {
 .rw-index-open-article-content p.rw-index-open-article-bcg {
   height: 72px;
   padding: 15px;
-  background: red;
+  background: white;
   /* Old browsers */
-  background: -moz-linear-gradient(top, red 0%, #ebebe6 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, #ebebe6));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #ebebe6));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, red 0%, #ebebe6 100%);
+  background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, red 0%, #ebebe6 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, red 0%, #ebebe6 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, red 0%, #ebebe6 100%);
+  background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
   font-size: 14px;
 }
 
 .rw-index-open-article-date {
-  background-color: red;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
+  background-color: white;
   border-radius: 60px;
   width: 60px;
   height: 60px;
@@ -464,21 +460,19 @@ footer {
   margin-left: -30px;
   /* la moitié de la largeur de l'image  */
   z-index: 2;
-  -moz-box-shadow: 2px 2px 10px 0px #7e8b8c;
-  -webkit-box-shadow: 2px 2px 10px 0px #7e8b8c;
-  -o-box-shadow: 2px 2px 10px 0px #7e8b8c;
-  box-shadow: 2px 2px 10px 0px #7e8b8c;
+  -o-box-shadow: 2px 2px 10px #7e8b8c;
+  box-shadow: 2px 2px 10px #7e8b8c;
 }
 
 .rw-index-open-article-date p {
   padding: 10px;
   font-size: 12px;
-  line-height: 12px +1;
+  line-height: 13px;
 }
 
-.rw-index-open-article-date p .rw-index-day {
+.rw-index-day {
   color: #bf382a;
-  font-size: 30px;
+  font-size: 14px;
 }
 
 /*ARTICLES OUVERTS MINIS*/
@@ -487,10 +481,8 @@ footer {
 }
 
 .rw-index-open-article-min {
-  -moz-box-shadow: 1px -1px 6px 1px #7e8b8c;
-  -webkit-box-shadow: 1px -1px 6px 1px #7e8b8c;
-  -o-box-shadow: 1px -1px 6px 1px #7e8b8c;
-  box-shadow: 1px -1px 6px 1px #7e8b8c;
+  -o-box-shadow: 1px -1px 6px #7e8b8c;
+  box-shadow: 1px -1px 6px #7e8b8c;
   height: 50px;
   width: 300px;
   border: 0px solid #F6D432;
@@ -499,53 +491,39 @@ footer {
 .rw-index-article-min-date {
   width: 60px;
   height: 50px;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
+  float: left;
   background-color: #ebebe6;
-  padding: 5px;
+  padding: 4px;
 }
 
 .rw-index-article-min-date p {
-  display: block;
-  margin: 0 auto;
   padding: 0px;
   font-size: 12px;
-  line-height: 12px +1;
-}
-
-.rw-index-article-min-date p .rw-index-day {
-  color: #bf382a;
-  font-size: 30px;
+  line-height: 13px;
 }
 
 .rw-index-article-min-link {
-  display: inline-block;
-  vertical-align: top;
-  width: 236px;
+  float: left;
+  width: 240px;
   height: 50px;
 }
 
 .rw-index-article-min-link a {
   display: block;
   float: left;
-  text-decoration: none;
-  color: red;
+  color: black;
   font-size: 14px;
-  margin: 0 auto;
   height: 50px;
-  width: 200px;
-  padding: 5px;
+  width: 210px;
+  padding: 10px;
   text-align: center;
 }
 
-.rw-index-article-min-link img {
+.rw-index-article-min-triangle {
   float: right;
+  width: 0;
   height: 50px;
-  width: 26px;
-  border-bottom: 0px solid #000;
-  margin-right: 0px;
-  display: inline;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #F6D432 transparent;
 }
