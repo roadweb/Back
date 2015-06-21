@@ -4,9 +4,9 @@
             <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}">
         </p>
 
-        <p class="rw-slogan">bienvenue sur <em>roadweb</em>.com</p>
+        <h1 class="rw-slogan">bienvenue sur <em>roadweb</em>.com</h1>
 
-        <div class="rw-search">
+        <div id="rw-search" class="">
             <form action="" class="rw-searchbar" method="post">
                 <input name="" type="search" placeholder="Rechercher sur Roadweb.com"/>
             </form>
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="rw-clear"></div>
-    <nav class="rw-nav">
+    <nav id="rw-nav">
         <ul class="rw-ul_grey">
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Forum</a></li>

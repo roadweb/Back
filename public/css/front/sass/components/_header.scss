@@ -36,13 +36,22 @@
 		font-style: normal;
 	}
 }
-
-.rw-search {
-	position: absolute;
-	height: 50px;
-	bottom: -25px;
-	right: 0;
-	width: 30%;
+.transSearch {
+  position:fixed;
+  top:100px;
+  height: 50px;
+  bottom: -25px;
+  right: 0;
+  width: 30%;
+  z-index: -1;
+}
+#rw-search {
+  position: fixed;
+  height: 50px;
+  top: 100px;
+  right: 0;
+  width: 30%;
+  z-index: -100;
 
 	.rw-loupe {
 		display: block;
@@ -61,12 +70,16 @@
 		width: 100%;
 	}
 }
-
-.rw-nav {
-	height: 90px;
-	margin-top: 30px;
-	font-size: 0;
-	background-color: $grey-light;
+.fixNavigation {
+  z-index: 1000;
+  position: fixed;
+  top: -30px;
+width: 100%;
+}
+#rw-nav {
+  margin-top: 30px;
+  font-size: 0;
+  background-color: $grey-light;
 
 	ul, li {
 		display: inline-block;

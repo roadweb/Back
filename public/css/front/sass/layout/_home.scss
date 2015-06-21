@@ -1,5 +1,7 @@
 /*DERNIERS ARTICLES*/
 .rw-index-last-articles-container {
+  position:relative;
+  z-index: 1;
 	background-color: $grey-light;
 	width: 1140px; /*largeur du site - 2x marge de 30px*/
 	height: 400px;
