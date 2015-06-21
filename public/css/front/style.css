@@ -217,7 +217,6 @@ footer {
   padding: 0;
   width: 100%;
   height: 136px;
-  margin-bottom: 55px;
 }
 
 .rw-logo {
@@ -244,13 +243,13 @@ footer {
 }
 
 .transSearch {
+  /*classe effective après scroll _ cf js*/
   position: fixed;
-  top: 100px;
+  top: 200px;
   height: 50px;
   bottom: -25px;
   right: 0;
   width: 30%;
-  z-index: -1;
 }
 
 #rw-search {
@@ -259,7 +258,7 @@ footer {
   top: 100px;
   right: 0;
   width: 30%;
-  z-index: -100;
+  z-index: 9998;
 }
 
 #rw-search .rw-loupe {
@@ -280,10 +279,11 @@ footer {
 }
 
 .fixNavigation {
-  z-index: 1000;
+  /*classe effective après scroll _ cf js*/
   position: fixed;
   top: -30px;
   width: 100%;
+  z-index: 9999;
 }
 
 #rw-nav {

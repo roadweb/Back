@@ -6,7 +6,9 @@
 
         <h1 class="rw-slogan">bienvenue sur <em>roadweb</em>.com</h1>
 
-        <div id="rw-search" class="">
+        <div id="rw-search">
+            {{--ajoute la classe transSearch quand il y a un scroll--}}
+
             <form action="" class="rw-searchbar" method="post">
                 <input name="" type="search" placeholder="Rechercher sur Roadweb.com"/>
             </form>
@@ -15,6 +17,7 @@
     </div>
     <div class="rw-clear"></div>
     <nav id="rw-nav">
+        {{--ajoute la classe fixNavigation quand il y a un scroll--}}
         <ul class="rw-ul_grey">
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Forum</a></li>
