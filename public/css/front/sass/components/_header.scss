@@ -39,7 +39,7 @@
 #rw-search.transSearch {
   /*classe effective après scroll _ cf js*/
   position: fixed;
-  top: 100px;
+  top: 95px;
   height: 50px;
   bottom: -25px;
   right: 0;
@@ -83,6 +83,7 @@
   margin-top: 30px;
   font-size: 0;
   background-color: $grey-light;
+  margin-bottom: 10px;
 
   ul, li {
     display: inline-block;

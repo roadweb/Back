@@ -245,7 +245,7 @@ footer {
 #rw-search.transSearch {
   /*classe effective après scroll _ cf js*/
   position: fixed;
-    top: 100px;
+  top: 95px;
   height: 50px;
   bottom: -25px;
   right: 0;
@@ -255,7 +255,7 @@ footer {
 #rw-search {
   position: fixed;
   height: 50px;
-    top: 110px;
+  top: 110px;
   right: 0;
   width: 30%;
   z-index: 1;
@@ -270,8 +270,8 @@ footer {
 
 #rw-search input[type=search] {
   display: block;
-    -webkit-appearance: none;
-    /*safari ne prend pas en compte la hauteur sinon*/
+  -webkit-appearance: none;
+  /*safari ne prend pas en compte la hauteur sinon*/
   background-color: #ebebe6;
   float: right;
   padding-left: 52px;
@@ -292,6 +292,7 @@ footer {
   margin-top: 30px;
   font-size: 0;
   background-color: #ebebe6;
+  margin-bottom: 10px;
 }
 
 #rw-nav ul, #rw-nav li {
