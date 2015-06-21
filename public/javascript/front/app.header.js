@@ -1,8 +1,8 @@
 $(function () {
     $(window).scroll(function () {
         //Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 170) {
-            //si on a défilé de plus de 170px du haut vers le bas
+        if ($(this).scrollTop() > 155) {
+            //si on a défilé de plus de 155px du haut vers le bas
             $('#rw-nav').addClass('fixNavigation');
             $('#rw-search').addClass('transSearch');
              //on ajoute la classe "fixNavigation" à <div id="navigation">

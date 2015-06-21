@@ -36,10 +36,10 @@
   }
 }
 
-.transSearch {
+#rw-search.transSearch {
   /*classe effective après scroll _ cf js*/
   position: fixed;
-  top: 200px;
+  top: 100px;
   height: 50px;
   bottom: -25px;
   right: 0;
@@ -48,7 +48,7 @@
 #rw-search {
   position: fixed;
   height: 50px;
-  top: 100px;
+  top: 110px;
   right: 0;
   width: 30%;
   z-index:1;
@@ -60,8 +60,8 @@
     background-color: $red;
   }
   input[type=search] {
-//    todo-me safari n'affiche pas correctement la barre de recherche
     display: block;
+    -webkit-appearance: none; /*safari ne prend pas en compte la hauteur sinon*/
     background-color: $grey-light;
     float: right;
     padding-left: 52px;

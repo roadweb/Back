@@ -20,15 +20,11 @@
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
         <ul class="rw-ul_grey" >
             <li><a href="#">Accueil</a></li>
-            <li><a href="#">Forum</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Tutoriel</a></li>
-            <li><a href="#">Exercices</a></li>
-            <li><a href="#">Codothèque</a></li>
+
         </ul>
         <ul class="rw-ul_red">
-            <li><a href="#">Cvthèque</a></li>
-            <li><a href="#">Connexion</a></li>
+            <li><a href="#">Abonnement</a></li>
         </ul>
     </nav>
 </header>
