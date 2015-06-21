@@ -44,16 +44,14 @@
   bottom: -25px;
   right: 0;
   width: 30%;
-//  z-index: -1;
 }
-
 #rw-search {
   position: fixed;
   height: 50px;
   top: 100px;
   right: 0;
   width: 30%;
-  z-index:9998;
+  z-index:1;
 
   .rw-loupe {
     display: block;
@@ -91,6 +89,8 @@
   }
 
   .rw-ul_grey {
+    position:relative;
+    z-index: 9999;
     background-color: $grey-light;
     width: 70%;
     text-align: right;
@@ -103,6 +103,8 @@
   }
 
   .rw-ul_red {
+    position:relative;
+    z-index: 9999;
     background-color: $red;
     width: 30%;
     a {

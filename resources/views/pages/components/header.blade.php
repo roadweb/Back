@@ -16,9 +16,9 @@
         </div>
     </div>
     <div class="rw-clear"></div>
-    <nav id="rw-nav">
+    <nav id="rw-nav" >
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
-        <ul class="rw-ul_grey">
+        <ul class="rw-ul_grey" >
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Forum</a></li>
             <li><a href="#">Blog</a></li>

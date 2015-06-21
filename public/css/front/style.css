@@ -258,7 +258,7 @@ footer {
   top: 100px;
   right: 0;
   width: 30%;
-  z-index: 9998;
+  z-index: 1;
 }
 
 #rw-search .rw-loupe {
@@ -297,6 +297,8 @@ footer {
 }
 
 #rw-nav .rw-ul_grey {
+  position: relative;
+  z-index: 9999;
   background-color: #ebebe6;
   width: 70%;
   text-align: right;
@@ -311,6 +313,8 @@ footer {
 }
 
 #rw-nav .rw-ul_red {
+  position: relative;
+  z-index: 9999;
   background-color: #bf382a;
   width: 30%;
 }
@@ -343,7 +347,6 @@ footer {
 /*DERNIERS ARTICLES*/
 .rw-index-last-articles-container, .rw-index-open-articles-container, .rw-index-open-articles-container-min {
   position: relative;
-  z-index: 1;
   background-color: #ebebe6;
   width: 1140px;
   /*largeur du site - 2x marge de 30px*/
