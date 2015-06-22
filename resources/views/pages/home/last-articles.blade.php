@@ -24,7 +24,7 @@
             <img src="{{ asset('images/open_article_test.jpg')}}" alt="" />
             <div class="rw-index-open-article-date">
                 <p>
-                    <font class="rw-index-day">12</font>
+                    <span class="rw-index-day">12</span>
                     <br />
                     Janvier 
                     <br />
@@ -40,7 +40,7 @@
             <img src="{{ asset('images/open_article_test.jpg')}}" alt="" />
             <div class="rw-index-open-article-date">
                 <p>
-                    <font class="rw-index-day">12</font>
+                    <span class="rw-index-day">12</span>
                     <br />
                     Janvier 
                     <br />
@@ -54,8 +54,12 @@
         <h1>Outils</h1>
         <div class="rw-index-open-article-content">
             <div class="rw-index-open-article-date">
-                <p><font class="rw-index-day">12</font><br>
-                    Janvier <br>2015</p>
+                <p><span class="rw-index-day">12</span>
+                    <br />
+                    Janvier 
+                    <br />
+                    2015
+                </p>
             </div>
             <img src="{{ asset('images/open_article_test.jpg')}}" alt="" />
             <p class="rw-index-open-article-bcg">titre de l'article blabla blabla blabla blabla blabla test</p>
@@ -67,7 +71,7 @@
     <article class="rw-index-open-article-min">
         <div class="rw-index-article-min-date">
             <p>
-                <font class="rw-index-day">12</font>
+                <span class="rw-index-day">12</span>
                 <br />
                 Janvier 
                 <br />
@@ -82,7 +86,7 @@
     <article class="rw-index-open-article-min">
         <div class="rw-index-article-min-date">
             <p>
-                <font class="rw-index-day">12</font>
+                <span class="rw-index-day">12</span>
                 <br />
                 Janvier 
                 <br />
@@ -97,7 +101,7 @@
     <article class="rw-index-open-article-min">
         <div class="rw-index-article-min-date">
             <p>
-                <font class="rw-index-day">12</font>
+                <span class="rw-index-day">12</span>
                 <br />
                 Janvier 
                 <br />
