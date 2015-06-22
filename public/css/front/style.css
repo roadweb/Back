@@ -250,6 +250,7 @@ footer {
   bottom: -25px;
   right: 0;
   width: 30%;
+  transition: all 1s ease-out;
 }
 
 #rw-search {
@@ -280,7 +281,7 @@ footer {
   width: 100%;
 }
 
-.fixNavigation {
+#rw-nav.fixNavigation {
   /*classe effective après scroll _ cf js*/
   position: fixed;
   top: -30px;
@@ -289,10 +290,21 @@ footer {
 }
 
 #rw-nav {
+  position: relative;
+  z-index: 9999;
   margin-top: 30px;
   font-size: 0;
   background-color: #ebebe6;
   margin-bottom: 10px;
+}
+
+#rw-nav img {
+  position: absolute;
+  z-index: 9999;
+  height: 70px;
+  top: 25px;
+  left: 50px;
+  background: green;
 }
 
 #rw-nav ul, #rw-nav li {
@@ -300,8 +312,6 @@ footer {
 }
 
 #rw-nav .rw-ul_grey {
-  position: relative;
-  z-index: 9999;
   background-color: #ebebe6;
   width: 70%;
   text-align: right;
@@ -316,8 +326,6 @@ footer {
 }
 
 #rw-nav .rw-ul_red {
-  position: relative;
-  z-index: 9999;
   background-color: #bf382a;
   width: 30%;
 }
