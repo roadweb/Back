@@ -1,0 +1,46 @@
+.rw-carrous-body{
+    width:1200px;
+    //display:flex;
+}
+
+        .rw-carrous-body-content{
+            position:relative;
+
+        }
+
+            .rw-carrous-body-content-article-screen{
+                //position:absolute;
+                display: inline-block;
+                width:416px;
+                height:370px;
+                margin-left:40px;
+                //background-image: url('../../../images/ecran.png');
+            }
+
+            .rw-carrous-body-content-article{
+                position:absolute;
+                display: inline-block;
+                width:600px;
+                top:20px;
+                //display:flex;
+                //flex-direction: column;
+                margin-left:30px;
+            }
+                .rw-carrous-body-content-article-text-h1{
+                    display: block;
+                    color:blue;
+                    font-size:32px;
+                    line-height: 40px;
+                    margin-bottom:10px;
+                }
+
+                .rw-carrous-body-content-article-text-p{
+                 display: block;
+                    font-size:24px;
+                    line-height: 32px;
+                }
+                    
+.rw-readmore,
+.rw-readmore a{
+    color:blue;
+}
