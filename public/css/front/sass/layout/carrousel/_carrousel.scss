@@ -1,0 +1,41 @@
+/*
+    CARROUSEL DE LA HOME PAGE
+    MATHIEU HO
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,500);
+
+* {
+  box-sizing: border-box;
+}
+
+.rw-carrous{
+    position:relative;
+    width:1200px;
+    padding: 20px 0;
+    //margin:20px 0;
+    //line-height: 150px;
+    margin:0 auto;
+    //background-color:white;
+    //background-image: url(../../../../../images/exagone-top.png);
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans";
+}
+
+
+.rw-fond-exagone-top{
+    position: absolute;
+    //top:0;
+    //left:0;
+    display:flex;
+    width: auto;
+    height:auto;
+    line-height: 100vh;
+    right:0;
+    //background-image: url(../../../../../images/exagone-top.png);
+}
+
+@import "../../base/variables";
+@import "component/jobnav";
+@import "component/jobdescription";
