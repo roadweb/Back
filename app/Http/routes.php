@@ -59,6 +59,12 @@ Route::get('/jobs', 'JobsController@index');
 
 Route::get('/jobs/job', 'JobsController@description');
 
+Route::get('/motions', 'MotionsController@index');
+
+Route::get('/subscribe', 'SubController@sub');
+
+Route::get('/subscribe/validation', 'SubController@subvalid');
+
 /*
 |--------------------------------------------------------------------------
 | API
