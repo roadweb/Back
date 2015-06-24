@@ -16,16 +16,27 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+<<<<<<< HEAD
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+=======
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+>>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
+<<<<<<< HEAD
 	display: block;
 }
 body {
@@ -45,4 +56,25 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+=======
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+>>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
 }
