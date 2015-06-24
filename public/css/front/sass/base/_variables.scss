@@ -1,16 +1,28 @@
-$orange:"";
-$grey1:"#ebebe6";
-$grey2:"#7e8b8c";
-$rouge:#bf382a;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
-$marketing:"#f59e36";
-$developement:"#f6d432";
-$design1:"#72cff5";
-$design2:"#36a7de";
-$referencement1:"#b76dab";
-$referencement2:"#942581";
-$cm1:"#eb6441";
-$cm2:"#e72e2d";
+$fontFamily : 'Open Sans', sans-serif;
+
+$grey-dark: #7e8b8c; /*gris foncé */
+$grey-light: #ebebe6; /*gris clair*/
+$red: #bf382a; /*rouge*/
+
+
+/* variables */
+
+$colorMarket : #F59E36;
+$colorDev : #F6D432;
+$colorDesignClair : #72CFF5;
+$colorDesignFonce : #36A7DE;
+$colorRefClair : #B76DAB;
+$colorRefFonce : #942581;
+$colorInteClair : #DCDD1F;
+$colorInteFonce : #38AA49;
+$colorCmClair : #EB6441;
+$colorCmFonce : #E72E2D;
+
+
+
+/* mixin */
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
@@ -20,12 +32,4 @@ $cm2:"#e72e2d";
     transition: $transition-property $transition-time $method;
 }
 
-
-@mixin transition2($delay, $duration, $property) {
-transition: {
-duration: $duration;
-property: $property;
-timing-function: cubic-bezier(0.55, 0.01, 0.11, 0.99);
-} 
-}
 

@@ -1,1 +1,112 @@
-azdzdz
+footer {
+	width:100%;
+}
+
+.rw-index-footer-bcg {
+	margin:0 auto;
+	display:block;
+	z-index:2;
+}
+
+.rw-index-footer-container {
+	height:210px;
+	width:100%;
+	background-color: $grey-light;
+	padding:20px 30px;
+	z-index:1;
+	margin-top:-10px;
+}
+
+.rw-index-footer-contact {
+	background-color:white;
+	float:left;
+	width:68%;
+	height:80px;
+	padding:10px 160px 10px 60px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	p {
+		text-align:left;
+		font-size:14px;
+		line-height:25px;
+		a {
+			color: $red;
+		}
+	}
+}
+
+.rw-index-footer-btn-subscription {
+	width:345px;
+	height:80px;
+	background-color: $grey-dark;
+	float:right;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	a {
+		display:block;
+		line-height:80px;
+		margin:0 auto;
+		text-align:center;
+		color:$grey-light;
+		font-size:20px;
+		font-weight:600;
+	}
+}
+
+.rw-index-footer-nav {
+	margin-top:20px;
+	width:100%;
+	.rw-index-footer-nav-bcg-icon {
+		float:left;
+		width:65px;
+		height:65px;
+		background: $red url('images/reseaux-sociaux.png') no-repeat center;
+		margin-right:20px;
+	}
+	p {
+		color: $red;
+		font-size:20px;
+		line-height:65px;
+		margin:0 auto;
+		float:left;
+		width:200px;
+		display:block;
+	}
+	ul {
+		height:65px;
+		float:left;
+		margin:0 auto;
+		padding-left:0px;
+		li {
+			height:65px;
+			display:block;
+			float:left;
+			list-style:none;
+			margin:15px;
+			a {
+				display:block;
+				color: red;
+				font-size:20px;
+				img {
+					width:40px;
+					height:40px;
+				}
+			}
+		}
+		&:last-child{
+			float:right;
+			li {
+				padding-top:4px;
+				&:last-child {
+					margin-right:0px;
+				}
+			}
+		}
+	}
+}
+
+.clear {
+	clear:both;
+}

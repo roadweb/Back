@@ -1,4 +1,4 @@
-@import '../../../base/variables';
+//  @import '../../../base/variables';
 
 .rw-carrous-header{
     width:1200px;
@@ -19,11 +19,13 @@
             width:80px;
             height:80px;
             display:flex;
-            background-color: $rouge;
+            background-color: $red;
+            justify-content: center;
+            align-items: center;
         }
         .rw-carrous-nav-label{
             display:flex;
-            color:$rouge;
+            color:$red;
             width:120px;
             font-size:18px;
             margin-left:40px;
@@ -41,10 +43,8 @@
         line-height: calc(91px*1.2);
         padding:0;
         list-style: none;
-
         display:flex;
         flex-direction: row;
-        //border:1px dotted black;
     }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@
     .rw-carrous-navbar-content{
         position: absolute;
         width:  100%;
-        left:0;
+        //left:0;
         display:flex;
         flex-direction: row;
     }
@@ -64,14 +64,13 @@
             left:-80px;
             line-height: 4px;   //calc(79px*1.2);
             flex-direction: row;
-            //justify-content: center;
         }
             .rw-carrous-navbar-line{
                 display:flex;
                 width: calc(91px*1.2);
                 width:100%;
                 height: 4px;
-                background-color:$rouge;
+                background-color:$red;
                 justify-content:center;
                 align-items:baseline;
             }
@@ -80,7 +79,7 @@
 
     .rw-carrous-navbar-content{
         top:-80px;
-        width:  100%;
+        width: 100%;
         height: calc(79px*1.2);
         display:flex;
         flex-direction: row;
@@ -102,7 +101,7 @@
             .rw-carrous-navbar-job .rw-icon-job{
                 width: 91px;
                 height: 79px;
-                margin: 0 calc(91px*0.1);    //  20% calc(91px*0.1)
+                margin: 0 calc(91px*0.1);
                 display:flex;
             } 
 
@@ -135,7 +134,6 @@
             }
 
             .rw-carrous-navbar-job-label span{
-                //width:auto;
                 height:12px;
                 line-height:100%;
                 top:6px;
@@ -152,7 +150,7 @@
                 .rw-carrous-navbar-vertical-line .rw-navbar-vertical-line{
                     width:4px;
                     height:26px;
-                    background-color: $rouge;
+                    background-color: $red;
                 }
                 .rw-carrous-navbar-vertical-line .rw-icon-exagone{
                     width:28px;
@@ -164,9 +162,9 @@
         .rw-carrous-nav-icon{
             position:fixed;
             right:0;
-            top:160px;
+            top:300px;
             width:80px;
-            height:180px;
+            height:164px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -177,14 +175,14 @@
                 width:80px;
                 height:80px;
                 display:block;
-                background-color: $rouge;
+                background-color: $red;
             }
                 .rw-icon-reseau,
                 .rw-icon-newsletter{
                     width:46px;
                     height:58px;
                     margin:11px auto;
-                    background-color: $rouge;
+                    background-color: $red;
                     display:flex;
                     justify-content: space-between;
                 }
@@ -193,3 +191,7 @@
                     padding: 4.5px 8.5px;
                     background-color: white;
                 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+.white{color:white;}

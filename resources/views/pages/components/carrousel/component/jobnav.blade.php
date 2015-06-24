@@ -23,7 +23,7 @@
         <div class="rw-carrous-nav-road">
             
             <div class="rw-carrous-nav-icon-menu">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars fa-2x white"></i>
             </div>
             
             

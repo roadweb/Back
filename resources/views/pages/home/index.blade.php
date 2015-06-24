@@ -2,11 +2,19 @@
 
 @section('content')
 
-    <p>Je suis la home</p>
+    @include('pages.components.header')
+
+    @include('pages.components.carrousel.carrousel')
+
+    <div class="container">
+        @include('pages.home.last-articles')
+    </div>
+
+    @include('pages.components.footer')
 
     <!--**********************    SECTION "CAROUSSEL"    ***************************-->
     <!--**********************    MATHIEU HO             ***************************-->
-    @include('pages.home.carrousel.carrousel')
+    
     <!--****************************************************************************-->
 
 @endsection()

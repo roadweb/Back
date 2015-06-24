@@ -8,7 +8,9 @@
 }
 
 .rw-carrous {
+  position: relative;
   width: 1200px;
+  padding: 20px 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -18,10 +20,10 @@
 .rw-fond-exagone-top {
   position: absolute;
   display: flex;
-  width: 200px;
-  height: 200px;
-  justify-content: flex-end;
-  background-image: url(../../../../../images/exagone-top.png);
+  width: auto;
+  height: auto;
+  line-height: 100vh;
+  right: 0;
 }
 
 .rw-carrous-header {
@@ -116,14 +118,14 @@
 .rw-carrous-navbar-job a {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   text-decoration: none;
 }
 
 .rw-carrous-navbar-job .rw-icon-job {
   width: 91px;
   height: 79px;
-  margin: 20% calc(91px*0.1) 0 calc(91px*0.1);
+  margin: 0 calc(91px*0.1);
   display: flex;
 }
 
@@ -138,22 +140,48 @@
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job-label .rw-icon-exagone,
-.rw-carrous-navbar-job-label,
-.rw-carrous-navbar-vertical-line {
+.rw-carrous-navbar-job-label {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(91px*1.2);
+}
+
+.rw-carrous-navbar-job-label span,
+.rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
   position: absolute;
   font-size: 8px;
   width: calc(91px*1.2);
-  line-height: 40px;
+  height: 50px;
+  line-height: 100%;
   display: inline-flex;
+  align-items: baseline;
   justify-content: center;
 }
 
-.rw-carrous-navbar-job-label .rw-icon-exagone {
-  display: flex;
+.rw-carrous-navbar-job-label span {
+  height: 12px;
+  line-height: 100%;
+  top: 6px;
+  color: #333;
+  background-color: white;
+  align-items: center;
+}
+
+.rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
+  align-items: center;
+  flex-direction: column;
+}
+
+.rw-carrous-navbar-vertical-line .rw-navbar-vertical-line {
+  width: 4px;
+  height: 26px;
+  background-color: #bf382a;
+}
+
+.rw-carrous-navbar-vertical-line .rw-icon-exagone {
   width: 28px;
   height: 24px;
-  justify-content: center;
 }
 
 .rw-carrous-nav-icon {
@@ -183,6 +211,11 @@
   background-color: #bf382a;
   display: flex;
   justify-content: space-between;
+}
+
+.rw-icon-newsletter {
+  padding: 4.5px 8.5px;
+  background-color: white;
 }
 
 .rw-carrous-body {

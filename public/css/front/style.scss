@@ -1,9 +1,31 @@
-@import 'sass/base/base';
-@import 'sass/base/reset';
-@import 'sass/base/variables';
 
-@import 'sass/layout/carrousel/carrousel';
-    
-html{
-    width:100%;
-}
+@import "sass/base/variables";
+
+@import "sass/base/reset";
+
+@import "sass/base/base";
+
+/*
+|--------------------------------------------------------------------------
+| Components
+|--------------------------------------------------------------------------
+*/
+
+@import "sass/components/footer";
+
+@import "sass/layout/carrousel/carrousel";
+ 
+@import "sass/components/header";
+
+/*
+|--------------------------------------------------------------------------
+| Layouts
+|--------------------------------------------------------------------------
+*/
+
+@import "sass/layout/home";
+
+@import "sass/layout/blog";
+
+@import "sass/layout/landing";
+ 
