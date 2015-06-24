@@ -246,14 +246,13 @@ footer {
 }
 
 #rw-search.transSearch {
-  /*classe effective après scroll _ cf js*/
   position: fixed;
   top: 95px;
   height: 50px;
   bottom: -25px;
   right: 0;
   width: 30%;
-  z-index: -1;
+  z-index: 100;
 }
 
 #rw-search {

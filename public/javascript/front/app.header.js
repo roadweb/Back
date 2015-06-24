@@ -6,14 +6,13 @@ $(function () {
 
             $('#rw-nav').addClass('fixNavigation');
             $('#rw-search').addClass('transSearch');
-             //on ajoute la classe "fixNavigation" à <div id="navigation">
-             }
-        else
-            {
-                $('#rw-nav').removeClass("fixNavigation");
-                $('#rw-search').removeClass('transSearch');
+            //on ajoute la classe "fixNavigation" à <div id="navigation">
+        }
+        else {
+            $('#rw-nav').removeClass("fixNavigation");
+            $('#rw-search').removeClass('transSearch');
 
-                //sinon on retire la classe "fixNavigation" à <div id="navigation">
-            }
-        });
+            //sinon on retire la classe "fixNavigation" à <div id="navigation">
+        }
     });
+});
