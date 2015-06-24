@@ -1,0 +1,120 @@
+.rw-sub-container {
+  width: 100%;
+  margin: 0 auto;
+
+  .rw-sub-header {
+
+    padding: 3% 0;
+
+    //    text-transform: uppercase;
+    text-align: center;
+
+    h1, h2 {
+      font-size: 26px;
+      padding: 5px 0;
+
+      span {
+        color: $red;
+      }
+    }
+  }
+
+  .rw-subvalid-header {
+    width: 350px;
+    margin: auto;
+  }
+
+  .rw-sub-content {
+
+    text-align: center;
+    font-size: 14px;
+
+    form {
+
+      margin: 10px 0;
+      input {
+        width: 350px;
+
+        margin: 2%;
+        padding: 15px;
+
+        font-style: italic;
+
+        background-color: $grey-light;
+        border: none;
+
+      }
+
+      .rw-sub-checkbox {
+        width: auto;
+
+      }
+
+      .rw-sub-upload {
+        background-color: rgba($red, 0.5);
+        padding: 0;
+        cursor: pointer;
+      }
+
+      button {
+        width: 350px;
+        padding: 10px;
+        margin-top: 20px;
+
+        cursor: pointer;
+
+        font-size: 20px;
+        font-weight: 300;
+        background-color: $red;
+        color: #ffffff;
+        border: none;
+
+      }
+    }
+
+  }
+  .rw-sub-advantages {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    background-color: $grey-light;
+
+    margin: 50px 0;
+
+    .rw-sub-advantages-zone {
+      margin: 10px auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      width: 320px;
+
+      border: 2px solid #FFFFFF;
+      background: linear-gradient(#FFFFFF, $grey-light);
+
+      img {
+        width: 59px;
+        margin: auto;
+
+      }
+      h3, p {
+        margin: auto;
+        padding: 20px;
+        text-align: justify;
+      }
+
+      h3 {
+        font-weight: 600;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .rw-sub-container {
+    .rw-sub-advantages {
+      flex-flow: row wrap;
+    }
+  }
+}
