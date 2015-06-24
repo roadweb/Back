@@ -11,10 +11,6 @@
   padding: 0;
   width: 100%;
   height: 136px;
-<<<<<<< HEAD
-=======
-  margin-bottom: 55px;
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
 }
 
 .rw-logo {
@@ -40,19 +36,13 @@
   }
 }
 
-<<<<<<< HEAD
 #rw-search.transSearch {
   position: fixed;
   top: 95px;
-=======
-.rw-search {
-  position: absolute;
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
   height: 50px;
   bottom: -25px;
   right: 0;
   width: 30%;
-<<<<<<< HEAD
   z-index: 100;
 }
 
@@ -63,8 +53,6 @@
   right: 0;
   width: 30%;
   z-index: 1;
-=======
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
 
   .rw-loupe {
     display: block;
@@ -72,15 +60,9 @@
     height: 50px;
     background-color: $red;
   }
-<<<<<<< HEAD
   input[type=search] {
     display: block;
     -webkit-appearance: none; /*safari ne prend pas en compte la hauteur sinon*/
-=======
-
-  input[type=search] {
-    display: block;
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
     background-color: $grey-light;
     float: right;
     padding-left: 52px;
@@ -90,7 +72,6 @@
   }
 }
 
-<<<<<<< HEAD
 .fixNavigation {
   /*classe effective après scroll _ cf js*/
   position: fixed;
@@ -104,24 +85,14 @@
   font-size: 0;
   background-color: $grey-light;
   margin-bottom: 10px;
-=======
-.rw-nav {
-  height: 90px;
-  margin-top: 30px;
-  font-size: 0;
-  background-color: $grey-light;
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
 
   ul, li {
     display: inline-block;
   }
 
   .rw-ul_grey {
-<<<<<<< HEAD
     position:relative;
     z-index: 9999;
-=======
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
     background-color: $grey-light;
     width: 70%;
     text-align: right;
@@ -134,11 +105,8 @@
   }
 
   .rw-ul_red {
-<<<<<<< HEAD
     position:relative;
     z-index: 9999;
-=======
->>>>>>> 6b26a5423a3baeba6d1edc886b567ca91b9d32ca
     background-color: $red;
     width: 30%;
     a {
