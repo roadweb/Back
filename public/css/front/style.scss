@@ -1,3 +1,4 @@
+
 @import "sass/base/variables";
 
 @import "sass/base/reset";
@@ -12,8 +13,9 @@
 
 @import "sass/components/footer";
 
+@import "sass/layout/carrousel/carrousel";
+ 
 @import "sass/components/header";
-
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,9 @@
 @import "sass/layout/jobs";
 
 @import "sass/layout/landing";
+<<<<<<< HEAD
 @import "sass/layout/article-on";
 @import "sass/layout/sub";
 @import "sass/layout/mentions";
+=======
+>>>>>>> 2f7b3c48bb213c67fe72601efdb0e7cfb98cb01f

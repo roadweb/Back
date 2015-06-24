@@ -4,10 +4,17 @@
 
     @include('pages.components.header')
 
+    @include('pages.components.carrousel.carrousel')
+
     <div class="container">
         @include('pages.home.last-articles')
     </div>
 
     @include('pages.components.footer')
 
-@stop
+    <!--**********************    SECTION "CAROUSSEL"    ***************************-->
+    <!--**********************    MATHIEU HO             ***************************-->
+    
+    <!--****************************************************************************-->
+
+@endsection()
