@@ -37,22 +37,26 @@
 }
 
 #rw-search.transSearch {
-  /*classe effective après scroll _ cf js*/
   position: fixed;
   top: 95px;
   height: 50px;
   bottom: -25px;
   right: 0;
   width: 30%;
+<<<<<<< HEAD
   transition: all 1s ease-out;
+=======
+  z-index: 100;
+>>>>>>> 73da0dd666cce64077c0d6623917816b3cbb5e94
 }
+
 #rw-search {
   position: fixed;
   height: 50px;
   top: 110px;
   right: 0;
   width: 30%;
-  z-index:1;
+  z-index: 1;
 
   .rw-loupe {
     display: block;

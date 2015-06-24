@@ -55,6 +55,9 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}', 'BlogController@article');
 
+Route::get('/jobs', 'JobsController@index');
+
+Route::get('/jobs/job', 'JobsController@description');
 
 /*
 |--------------------------------------------------------------------------

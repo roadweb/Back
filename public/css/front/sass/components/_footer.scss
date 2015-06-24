@@ -22,7 +22,7 @@ footer {
 	float:left;
 	width:68%;
 	height:80px;
-	padding:10px 160px 10px 60px;
+	padding:10px 60px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -47,7 +47,6 @@ footer {
 	a {
 		display:block;
 		line-height:80px;
-		margin:0 auto;
 		text-align:center;
 		color:$grey-light;
 		font-size:20px;
@@ -62,7 +61,7 @@ footer {
 		float:left;
 		width:65px;
 		height:65px;
-		background: $red url('images/reseaux-sociaux.png') no-repeat center;
+		background: $red url('../../images/reseaux-sociaux.png') no-repeat center;
 		margin-right:20px;
 	}
 	p {
@@ -87,7 +86,7 @@ footer {
 			margin:15px;
 			a {
 				display:block;
-				color: red;
+				color: #ccc;
 				font-size:20px;
 				img {
 					width:40px;
@@ -107,6 +106,3 @@ footer {
 	}
 }
 
-.clear {
-	clear:both;
-}
