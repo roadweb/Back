@@ -55,6 +55,12 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}', 'BlogController@article');
 
+Route::get('/subscribe', 'SubController@subscribe');
+
+Route::get('/subscribe/validation', 'SubController@subvalidation');
+
+Route::get('/motion', 'MotionController@index');
+
 
 /*
 |--------------------------------------------------------------------------

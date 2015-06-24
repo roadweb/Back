@@ -7,6 +7,8 @@ bloc de l'article
 
   float: left;
 
+  margin: 20px auto;
+
   padding-bottom: 2%;
 }
 
@@ -169,6 +171,7 @@ partie droite de la page
   width: 30%;
   height: auto;
   float: left;
+  margin: 20px auto;
 
   background-color: $grey-light;
 
@@ -245,7 +248,7 @@ partie droite de la page
   }
 
   .rw-blog-article-brd-inte {
-    border: 2px solid $colorInteClair;
+    border: 2px solid $colorInteFonce;
 
     .rw-blog-band-others-sameAuth-header-picto {
       background: #ffffff url("../../images/triangleinte.png") no-repeat right bottom;
