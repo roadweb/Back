@@ -65,6 +65,8 @@ Route::get('/subscribe', 'SubController@sub');
 
 Route::get('/subscribe/validation', 'SubController@subvalid');
 
+Route::get('/about', 'AboutusController@index');
+
 /*
 |--------------------------------------------------------------------------
 | API

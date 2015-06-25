@@ -1257,7 +1257,8 @@ partie droite de la page
   flex-flow: row nowrap;
   justify-content: space-around;
   background-color: #ebebe6;
-  margin: 50px 0;
+  width: 70%;
+  margin: 50px auto 0;
 }
 
 .rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone {
@@ -1291,8 +1292,9 @@ partie droite de la page
 }
 
 .rw-mentions-container {
-  width: 100%;
+  width: 70%;
   height: auto;
+  margin: 50px auto;
   border: 2px solid #7e8b8c;
   box-shadow: 2px 3px 3px #7e8b8c;
 }
@@ -1322,4 +1324,80 @@ partie droite de la page
 
 .rw-mentions-container .rw-mentions-content p {
   padding: 1% 0;
+}
+
+.rw-aboutus-container {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt h2 {
+  text-align: justify;
+  padding: 2%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p {
+  text-align: justify;
+  padding: 2%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p:nth-of-type(6) {
+  font-weight: 600;
+  padding: 3%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img {
+  float: right;
+  padding: 1%;
+  margin: 1%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(1) {
+  transform: translateY(-20px) translateX(20px);
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(2) {
+  transform: translateY(20px);
+  z-index: 1;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(3) {
+  transform: translateY(-20px) translateX(-20px);
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres {
+  float: left;
+  padding: 0 1%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt span {
+  font-style: italic;
+}
+
+.rw-aboutus-container .rw-aboutus-slide {
+  margin: 250px auto 0;
+}
+
+.rw-aboutus-container .rw-aboutus-slide h3 {
+  color: #bf382a;
+  padding: 2%;
+  font-size: 20px;
+}
+
+.rw-aboutus-container .rw-aboutus-slide .rw-aboutus-slideshow {
+  width: 1046px;
+  height: 120px;
+  overflow: hidden;
+  background-color: #ebebe6;
+  padding: 20px;
+}
+
+.rw-aboutus-container .rw-aboutus-slide .rw-aboutus-slideshow .rw-aboutus-sContent li {
+  display: inline;
+  margin: auto;
+}
+
+.rw-aboutus-container .rw-aboutus-slide .rw-aboutus-slideshow .rw-aboutus-sContent li img {
+  box-shadow: 2px 2px 3px #7e8b8c;
+  margin: 0 0 40px 0;
 }

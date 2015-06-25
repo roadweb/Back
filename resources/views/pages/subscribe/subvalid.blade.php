@@ -25,7 +25,7 @@
 
             <img src="{{asset('images/picto-avantage1.png')}}" alt="icône communauté"/>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam aperiam, beatae blanditiis cumque deleniti dolor enim illum mollitia natus numquam, omnis rerum sint, soluta tempore ullam veniam voluptas.
+            <p>Road-Web est un lieu d'échange et d'entraide pour tous les utilisateurs mais aussi pour les élèves et anciens élèves de l’EmWeb qui participent à son développement. Rejoindre Road-Web c’est intégrer une communauté active dans l’apprentissage et l’évolution des métiers du web.
             </p>
 
         </div>
@@ -36,7 +36,7 @@
 
             <img src="{{asset('images/picto-avantage2.png')}}" alt="icône apprentissage"/>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam aperiam, beatae blanditiis cumque deleniti dolor enim illum mollitia natus numquam, omnis rerum sint, soluta tempore ullam veniam voluptas.
+            <p>Road-Web se propose d’être une épaule sur laquelle s’appuyer pour approfondir les connaissances et les compétences liées aux métiers du web. Que vous soyez autodidacte ou faisant partie de l’EmWeb, vous trouverez ici des conseils et des informations qui pourront compléter vos connaissances. Et tout peut se faire à votre rythme !
             </p>
 
         </div>
@@ -47,7 +47,7 @@
 
             <img src="{{asset('images/picto-avantage3.png')}}" alt="icône contenu"/>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam aperiam, beatae blanditiis cumque deleniti dolor enim illum mollitia natus numquam, omnis rerum sint, soluta tempore ullam veniam voluptas.
+            <p>Road-Web est une plate-forme qui se veut complémentaire pour vous dans votre apprentissage. La communauté Road-Web vous donne accès à des contenus spécifiquement écrits et étudiés pour ce site. Le but étant que vous ayez accès à des compléments exclusifs pour accroître vos compétences.
             </p>
 
         </div>
