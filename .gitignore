@@ -1,6 +1,6 @@
 /vendor
-/node_modules
 .env
 .idea/
 bower_components/
 .sass-cache/
+prepros.cfg

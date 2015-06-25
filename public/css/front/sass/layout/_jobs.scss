@@ -1,0 +1,215 @@
+/*INDEX DES METIERS*/
+
+.rw-jobs-index-container {
+	width:100%;
+	padding:30px;
+	h1 {
+		font-size:30px;
+		color:$red;
+		text-align:center;
+		margin:0 20px;
+	}
+	p {
+		text-align:justify;
+		font-size:14px;
+		line-height:20px;
+		width:100%;
+		padding:50px 70px;
+		margin:0 auto;
+	}
+}
+
+.rw-jobs-index-webmarketing {
+	display:inline-block;
+	vertical-align:top;
+	margin:20px 60px;
+	border:2px solid $colorMarket;
+	width:440px;
+	height:120px;
+	background: white; /* Old browsers */
+	background: -moz-linear-gradient(top, white 0%, $grey-light 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, $grey-light)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, white 0%, $grey-light 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ */
+	background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0); /* IE6-9 */
+	position:relative;
+	div {
+		float:left;
+		vertical-align:top;
+		height:100%;
+		position:relative;
+		padding:5px 0;
+	}	
+	.rw-jobs-index-icon {
+		width:80px;
+		img {
+			padding:12px 0;
+			position:absolute;
+			left:-35px;
+		}
+	}
+	.rw-jobs-index-description {
+		width:315px;
+		h1 {
+			font-size:26px;
+			color:$colorMarket;
+			margin:3px;
+		}
+		p {
+			margin:0;
+			padding:8px 0 0 0;
+			width:100%;
+			line-height:18px;
+			a {
+				color:$colorMarket;
+				font-weight:600 !important;
+			}
+		}
+	}
+	.rw-jobs-index-triangle {
+		float:right;
+		width: 0;
+		height: 118px;
+		border-style: solid;
+		border-width: 0 0 40px 40px;
+		border-color: transparent transparent $colorMarket transparent;
+	}	
+}
+
+.rw-jobs-index-developpement {
+	@extend .rw-jobs-index-webmarketing;	
+	border:2px solid $colorDev !important;
+	h1 {
+		color:$colorDev !important;
+	}
+	a {
+		color:$colorDev !important;
+	}
+	.rw-jobs-index-triangle {
+		border-color: transparent transparent $colorDev transparent !important;
+	}	
+}
+
+.rw-jobs-index-webdesign {
+	@extend .rw-jobs-index-webmarketing;	
+	border:2px solid $colorDesignFonce !important;
+	h1 {
+		color:$colorDesignFonce !important;
+	}
+	a {
+		color:$colorDesignFonce !important;
+	}
+	.rw-jobs-index-triangle {
+		border-color: transparent transparent $colorDesignFonce transparent !important;
+	}	
+}
+
+.rw-jobs-index-referencement {
+	@extend .rw-jobs-index-webmarketing;	
+	border:2px solid $colorRefClair !important;
+	h1 {
+		color:$colorRefClair !important;
+	}
+	a {
+		color:$colorRefClair !important;
+	}
+	.rw-jobs-index-triangle {
+		border-color: transparent transparent $colorRefClair transparent !important;
+	}	
+}
+
+.rw-jobs-index-integration {
+	@extend .rw-jobs-index-webmarketing;	
+	border:2px solid $colorInteFonce !important;
+	h1 {
+		color:$colorInteFonce !important;
+	}
+	a {
+		color:$colorInteFonce !important;
+	}
+	.rw-jobs-index-triangle {
+		border-color: transparent transparent $colorInteFonce transparent !important;
+	}	
+}
+
+.rw-jobs-index-community-management {
+	@extend .rw-jobs-index-webmarketing;	
+	border:2px solid $colorCmClair !important;
+	h1 {
+		color:$colorCmClair !important;
+	}
+	a {
+		color:$colorCmClair !important;
+	}
+	.rw-jobs-index-triangle {
+		border-color: transparent transparent $colorCmClair transparent !important;
+	}	
+}
+
+/*FICHE METIER*/
+
+.rw-jobs-job-description {
+	margin:30px;
+	width:100%;
+	border:2px solid $colorMarket;
+	position:relative;
+		h1 {
+			color:$colorMarket;
+			font-size:30px;
+			line-height:70px;
+			height:70px;
+			width:100%;
+			text-align:center;
+			background: white; /* Old browsers */
+			background: -moz-linear-gradient(top, white 0%, $grey-light 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, $grey-light)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, white 0%, $grey-light 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ */
+			background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0); /* IE6-9 */
+		}
+	.rw-jobs-job-text{
+		margin:40px;
+		h2 {
+			color:$colorMarket;
+			font-size:20px;
+			margin:30px 0 10px 0;
+			font-weight:600;
+			border-bottom:1px solid $colorMarket;
+			padding-bottom:5px;
+		}
+		h3 {
+			font-size:16px;
+			color:black;
+			font-weight:600;
+			margin:20px 0 5px 0;
+		}
+		p {
+			line-height:16px;
+			font-size:14px;
+			text-align:justify;
+		}
+		ul {
+			li {
+				line-height:16px;
+				font-size:14px;
+				margin-left:30px;
+			}
+		}
+	}
+	.rw-jobs-job-triangle {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width: 0;
+		height: 118px;
+		border-style: solid;
+		border-width: 0 0 40px 40px;
+		border-color: transparent transparent $colorMarket transparent;
+	}	
+
+}
+
