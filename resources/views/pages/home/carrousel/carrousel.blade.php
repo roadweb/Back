@@ -4,7 +4,7 @@
     <img class="rw-fond-exagone-top" src="images/exagonefond.png" />
     <div class="rw-carrous">
         <div>
-            @include('pages.components.carrousel.component.jobnav')
-            @include('pages.components.carrousel.component.jobdescription')
+            @include('pages.home.carrousel.component.jobnav')
+            @include('pages.home.carrousel.component.jobdescription')
         </div>
     </div>
