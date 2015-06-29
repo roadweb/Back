@@ -19,7 +19,8 @@
 
                             <p>{{ $user->email }}</p>
 
-                            <button class="btn btn-default" data-toggle="tooltip"
+                            <button class="btn btn-default" 
+                                    data-toggle="tooltip"
                                     data-placement="top"
                                     title="Les articles qu'il a publiés">
                                 <span class="glyphicon glyphicon-edit"></span>  {{ $user->posts->count() }}
