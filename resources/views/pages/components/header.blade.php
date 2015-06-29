@@ -4,7 +4,7 @@
             <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
         </p>
 
-        <h1 class="rw-slogan">bienvenue sur <em>roadweb</em>.com</h1>
+        <h1 class="rw-slogan">Bienvenue sur <em>road-web</em></h1>
 
         <div id="rw-search">
             {{--ajoute la classe transSearch quand il y a un scroll--}}

@@ -28,7 +28,7 @@
   left: 155px;
   bottom: 0;
   line-height: 100px;
-  font-size: 32px;
+  font-size: $fontSize + 1em;
 
   em {
     color: $red;
@@ -138,7 +138,7 @@
     list-style-type: none;
     line-height: 90px;
     margin: 0;
-    font-size: 18px;
+    font-size: $fontSize + 0.125em;
   }
 
   a {
