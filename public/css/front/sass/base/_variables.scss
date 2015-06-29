@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 $fontFamily : 'Open Sans', sans-serif;
+$fontSize: 1em;
+$lineHeight : $fontSize + 0.25%;
 
 $grey-dark: #7e8b8c; /*gris foncé */
 $grey-light: #ebebe6; /*gris clair*/

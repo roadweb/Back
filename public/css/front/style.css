@@ -114,7 +114,7 @@ footer {
 
 .rw-index-footer-contact p {
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 25px;
 }
 
@@ -135,7 +135,7 @@ footer {
   line-height: 80px;
   text-align: center;
   color: #ebebe6;
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 600;
 }
 
@@ -154,7 +154,7 @@ footer {
 
 .rw-index-footer-nav p {
   color: #bf382a;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 65px;
   margin: 0 auto;
   float: left;
@@ -180,7 +180,7 @@ footer {
 .rw-index-footer-nav ul li a {
   display: block;
   color: #ccc;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .rw-index-footer-nav ul li a img {
@@ -230,7 +230,7 @@ footer {
   left: 155px;
   bottom: 0;
   line-height: 100px;
-  font-size: 32px;
+  font-size: 2em;
 }
 
 .rw-slogan em {
@@ -304,6 +304,7 @@ footer {
 }
 
 #rw-nav {
+  width: 100%;
   margin-top: 30px;
   font-size: 0;
   height: 90px;
@@ -349,7 +350,7 @@ footer {
   list-style-type: none;
   line-height: 90px;
   margin: 0;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 #rw-nav a {
@@ -378,7 +379,7 @@ footer {
 .rw-index-last-articles-container h1 {
   color: #bf382a;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 400;
   text-shadow: 2px 2px 2px white;
   margin: 8px 0px 15px 0px;
@@ -446,7 +447,7 @@ footer {
 	h1 {
 		color: $red;
 		margin: 8px 0px 15px 0px;
-		font-size: 30px;
+		font-size: $fontSize + 0.875em;
 	}
 }
 
@@ -475,7 +476,7 @@ footer {
 		background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ 
 		background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ 
 		background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C 
-		font-size: 14px;
+		font-size: $fontSize - 0.125em;
 	}
 }
 
@@ -552,7 +553,7 @@ footer {
   display: block;
   float: left;
   color: black;
-  font-size: 14px;
+  font-size: 0.875em;
   height: 50px;
   width: 210px;
   padding: 10px;
