@@ -29,4 +29,5 @@
             <li><a href="#">Qui sommes nous</a></li>
         </ul>
     </nav>
+    {{--<div class="rw-clear"></div>--}}
 </header>
