@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
