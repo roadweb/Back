@@ -44,6 +44,8 @@
   right: 0;
   width: 30%;
   transition: all 1s ease-out;
+
+
   z-index: 100;
 }
 
@@ -73,50 +75,56 @@
   }
 }
 
-#rw-nav.fixNavigation {
+.fixNavigation {
   /*classe effective après scroll _ cf js*/
   position: fixed;
   top: -30px;
   width: 100%;
   z-index: 9999;
-}
 
+  .rw-logo-fix {
+    height:80px;
+    margin:5px 5px 5px -100px;
+    display:inline-block;
+    vertical-align:top;
+    visibility:visible !important;
+    transform:translateX(200px);
+    transition:transform 1s ease-in-out;
+  }
+}
+.rw-logo-fix {
+  visibility: hidden;
+}
 #rw-nav {
-  position: relative;
-  z-index: 9999;
   margin-top: 30px;
   font-size: 0;
+  height:90px;
   background-color: $grey-light;
   margin-bottom: 10px;
-  img {
-    position: absolute;
-    z-index: 9999;
-    height: 70px;
-    top: 25px;
-    left: 50px;
-    background: green;
-  }
 
-
-  ul, li {
+  li {
     display: inline-block;
+    vertical-align:top;
   }
 
   .rw-ul_grey {
-
+    float:right;
+    position:relative;
+    z-index: 9999;
     background-color: $grey-light;
-    width: 70%;
     text-align: right;
     li:first-child a {
       color: $red;
     }
-
     a {
       margin-right: 8px;
     }
   }
 
   .rw-ul_red {
+    float:right;
+    position:relative;
+    z-index: 9999;
     background-color: $red;
     width: 30%;
     a {

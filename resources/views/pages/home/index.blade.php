@@ -5,7 +5,7 @@
     @include('pages.components.header')
 
     <div class="container">
-        @include('pages.home.carrousel.carrousel')
+        @include('pages.carrousel.carrousel')
         @include('pages.home.last-articles')
     </div>
 
