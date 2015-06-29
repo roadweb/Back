@@ -19,3 +19,17 @@ $colorInteClair : #DCDD1F;
 $colorInteFonce : #38AA49;
 $colorCmClair : #EB6441;
 $colorCmFonce : #E72E2D;
+
+
+
+/* mixin */
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+
