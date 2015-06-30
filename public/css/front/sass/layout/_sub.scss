@@ -6,7 +6,7 @@
 
     padding: 3% 0;
 
-    //    text-transform: uppercase;
+//    text-transform: uppercase;
     text-align: center;
 
     h1, h2 {
@@ -32,30 +32,31 @@
     form {
 
       margin: 10px 0;
-      input {
-        width: 350px;
+    input {
+      width: 350px;
 
-        margin: 2%;
-        padding: 15px;
+      margin: 2%;
+      padding: 15px;
 
-        font-style: italic;
+      font-style: italic;
 
-        background-color: $grey-light;
-        border: none;
 
-      }
 
-      .rw-sub-checkbox {
-        width: auto;
+      background-color: $grey-light;
+      border: none;
 
-      }
+    }
 
-      .rw-sub-upload {
-        background-color: rgba($red, 0.5);
-        padding: 0;
-        cursor: pointer;
-      }
+    .rw-sub-checkbox {
+      width: auto;
 
+    }
+
+    .rw-sub-upload {
+      background-color: rgba($red, 0.5);
+      padding: 0;
+      cursor: pointer;
+    }
       button {
         width: 350px;
         padding: 10px;
@@ -79,8 +80,10 @@
     justify-content: space-around;
 
     background-color: $grey-light;
+    width: 70%;
 
-    margin: 50px 0;
+    margin: 50px auto 0;
+
 
     .rw-sub-advantages-zone {
       margin: 10px auto;
@@ -111,7 +114,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px){
   .rw-sub-container {
     .rw-sub-advantages {
       flex-flow: row wrap;

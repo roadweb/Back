@@ -146,9 +146,9 @@
 
 
 
-    <!---------------------
- Partie droite de la page : bio auteur + autres articles même auteur + autre article même métier + mis en avant
------------------------>
+        <!---------------------
+     Partie droite de la page : bio auteur + autres articles même auteur + autre article même métier + mis en avant
+    ----------------------->
 
     <div class="rw-blog-band-container">
 
@@ -157,8 +157,7 @@
 
             <h3>Nom Prénom</h3>
 
-            <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus
-                mollitia neque omnis
+            <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
                 praesentium quis</p>
 
 

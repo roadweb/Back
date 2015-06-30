@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class SubController extends Controller
+class AboutusController extends Controller
 {
 
     /**
@@ -13,14 +13,10 @@ class SubController extends Controller
      *
      * @return Response
      */
-    public function sub()
+    public function index()
     {
-        return view('pages.subscribe.sub');
+        return view('pages.aboutus.index');
     }
 
-    public function subvalid()
-    {
-        return view('pages.subscribe.subvalid');
-    }
 
 }
