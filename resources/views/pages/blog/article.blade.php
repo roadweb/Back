@@ -303,7 +303,6 @@
             </div>
 
 
-
         </div>
 
         <div class="rw-blog-band-auth">
@@ -318,7 +317,6 @@
             <img src="{{asset('images/google-plus.png')}}" alt="google +"/>
             <img src="{{asset('images/behance.png')}}" alt="behance"/>
         </div>
-
 
 
     </div>

@@ -28,7 +28,7 @@
   left: 155px;
   bottom: 0;
   line-height: 100px;
-  font-size: 32px;
+  font-size: $fontSize + 1em;
 
   em {
     color: $red;
@@ -43,6 +43,9 @@
   bottom: -25px;
   right: 0;
   width: 30%;
+  transition: all 1s ease-out;
+
+
   z-index: 100;
 }
 
@@ -78,23 +81,38 @@
   top: -30px;
   width: 100%;
   z-index: 9999;
-}
 
+  .rw-logo-fix {
+    height:80px;
+    margin:5px 5px 5px -100px;
+    display:inline-block;
+    vertical-align:top;
+    visibility:visible !important;
+    transform:translateX(200px);
+    transition:transform 1s ease-in-out;
+  }
+}
+.rw-logo-fix {
+  visibility: hidden;
+}
 #rw-nav {
+  width:100%;
   margin-top: 30px;
   font-size: 0;
+  height:90px;
   background-color: $grey-light;
   margin-bottom: 10px;
 
-  ul, li {
+  li {
     display: inline-block;
+    vertical-align:top;
   }
 
   .rw-ul_grey {
+    float:right;
     position:relative;
     z-index: 9999;
     background-color: $grey-light;
-    width: 70%;
     text-align: right;
     li:first-child a {
       color: $red;
@@ -105,6 +123,7 @@
   }
 
   .rw-ul_red {
+    float:right;
     position:relative;
     z-index: 9999;
     background-color: $red;
@@ -119,7 +138,7 @@
     list-style-type: none;
     line-height: 90px;
     margin: 0;
-    font-size: 18px;
+    font-size: $fontSize + 0.125em;
   }
 
   a {

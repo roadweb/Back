@@ -28,8 +28,8 @@ footer {
 	border-radius: 3px;
 	p {
 		text-align:left;
-		font-size:14px;
-		line-height:25px;
+		font-size: $fontSize - 0.125em;
+		line-height: $fontSize - 0.125em + 2%;
 		a {
 			color: $red;
 		}
@@ -49,7 +49,7 @@ footer {
 		line-height:80px;
 		text-align:center;
 		color:$grey-light;
-		font-size:20px;
+		font-size: $fontSize + 0.25em;
 		font-weight:600;
 	}
 }
@@ -66,7 +66,7 @@ footer {
 	}
 	p {
 		color: $red;
-		font-size:20px;
+		font-size: $fontSize + 0.25em;
 		line-height:65px;
 		margin:0 auto;
 		float:left;
@@ -87,7 +87,7 @@ footer {
 			a {
 				display:block;
 				color: #ccc;
-				font-size:20px;
+				font-size: $fontSize + 0.25em;
 				img {
 					width:40px;
 					height:40px;

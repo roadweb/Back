@@ -9,7 +9,7 @@
 	h1 {
 		color: $red;
 		text-align: center;
-		font-size: 30px;
+		font-size: $fontSize + 0.875em;
 		font-weight: 400;
 		text-shadow: 2px 2px 2px white;
 		margin: 8px 0px 15px 0px;
@@ -72,7 +72,7 @@
 	h1 {
 		color: $red;
 		margin: 8px 0px 15px 0px;
-		font-size: 30px;
+		font-size: $fontSize + 0.875em;
 	}
 }
 
@@ -101,7 +101,7 @@
 		background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ 
 		background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ 
 		background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C 
-		font-size: 14px;
+		font-size: $fontSize - 0.125em;
 	}
 }
 
@@ -178,7 +178,7 @@
 		display: block;
 		float:left;
 		color: black;
-		font-size: 14px;
+		font-size: $fontSize - 0.125em;
 		height: 50px;
 		width: 210px;
 		padding: 10px;

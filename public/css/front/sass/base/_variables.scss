@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 $fontFamily : 'Open Sans', sans-serif;
+$fontSize: 1em;
+$lineHeight : $fontSize + 0.25%;
 
 $grey-dark: #7e8b8c; /*gris foncé */
 $grey-light: #ebebe6; /*gris clair*/
@@ -19,3 +21,17 @@ $colorInteClair : #DCDD1F;
 $colorInteFonce : #38AA49;
 $colorCmClair : #EB6441;
 $colorCmFonce : #E72E2D;
+
+
+
+/* mixin */
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+
