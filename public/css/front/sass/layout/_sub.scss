@@ -100,16 +100,19 @@
         margin: auto;
 
       }
-      h3, p {
+
+      p {
+        line-height: $lineHeight;
+        margin: auto;
+        text-align: left;
+        padding: 20px;
+      }
+      h3 {
         margin: auto;
         padding: 20px;
         text-align: justify;
-      }
-
-      h3 {
         font-weight: 600;
       }
-
     }
   }
 }

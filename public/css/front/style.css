@@ -1369,13 +1369,17 @@ partie droite de la page
   margin: auto;
 }
 
-.rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone h3, .rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone p {
+.rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone p {
+  line-height: 1.5em;
   margin: auto;
+  text-align: left;
   padding: 20px;
-  text-align: justify;
 }
 
 .rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone h3 {
+  margin: auto;
+  padding: 20px;
+  text-align: justify;
   font-weight: 600;
 }
 
@@ -1415,11 +1419,13 @@ partie droite de la page
 .rw-mentions-container .rw-mentions-content h2 {
   padding: 3% 0;
   text-decoration: underline;
+  color: #bf382a;
   font-size: 24px;
 }
 
 .rw-mentions-container .rw-mentions-content p {
   padding: 1% 0;
+  line-height: 1.5em;
 }
 
 .rw-aboutus-container {
@@ -1435,6 +1441,7 @@ partie droite de la page
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p {
   text-align: justify;
   padding: 2%;
+  line-height: 1.5em;
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p:nth-of-type(6) {
