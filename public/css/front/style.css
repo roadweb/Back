@@ -960,7 +960,7 @@ Bloc content page
 **************************/
 .rw-main-container-articleon {
   margin: 30px auto;
-  width: 70%;
+  width: 1200px;
 }
 
 /*************************
@@ -1252,7 +1252,7 @@ partie droite de la page
 }
 
 .rw-sub-container {
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -1327,7 +1327,7 @@ partie droite de la page
       -ms-flex-pack: distribute;
           justify-content: space-around;
   background-color: #ebebe6;
-  width: 70%;
+  width: 100%;
   margin: 50px auto 0;
 }
 
@@ -1374,7 +1374,7 @@ partie droite de la page
 }
 
 .rw-mentions-container {
-  width: 70%;
+  width: 1200px;
   height: auto;
   margin: 50px auto;
   border: 2px solid #7e8b8c;
