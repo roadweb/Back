@@ -12,24 +12,10 @@
     		<h1>Les Métiers du Web</h1>
 
     		<p>
-    			Sur Roadweb, nous vous proposons notre vision du web à travers les différents métiers...
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction 
-	    		blablabla je suis un texte d'introduction
+    			Sur Road-Web, nous vous proposons notre vision du web à travers nos différents métiers. 
+    			Retrouvez ici les fiches descriptives des différents métiers que regroupe la création dans 
+    			le monde du digital et du numérique. Et n’oubliez pas que chaque métier existe grâce aux
+    			autres !
 	    	</p>
 
     		<div class="rw-jobs-index-webmarketing">

@@ -1,12 +1,5 @@
 /************************************BLOG OFF**************************************/
 
-/******************LIGNE METIERS + CONNEXION******************/
-
-
-
-
-
-
 /******************BLOC DERNIERS ARTICLES******************/
 
 .rw-index-blog-last-articles-container {
@@ -32,9 +25,9 @@
 }
 
 .rw-index-blog-open-article-min {
-  /*display:inline-block;*/
-  position: relative;
-  height: 90px;
+    /*display:inline-block;*/
+    position: relative;
+    height: 90px;
 	width: 400px;
 	margin-bottom:30px;
 }
@@ -43,7 +36,7 @@
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
-	width: 90px;
+	width: 85px;
 	height: 90px;
 	float:left;
 	background: white; /* Old browsers */
@@ -57,19 +50,19 @@
 		display:block;
 		margin:auto;
 		height:50px;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: $fontSize - 0.2em;
+		line-height: $lineHeight - 0.2em;
 		text-align:center;
 		span {
 			color:$red;
-			font-size:16px;
+			font-size:$fontSize + 0.3em;
 		}
 	}
 }
 
 .rw-index-blog-open-article-min-link {
 	float: left;
-	width: 310px;
+	width: 315px;
 	height: 90px;
 	border:2px solid $colorDev;
 	background-color:#fff;
@@ -83,8 +76,9 @@
 			width:100%;
 			height:100%;
 			color: black;
-			font-size: 14px;
-			padding: 8px 4px 5px 4px;
+			font-size: $fontSize;
+			line-height: $lineHeight;
+			padding: 5px;
 		}
 	}
 

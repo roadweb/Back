@@ -97,7 +97,7 @@ EXTENDS
   clear: both;
 }
 
-.rw-index-article-min-triangle, .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-blog-article-container-arrow {
+.rw-index-footer-btn-subscription .rw-index-footer-triangle, .rw-index-article-min-triangle, .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-blog-article-container-arrow {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -140,7 +140,7 @@ footer {
 
 .rw-index-footer-contact p {
   text-align: left;
-  font-size: 0.875em;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
@@ -151,6 +151,7 @@ footer {
 .rw-index-footer-btn-subscription {
   width: 345px;
   height: 80px;
+  position: relative;
   background-color: #7e8b8c;
   float: right;
   border-radius: 8px;
@@ -165,6 +166,11 @@ footer {
   font-weight: 600;
 }
 
+.rw-index-footer-btn-subscription .rw-index-footer-triangle {
+  border-color: transparent transparent white transparent;
+  border-width: 0 0 30px 30px;
+}
+
 .rw-index-footer-nav {
   margin-top: 20px;
   width: 100%;
@@ -174,7 +180,7 @@ footer {
   float: left;
   width: 65px;
   height: 65px;
-  background: #bf382a url("../../images/reseaux-sociaux.png") no-repeat center;
+  background: #bf382a url("../../images/reseaux-icon/reseaux-sociaux.png") no-repeat center;
   margin-right: 20px;
 }
 
@@ -290,6 +296,8 @@ footer {
   width: 50px;
   height: 50px;
   background-color: #bf382a;
+  position: relative;
+  z-index: 9999;
 }
 
 #rw-search input[type=search] {
@@ -436,8 +444,9 @@ footer {
 .rw-index-last-article h1, .rw-index-open-article-min h1 {
   color: black;
   text-align: center;
-  font-size: 15px;
-  margin: 10px 0px;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 4px 0px;
 }
 
 .rw-index-last-article img, .rw-index-open-article-min img {
@@ -449,8 +458,9 @@ footer {
 
 .rw-index-last-article p, .rw-index-open-article-min p {
   text-align: center;
-  font-size: 13px;
-  padding: 10px 20px;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  padding: 8px 20px;
 }
 
 .rw-index-last-article:last-child, .rw-index-open-article-min:last-child {
@@ -561,13 +571,13 @@ footer {
 
 .rw-index-article-min-date p {
   padding: 0px;
-  font-size: 12px;
-  line-height: 13px;
+  font-size: 0.7em;
+  line-height: 1.2em;
 }
 
 .rw-index-article-min-date p span {
   color: #bf382a;
-  font-size: 15px;
+  font-size: 1.3em;
 }
 
 .rw-index-article-min-link {
@@ -580,7 +590,8 @@ footer {
   display: block;
   float: left;
   color: black;
-  font-size: 0.875em;
+  font-size: 0.9em;
+  line-height: 1.2em;
   height: 50px;
   width: 210px;
   padding: 10px;
@@ -593,7 +604,6 @@ footer {
 }
 
 /************************************BLOG OFF**************************************/
-/******************LIGNE METIERS + CONNEXION******************/
 /******************BLOC DERNIERS ARTICLES******************/
 .rw-index-blog-last-articles-container, .rw-index-blog-open-articles-container-min {
   background-color: #ebebe6;
@@ -649,7 +659,7 @@ footer {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90px;
+  width: 85px;
   height: 90px;
   float: left;
   background: white;
@@ -669,19 +679,19 @@ footer {
   display: block;
   margin: auto;
   height: 50px;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 0.8em;
+  line-height: 1.3em;
   text-align: center;
 }
 
 .rw-index-blog-open-article-min-date p span {
   color: #bf382a;
-  font-size: 16px;
+  font-size: 1.3em;
 }
 
 .rw-index-blog-open-article-min-link {
   float: left;
-  width: 310px;
+  width: 315px;
   height: 90px;
   border: 2px solid #F6D432;
   background-color: #fff;
@@ -698,8 +708,9 @@ footer {
   width: 100%;
   height: 100%;
   color: black;
-  font-size: 14px;
-  padding: 8px 4px 5px 4px;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 5px;
 }
 
 .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons {
@@ -733,8 +744,8 @@ footer {
 
 .rw-jobs-index-container p {
   text-align: justify;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1em;
+  line-height: 1.5em;
   width: 100%;
   padding: 50px 70px;
   margin: 0 auto;
@@ -788,14 +799,15 @@ footer {
 .rw-jobs-index-webmarketing .rw-jobs-index-description h1, .rw-jobs-index-developpement .rw-jobs-index-description h1, .rw-jobs-index-webdesign .rw-jobs-index-description h1, .rw-jobs-index-referencement .rw-jobs-index-description h1, .rw-jobs-index-integration .rw-jobs-index-description h1, .rw-jobs-index-community-management .rw-jobs-index-description h1 {
   font-size: 26px;
   color: #F59E36;
-  margin: 3px;
+  margin: 2px;
 }
 
 .rw-jobs-index-webmarketing .rw-jobs-index-description p, .rw-jobs-index-developpement .rw-jobs-index-description p, .rw-jobs-index-webdesign .rw-jobs-index-description p, .rw-jobs-index-referencement .rw-jobs-index-description p, .rw-jobs-index-integration .rw-jobs-index-description p, .rw-jobs-index-community-management .rw-jobs-index-description p {
   margin: 0;
   padding: 8px 0 0 0;
   width: 100%;
-  line-height: 18px;
+  font-size: 0.9em;
+  line-height: 1.4em;
 }
 
 .rw-jobs-index-webmarketing .rw-jobs-index-description p a, .rw-jobs-index-developpement .rw-jobs-index-description p a, .rw-jobs-index-webdesign .rw-jobs-index-description p a, .rw-jobs-index-referencement .rw-jobs-index-description p a, .rw-jobs-index-integration .rw-jobs-index-description p a, .rw-jobs-index-community-management .rw-jobs-index-description p a {
@@ -939,14 +951,14 @@ footer {
 }
 
 .rw-jobs-job-description .rw-jobs-job-text p {
-  line-height: 16px;
-  font-size: 14px;
+  line-height: 1.5em;
+  font-size: 1em;
   text-align: justify;
 }
 
 .rw-jobs-job-description .rw-jobs-job-text ul li {
-  line-height: 16px;
-  font-size: 14px;
+  line-height: 1.5em;
+  font-size: 1em;
   margin-left: 30px;
 }
 
