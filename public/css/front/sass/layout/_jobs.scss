@@ -69,12 +69,9 @@
 		}
 	}
 	.rw-jobs-index-triangle {
-		float:right;
-		width: 0;
-		height: 118px;
-		border-style: solid;
-		border-width: 0 0 40px 40px;
-		border-color: transparent transparent $colorMarket transparent;
+		@extend %arrow;
+      border-width: 0 0 40px 40px;
+      border-color: transparent transparent $colorMarket transparent;
 	}	
 }
 
@@ -201,14 +198,9 @@
 		}
 	}
 	.rw-jobs-job-triangle {
-		position:absolute;
-		right:0;
-		bottom:0;
-		width: 0;
-		height: 118px;
-		border-style: solid;
-		border-width: 0 0 40px 40px;
-		border-color: transparent transparent $colorMarket transparent;
+      @extend %arrow;
+      border-width: 0 0 40px 40px;
+      border-color: transparent transparent $colorMarket transparent;
 	}	
 
 }

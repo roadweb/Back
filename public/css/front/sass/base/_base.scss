@@ -32,3 +32,11 @@ EXTENDS
   &:after { content: " "; display: table; }
   &:after { clear: both; }
 }
+
+%arrow {
+  position:absolute;
+  right:0;
+  bottom:0;
+  width: 0;
+  border-style: solid;
+}

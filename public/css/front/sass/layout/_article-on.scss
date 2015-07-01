@@ -20,6 +20,7 @@ bloc de l'article
   float: left;
 
   margin: 20px auto;
+  position: relative;
 
   padding-bottom: 2%;
 
@@ -29,31 +30,21 @@ bloc de l'article
 .rw-blog-article-brd-design {
   border: 2px solid $colorDesignFonce;
 
-  /* triangle bas d'article fait en image. A voir pour le faire en CSS*/
-  background: #ffffff url('../../images/triangledesign.png') scroll no-repeat right bottom;
+  /* triangle bas d'article fait en image. A voir pour le faire en CSS
+  background: #ffffff url('../../images/triangledesign.png') scroll no-repeat right bottom;*/
 }
 
 /* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
 
-/*
+
 .rw-blog-article-container-arrow {
-  width: 0;
-  height: 0;
-  margin: 10px auto;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  @extend %arrow;
+  border-color: transparent transparent $colorDesignClair transparent;
+  border-width: 0 0 40px 40px;
 
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-top: 25px solid $colorDesignFonce;
 
-  transform: rotate(-45deg);
 
-  left: 95%;
-  top: 97%;
-
-}*/
+}
 
 /*************************
 Bloc Titre de l'article
@@ -84,6 +75,7 @@ Bloc Titre de l'article
   margin: 0 auto;
   padding: 10px;
   text-shadow: 2px 2px 2px #ffffff;
+  line-height: $lineHeight;
 }
 
 /*************************
@@ -210,8 +202,8 @@ partie droite de la page
     p {
 
       padding: 3%;
-
-      text-align: justify;
+      line-height: $lineHeight;
+      text-align: left;
     }
 
     .rw-blog-band-auth-rsx {
@@ -243,6 +235,7 @@ partie droite de la page
         height: 53px;
         margin: auto;
         padding: 0 1%;
+        line-height: $lineHeight;
       }
 
       .rw-blog-band-others-sameAuth-header-date {

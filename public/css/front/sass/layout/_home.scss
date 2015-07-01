@@ -151,6 +151,7 @@
 	height: 50px;
 	width: 300px;
 	border: 0px solid $colorDev;
+  position: relative;
 }
 
 .rw-index-article-min-date {
@@ -187,11 +188,9 @@
 }
 
 .rw-index-article-min-triangle {
-	float: right;
-	width: 0;
-	height: 50px;
-	border-style: solid;
-	border-width: 0 0 20px 20px;
-	border-color: transparent transparent $colorDev transparent;
+	@extend %arrow;
+
+  border-width: 0 0 25px 25px;
+  border-color: transparent transparent $colorDev transparent;
 }
 
