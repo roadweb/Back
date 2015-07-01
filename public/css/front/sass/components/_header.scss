@@ -56,7 +56,7 @@
   right: 0;
   width: 30%;
   z-index: 1;
-
+//todo-manue Loupe non prise en charge sur chrome
   .rw-loupe {
     display: block;
     width: 50px;
@@ -95,10 +95,11 @@
 .rw-logo-fix {
   visibility: hidden;
 }
+//todo-manue centrer adhérer et pousser sur la gauche les autres
 #rw-nav {
   width:100%;
   margin-top: 30px;
-  font-size: 0;
+  font-size: 16px;
   height:90px;
   background-color: $grey-light;
   margin-bottom: 10px;
@@ -138,7 +139,7 @@
     list-style-type: none;
     line-height: 90px;
     margin: 0;
-    font-size: $fontSize + 0.125em;
+    font-size: $fontSize;
   }
 
   a {
