@@ -28,6 +28,8 @@
         padding: 1%;
         margin: 1%;
 
+        @extend %clearfix;
+
         img {
           &:nth-of-type(1) {
             transform: translateY(-20px) translateX(20px);
@@ -49,6 +51,8 @@
         float: left;
 
         padding: 0 1%;
+
+        @extend %clearfix;
 
       }
 

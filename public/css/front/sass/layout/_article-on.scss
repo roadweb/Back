@@ -1,4 +1,16 @@
 /*************************
+Bloc content page
+**************************/
+
+.rw-main-container-articleon {
+  margin: 30px auto;
+  width: 70%;
+
+  @extend %clearfix;
+
+}
+
+/*************************
 bloc de l'article
 **************************/
 .rw-blog-article-container {
@@ -10,6 +22,8 @@ bloc de l'article
   margin: 20px auto;
 
   padding-bottom: 2%;
+
+  @extend %clearfix;
 }
 
 .rw-blog-article-brd-design {
@@ -94,6 +108,10 @@ Bloc contenu de l'article
 .rw-blog-article-content {
   width: 100%;
   padding: 10px;
+
+  p {
+    line-height: $lineHeight;
+  }
 }
 
 .rw-blog-article-content img {
@@ -150,6 +168,8 @@ Bloc commentaire de l'article
 .rw-blog-article-comment-cmt-ord img {
   float: left;
   display: block;
+
+  @extend %clearfix;
 }
 
 .rw-blog-article-comment-cmt-ord p {
@@ -168,11 +188,12 @@ partie droite de la page
 **************************/
 
 .rw-blog-band-container {
-  width: 30%;
+  width: 29%;
   height: auto;
   float: left;
-  margin: 20px auto;
+  margin: 20px 0 20px 5px;
 
+  @extend %clearfix;
   background-color: $grey-light;
 
   .rw-blog-band-auth {
@@ -266,7 +287,9 @@ partie droite de la page
       padding: 3%;
 
       img {
-        width: 100%;
+        width: 234px;
+        height: 128px;
+        border-bottom: 2px solid $grey-dark;
       }
     }
 

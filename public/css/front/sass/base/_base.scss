@@ -22,3 +22,13 @@ a {
 .clear {
 	clear:both;
 }
+
+/*************************
+EXTENDS
+**************************/
+
+%clearfix {
+  &:before,
+  &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}

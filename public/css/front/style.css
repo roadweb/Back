@@ -79,6 +79,24 @@ a {
   clear: both;
 }
 
+/*************************
+EXTENDS
+**************************/
+.rw-main-container-articleon:before,
+.rw-blog-article-container:before,
+.rw-blog-article-comment-cmt-ord img:before,
+.rw-blog-band-container:before,
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:before,
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:before,
+.rw-main-container-articleon:after, .rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-blog-band-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+  content: " ";
+  display: table;
+}
+
+.rw-main-container-articleon:after, .rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-blog-band-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+  clear: both;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -115,7 +133,7 @@ footer {
 .rw-index-footer-contact p {
   text-align: left;
   font-size: 0.875em;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 .rw-index-footer-contact p a {
@@ -306,7 +324,7 @@ footer {
 #rw-nav {
   width: 100%;
   margin-top: 30px;
-  font-size: 0;
+  font-size: 16px;
   height: 90px;
   background-color: #ebebe6;
   margin-bottom: 10px;
@@ -946,6 +964,14 @@ footer {
 }
 
 /*************************
+Bloc content page
+**************************/
+.rw-main-container-articleon {
+  margin: 30px auto;
+  width: 70%;
+}
+
+/*************************
 bloc de l'article
 **************************/
 .rw-blog-article-container {
@@ -1044,6 +1070,10 @@ Bloc contenu de l'article
   padding: 10px;
 }
 
+.rw-blog-article-content p {
+  line-height: 1.5em;
+}
+
 .rw-blog-article-content img {
   margin: 0 5%;
   width: 90%;
@@ -1109,10 +1139,10 @@ Bloc commentaire de l'article
 partie droite de la page
 **************************/
 .rw-blog-band-container {
-  width: 30%;
+  width: 29%;
   height: auto;
   float: left;
-  margin: 20px auto;
+  margin: 20px 0 20px 5px;
   background-color: #ebebe6;
 }
 
@@ -1207,7 +1237,9 @@ partie droite de la page
 }
 
 .rw-blog-band-container .rw-blog-band-others-Une .rw-blog-band-others-Une-illus img {
-  width: 100%;
+  width: 234px;
+  height: 128px;
+  border-bottom: 2px solid #7e8b8c;
 }
 
 .rw-blog-band-container .rw-blog-band-others-Une .rw-blog-band-others-Une-header {
