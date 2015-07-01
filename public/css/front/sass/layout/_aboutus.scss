@@ -15,6 +15,7 @@
 
         text-align: justify;
         padding: 2%;
+        line-height: $lineHeight;
 
         &:nth-of-type(6) {
           font-weight: 600;
@@ -27,6 +28,8 @@
 
         padding: 1%;
         margin: 1%;
+
+        @extend %clearfix;
 
         img {
           &:nth-of-type(1) {
@@ -49,6 +52,8 @@
         float: left;
 
         padding: 0 1%;
+
+        @extend %clearfix;
 
       }
 
