@@ -1,4 +1,4 @@
-<!-- développé par Céline : index de la home / bloc "derniers articles" -->
+    <!-- développé par Céline : index de la home / bloc "derniers articles" -->
 
 <section class="rw-index-last-articles-container">
     <h1>Derniers articles du blog</h1>
