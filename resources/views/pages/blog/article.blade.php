@@ -134,7 +134,7 @@
                 </div>
 
 
-                <div class="rw-blog-article-container-arrow"></div>
+                <div class="rw-bdc-triangle-design"></div>
             </div>
         </div>
 
@@ -156,9 +156,9 @@
 
 
             <div class="rw-blog-band-auth-rsx">
-                <img src="{{ asset('images/facebook.png')}}" alt="Facebook"/>
-                <img src="{{ asset('images/linkedin.png')}}" alt="Linkedin"/>
-                <img src="{{ asset('images/twitter.png')}}" alt="Twitter"/>
+                <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
+                <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
+                <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter"/>
             </div>
         </div>
 
@@ -186,6 +186,7 @@
 
             </div>
 
+            <div class="rw-bdc-triangle-inte"></div>
 
         </div>
 
@@ -213,6 +214,7 @@
 
             </div>
 
+            <div class="rw-bdc-triangle-design"></div>
 
         </div>
 
@@ -242,6 +244,7 @@
 
 
             </div>
+            <div class="rw-bdc-triangle-design"></div>
 
 
         </div>
@@ -269,6 +272,7 @@
 
             </div>
 
+            <div class="rw-bdc-triangle-design"></div>
 
         </div>
 
@@ -306,12 +310,12 @@
         </div>
 
         <div class="rw-blog-band-rsx">
-            <img src="{{asset('images/linkedin.png')}}" alt="Linkedin"/>
-            <img src="{{asset('images/twitter.png')}}" alt="Twietter"/>
-            <img src="{{asset('images/facebook.png')}}" alt="Facebook"/>
-            <img src="{{asset('images/pinterest.png')}}" alt="Pinterest"/>
-            <img src="{{asset('images/google-plus.png')}}" alt="google +"/>
-            <img src="{{asset('images/behance.png')}}" alt="behance"/>
+            <img src="{{asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
+            <img src="{{asset('images/reseaux-icon/twitter.png')}}" alt="Twietter"/>
+            <img src="{{asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
+            <img src="{{asset('images/reseaux-icon/pinterest.png')}}" alt="Pinterest"/>
+            <img src="{{asset('images/reseaux-icon/google-plus.png')}}" alt="google +"/>
+            <img src="{{asset('images/reseaux-icon/behance.png')}}" alt="behance"/>
         </div>
 
 

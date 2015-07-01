@@ -97,7 +97,7 @@ EXTENDS
   clear: both;
 }
 
-.rw-index-footer-btn-subscription .rw-index-footer-triangle, .rw-index-article-min-triangle, .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-blog-article-container-arrow {
+.rw-index-footer-btn-subscription .rw-index-footer-triangle, .rw-index-article-min-triangle, .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-bdc-triangle-design, .rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -965,7 +965,7 @@ Bloc content page
 **************************/
 .rw-main-container-articleon {
   margin: 30px auto;
-  width: 70%;
+  width: 1200px;
 }
 
 /*************************
@@ -987,8 +987,8 @@ bloc de l'article
 }
 
 /* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
-.rw-blog-article-container-arrow {
-  border-color: transparent transparent #72CFF5 transparent;
+.rw-bdc-triangle-design {
+  border-color: transparent transparent #36A7DE transparent;
   border-width: 0 0 40px 40px;
 }
 
@@ -1159,6 +1159,7 @@ partie droite de la page
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth {
   margin: 3%;
+  position: relative;
 }
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-header {
@@ -1210,7 +1211,12 @@ partie droite de la page
 }
 
 .rw-blog-band-container .rw-blog-article-brd-inte .rw-blog-band-others-sameAuth-header-picto {
-  background: #ffffff url("../../images/triangleinte.png") no-repeat right bottom;
+  background: #ffffff url;
+}
+
+.rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
+  border-color: transparent transparent #38AA49 transparent;
+  border-width: 0 0 40px 40px;
 }
 
 .rw-blog-band-container .rw-blog-band-others-Une {
@@ -1257,7 +1263,7 @@ partie droite de la page
 }
 
 .rw-sub-container {
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -1332,7 +1338,7 @@ partie droite de la page
       -ms-flex-pack: distribute;
           justify-content: space-around;
   background-color: #ebebe6;
-  width: 70%;
+  width: 100%;
   margin: 50px auto 0;
 }
 
@@ -1379,7 +1385,7 @@ partie droite de la page
 }
 
 .rw-mentions-container {
-  width: 70%;
+  width: 1200px;
   height: auto;
   margin: 50px auto;
   border: 2px solid #7e8b8c;
