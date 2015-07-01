@@ -99,7 +99,7 @@
 #rw-nav {
   width:100%;
   margin-top: 30px;
-  font-size: 16px;
+  font-size: $fontSize + 0.120em;
   height:90px;
   background-color: $grey-light;
   margin-bottom: 10px;
@@ -107,6 +107,16 @@
   li {
     display: inline-block;
     vertical-align:top;
+    list-style-type: none;
+    line-height: 90px;
+    font-size: $fontSize + 0.125em;
+    margin: 0 25px;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 90px;
+    color: black;
   }
 
   .rw-ul_grey {
@@ -115,11 +125,9 @@
     z-index: 9999;
     background-color: $grey-light;
     text-align: right;
+    padding-right:30px;
     li:first-child a {
       color: $red;
-    }
-    a {
-      margin-right: 8px;
     }
   }
 
@@ -129,24 +137,10 @@
     z-index: 9999;
     background-color: $red;
     width: 30%;
+    text-align: center;
     a {
-      margin-left: 8px;
       color: white;
     }
   }
 
-  li {
-    list-style-type: none;
-    line-height: 90px;
-    margin: 0;
-    font-size: $fontSize;
-  }
-
-  a {
-    display: inline-block;
-    text-decoration: none;
-    line-height: 90px;
-    color: black;
-    margin: 0 20px;
-  }
 }
