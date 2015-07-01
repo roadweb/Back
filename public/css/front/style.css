@@ -332,7 +332,7 @@ footer {
 #rw-nav {
   width: 100%;
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 1.12em;
   height: 90px;
   background-color: #ebebe6;
   margin-bottom: 10px;
@@ -341,6 +341,17 @@ footer {
 #rw-nav li {
   display: inline-block;
   vertical-align: top;
+  list-style-type: none;
+  line-height: 90px;
+  font-size: 1.125em;
+  margin: 0 25px;
+}
+
+#rw-nav a {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 90px;
+  color: black;
 }
 
 #rw-nav .rw-ul_grey {
@@ -349,14 +360,11 @@ footer {
   z-index: 9999;
   background-color: #ebebe6;
   text-align: right;
+  padding-right: 30px;
 }
 
 #rw-nav .rw-ul_grey li:first-child a {
   color: #bf382a;
-}
-
-#rw-nav .rw-ul_grey a {
-  margin-right: 8px;
 }
 
 #rw-nav .rw-ul_red {
@@ -365,26 +373,11 @@ footer {
   z-index: 9999;
   background-color: #bf382a;
   width: 30%;
+  text-align: center;
 }
 
 #rw-nav .rw-ul_red a {
-  margin-left: 8px;
   color: white;
-}
-
-#rw-nav li {
-  list-style-type: none;
-  line-height: 90px;
-  margin: 0;
-  font-size: 1.125em;
-}
-
-#rw-nav a {
-  display: inline-block;
-  text-decoration: none;
-  line-height: 90px;
-  color: black;
-  margin: 0 20px;
 }
 
 /*
