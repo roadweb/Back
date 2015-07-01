@@ -32,8 +32,9 @@
 }
 
 .rw-index-blog-open-article-min {
-	/*display:inline-block;*/
-	height: 90px;
+  /*display:inline-block;*/
+  position: relative;
+  height: 90px;
 	width: 400px;
 	margin-bottom:30px;
 }
@@ -98,12 +99,9 @@
 		}
 
 		.rw-index-blog-open-article-min-triangle {
-			float: right;
-			width: 0;
-			height: 46px;
-			border-style: solid;
-			border-width: 0 0 30px 30px;
-			border-color: transparent transparent $colorDev transparent;
+			@extend %arrow;
+          border-width: 0 0 40px 40px;
+          border-color: transparent transparent $colorDev transparent;
 		}
 	}
 }

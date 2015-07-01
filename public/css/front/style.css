@@ -97,6 +97,14 @@ EXTENDS
   clear: both;
 }
 
+.rw-index-article-min-triangle, .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-blog-article-container-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  border-style: solid;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -540,6 +548,7 @@ footer {
   height: 50px;
   width: 300px;
   border: 0px solid #F6D432;
+  position: relative;
 }
 
 .rw-index-article-min-date {
@@ -579,11 +588,7 @@ footer {
 }
 
 .rw-index-article-min-triangle {
-  float: right;
-  width: 0;
-  height: 50px;
-  border-style: solid;
-  border-width: 0 0 20px 20px;
+  border-width: 0 0 25px 25px;
   border-color: transparent transparent #F6D432 transparent;
 }
 
@@ -624,6 +629,7 @@ footer {
 
 .rw-index-blog-open-article-min {
   /*display:inline-block;*/
+  position: relative;
   height: 90px;
   width: 400px;
   margin-bottom: 30px;
@@ -708,11 +714,7 @@ footer {
 }
 
 .rw-index-blog-open-article-min-link .rw-index-blog-open-article-min-icons .rw-index-blog-open-article-min-triangle {
-  float: right;
-  width: 0;
-  height: 46px;
-  border-style: solid;
-  border-width: 0 0 30px 30px;
+  border-width: 0 0 40px 40px;
   border-color: transparent transparent #F6D432 transparent;
 }
 
@@ -802,10 +804,6 @@ footer {
 }
 
 .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle {
-  float: right;
-  width: 0;
-  height: 118px;
-  border-style: solid;
   border-width: 0 0 40px 40px;
   border-color: transparent transparent #F59E36 transparent;
 }
@@ -953,12 +951,6 @@ footer {
 }
 
 .rw-jobs-job-description .rw-jobs-job-triangle {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 118px;
-  border-style: solid;
   border-width: 0 0 40px 40px;
   border-color: transparent transparent #F59E36 transparent;
 }
@@ -979,35 +971,22 @@ bloc de l'article
   height: auto;
   float: left;
   margin: 20px auto;
+  position: relative;
   padding-bottom: 2%;
 }
 
 .rw-blog-article-brd-design {
   border: 2px solid #36A7DE;
-  /* triangle bas d'article fait en image. A voir pour le faire en CSS*/
-  background: #ffffff url("../../images/triangledesign.png") scroll no-repeat right bottom;
+  /* triangle bas d'article fait en image. A voir pour le faire en CSS
+  background: #ffffff url('../../images/triangledesign.png') scroll no-repeat right bottom;*/
 }
 
 /* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
-/*
 .rw-blog-article-container-arrow {
-  width: 0;
-  height: 0;
-  margin: 10px auto;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  border-color: transparent transparent #72CFF5 transparent;
+  border-width: 0 0 40px 40px;
+}
 
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-top: 25px solid $colorDesignFonce;
-
-  transform: rotate(-45deg);
-
-  left: 95%;
-  top: 97%;
-
-}*/
 /*************************
 Bloc Titre de l'article
 **************************/
@@ -1046,6 +1025,7 @@ Bloc Titre de l'article
   margin: 0 auto;
   padding: 10px;
   text-shadow: 2px 2px 2px #ffffff;
+  line-height: 1.5em;
 }
 
 /*************************
@@ -1159,7 +1139,8 @@ partie droite de la page
 
 .rw-blog-band-container .rw-blog-band-auth p {
   padding: 3%;
-  text-align: justify;
+  line-height: 1.5em;
+  text-align: left;
 }
 
 .rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-rsx {
@@ -1196,6 +1177,7 @@ partie droite de la page
   height: 53px;
   margin: auto;
   padding: 0 1%;
+  line-height: 1.5em;
 }
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-header .rw-blog-band-others-sameAuth-header-date {
@@ -1418,7 +1400,6 @@ partie droite de la page
 
 .rw-mentions-container .rw-mentions-content h2 {
   padding: 3% 0;
-  text-decoration: underline;
   color: #bf382a;
   font-size: 24px;
 }

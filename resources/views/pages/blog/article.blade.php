@@ -13,7 +13,7 @@
 
             <div class="rw-blog-article-header">
 
-                <!---- attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+                <!---- todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-article-header-date">
                     <p class="rw-blog-article-header-date-red">12</p>
 
@@ -23,7 +23,7 @@
                 </div>
 
 
-                <!---- Le titre sera récupéré dans la bdd---->
+                <!----todo-popix Le titre sera récupéré dans la bdd---->
                 <h3> Que ce soit du print ou du digital comment aborder le langage couleur avec votre prestataire.</h3>
 
 
@@ -31,12 +31,12 @@
 
             <div class="rw-blog-article-content">
 
-                <!---- L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
+                <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
                 <img src="http://lorempixel.com/1227/405/abstract/7/" alt="chromatides"/>
 
                 <!---------------------
-                 Ici le contenu de l'article. J'ai mis des <p> pour l'instant mais éventuellement mettre une div complète?
+                todo-popix VOTRE AVIS:Ici le contenu de l'article. J'ai mis des <p> pour l'instant mais éventuellement mettre une div complète?
                 ----------------------->
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque dolorem eaque.
@@ -56,7 +56,7 @@
                     nesciunt!
                 </p>
 
-                <!---- auteur devra être récupéré dans la BDD ---->
+                <!----todo-popix auteur devra être récupéré dans la BDD ---->
                 <h4>Auteur</h4>
 
             </div>
@@ -66,10 +66,10 @@
 
                 <div class="rw-blog-article-comment-nbr">
 
-                    <!--------------------- Le nombre de commentaire devra être récupéré dans la base de données ----------------------->
+                    <!---------------------todo-popix Le nombre de commentaire devra être récupéré dans la base de données ----------------------->
                     <p class="rw-blog-article-comment-nbr-red">3</p>
 
-                    <!---------------------
+                    <!---------------------todo-popix
                      Faire un script pour le pluriel du mot commentaire!!
                         si 0 ou 1 ==> singulier
                         si 2 ou + ==> pluriel
@@ -84,17 +84,14 @@
                 <div class="rw-blog-article-comment-cmt">
 
                     <div class="rw-blog-article-comment-cmt-ord">
-                        <!---------------------
-                         Partie améliorée par rapport au design de la maquette.. A l'origine pas de date ni d'avatar. A voir!
-                        ----------------------->
 
-                        <!---- avatar dans bdd---->
+                        <!----todo-popix avatar dans bdd idem pour chaque coms---->
                         <img src="http://lorempixel.com/60/60/people/1/" alt="avatar"/>
 
-                        <!---- date commentaire dans bdd---->
+                        <!----todo-popix date commentaire dans bdd idem pour chaque coms---->
                         <p>15 janvier 2015 14h39</p>
 
-                        <!---- contenu du commentaire dans bdd---->
+                        <!----todo-popix contenu du commentaire dans bdd idem pour chaque coms---->
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
                     </div>
@@ -102,9 +99,6 @@
                     <div class="rw-blog-article-comment-cmt">
 
                         <div class="rw-blog-article-comment-cmt-ord">
-                            <!---------------------
-                             Partie améliorée par rapport au design de la maquette.. A l'origine pas de date ni d'avatar. A voir!
-                            ----------------------->
 
                             <!---- avatar dans bdd, peut être autre façon de récupérer img?---->
                             <img src="http://lorempixel.com/60/60/people/9/" alt="avatar"/>
@@ -120,9 +114,6 @@
                         <div class="rw-blog-article-comment-cmt">
 
                             <div class="rw-blog-article-comment-cmt-ord">
-                                <!---------------------
-                                 Partie améliorée par rapport au design de la maquette.. A l'origine pas de date ni d'avatar. A voir!
-                                ----------------------->
 
                                 <!---- avatar dans bdd---->
                                 <img src="http://lorempixel.com/60/60/people/1/" alt="avatar"/>
@@ -143,7 +134,7 @@
                 </div>
 
 
-                <!--  <div class="rw-blog-article-container-arrow"></div>-->
+                <div class="rw-blog-article-container-arrow"></div>
             </div>
         </div>
 
@@ -175,7 +166,7 @@
 
             <div class="rw-blog-band-others-sameAuth-header">
 
-                <!---- attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+                <!----todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-band-others-sameAuth-header-date">
                     <p class="rw-blog-band-others-sameAuth-header-date-red">09</p>
 
@@ -183,8 +174,8 @@
 
                     <p>2015</p>
                 </div>
-                <!---- Le titre sera récupéré dans la bdd---->
-                <h3> Que ce soit du print ou du digital comment aborder le langage couleur avec votre prestataire.</h3>
+                <!----todo-popix  Le titre sera récupéré dans la bdd---->
+                <h3> Que ce soit du print ou du digital comment aborder ...</h3>
 
             </div>
 
@@ -202,7 +193,7 @@
 
             <div class="rw-blog-band-others-sameAuth-header">
 
-                <!---- attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+                <!----todo-popix  attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-band-others-sameAuth-header-date">
                     <p class="rw-blog-band-others-sameAuth-header-date-red">19</p>
 
@@ -210,7 +201,7 @@
 
                     <p>2015</p>
                 </div>
-                <!---- Le titre sera récupéré dans la bdd---->
+                <!----todo-popix  Le titre sera récupéré dans la bdd---->
                 <h3> Changer son thème Wordpress</h3>
 
             </div>
@@ -232,7 +223,7 @@
 
             <div class="rw-blog-band-others-sameAuth-header">
 
-                <!---- attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+                <!----todo-popix  attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-band-others-sameAuth-header-date">
                     <p class="rw-blog-band-others-sameAuth-header-date-red">12</p>
 
@@ -240,7 +231,7 @@
 
                     <p>2015</p>
                 </div>
-                <!---- Le titre sera récupéré dans la bdd---->
+                <!----todo-popix  Le titre sera récupéré dans la bdd---->
                 <h3> Nos secrets sur Photoshop avec 3 exemples à l'appui</h3>
 
             </div>
@@ -258,7 +249,7 @@
 
             <div class="rw-blog-band-others-sameAuth-header">
 
-                <!---- attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+                <!----todo-popix  attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-band-others-sameAuth-header-date">
                     <p class="rw-blog-band-others-sameAuth-header-date-red">12</p>
 
@@ -266,7 +257,7 @@
 
                     <p>2015</p>
                 </div>
-                <!---- Le titre sera récupéré dans la bdd---->
+                <!----todo-popix  Le titre sera récupéré dans la bdd---->
                 <h3> Nos secrets sur Photoshop avec 3 exemples à l'appui</h3>
 
             </div>
@@ -293,6 +284,8 @@
 
             <div class="rw-blog-band-others-Une-illus">
 
+                <!----todo-popix  L'image sera récupérée dans la bdd---->
+
                 <img src="{{asset('images/blog1.png')}}" alt="Photoshop et CSS"/>
 
             </div>
@@ -300,7 +293,7 @@
 
             <div class="rw-blog-band-others-Une-header">
 
-                <!---- Le titre sera récupéré dans la bdd---->
+                <!----todo-popix  Le titre sera récupéré dans la bdd---->
                 <h3> Depuis Photoshop directement en CSSDepuis Photoshop directement en CSS</h3>
 
             </div>
