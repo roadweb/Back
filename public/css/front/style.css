@@ -82,18 +82,16 @@ a {
 /*************************
 EXTENDS
 **************************/
-.rw-main-container-articleon:before,
 .rw-blog-article-container:before,
 .rw-blog-article-comment-cmt-ord img:before,
-.rw-blog-band-container:before,
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:before,
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:before,
-.rw-main-container-articleon:after, .rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-blog-band-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+.rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
   content: " ";
   display: table;
 }
 
-.rw-main-container-articleon:after, .rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-blog-band-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+.rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
   clear: both;
 }
 
@@ -966,6 +964,13 @@ Bloc content page
 .rw-main-container-articleon {
   margin: 30px auto;
   width: 1200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
 }
 
 /*************************
@@ -974,7 +979,6 @@ bloc de l'article
 .rw-blog-article-container {
   width: 70%;
   height: auto;
-  float: left;
   margin: 20px auto;
   position: relative;
   padding-bottom: 2%;
@@ -982,11 +986,8 @@ bloc de l'article
 
 .rw-blog-article-brd-design {
   border: 2px solid #36A7DE;
-  /* triangle bas d'article fait en image. A voir pour le faire en CSS
-  background: #ffffff url('../../images/triangledesign.png') scroll no-repeat right bottom;*/
 }
 
-/* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
 .rw-bdc-triangle-design {
   border-color: transparent transparent #36A7DE transparent;
   border-width: 0 0 40px 40px;
@@ -1014,11 +1015,21 @@ Bloc Titre de l'article
 
 .rw-blog-article-header p {
   padding: 2%;
+  margin: auto;
 }
 
 .rw-blog-article-header-date {
   width: 100px;
-  padding: 15px 10px;
+  padding: 2%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   background-color: #ebebe6;
   font-size: 14px;
@@ -1027,7 +1038,7 @@ Bloc Titre de l'article
 .rw-blog-article-header h3 {
   text-align: left;
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
   padding: 10px;
   text-shadow: 2px 2px 2px #ffffff;
   line-height: 1.5em;
@@ -1053,6 +1064,13 @@ Bloc contenu de l'article
 .rw-blog-article-content {
   width: 100%;
   padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 .rw-blog-article-content p {
@@ -1060,14 +1078,14 @@ Bloc contenu de l'article
 }
 
 .rw-blog-article-content img {
-  margin: 0 5%;
+  margin: auto;
   width: 90%;
   padding: 15px;
 }
 
 .rw-blog-article-content p, .rw-blog-article-content h4 {
   text-align: justify;
-  margin: 0 5%;
+  margin: auto;
   width: 90%;
   padding: 10px;
 }
@@ -1126,8 +1144,7 @@ partie droite de la page
 .rw-blog-band-container {
   width: 29%;
   height: auto;
-  float: left;
-  margin: 20px 0 20px 5px;
+  margin: 20px auto;
   background-color: #ebebe6;
 }
 

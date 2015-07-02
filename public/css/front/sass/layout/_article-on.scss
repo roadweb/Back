@@ -5,8 +5,10 @@ Bloc content page
 .rw-main-container-articleon {
   margin: 30px auto;
   width: 1200px;
+  display: flex;
+  flex-flow: row nowrap;
 
-  @extend %clearfix;
+ // @extend %clearfix;
 
 }
 
@@ -17,7 +19,7 @@ bloc de l'article
   width: 70%;
   height: auto;
 
-  float: left;
+  //float: left;
 
   margin: 20px auto;
   position: relative;
@@ -29,21 +31,12 @@ bloc de l'article
 
 .rw-blog-article-brd-design {
   border: 2px solid $colorDesignFonce;
-
-  /* triangle bas d'article fait en image. A voir pour le faire en CSS
-  background: #ffffff url('../../images/triangledesign.png') scroll no-repeat right bottom;*/
 }
-
-/* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
-
 
 .rw-bdc-triangle-design {
   @extend %arrow;
   border-color: transparent transparent $colorDesignFonce transparent;
   border-width: 0 0 40px 40px;
-
-
-
 }
 
 /*************************
@@ -58,12 +51,15 @@ Bloc Titre de l'article
 
   p {
     padding: 2%;
+    margin: auto;
   }
 }
 
 .rw-blog-article-header-date {
   width: 100px;
-  padding: 15px 10px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: $grey-light;
   font-size: 14px;
@@ -72,7 +68,7 @@ Bloc Titre de l'article
 .rw-blog-article-header h3 {
   text-align: left;
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
   padding: 10px;
   text-shadow: 2px 2px 2px #ffffff;
   line-height: $lineHeight;
@@ -100,6 +96,8 @@ Bloc contenu de l'article
 .rw-blog-article-content {
   width: 100%;
   padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
 
   p {
     line-height: $lineHeight;
@@ -107,14 +105,14 @@ Bloc contenu de l'article
 }
 
 .rw-blog-article-content img {
-  margin: 0 5%;
+  margin: auto;
   width: 90%;
   padding: 15px;
 }
 
 .rw-blog-article-content p, .rw-blog-article-content h4 {
   text-align: justify;
-  margin: 0 5%;
+  margin: auto;
   width: 90%;
   padding: 10px;
 
@@ -182,10 +180,10 @@ partie droite de la page
 .rw-blog-band-container {
   width: 29%;
   height: auto;
-  float: left;
-  margin: 20px 0 20px 5px;
+  //float: left;
+  margin: 20px auto;
 
-  @extend %clearfix;
+ // @extend %clearfix;
   background-color: $grey-light;
 
   .rw-blog-band-auth {
