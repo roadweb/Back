@@ -14,26 +14,26 @@
 		font-size:$fontSize;
 		line-height:$lineHeight;
 		width:100%;
-		padding:50px 70px;
+		padding:50px;
 		margin:0 auto;
 	}
 }
 
+.rw-jobs-index-container-flex {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+}
+
 .rw-jobs-index-webmarketing {
-	display:inline-block;
-	vertical-align:top;
-	margin:20px 60px;
+	margin:20px;
 	border:2px solid $colorMarket;
 	width:440px;
 	height:120px;
-	background: white; /* Old browsers */
-	background: -moz-linear-gradient(top, white 0%, $grey-light 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, $grey-light)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, white 0%, $grey-light 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ */
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-around;
 	background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0); /* IE6-9 */
 	position:relative;
 	div {
 		float:left;
