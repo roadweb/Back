@@ -1507,13 +1507,13 @@ partie droite de la page
     CARROUSEL DE LA HOME PAGE
     MATHIEU HO
 */
+/*
 * {
   box-sizing: border-box;
 }
-
+*/
 .rw-carrous {
   width: 1200px;
-  padding: 60px 0;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1524,25 +1524,11 @@ partie droite de la page
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Open Sans";
-}
-
-.rw-fond-exagone-top {
-  position: absolute;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: auto;
-  height: auto;
-  line-height: 100vh;
-  right: 0;
 }
 
 .rw-carrous-header {
   width: 1200px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
 .rw-carrous-nav {
@@ -1673,18 +1659,8 @@ partie droite de la page
 
 .rw-carrous-navbar-content {
   top: -80px;
-  width: 100%;
   height: -webkit-calc(79px*1.2);
   height: calc(79px*1.2);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -1721,6 +1697,7 @@ partie droite de la page
 }
 
 .rw-carrous-navbar-job .rw-icon-job {
+  z-index: 2;
   width: 91px;
   height: 79px;
   margin: 0 -webkit-calc(91px*0.1);
@@ -1729,6 +1706,8 @@ partie droite de la page
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .rw-carrous-navbar-job .rw-icon-job:hover {
@@ -1741,8 +1720,11 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job-label {
-  position: absolute;
+.rw-carrous-navbar-job .rw-carrous-navbar-job-label {
+  overflow: hidden;
+  top: -30px;
+  opacity: 0;
+  position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1754,6 +1736,14 @@ partie droite de la page
           flex-direction: column;
   width: -webkit-calc(91px*1.2);
   width: calc(91px*1.2);
+}
+
+.rw-carrous-navbar-job a:hover .rw-carrous-navbar-job-label {
+  overflow: visible;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .rw-carrous-navbar-job-label span,
@@ -1813,7 +1803,54 @@ partie droite de la page
   height: 24px;
 }
 
+.white {
+  color: white;
+}
+
+.rw-carrous-body {
+  width: 1200px;
+}
+
+.rw-carrous-body-content {
+  position: relative;
+}
+
+.rw-carrous-body-content-article-screen {
+  display: inline-block;
+  width: 416px;
+  height: 370px;
+  margin-left: 40px;
+}
+
+.rw-carrous-body-content-article {
+  position: absolute;
+  display: inline-block;
+  width: 600px;
+  top: 20px;
+  margin-left: 30px;
+}
+
+.rw-carrous-body-content-article-text-h1 {
+  display: block;
+  color: blue;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.rw-carrous-body-content-article-text-p {
+  display: block;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.rw-readmore,
+.rw-readmore a {
+  color: blue;
+}
+
 .rw-carrous-nav-icon {
+  z-index: 9999;
   position: fixed;
   right: 0;
   top: 300px;
@@ -1863,48 +1900,24 @@ partie droite de la page
   background-color: white;
 }
 
-.white {
-  color: white;
-}
-
-.rw-carrous-body {
-  width: 1200px;
-}
-
-.rw-carrous-body-content {
-  position: relative;
-}
-
-.rw-carrous-body-content-article-screen {
-  display: inline-block;
-  width: 416px;
-  height: 370px;
-  margin-left: 40px;
-}
-
-.rw-carrous-body-content-article {
+/*
+|--------------------------------------------------------------------------
+| Background
+|--------------------------------------------------------------------------
+*/
+/* mathieu */
+/* FOND EXAGONE TOP */
+.rw-fond-exagone-top {
+  z-index: -1;
   position: absolute;
-  display: inline-block;
-  width: 600px;
-  top: 20px;
-  margin-left: 30px;
-}
-
-.rw-carrous-body-content-article-text-h1 {
-  display: block;
-  color: blue;
-  font-size: 32px;
-  line-height: 40px;
-  margin-bottom: 10px;
-}
-
-.rw-carrous-body-content-article-text-p {
-  display: block;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.rw-readmore,
-.rw-readmore a {
-  color: blue;
+  padding: 20px 0;
+  top: 280px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: auto;
+  line-height: 100vh;
+  right: 0;
 }

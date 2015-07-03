@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}"/>
 </head>
 <body>
+    
+<img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
 
 @yield('content')
 
