@@ -4,11 +4,9 @@
 
     @include('pages.components.header')
 
-    <div class="container">
-      
-      JE SUIS L'INDEX OFF DU BLOG
-      <br /> <br />
-        
+    @include('pages.lognews.lognews')
+
+    <div class="container">        
       @include('pages.carrousel.component.jobnav')
       @include('pages.blog.off.last-articles')
     </div>
