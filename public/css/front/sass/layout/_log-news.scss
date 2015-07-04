@@ -1,0 +1,35 @@
+////////    LOGNEWS    :    mathieu     ////////////////////////////////////////////////////////////////
+
+        .rw-carrous-nav-icon{
+            z-index: 9999;
+            position:fixed;
+            right:0;
+            top:300px;
+            width:80px;
+            height:164px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+            .rw-carrous-nav-reseau,
+            .rw-carrous-nav-newsletter{
+                width:80px;
+                height:80px;
+                display:block;
+                background-color: $red;
+            }
+                .rw-icon-reseau,
+                .rw-icon-newsletter{
+                    width:46px;
+                    height:58px;
+                    margin:11px auto;
+                    background-color: $red;
+                    display:flex;
+                    justify-content: space-between;
+                }
+
+                .rw-icon-newsletter{
+                    padding: 4.5px 8.5px;
+                    background-color: white;
+                }
