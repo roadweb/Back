@@ -1,3 +1,5 @@
+<!-- dev: mathieu -->
+
 <form class="rw-logform" role="form" method="POST" action="#">  <!-- action="{{ url('/admin/auth/login') }}" -->
     <input type="hidden" name="_token" value="#"> <!-- value="{{ csrf_token() }}" -->
 
