@@ -5,8 +5,7 @@
     @include('pages.components.header')
 
     <div class="container">
-      
-      JE SUIS L'INDEX OFF DU BLOG
+
       <br /> <br />
         
       @include('pages.carrousel.component.jobnav')
