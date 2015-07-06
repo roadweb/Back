@@ -4,7 +4,7 @@ Bloc content page
 
 .rw-main-container-articleon {
   margin: 30px auto;
-  width: 70%;
+  width: 1200px;
 
   @extend %clearfix;
 
@@ -37,9 +37,9 @@ bloc de l'article
 /* code css du triangle à ajuster pour la position. Penser à passer la position de rw-blog-article-container en position relative si technique utilisée*/
 
 
-.rw-blog-article-container-arrow {
+.rw-bdc-triangle-design {
   @extend %arrow;
-  border-color: transparent transparent $colorDesignClair transparent;
+  border-color: transparent transparent $colorDesignFonce transparent;
   border-width: 0 0 40px 40px;
 
 
@@ -221,6 +221,7 @@ partie droite de la page
   .rw-blog-band-others-sameAuth {
 
     margin: 3%;
+    position: relative;
 
     .rw-blog-band-others-sameAuth-header {
 
@@ -264,8 +265,15 @@ partie droite de la page
   .rw-blog-article-brd-inte {
     border: 2px solid $colorInteFonce;
 
+
     .rw-blog-band-others-sameAuth-header-picto {
-      background: #ffffff url("../../images/triangleinte.png") no-repeat right bottom;
+      background: #ffffff url
+    }
+
+    .rw-bdc-triangle-inte {
+      @extend %arrow;
+      border-color: transparent transparent $colorInteFonce transparent;
+      border-width: 0 0 40px 40px;
     }
   }
 
