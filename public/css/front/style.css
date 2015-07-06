@@ -333,7 +333,7 @@ footer {
   height: 50px;
   bottom: -25px;
   right: 0;
-  width: 30%;
+  width: 20%;
   -webkit-transition: all 1s ease-out;
           transition: all 1s ease-out;
   z-index: 100;
@@ -344,7 +344,7 @@ footer {
   height: 50px;
   top: 110px;
   right: 0;
-  width: 30%;
+  width: 20%;
   z-index: 1;
 }
 
@@ -378,25 +378,31 @@ footer {
 }
 
 .fixNavigation .rw-logo-fix {
-  height: 80px;
-  margin: 5px 5px 5px -100px;
-  display: inline-block;
-  vertical-align: top;
-  visibility: visible !important;
-  -webkit-transform: translateX(200px);
-      -ms-transform: translateX(200px);
-          transform: translateX(200px);
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-          transition: transform 1s ease-in-out;
+  margin: auto;
 }
 
-.rw-logo-fix {
-  visibility: hidden;
+.fixNavigation .rw-logo-fix img {
+  -webkit-transition: opacity 2s;
+          transition: opacity 2s;
+  opacity: 1;
+}
+
+.rw-logo-fix img {
+  height: 80px;
+  opacity: 0;
+  padding: 0 50px;
 }
 
 #rw-nav {
   width: 100%;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   font-size: 1.12em;
   height: 90px;
   background-color: #ebebe6;
@@ -407,9 +413,8 @@ footer {
   display: inline-block;
   vertical-align: top;
   list-style-type: none;
-  line-height: 90px;
   font-size: 1.125em;
-  margin: 0 25px;
+  margin: auto;
 }
 
 #rw-nav a {
@@ -420,12 +425,25 @@ footer {
 }
 
 #rw-nav .rw-ul_grey {
-  float: right;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   position: relative;
   z-index: 9999;
   background-color: #ebebe6;
-  text-align: right;
-  padding-right: 30px;
 }
 
 #rw-nav .rw-ul_grey li:first-child a {
@@ -433,11 +451,11 @@ footer {
 }
 
 #rw-nav .rw-ul_red {
-  float: right;
+  margin: auto;
+  padding: 0 5%;
   position: relative;
   z-index: 9999;
   background-color: #bf382a;
-  width: 30%;
   text-align: center;
 }
 

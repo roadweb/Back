@@ -42,7 +42,7 @@
   height: 50px;
   bottom: -25px;
   right: 0;
-  width: 30%;
+  width: 20%;
   transition: all 1s ease-out;
 
 
@@ -54,7 +54,7 @@
   height: 50px;
   top: 110px;
   right: 0;
-  width: 30%;
+  width: 20%;
   z-index: 1;
   .rw-loupe {
     display: block;
@@ -84,22 +84,32 @@
   z-index: 9999;
 
   .rw-logo-fix {
-    height:80px;
-    margin:5px 5px 5px -100px;
-    display:inline-block;
-    vertical-align:top;
-    visibility:visible !important;
-    transform:translateX(200px);
-    transition:transform 1s ease-in-out;
+      margin:auto;
+//    width:20%;
+//    flex-grow:2;
+
+    img {
+//      visibility:visible !important;
+      transition: opacity 2s;
+      opacity:1;
+    }
   }
 }
 .rw-logo-fix {
-  visibility: hidden;
+  img{
+    height:80px;
+    opacity:0;
+    padding: 0 50px;
+//    visibility: hidden;
+  }
+
 }
 #rw-nav {
   width:100%;
   margin-top: 30px;
-
+display:flex;
+  flex-flow: row nowrap;
+//  justify-content: flex-end;
   font-size: $fontSize + 0.120em;
 
   height:90px;
@@ -110,9 +120,9 @@
     display: inline-block;
     vertical-align:top;
     list-style-type: none;
-    line-height: 90px;
+//    line-height: 90px;
     font-size: $fontSize + 0.125em;
-    margin: 0 25px;
+    margin: auto;
   }
   a {
     display: inline-block;
@@ -122,23 +132,27 @@
   }
 
   .rw-ul_grey {
-    float:right;
-    position:relative;
+    flex-grow:2;
+    margin:auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    position: relative;
     z-index: 9999;
-    background-color: $grey-light;
-    text-align: right;
-    padding-right:30px;
+    background-color:$grey-light;
+//    text-align: right;
+//    padding-right:30px;
     li:first-child a {
       color: $red;
     }
   }
 
   .rw-ul_red {
-    float:right;
+    margin:auto;
+    padding: 0 5%;
     position:relative;
     z-index: 9999;
     background-color: $red;
-    width: 30%;
     text-align: center;
     a {
       color: white;
