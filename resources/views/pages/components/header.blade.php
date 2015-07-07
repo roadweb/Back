@@ -10,7 +10,7 @@
             {{--ajoute la classe transSearch quand il y a un scroll--}}
 
             <form action="" class="rw-searchbar" method="post">
-                <input name="" type="search" placeholder="Rechercher sur Roadweb.com"/>
+                <input name="" type="search" placeholder="Rechercher sur Roadweb"/>
             </form>
             <p><img class="rw-loupe" alt="loupe" src="{{asset('images/loupe.png')}}" height="90px"></p>
         </div>
@@ -18,15 +18,17 @@
     <div class="rw-clear"></div>
     <nav id="rw-nav">
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
-        <img class="rw-logo-fix" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
-        <ul class="rw-ul_red">
-            <li><a href="#">Adhérer</a></li>
-        </ul>
+        <div class="rw-logo-fix">
+        <img alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
+        </div>
         <ul class="rw-ul_grey">
             <li><a href="#">Accueil</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Nos métiers</a></li>
             <li><a href="#">Qui sommes nous</a></li>
+        </ul>
+        <ul class="rw-ul_red">
+            <li><a href="#">Inscription</a></li>
         </ul>
     </nav>
     {{--<div class="rw-clear"></div>--}}
