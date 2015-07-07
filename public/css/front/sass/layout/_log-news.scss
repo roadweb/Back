@@ -1,35 +1,235 @@
 ////////    LOGNEWS    :    mathieu     ////////////////////////////////////////////////////////////////
 
-        .rw-carrous-nav-icon{
-            z-index: 9999;
-            position:fixed;
-            right:0;
-            top:300px;
+.rw-lognews-login,
+.rw-lognews-newsletter{
+    z-index: 9999;
+    position:fixed;
+    right:0;
+    top:280px;
+    min-width:80px;
+    height:inherit;
+    display: flex;
+    flex-direction: column;
+}
+.rw-lognews-newsletter{
+    top:380px;
+}
+    .rw-lognews-login:hover,
+    .rw-lognews-newsletter:hover{
+        z-index: 10000;
+    }
+    .rw-login,
+    .rw-newsletter{
+        width:inherit;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .rw-lognews-container{
+        z-index:9;
+        width:0;
+        height:0;
+        overflow:hidden;
+        left:80px;
+        display:inline-flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 0 6px 6px 6px;
+        box-shadow: 0 0 6px;
+        @include transition(all, 0.2s, ease-in-out);
+    }
+        .rw-square{
+            top:0;
+            left:0;
             width:80px;
-            height:164px;
-            display: flex;
+            height:80px;
+            display:flex;
+            background-color: $red;
+        }
+            .rw-icon-login,
+            .rw-icon-newsletter{
+                width:46px;
+                height:58px;
+                margin:11px 17px;
+                background-color: $red;
+                display:flex;
+                align-items: center;
+            }
+            .rw-icon-newsletter{
+                padding: 4.5px 8.5px;
+                background-color: white;
+            }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.rw-lognews-form{
+    width:220px;
+    padding:10px;
+    height:inherit;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $grey-light;
+    border-radius: 0 4px 4px 4px;
+}
+
+.rw-login:hover .rw-lognews-container,
+.rw-newsletter:hover .rw-lognews-container{
+    overflow:visible;
+    right:10px;
+    width:240px;
+    height:auto;
+    box-shadow: 0 0 4px;
+    @include transition(all, 0.2s, ease-in-out);
+    padding:10px;
+    background-color: white;
+}
+
+    .rw-lognews-form-group{
+        width:200px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-content: center;
+    }
+        .rw-lognews-container-header{
+            min-height:60px;
+            line-height: 30px;
+            padding:10px 0;
+            display:flex;
             flex-direction: column;
-            justify-content: space-between;
+        }
+        .rw-lognews-container-row,
+        .rw-lognews-container-welcome,
+        .rw-lognews-container-btn,
+        .rw-lognews-container-forgoten,
+        .rw-lognews-container-remember{
+            line-height:50px;////////////////////////////////////////////////////////
+            
+            width:200px;
+            height:50px;
+            border-radius: 2px;
+            display: flex;
+            flex-direction:row;
+            align-items: stretch;
+            justify-content: center;
+        }
+            .rw-lognews-container-forgoten,
+            .rw-lognews-container-remember{
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .rw-lognews-container-forgoten{
+                justify-content: flex-start;
+            }
+            .rw-lognews-container-btn{
+                height:40px;
+                line-height: 50px;
+                margin:5px 0;
+            }
+
+        .rw-lognews-form-group .rw-checkbox{
+            width:30px;
         }
 
-            .rw-carrous-nav-reseau,
-            .rw-carrous-nav-newsletter{
-                width:80px;
-                height:80px;
-                display:block;
-                background-color: $red;
+            .rw-lognews-container-row .rw-lognews-icon,
+            .rw-lognews-container-btn .rw-lognews-icon{
+                width:40px;
+                height:40px;
+                display:flex;
+                justify-content: space-around;
+                border-radius:2px 0 0 2px;
             }
-                .rw-icon-reseau,
-                .rw-icon-newsletter{
-                    width:46px;
-                    height:58px;
-                    margin:11px auto;
-                    background-color: $red;
-                    display:flex;
-                    justify-content: space-between;
+                .rw-lognews-container-row .rw-lognews-icon{
+                    background-color:#333;
                 }
+                    .rw-lognews-icon img{
+                        width:20px;
+                        height:auto;
+                        display:block;
+                        margin:auto;
+                    }
 
-                .rw-icon-newsletter{
-                    padding: 4.5px 8.5px;
-                    background-color: white;
-                }
+        .rw-lognews-container-row input,
+        .rw-lognews-container-row label,
+        .rw-lognews-container-row a,
+        .rw-lognews-form-group h1{
+            line-height:40px;////////////////////////////////////////////////////
+            
+            height:40px;
+            width:160px;
+            background:none;
+            border:none;
+            text-align: center;
+        }
+        .rw-lognews-container-row input{
+            border-bottom:1px solid #333;
+        }
+        .rw-lognews-form-group a{
+            color:#333;
+        }
+        .rw-lognews-form-group h1{
+            display:flex; 
+            height:auto;
+            line-height:center;
+        }
+        .rw-lognews-form-group a:hover{
+            @include transition(all, 0.2s, ease-in-out);
+        }
+
+        .rw-lognews-pwd-forgoten, 
+        .rw-lognews-remember{
+            font-size: 12px;/////////////////////////////////////
+        }
+
+        .rw-lognews-btn-send{
+            display:flex;
+            justify-content: center;
+            height:40px;
+            width:160px;
+            color:white;
+            background:none;
+            border:none;
+            font-weight: 600;
+            border-left:1px solid white;
+        }
+
+    .rw-lognews-form-group .rw-lognews-sub{
+        line-height: 30px;///////////////////////////////////////////////////////
+
+        width: 200px;
+        display:block;
+        justify-content: center;
+        text-align: center;
+    }
+    .rw-lognews-form-group .rw-welcome{
+        color:$red;
+        font-size:20px;
+        font-weight: 800;
+    }
+    .rw-lognews-form-group .rw-subscriber{
+        font-size:20px;
+    }
+
+.rw-lognews-form-group .rw-bg-connect{
+    background-color:$colorOpen;
+}
+.rw-lognews-form-group .rw-bg-disconnect{
+    background-color:$colorClose;
+}
+.rw-lognews-form-group .rw-bg-connect:hover{
+    background-color:$colorOpenHover;
+    @include transition(all, 0.2s, ease-in-out);
+}
+.rw-lognews-form-group .rw-bg-disconnect:hover{
+    background-color:$colorCloseHover;
+    @include transition(all, 0.2s, ease-in-out);
+}
+.rw-lognews-form-group .rw-font-connect:hover{
+    color:$colorCloseHover;
+    @include transition(all, 0.2s, ease-in-out);
+}
+.rw-lognews-form-group .rw-font-disconnect:hover{
+    color:$colorCloseHover;
+    @include transition(all, 0.2s, ease-in-out);
+}
