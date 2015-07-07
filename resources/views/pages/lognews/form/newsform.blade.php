@@ -1,43 +1,30 @@
 <!-- dev: mathieu -->
-
-<form class="rw-logform" role="form" method="POST" action="#">  <!-- action="{{ url('/admin/auth/login') }}" -->
-    <input type="hidden" name="_token" value="#"> <!-- value="{{ csrf_token() }}" -->
-
-    <div class="form-group">
-        <label class="col-md-4 control-label">Login/Email</label>
-
-        <div class="col-md-6">
-            <input type="email" class="form-control" name="email" value="#"> <!-- value="{{ old('email') }}" -->
+    
+<form class="rw-lognews-form" role="form" method="POST" action="#">  <!-- action="{{ url('/admin/auth/login') }}" -->
+    
+    <div class="rw-lognews-form-group">
+        <div class="rw-lognews-container-header">
+            <span class="rw-lognews-sub">Recevoir la newsletter</span>
         </div>
     </div>
-
-    <div class="form-group">
-        <label class="col-md-4 control-label">Mot de passe</label>
-
-        <div class="col-md-6">
-            <input type="password" class="form-control" name="password">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-6 col-md-offset-4">
-            <div class="checkbox checkbox-success">
-                <input id="checkbox1"
-                       type="checkbox"
-                       class="checkbox checkbox-success"
-                       name="remember">
-                <label for="checkbox1">
-                    Se rappeler de moi ?
-                </label>
+    
+    <div class="rw-lognews-form-group">
+        <div class="rw-lognews-container-row">
+            <div class="rw-lognews-icon">
+                <img src="{{ asset('images/icons-manquantes/arobaz.png') }}" alt="newsletter">
             </div>
+            <input type="email" name="newsletter" value="e-mail"> <!--  class="form-control"  value="{{ old('email') }}" -->
+        </div>
+        
+    </div>
+    
+    <div class="rw-lognews-form-group">
+        <div class="rw-lognews-container-btn rw-bg-connect">
+            <div class="rw-lognews-icon">
+                <img src="{{ asset('images/icons-manquantes/ok.png') }}" alt="ok"/>
+            </div>
+            <button type="submit" class="rw-lognews-btn-send">Enregistrer</button>
         </div>
     </div>
-
-    <div class="form-group">
-        <div class="col-md-6 col-md-offset-4">
-            <button type="submit" class="btn btn-primary">Se connecter</button>
-
-            <a class="btn btn-link" href="#">Mot de passe oublié ?</a> <!-- {{ url('/admin/password/email') }} -->
-        </div>
-    </div>
+    
 </form>
