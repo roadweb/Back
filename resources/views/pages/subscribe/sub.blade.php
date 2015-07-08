@@ -4,7 +4,7 @@
     @include('pages.components.header')
 
     <!---------------------
- développé par Pauline: Inscription : creation de compte
+ développé par Pauline: Inscription : creation de compte et proposition d'adhésion association
 ----------------------->
 
 <div class="rw-sub-container">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="rw-sub-content">
-        <form action="" method="">
+        <form action="" method="" class="rw-sub-form">
 
             <fieldset>
                 <input type="text" name="nom" placeholder="Nom"/>
@@ -35,14 +35,30 @@
             <input type="password" name="password" placeholder="Confirmation de mot de passe"/>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="checkbox">
 
-            <input class="rw-sub-checkbox" type="checkbox" name="Emweb" value="Emweb"/>Je suis ou j'ai été élève de l'EmWeb.
+                <p>
+                    <input type="checkbox" id="emweb" />
+                    <label for="emweb">
+            <span class="ui">
 
+            </span>Je suis ou j'ai été élève de l'EMWeb</label>
+                </p>
             <!---------------------
              upload de fichier uniquement si checkbox élèves EmWeb sélectionnée
             ----------------------->
-            <input class="rw-sub-upload" type="file" name="champsFichier" id="champsFichier"><br>
+               <p>
+                <label for="champsFichier">La validation de votre inscription en tant qu'élève ou ancien élève de l'EMWeb se fait par l'envoi d'un certificat de scolarité à votre nom directement par ce formulaire.</label>
+
+            <input class="rw-sub-upload" type="file" name="champsFichier" id="champsFichier">
+               </p>
+                <p>
+                    <input type="checkbox" id="assorw" />
+                    <label for="assorw">
+            <span class="ui">
+
+            </span>Je désire des renseignements concernant l'association Road Web.</label>
+                </p>
 
 
             </fieldset>
