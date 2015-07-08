@@ -17,5 +17,4 @@ class MotionsController extends Controller
     {
         return view('pages.motion.index');
     }
-
 }

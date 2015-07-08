@@ -116,7 +116,7 @@ FIN DES ARTICLES OUVERTS-->
         </div>
         <div class="rw-index-article-min-link">
             <div class="rw-index-article-min-triangle"></div>
-            <a href="#">Nom de l'article - lire l'article</a>
+            <a href="/blog">Nom de l'article - lire l'article</a>
             
         </div>
     </article>
