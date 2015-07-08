@@ -10,7 +10,7 @@ function active($path)
     $match = $request === '/' ? '/' : explode('/', $request)[0];
 
     if ($match === $path) {
-        return 'class=active';
+        return "class='active'";
     }
 
     return false;
