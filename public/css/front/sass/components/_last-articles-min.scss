@@ -1,0 +1,73 @@
+/******************BLOC ARTICLES OUVERTS MINIS******************/
+.rw-index-open-articles-container-min {
+	width:100%;
+	height:auto;
+	padding:15px;
+	margin-top: 10px;
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+}
+
+.rw-index-open-article-min {
+    position: relative;
+    height: 90px;
+	width: 400px;
+	margin: 10px 0;
+	display:flex;
+	flex-flow: row nowrap;
+	.rw-index-open-article-min-triangle {
+		@extend %arrow;
+        border-width: 0 0 40px 40px;
+        border-color: transparent transparent $colorDev transparent;
+	}
+}
+
+.rw-index-open-article-min-date {
+	width: 85px;
+	height: 90px;
+	display:flex;
+	background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+	p {
+		margin:auto;
+		height:50px;
+		font-size: $fontSize - 0.2em;
+		line-height: $lineHeight - 0.2em;
+		text-align:center;
+		span {
+			color:$red;
+			font-size:$fontSize + 0.3em;
+		}
+	}
+}
+
+.rw-index-open-article-min-link {
+	width: 315px;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	height: 90px;
+	border:2px solid $colorDev;
+	background-color:#fff;
+	.rw-index-open-article-min-title {
+		height: 40px;
+		width: 310px;
+		a {
+			display: block;
+			width:100%;
+			height:100%;
+			color: black;
+			font-size: $fontSize;
+			line-height: $lineHeight;
+			padding: 5px;
+		}
+	}
+
+	.rw-index-open-article-min-icons {
+		height: 50px;
+		padding: 0 4px 2px 4px;
+		img {
+			height:45px;
+		}
+	}
+}

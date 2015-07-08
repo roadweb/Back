@@ -9,8 +9,11 @@ footer {
 }
 
 .rw-index-footer-container {
-	height:210px;
+	height:auto;
 	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
 	background-color: $grey-light;
 	padding:20px 30px;
 	z-index:1;
@@ -19,12 +22,11 @@ footer {
 
 .rw-index-footer-contact {
 	background-color:white;
-	float:left;
-	width:68%;
-	height:80px;
+	margin:10px;
+	width:72%;
+	min-height:80px;
+	height:auto;
 	padding:10px 60px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	p {
 		text-align:left;
@@ -37,17 +39,17 @@ footer {
 }
 
 .rw-index-footer-btn-subscription {
-	width:345px;
-	height:80px;
+	width:25%;
+	display:flex;
+	margin:auto 10px;
+	min-height:80px;
+	margin:auto;
 	position:relative;
 	background-color: $grey-dark;
-	float:right;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	a {
 		display:block;
-		line-height:80px;
+		margin: auto;
 		text-align:center;
 		color:$grey-light;
 		font-size: $fontSize + 0.25em;
@@ -61,54 +63,66 @@ footer {
 }
 
 .rw-index-footer-nav {
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
 	margin-top:20px;
 	width:100%;
-	.rw-index-footer-nav-bcg-icon {
-		float:left;
-		width:65px;
-		height:65px;
-		background: $red url('../../images/reseaux-icon/reseaux-sociaux.png') no-repeat center;
-		margin-right:20px;
-	}
-	p {
-		color: $red;
-		font-size: $fontSize + 0.25em;
-		line-height:65px;
-		margin:0 auto;
-		float:left;
-		width:200px;
-		display:block;
-	}
-	ul {
-		height:65px;
-		float:left;
-		margin:0 auto;
-		padding-left:0;
-		li {
+	.rw-index-footer-nav-networks {
+		display:flex;
+		flex-flow:row nowrap;
+		.rw-index-footer-nav-bcg-icon {
+			min-width:65px;
 			height:65px;
-			display:block;
-			float:left;
-			list-style:none;
-			margin:15px;
-			a {
-				display:block;
-				color: #ccc;
-				font-size: $fontSize + 0.25em;
-				img {
-					width:40px;
-					height:40px;
+			background: $red url('../../images/reseaux-icon/reseaux-sociaux.png') no-repeat center;
+			margin:auto;
+		}
+		p {
+			color: $red;
+			font-size: $fontSize + 0.25em;
+			margin:auto 5px;
+		}
+		ul {
+			display:flex;
+			flex-flow:row nowrap;
+			justify-content:space-between;
+			height:65px;
+			margin:auto;
+			li {
+				height:65px;
+				list-style:none;
+				margin:10px;
+				&.rw-hidden {
+					display:none;
+				}
+				a {
+					display:block;
+					img {
+						width:40px;
+						height:40px;
+					}
 				}
 			}
 		}
-		&:last-child{
-			float:right;
+	}
+	.rw-index-footer-nav-list {
+		ul {
+			height:65px;
+			margin:auto;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-between;
 			li {
-				padding-top:4px;
-				&:last-child {
-					margin-right:0;
+				list-style:none;
+				a {
+					display:block;
+					margin:15px;
+					color: #ccc;
+					font-size: $fontSize + 0.25em;
 				}
 			}
 		}
 	}
 }
-//todo-popix mettre le triangle blanc dans le bouton abonnement et changer en adhérer si chef ok.
+
+	

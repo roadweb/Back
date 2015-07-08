@@ -1,8 +1,10 @@
-<div class="rw-carrous-body">
+<!-- dev: mathieu -->
+<div class="rw-carrous">
+    <div class="rw-carrous-body">
 
     <div class="rw-carrous-body-content">
 
-        <img class="rw-carrous-body-content-article-screen" src="images/ecran.png"/>
+        <img class="rw-carrous-body-content-article-screen" src="{{ asset('images/ecran.png')}}"/>
     
         <div class="rw-carrous-body-content-article">
             <h1 class="rw-carrous-body-content-article-text-h1"> Webdesigner</h1>
@@ -13,4 +15,5 @@
         
     </div>
     
+</div>
 </div>
