@@ -76,13 +76,13 @@ Route::get('/about', 'AboutusController@index');
 |
 */
 
-Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
-    Route::get('posts', function(){
-        $posts = Post::get();
-        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
-    });
-    Route::get('posts/{id}', function($id){
-        $posts = Post::find($id);
-        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
-    });
-});
+//Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
+//    Route::get('posts', function(){
+//        $posts = Post::get();
+//        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+//    });
+//    Route::get('posts/{id}', function($id){
+//        $posts = Post::find($id);
+//        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+//    });
+//});

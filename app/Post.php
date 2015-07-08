@@ -11,6 +11,7 @@ class Post extends Model
         'content',
         'published',
         'user_id',
+        'resume',
         'category_id',
         'is_sticky',
         'job_id',
