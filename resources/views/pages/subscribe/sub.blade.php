@@ -35,7 +35,7 @@
             <input type="password" name="password" placeholder="Confirmation de mot de passe"/>
             </fieldset>
 
-            <fieldset class="checkbox">
+            <fieldset class="rw-sub-checkbox">
 
                 <p>
                     <input type="checkbox" id="emweb" />
@@ -48,10 +48,16 @@
              upload de fichier uniquement si checkbox élèves EmWeb sélectionnée
             ----------------------->
                <p>
-                <label for="champsFichier">La validation de votre inscription en tant qu'élève ou ancien élève de l'EMWeb se fait par l'envoi d'un certificat de scolarité à votre nom directement par ce formulaire.</label>
+                La validation de votre inscription en tant qu'élève ou ancien élève de l'EMWeb se fait par l'envoi d'un certificat de scolarité à votre nom directement par ce formulaire.
 
-            <input class="rw-sub-upload" type="file" name="champsFichier" id="champsFichier">
                </p>
+
+                <div class="rw-sub-input-file-container">
+                    <input class="rw-sub-input-file" id="my-file" type="file">
+                    <label for="my-file" class="rw-sub-input-file-trigger" tabindex="0">Choisir un fichier...</label>
+                </div>
+                <p class="rw-sub-file-return"></p>
+
                 <p>
                     <input type="checkbox" id="assorw" />
                     <label for="assorw">

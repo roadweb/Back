@@ -1269,38 +1269,52 @@ partie droite de la page
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   height: auto;
+  /*************************
+      design du bouton upload de fichier
+      **************************/
+  /* styles de base si JS est activé */
+  /* quelques styles d'interactions */
+  /* styles du retour visuel */
+  /* on complète l'information d'un contenu textuel
+         uniquement lorsque le paragraphe n'est pas vide */
+  /*************************
+      bouton valider
+      **************************/
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form .checkbox {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox {
   width: 50%;
   text-align: left;
   margin: auto;
+  /*************************
+        design des checkboxs
+      **************************/
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form p {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox p {
   margin: auto;
   padding: 2em 0;
   line-height: 1.5em;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked), .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked), .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked {
   left: -9999px;
   position: absolute;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label {
   cursor: pointer;
   padding-left: 75px;
   position: relative;
   text-align: left;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label::before, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::before, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label::after, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::after {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::before, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label::before, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::before {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::before {
   background: #E84C3D none repeat scroll 0 0;
   border-radius: 15px;
   height: 30px;
@@ -1311,7 +1325,7 @@ partie droite de la page
   width: 65px;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label::after, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::after {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::after {
   background: #C1392B none repeat scroll 0 0;
   border-radius: 50%;
   height: 20px;
@@ -1322,17 +1336,17 @@ partie droite de la page
   width: 20px;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::before {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::before {
   background: #16A086 none repeat scroll 0 0;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label::after {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label::after {
   background: #037E69 none repeat scroll 0 0;
   left: 40px;
   top: 2px;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label .ui, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label .ui::before, .rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label .ui::after {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label .ui, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label .ui::before, .rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label .ui::after {
   border-radius: 15px;
   font-size: 14px;
   font-weight: bold;
@@ -1344,20 +1358,20 @@ partie droite de la page
   width: 65px;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:not(:checked) + label .ui::before {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:not(:checked) + label .ui::before {
   content: "non";
   left: 32px;
   color: #ebebe6;
   top: 0;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:checked + label .ui::after {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:checked + label .ui::after {
   color: #ebebe6;
   content: "oui";
-  top: -2px;
+  top: 1px;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form [type="checkbox"]:focus + label::before {
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-checkbox [type="checkbox"]:focus + label::before {
   box-sizing: border-box;
 }
 
@@ -1370,10 +1384,79 @@ partie droite de la page
   border: none;
 }
 
-.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-upload {
-  background-color: rgba(191, 56, 42, 0.5);
-  padding: 0;
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file-container {
+  position: relative;
+  width: auto;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  background: #16A086;
+  color: #ebebe6;
+  font-size: 1em;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
   cursor: pointer;
+  border-radius: 50px;
+  width: 230px;
+  margin: auto;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  padding: 14px 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file-trigger:hover,
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-input-file-trigger:focus {
+  background: #E84C3D;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-file-return {
+  margin: 0;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-file-return:not(:empty) {
+  margin: 0;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+  color: #16A086;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: auto;
+}
+
+.rw-sub-container .rw-sub-content .rw-sub-form .rw-sub-js .rw-sub-file-return:not(:empty):before {
+  content: "Fichier choisi :  ";
+  font-weight: normal;
+  color: #037E69;
+  margin: auto;
+  padding: 0 10px;
 }
 
 .rw-sub-container .rw-sub-content .rw-sub-form button {

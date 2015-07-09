@@ -35,17 +35,19 @@
         flex-flow: column nowrap;
         height: auto;
 
-      .checkbox {
+      .rw-sub-checkbox {
         width: 50%;
         text-align: left;
         margin: auto;
-      }
+
       p {
         margin: auto;
         padding: 2em 0;
         line-height: $lineHeight;
         }
-
+      /*************************
+        design des checkboxs
+      **************************/
         [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
           left: -9999px;
           position: absolute;
@@ -109,11 +111,12 @@
         [type="checkbox"]:checked + label .ui::after {
           color: $grey-light;
           content: "oui";
-          top: -2px;
+          top: 1px;
         }
         [type="checkbox"]:focus + label::before {
           box-sizing: border-box;
         }
+      }
 
       input {
       width: 350px;
@@ -129,11 +132,77 @@
     }
 
 
-    .rw-sub-upload {
-      background-color: rgba($red, 0.5);
-      padding: 0;
-      cursor: pointer;
-    }
+      /*************************
+      design du bouton upload de fichier
+      **************************/
+
+      /* styles de base si JS est activé */
+      .rw-sub-js .rw-sub-input-file-container {
+        position: relative;
+        width: auto;
+      }
+      .rw-sub-js .rw-sub-input-file-trigger {
+        display: block;
+        padding: 14px 45px;
+        background: $colorOpen;
+        color: $grey-light;
+        font-size: 1em;
+        transition: all .4s;
+        cursor: pointer;
+        border-radius: 50px;
+        width: 230px;
+        margin: auto;
+      }
+      .rw-sub-js .rw-sub-input-file {
+        position: absolute;
+        top: 0; left: 0;
+        width: 210px;
+        padding: 14px 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      /* quelques styles d'interactions */
+      .rw-sub-js .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+      .rw-sub-js .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+      .rw-sub-js .rw-sub-input-file-trigger:hover,
+      .rw-sub-js .rw-sub-input-file-trigger:focus {
+        background: $colorClose;
+        //color: #FFFFFF;
+      }
+
+      /* styles du retour visuel */
+      .rw-sub-file-return {
+        margin: 0;
+      }
+      .rw-sub-file-return:not(:empty) {
+        margin: 0;
+      }
+      .rw-sub-js .rw-sub-file-return {
+        font-style: italic;
+        font-size: .9em;
+        font-weight: bold;
+        color: $colorOpen;
+        display: flex;
+        flex-flow: row wrap;
+        flex-flow: column wrap;
+        justify-content: center;
+        text-align: center;
+        width: auto;
+      }
+      /* on complète l'information d'un contenu textuel
+         uniquement lorsque le paragraphe n'est pas vide */
+      .rw-sub-js .rw-sub-file-return:not(:empty):before {
+        content: "Fichier choisi :  ";
+        font-weight: normal;
+        color: $colorOpenHover;
+        margin: auto;
+        padding: 0 10px;
+      }
+
+      /*************************
+      bouton valider
+      **************************/
       button {
         width: 350px;
         padding: 10px;
