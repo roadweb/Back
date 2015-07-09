@@ -4,7 +4,7 @@
         @foreach($posts as $post)
             <article class="rw-index-last-article">
                 <h1>{{ $post->title }}</h1>
-                <img src="{{ asset('images/last_article_test.jpg')}}" alt="" />
+                <img src="{{ $post->img_link }}" alt="" />
                 <p>{{ $post->resume }}</p>
             </article>
         @endforeach

@@ -122,7 +122,7 @@
 
                             <div class="form-group">
                                 <label for="image">Le lien de l'image</label>
-                                <input type="text" name="image" class="form-control"
+                                <input type="text" name="img_link" class="form-control"
                                        placeholder="Copiez ici l'url de votre image">
                             </div>
 
