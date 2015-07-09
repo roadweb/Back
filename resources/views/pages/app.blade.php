@@ -13,6 +13,11 @@
 @yield('content')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="{{ asset('javascript/front/app.header.js') }}" ></script><script type="text/javascript" src="{{ asset('javascript/front/app.aboutus.js') }}" ></script>
+
+<script type="text/javascript" src="{{ asset('javascript/front/app.header.js') }}" ></script>
+
+<script type="text/javascript" src="{{ asset('javascript/front/app.aboutus.js') }}" ></script>
+
+<script type="text/javascript" src="{{ asset('javascript/front/app.sub.js') }}" ></script>
 </body>
 </html>
