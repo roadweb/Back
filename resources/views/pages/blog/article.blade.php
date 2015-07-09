@@ -2,6 +2,8 @@
 
 @section('content')
     @include('pages.components.header')
+    @include('pages.carrousel.component.jobnav')
+
 
     <div class="rw-main-container-articleon">
 
@@ -298,7 +300,7 @@
             <div class="rw-blog-band-others-Une-header">
 
                 <!----todo-popix  Le titre sera récupéré dans la bdd---->
-                <h3> Depuis Photoshop directement en CSSDepuis Photoshop directement en CSS</h3>
+                <h3> Depuis Photoshop directement en CSS </h3>
 
             </div>
 
