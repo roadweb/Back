@@ -8,7 +8,8 @@
 
     <div class="container">
         @include('pages.carrousel.carrousel')
-        @include('pages.home.last-articles')
+        @include('pages.components.last-articles')
+        @include('pages.components.last-articles-min')
     </div>
 
     @include('pages.components.footer')
