@@ -8,10 +8,10 @@ use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class PostsController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *

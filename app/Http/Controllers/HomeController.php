@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -15,7 +17,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home.index');
+        $posts = Post::published()->get()->take(3);
+        return view('pages.home.index', compact('posts'));
     }
 
     public function landing()
