@@ -2,7 +2,6 @@
 
 @section('content')
 
-    @include('pages.components.header')
 
     <div class="container">
       
@@ -61,6 +60,5 @@
 
     </div>
 
-    @include('pages.components.footer')
 
 @stop

@@ -2,12 +2,9 @@
 
 @section('content')
 
-    @include('pages.components.header')
-    
-    @include('pages.lognews.lognews')
+
 
     <div class="container">
-        @include('pages.carrousel.component.jobnav')
     	<!-- développé par Céline : page "nos métiers" -->
     	<div class="rw-jobs-index-container">
       
@@ -84,6 +81,5 @@
             </div>
     	</div>
     </div>
-    @include('pages.components.footer')
 
 @stop

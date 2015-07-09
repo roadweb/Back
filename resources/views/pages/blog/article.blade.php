@@ -1,8 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    @include('pages.components.header')
-    @include('pages.carrousel.component.jobnav')
 
 
     <div class="rw-main-container-articleon">
@@ -326,5 +324,4 @@
     </div>
 
 
-    @include('pages.components.footer')
 @stop

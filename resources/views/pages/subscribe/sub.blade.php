@@ -1,7 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    @include('pages.components.header')
 
     <!---------------------
  développé par Pauline: Inscription : creation de compte et proposition d'adhésion association
@@ -120,6 +119,5 @@
 
 </div>
 
-    @include('pages.components.footer')
 
 @stop
