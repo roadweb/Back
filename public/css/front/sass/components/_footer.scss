@@ -55,11 +55,6 @@ footer {
 		font-size: $fontSize + 0.25em;
 		font-weight:600;
 	}
-	.rw-index-footer-triangle {
-		@extend %arrow;
-		border-color:transparent transparent white transparent;
-		border-width:0 0 30px 30px;
-	}
 }
 
 .rw-index-footer-nav {

@@ -7,8 +7,7 @@
                 du site. Nous vous répondrons le plus rapidement possible.</p>
         </div>
         <div class="rw-index-footer-btn-subscription">
-            <a href="{{ url('/') }}">Adhérer à Roadweb</a>
-            <div class="rw-index-footer-triangle"></div>
+            <a href="{{ url('/') }}">Vos demandes</a>
         </div>
         <div class="rw-index-footer-nav">
             <div class="rw-index-footer-nav-networks">
