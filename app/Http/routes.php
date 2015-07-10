@@ -67,6 +67,10 @@ Route::get('/subscribe/validation', 'SubController@subvalid');
 
 Route::get('/about', 'AboutusController@index');
 
+Route::get('/compte', 'CompteController@index');
+
+Route::get('/adhesion', 'AdhesionController@index');
+
 /*
 |--------------------------------------------------------------------------
 | API

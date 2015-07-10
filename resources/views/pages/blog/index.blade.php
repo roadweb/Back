@@ -2,9 +2,7 @@
 
 @section('content')
 
-    @include('pages.components.header')
 
-    @include('pages.lognews.lognews')
 
     <div class="container">
 
@@ -14,6 +12,5 @@
 
     </div>
 
-    @include('pages.components.footer')
 
 @stop
