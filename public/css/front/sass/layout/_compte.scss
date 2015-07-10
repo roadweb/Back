@@ -1,0 +1,184 @@
+.rw-cpt-main-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  line-height: $lineHeight;
+  max-width: 1200px;
+  margin: 50px auto;
+
+
+
+
+
+  .rw-cpt-header {
+    margin: auto;
+    
+    h1 {
+      font-size: $fontSize + 1;
+
+      span {
+        color: $red;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .rw-cpt-content {
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: auto;
+    flex-flow: row wrap;
+    width: 85%;
+
+    .rw-cpt-content-profil {
+      padding: 40px 40px 0 0;
+      margin: auto;
+
+      h2 {
+        padding: 25px 0;
+        color: $colorOpen;
+        font-weight: 400;
+        font-size: $fontSize + 0.5;
+
+        cursor: pointer;
+
+        span {
+          color: $grey-dark;
+        }
+
+        span:hover {
+          color: $colorClose;
+        }
+      }
+      form {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+
+        fieldset {
+          width: auto;
+          margin: auto;
+          background-color: rgba(#ffffff, 0.5);
+
+          label {
+            text-align: right;
+            width: 40%;
+            padding-right: 10px;
+          }
+          & > * {
+            padding: 10px 0;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+          }
+
+          input {
+            border: none;
+            background-color: $grey-light;
+            padding: 5px;
+            width: 240px;
+            color: darken($grey-dark, 20);
+            font-style: italic;
+          }
+
+          fieldset {
+            width: 100%;
+          }
+          textarea {
+            background-color: $grey-light;
+            width: 400px;
+            border: none;
+            font-family: $fontFamily;
+            color: $grey-dark;
+            font-weight: 200;
+            font-size: $fontSize - 0.125;
+            font-style: italic;
+          }
+
+        }
+      }
+    }
+
+    .rw-cpt-content-avatar {
+      margin: auto;
+
+      padding: 30px;
+
+      display: flex;
+      flex-flow: column nowrap;
+
+      background: linear-gradient(#FFFFFF, $grey-light);
+      border-radius: 20px;
+      box-shadow: 1px 1px 2px $grey-dark;
+
+      img {
+        margin: auto;
+        box-shadow: 1px 1px 4px $grey-dark;
+        //border: 1px solid rgba(#000000, 0.5);
+        border-radius:50%;
+
+
+      }
+
+      .rw-cpt-content-legend {
+        margin: auto;
+
+        display: flex;
+        flex-flow: row nowrap;
+
+        p {
+          margin: auto;
+          padding: 20px;
+        }
+      }
+    }
+
+    /*************************
+    progress bar
+    **************************/
+
+    .rw-cpt-progress-bar-container {
+
+      width: 400px;
+
+      .rw-cpt-progress-bar {
+        max-width: 100%;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+
+        margin-bottom: 20px;
+
+
+      .rw-cpt-bar {
+        width: 80%;
+        height: 30px;
+        background-color: $colorOpen;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+
+      }
+      &:nth-of-type(2) {
+        .rw-cpt-bar {
+          width: 40%;
+        }
+      }
+      &:nth-of-type(3) {
+        .rw-cpt-bar {
+          width: 70%;
+        }
+      }
+      &:nth-of-type(4) {
+        .rw-cpt-bar {
+          width: 65%;
+        }
+      }
+    }
+    }
+  }
+}

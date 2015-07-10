@@ -2,9 +2,8 @@
 
 @section('content')
 
-    @include('pages.components.header')
 
-<div class="rw-aboutus-container">
+    <div class="rw-aboutus-container">
 
     <div class="rw-aboutus-content">
 
@@ -145,6 +144,5 @@
     </div>
 
 
-    @include('pages.components.footer')
 
 @stop

@@ -1,8 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    @include('pages.components.header')
-    @include('pages.carrousel.component.jobnav')
 
 
     <div class="rw-main-container-articleon">
@@ -12,7 +10,29 @@
     ----------------------->
 
         <div class="rw-blog-article-container rw-blog-article-brd-design">
+            <div class="rw-blog-article-content-fct">
 
+                    <span>
+                        Temps de lecture moyen de l'article $temps
+                    </span>
+
+                <span>
+                <span>
+                    Partagez !
+                </span>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-google-plus"></i>
+                        <i class="fa fa-linkedin"></i>
+                </span>
+
+                    <span>
+                        <i class="fa fa-font"></i>
+                        <i class="fa fa-font"></i>
+                        <i class="fa fa-print"></i>
+                    </span>
+
+            </div>
             <div class="rw-blog-article-header">
 
                 <!---- todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
@@ -32,6 +52,7 @@
             </div>
 
             <div class="rw-blog-article-content">
+
 
                 <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
@@ -149,9 +170,11 @@
         <div class="rw-blog-band-container">
 
         <div class="rw-blog-band-auth">
-            <h3><a href="">Autres sujets du même auteur</a></h3>
+            <h3><a href="">Autres sujets de Prénom Nom</a></h3>
 
-            <h3>Nom Prénom</h3>
+            <div class="rw-blog-band-auth-avatar">
+                <img src="http://lorempixel.com/100/100/people/1" alt="avatar"/>
+            </div>
 
             <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
                 praesentium quis</p>
@@ -161,6 +184,7 @@
                 <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
                 <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
                 <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter"/>
+                <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Twitter"/>
             </div>
         </div>
 
@@ -326,5 +350,4 @@
     </div>
 
 
-    @include('pages.components.footer')
 @stop
