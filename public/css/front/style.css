@@ -960,15 +960,15 @@ bloc de l'article
   padding: 5px 10px;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span i {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i {
   padding: 0 2px;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span i:nth-child(1), .rw-blog-article-container .rw-blog-article-content-fct span i:nth-child(3) {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(1), .rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(3) {
   font-size: 1.25em;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span i:nth-child(2) {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(2) {
   font-size: 0.8em;
   padding: 0;
 }

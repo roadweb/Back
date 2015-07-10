@@ -16,6 +16,16 @@
                         Temps de lecture moyen de l'article $temps
                     </span>
 
+                <span>
+                <span>
+                    Partagez !
+                </span>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-google-plus"></i>
+                        <i class="fa fa-linkedin"></i>
+                </span>
+
                     <span>
                         <i class="fa fa-font"></i>
                         <i class="fa fa-font"></i>
@@ -174,6 +184,7 @@
                 <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
                 <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
                 <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter"/>
+                <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Twitter"/>
             </div>
         </div>
 
