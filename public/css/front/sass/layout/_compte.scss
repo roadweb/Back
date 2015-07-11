@@ -6,12 +6,16 @@
   max-width: 1200px;
   margin: 50px auto;
 
+  a {
+    color: inherit;
+  }
+
 
 
 
 
   .rw-cpt-header {
-    margin: auto;
+    margin: 20px auto;
     
     h1 {
       font-size: $fontSize + 1;
@@ -27,14 +31,13 @@
     margin: auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
     flex-flow: row wrap;
-    width: 85%;
+    width: 90%;
 
     .rw-cpt-content-profil {
-      padding: 40px 40px 0 0;
-      margin: auto;
+      margin: 50px auto 0;
 
       h2 {
         padding: 25px 0;
@@ -42,9 +45,13 @@
         font-weight: 400;
         font-size: $fontSize + 0.5;
 
-        cursor: pointer;
+
+        &:nth-child(1) {
+          padding-left: 70px;
+        }
 
         span {
+          cursor: pointer;
           color: $grey-dark;
         }
 
@@ -62,6 +69,18 @@
           margin: auto;
           background-color: rgba(#ffffff, 0.5);
 
+          .rw-cpt-content-profil-field-share {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: $grey-light;
+            color: $grey-dark;
+
+            padding: 0 2px;
+            i {
+              padding: 2px;
+              margin: auto;
+            }
+          }
           label {
             text-align: right;
             width: 40%;
@@ -95,11 +114,44 @@
             font-weight: 200;
             font-size: $fontSize - 0.125;
             font-style: italic;
+            padding: 10px;
           }
 
         }
       }
-    }
+
+      .rw-cpt-content-button {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 50px auto 0;
+
+
+        height: 150px;
+
+        button {
+          margin: auto;
+          background-color: $colorOpen;
+          color: $grey-light;
+          border: none;
+
+          width: 150px;
+          padding: 10px;
+          border-radius: 20px;
+          font-weight: 600;
+
+          &:hover {
+            cursor: pointer;
+            color: #FFFFFF;
+            background-color: $colorOpenHover;
+          }
+
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+
+
 
     .rw-cpt-content-avatar {
       margin: auto;
@@ -119,6 +171,10 @@
         //border: 1px solid rgba(#000000, 0.5);
         border-radius:50%;
 
+        width: 250px;
+        height: 250px;
+
+
 
       }
 
@@ -128,13 +184,25 @@
         display: flex;
         flex-flow: row nowrap;
 
-        p {
+        span {
           margin: auto;
           padding: 20px;
+          font-weight: 400;
+          font-size: $fontSize + 0.5;
+          cursor: pointer;
+          color: $grey-dark;
+
+        }
+        span:hover {
+          color: $colorClose;
         }
       }
     }
 
+      .rw-cpt-content-infos {
+        margin: 50px auto 0;
+      }
+  }
     /*************************
     progress bar
     **************************/

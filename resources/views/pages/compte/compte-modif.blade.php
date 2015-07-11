@@ -69,9 +69,8 @@
 
                             <div class="rw-cpt-content-profil-field">
 
-                                <label for="profession">Formation EMWeb : </label>
-                                <select name="formation" id="formation"></select>
-                                <input type="" name="profession" placeholder="infographiste"/>
+                                <label for="profession">Profession : </label>
+                                <input type="text" name="profession" placeholder="infographiste"/>
 
                             </div>
 
