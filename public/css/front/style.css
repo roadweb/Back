@@ -2684,6 +2684,315 @@ partie droite de la page
   width: 65%;
 }
 
+.rw-contact-container {
+  line-height: 1.5em;
+  margin: 50px auto;
+}
+
+.rw-contact-container h1 {
+  color: #bf382a;
+  text-align: center;
+  font-size: 1.875em;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px white;
+}
+
+.rw-contact-container p {
+  margin: 2%;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.rw-contact-container h2 {
+  margin: 5% 30% 2% 32%;
+  color: #16A086;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.rw-contact-container form {
+  width: 100%;
+  margin: 2%;
+}
+
+.rw-contact-container form fieldset {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 800px;
+  /*************************
+		    design du bouton upload de fichier
+		    **************************/
+  /* styles de base si JS est activé */
+}
+
+.rw-contact-container form fieldset .rw-contact-field {
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+
+.rw-contact-container form fieldset label {
+  text-align: right;
+  width: 230px;
+  padding: 15px;
+}
+
+.rw-contact-container form fieldset label.hidden {
+  display: none;
+}
+
+.rw-contact-container form fieldset input {
+  border: none;
+  background-color: #ebebe6;
+  padding: 15px;
+  width: 450px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #7e8b8c;
+}
+
+.rw-contact-container form fieldset select {
+  border: 2px solid #ebebe6;
+  padding: 8px;
+  background-color: #ebebe6;
+  width: 450px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #7e8b8c;
+}
+
+.rw-contact-container form fieldset textarea {
+  background-color: #ebebe6;
+  width: 450px;
+  height: 300px;
+  border: none;
+  padding: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  color: #7e8b8c;
+}
+
+.rw-contact-container form fieldset [required]:valid {
+  border: 2px solid #16A086;
+  box-shadow: 0px 0px 0px white;
+}
+
+.rw-contact-container form fieldset [required]:invalid {
+  border: 2px solid #E84C3D;
+  box-shadow: 0px 0px 0px white;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container {
+  position: relative;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding: 10px;
+  /* quelques styles d'interactions */
+  /* styles du retour visuel */
+  /* on complète l'information d'un contenu textuel
+		        uniquement lorsque le paragraphe n'est pas vide */
+  /*************************
+        		design des checkboxs
+		      	**************************/
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container p {
+  width: 230px;
+  text-align: right;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container div {
+  width: 450px;
+  padding: 5px 50px 5px 0;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file-trigger {
+  display: block;
+  padding: 10px 45px;
+  background: #16A086;
+  color: white;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 250px;
+  margin: auto;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  padding: 14px 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file-trigger:hover,
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file-trigger:focus {
+  background: #E84C3D;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return {
+  margin: 0;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return:not(:empty) {
+  margin: 0;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+  color: #16A086;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: auto;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return:not(:empty):before {
+  content: "Fichier choisi :  ";
+  font-weight: normal;
+  color: #037E69;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked), .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked {
+  left: -9999px;
+  position: absolute;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked) + label, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label {
+  cursor: pointer;
+  padding-left: 75px;
+  position: relative;
+  text-align: left;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked) + label::before, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label::before, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:not(:checked) + label::after, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked) + label::before, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label::before {
+  background: #E84C3D none repeat scroll 0 0;
+  border-radius: 15px;
+  height: 30px;
+  left: 0;
+  top: -3px;
+  -webkit-transition: background-color 0.2s ease 0s;
+          transition: background-color 0.2s ease 0s;
+  width: 65px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked) + label::after, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label::after {
+  background: #C1392B none repeat scroll 0 0;
+  border-radius: 50%;
+  height: 20px;
+  left: 5px;
+  top: 2px;
+  -webkit-transition: all 0.2s ease 0s;
+          transition: all 0.2s ease 0s;
+  width: 20px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:checked + label::before {
+  background: #16A086 none repeat scroll 0 0;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:checked + label::after {
+  background: #037E69 none repeat scroll 0 0;
+  left: 40px;
+  top: 2px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:checked + label .ui, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:not(:checked) + label .ui::before, .rw-contact-container form fieldset .rw-sub-input-file-container [type="checkbox"]:checked + label .ui::after {
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  left: 6px;
+  line-height: 22px;
+  position: absolute;
+  -webkit-transition: all 0.2s ease 0s;
+          transition: all 0.2s ease 0s;
+  width: 65px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:not(:checked) + label .ui::before {
+  content: "non";
+  left: 32px;
+  color: #ebebe6;
+  top: 0;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:checked + label .ui::after {
+  color: #ebebe6;
+  content: "oui";
+  top: 1px;
+}
+
+.rw-contact-container form fieldset .rw-sub-input-file-container input[type="checkbox"]:focus + label::before {
+  box-sizing: border-box;
+}
+
+.rw-contact-container form fieldset button {
+  width: 350px;
+  padding: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #bf382a;
+  color: #ffffff;
+  border: none;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Background

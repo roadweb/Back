@@ -71,6 +71,8 @@ Route::get('/compte', 'CompteController@index');
 
 Route::get('/adhesion', 'AdhesionController@index');
 
+Route::get('/contact', 'ContactController@index');
+
 /*
 |--------------------------------------------------------------------------
 | API
