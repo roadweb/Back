@@ -1,0 +1,263 @@
+.rw-contact-container {
+	line-height: $lineHeight;
+  	margin: 50px auto;
+
+	h1 {
+		color: $red;
+		text-align: center;
+		font-size: $fontSize + 0.875em;
+		font-weight: 400;
+		text-shadow: 2px 2px 2px white;
+	}
+
+	p {
+		margin:2%;
+		font-size: $fontSize;
+		line-height:$lineHeight;
+	}
+
+	h2 {
+        margin:5% 30% 2% 32%;
+        color: $colorOpen;
+        font-weight: 400;
+        font-size: $fontSize + 0.5;
+    }
+
+    form {
+       	width:100%;
+       	margin:2%;
+
+        fieldset {
+        	display: flex;
+	        flex-flow: row nowrap;
+	        justify-content:center;
+	        width:800px;
+          	.rw-contact-field {
+          		margin:auto;
+          		width:100%;
+	          	display: flex;
+	            flex-flow: row nowrap;
+	            justify-content:center;
+	            padding: 5px;
+       		}
+
+		    label {
+		        text-align: right;
+		        width: 230px;
+		        padding: 15px;
+		        &.hidden {
+		         	display:none;
+		        }
+		    }
+
+	        input {
+	            border: none;
+	            background-color: $grey-light;
+	            padding: 15px;
+	            width: 450px;
+	            font-family:$fontFamily;
+	            font-size:$fontSize - 0.1em;
+	            color:$grey-dark;
+	        }
+
+	        select {
+	            border: 2px solid $grey-light;
+	            padding: 8px;
+	            background-color: $grey-light;
+	            width: 450px;
+	            font-family:$fontFamily;
+	            font-size:$fontSize - 0.1em;
+	            color:$grey-dark;
+	        }
+        
+	        textarea {
+	            background-color: $grey-light;
+	            width: 450px;
+	            height:300px;
+	            border: none;
+	            padding: 15px;
+	            font-family:$fontFamily;
+	            font-size:$fontSize - 0.1em;
+	            color: $grey-dark;
+	        }
+
+	        [required]:valid {
+			   	border: 2px solid $colorOpen;
+			   	box-shadow:0px 0px 0px white;
+			}
+			[required]:invalid {
+			   	border: 2px solid $colorClose;
+			   	box-shadow:0px 0px 0px white;
+			}
+
+			/*************************
+		    design du bouton upload de fichier
+		    **************************/
+
+		    /* styles de base si JS est activé */
+		    .rw-sub-input-file-container {
+		    	position: relative;
+		        width: auto;
+		        display:flex;
+		        flex-flow:row nowrap;
+		        padding:10px;
+
+				p {
+					width:230px;
+					text-align:right;
+					margin-left:50px;
+					padding: 15px;
+				}
+
+			    div {
+			        width:450px;
+			        padding:5px 50px 5px 0;
+				}
+		    
+			    .rw-sub-input-file-trigger {
+			        display: block;
+			        padding: 10px 45px;
+			        background: $colorOpen;
+			        color:white;
+			        transition: all .4s;
+			        cursor: pointer;
+			        border-radius: 50px;
+			        width: 250px;
+			        margin: auto;
+			    }
+	      		.rw-sub-input-file {
+			        position: absolute;
+			        top: 0; 
+			        left: 0;
+			        width: 250px;
+			        padding: 14px 0;
+			        opacity: 0;
+			        cursor: pointer;
+	      		}
+
+			    /* quelques styles d'interactions */
+			    .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+				.rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+				.rw-sub-input-file-trigger:hover,
+				.rw-sub-input-file-trigger:focus {
+				    background: $colorClose;
+			    }
+
+	      		/* styles du retour visuel */
+			    .rw-sub-file-return {
+			        margin: 0;
+			    }
+		        .rw-sub-file-return:not(:empty) {
+		        	margin: 0;
+		        }
+		      	.rw-sub-file-return {
+			        font-style: italic;
+			        font-size: .9em;
+			        font-weight: bold;
+			        color: $colorOpen;
+			        display: flex;
+			        flex-flow: row wrap;
+			        flex-flow: column wrap;
+			        justify-content: center;
+			        text-align: center;
+			        width: auto;
+		      	}
+		        /* on complète l'information d'un contenu textuel
+		        uniquement lorsque le paragraphe n'est pas vide */
+		        .rw-sub-file-return:not(:empty):before {
+			        content: "Fichier choisi :  ";
+			        font-weight: normal;
+			        color: $colorOpenHover;
+			        margin: auto;
+			        padding: 0 10px;
+		        }
+
+		        /*************************
+        		design des checkboxs
+		      	**************************/
+
+		        input[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+		          left: -9999px;
+		          position: absolute;
+		        }
+		        input[type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+		          cursor: pointer;
+		          padding-left: 75px;
+		          position: relative;
+		          text-align: left;
+
+		        }
+
+		        input[type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before, [type="checkbox"]:not(:checked) + label::after, [type="checkbox"]:checked + label::after {
+		          content: "";
+		          position: absolute;
+		        }
+
+		        input[type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before {
+		          background: $colorClose none repeat scroll 0 0;
+		          border-radius: 15px;
+		          height: 30px;
+		          left: 0;
+		          top: -3px;
+		          transition: background-color 0.2s ease 0s;
+		          width: 65px;
+		        }
+		        input[type="checkbox"]:not(:checked) + label::after, [type="checkbox"]:checked + label::after {
+		          background: $colorCloseHover none repeat scroll 0 0;
+		          border-radius: 50%;
+		          height: 20px;
+		          left: 5px;
+		          top: 2px;
+		          transition: all 0.2s ease 0s;
+		          width: 20px;
+		        }
+		        input[type="checkbox"]:checked + label::before {
+		          background: $colorOpen none repeat scroll 0 0;
+		        }
+		        input[type="checkbox"]:checked + label::after {
+		          background: $colorOpenHover none repeat scroll 0 0;
+		          left: 40px;
+		          top: 2px;
+		        }
+		        input[type="checkbox"]:checked + label .ui, [type="checkbox"]:not(:checked) + label .ui::before, [type="checkbox"]:checked + label .ui::after {
+		          border-radius: 15px;
+		          font-size: 14px;
+		          font-weight: bold;
+		          left: 6px;
+		          line-height: 22px;
+		          position: absolute;
+		          transition: all 0.2s ease 0s;
+		          width: 65px;
+		        }
+		        input[type="checkbox"]:not(:checked) + label .ui::before {
+		          content: "non";
+		          left: 32px;
+		          color: $grey-light;
+		          top: 0;
+		        }
+
+		        input[type="checkbox"]:checked + label .ui::after {
+		          color: $grey-light;
+		          content: "oui";
+		          top: 1px;
+		        }
+		        input[type="checkbox"]:focus + label::before {
+		          box-sizing: border-box;
+		        }
+			}
+
+			button {
+		        width: 350px;
+			    padding: 10px;
+			    margin: 20px auto;
+			    cursor: pointer;
+			    font-size: 20px;
+			    font-weight: 300;
+			    background-color: $red;
+			    color: #ffffff;
+			    border: none;
+		    }
+      	}
+   
+    }
+}
