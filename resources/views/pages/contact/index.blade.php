@@ -13,21 +13,21 @@
 
     <form action="" method="">
 
-        <fieldset class="rw-sub-checkbox">
+        <fieldset>
 
             <div class="rw-contact-field">
                 <label for="prenom">Prénom : </label>
-                <input type="text" name="prenom" placeholder="Votre prénom" required/>
+                <input type="text" name="prenom" placeholder="Votre prénom" />
            </div>
 
             <div class="rw-contact-field">
                 <label for="nom">Nom : </label>
-                <input type="text" name="nom" placeholder="Votre Nom" required/>
+                <input type="text" name="nom" placeholder="Votre Nom" />
             </div>
 
             <div class="rw-contact-field">
                 <label for="mail">Adresse mail : </label>
-                <input type="email" name="mail" placeholder="votremail@mail.fr" required />
+                <input type="email" name="mail" placeholder="votremail@mail.fr" />
             </div>
 
             <div class="rw-contact-field">
@@ -56,7 +56,7 @@
 
             <div class="rw-contact-field">
                 <label for="message">Message : </label>
-                <textarea name="message" placeholder="Entrez votre message" required /></textarea>
+                <textarea name="message" placeholder="Entrez votre message" /></textarea>
             </div>
 
             <div class="rw-contact-field">
@@ -77,8 +77,10 @@
                 <input type="checkbox" name="copie" />
                 <label for="copie">
                     <span class="ui"></span>
-                    Je désire recevoir une copie de mon message par email</label>
-            </div>
+                    Je désire recevoir une copie de mon message par email
+                </label>
+            
+                    </div>
 
             <button name="envoyer">Envoyer</button>
 
