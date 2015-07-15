@@ -12,6 +12,7 @@ class Post extends Model
         'published',
         'user_id',
         'resume',
+        'img_link',
         'category_id',
         'is_sticky',
         'job_id',

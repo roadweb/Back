@@ -96,7 +96,7 @@ EXTENDS
   clear: both;
 }
 
-.rw-index-footer-btn-subscription .rw-index-footer-triangle, .rw-index-open-article-min .rw-index-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-bdc-triangle-design, .rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
+.rw-index-open-article-min .rw-index-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-bdc-triangle-design, .rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -180,11 +180,6 @@ footer {
   color: #ebebe6;
   font-size: 1.25em;
   font-weight: 600;
-}
-
-.rw-index-footer-btn-subscription .rw-index-footer-triangle {
-  border-color: transparent transparent white transparent;
-  border-width: 0 0 30px 30px;
 }
 
 .rw-index-footer-nav {
