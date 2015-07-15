@@ -63,7 +63,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        dd('Show');
+        $post = Post::find($id);
+        return view('admin.posts.show', compact('post'));
     }
 
     /**

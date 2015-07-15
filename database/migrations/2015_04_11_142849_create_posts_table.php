@@ -21,11 +21,9 @@ class CreatePostsTable extends Migration {
             $table->string('is_sticky')->default(false);
             $table->date('sticky_end');
             $table->string('published')->default(false);
-
             $table->string('ref_title');
             $table->string('ref_thumb');
             $table->string('ref_description');
-
 			$table->timestamps();
 		});
 
