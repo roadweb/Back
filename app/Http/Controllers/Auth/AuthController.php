@@ -32,7 +32,7 @@ class AuthController extends Controller {
 		$this->auth = $auth;
 		$this->registrar = $registrar;
         $this->loginPath = '/admin/auth/login';
-        $this->redirectPath = '/admin/home';
+        $this->redirectPath = '/admin';
         $this->loginPath = '/admin/auth/login';
 
         $this->middleware('guest', ['except' => 'getLogout']);

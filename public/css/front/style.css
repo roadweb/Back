@@ -6,6 +6,7 @@
 /* variables */
 /* colors: connexion, deconnexion, newsletter */
 /* mixin */
+/* Header */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,6 +66,11 @@ table {
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
+  padding-top: 0;
+}
+
+body.has-nav-fixed {
+  padding-top: 136px;
 }
 
 .container {
@@ -122,17 +128,9 @@ footer {
 .rw-index-footer-container {
   height: auto;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
   background-color: #ebebe6;
   padding: 20px 30px;
   z-index: 1;
@@ -161,9 +159,6 @@ footer {
 
 .rw-index-footer-btn-subscription {
   width: 25%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: auto 10px;
   min-height: 80px;
@@ -183,29 +178,16 @@ footer {
 }
 
 .rw-index-footer-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin-top: 20px;
   width: 100%;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks .rw-index-footer-nav-bcg-icon {
@@ -222,17 +204,9 @@ footer {
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   height: 65px;
   margin: auto;
 }
@@ -259,17 +233,9 @@ footer {
 .rw-index-footer-nav .rw-index-footer-nav-list ul {
   height: 65px;
   margin: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-list ul li {
@@ -281,6 +247,14 @@ footer {
   margin: 15px;
   color: #ccc;
   font-size: 1.25em;
+}
+
+.has-nav-fixed .rw-logo {
+  display: none;
+}
+
+.has-nav-fixed #rw-nav {
+  margin-top: 0;
 }
 
 .rw-header_container {
@@ -328,8 +302,7 @@ footer {
   bottom: -25px;
   right: 0;
   width: 20%;
-  -webkit-transition: all 1s ease-out;
-          transition: all 1s ease-out;
+  transition: all 1s ease-out;
   z-index: 100;
 }
 
@@ -366,7 +339,7 @@ footer {
 .fixNavigation {
   /*classe effective après scroll _ cf js*/
   position: fixed;
-  top: -30px;
+  top: 0px;
   width: 100%;
   z-index: 9999;
 }
@@ -376,8 +349,7 @@ footer {
 }
 
 .fixNavigation .rw-logo-fix img {
-  -webkit-transition: opacity 2s;
-          transition: opacity 2s;
+  transition: opacity 2s;
   opacity: 1;
 }
 
@@ -390,13 +362,8 @@ footer {
 #rw-nav {
   width: 100%;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   font-size: 1.12em;
   height: 90px;
   background-color: #ebebe6;
@@ -419,22 +386,11 @@ footer {
 }
 
 #rw-nav .rw-ul_grey {
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
   margin: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
   position: relative;
   z-index: 9999;
   background-color: #ebebe6;
@@ -463,16 +419,9 @@ footer {
   height: auto;
   padding: 15px;
   margin-top: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .rw-index-open-article-min {
@@ -480,13 +429,8 @@ footer {
   height: 90px;
   width: 400px;
   margin: 10px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 .rw-index-open-article-min .rw-index-open-article-min-triangle {
@@ -497,11 +441,7 @@ footer {
 .rw-index-open-article-min-date {
   width: 85px;
   height: 90px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
   background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
 }
@@ -521,19 +461,9 @@ footer {
 
 .rw-index-open-article-min-link {
   width: 315px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   height: 90px;
   border: 2px solid #F6D432;
   background-color: #fff;
@@ -587,20 +517,12 @@ footer {
 }
 
 .rw-index-last-articles-container .rw-index-last-articles-container-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .rw-index-last-article {
-  background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
   background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
   width: 300px;
@@ -643,16 +565,9 @@ footer {
   width: 100%;
   height: auto;
   padding: 15px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 /*INDEX DES METIERS*/
@@ -678,16 +593,9 @@ footer {
 }
 
 .rw-jobs-index-container-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .rw-jobs-index-webmarketing, .rw-jobs-index-developpement, .rw-jobs-index-webdesign, .rw-jobs-index-referencement, .rw-jobs-index-integration, .rw-jobs-index-community-management {
@@ -695,17 +603,9 @@ footer {
   border: 2px solid #F59E36;
   width: 440px;
   height: 120px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
+  flex-flow: row nowrap;
+  justify-content: space-around;
   background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
   position: relative;
@@ -854,12 +754,15 @@ footer {
   text-align: center;
   background: white;
   /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #ebebe6 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #ebebe6));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, white 0%, #ebebe6 100%);
   /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #ebebe6 100%);
   /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #ebebe6 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
@@ -910,13 +813,8 @@ Bloc content page
 .rw-main-container-articleon {
   margin: 30px auto;
   width: 1200px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 /*************************
@@ -933,17 +831,9 @@ bloc de l'article
 .rw-blog-article-container .rw-blog-article-content-fct {
   background-color: #36A7DE;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   font-size: 0.875em;
   margin: 0;
   padding: 0;
@@ -986,19 +876,10 @@ bloc de l'article
 Bloc Titre de l'article
 **************************/
 .rw-blog-article-header {
-  background-image: -webkit-linear-gradient(#ffffff, #ebebe6);
   background-image: linear-gradient(#ffffff, #ebebe6);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-flow: row nowrap;
   height: 75px;
 }
 
@@ -1010,15 +891,8 @@ Bloc Titre de l'article
 .rw-blog-article-header-date {
   width: 100px;
   padding: 2%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   background-color: #ebebe6;
   font-size: 14px;
@@ -1053,13 +927,8 @@ Bloc contenu de l'article
 .rw-blog-article-content {
   width: 100%;
   padding: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
 .rw-blog-article-content p {
@@ -1182,19 +1051,10 @@ partie droite de la page
 }
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-header {
-  background-image: -webkit-linear-gradient(#ffffff, #ebebe6);
   background-image: linear-gradient(#ffffff, #ebebe6);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-flow: row nowrap;
   height: 80px;
 }
 
@@ -1268,17 +1128,9 @@ partie droite de la page
 }
 
 .rw-blog-band-container .rw-blog-band-rsx {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-flow: row nowrap;
 }
 
 .rw-sub-container {
@@ -1312,13 +1164,8 @@ partie droite de la page
 
 .rw-sub-container .rw-sub-content .rw-sub-form {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   height: auto;
   /*************************
       design du bouton upload de fichier
@@ -1371,8 +1218,7 @@ partie droite de la page
   height: 30px;
   left: 0;
   top: -3px;
-  -webkit-transition: background-color 0.2s ease 0s;
-          transition: background-color 0.2s ease 0s;
+  transition: background-color 0.2s ease 0s;
   width: 65px;
 }
 
@@ -1382,8 +1228,7 @@ partie droite de la page
   height: 20px;
   left: 5px;
   top: 2px;
-  -webkit-transition: all 0.2s ease 0s;
-          transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   width: 20px;
 }
 
@@ -1404,8 +1249,7 @@ partie droite de la page
   left: 6px;
   line-height: 22px;
   position: absolute;
-  -webkit-transition: all 0.2s ease 0s;
-          transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   width: 65px;
 }
 
@@ -1446,8 +1290,7 @@ partie droite de la page
   background: #16A086;
   color: #ebebe6;
   font-size: 1em;
-  -webkit-transition: all 0.4s;
-          transition: all 0.4s;
+  transition: all 0.4s;
   cursor: pointer;
   border-radius: 50px;
   width: 230px;
@@ -1484,20 +1327,10 @@ partie droite de la page
   font-size: .9em;
   font-weight: bold;
   color: #16A086;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  flex-flow: column wrap;
+  justify-content: center;
   text-align: center;
   width: auto;
 }
@@ -1523,16 +1356,9 @@ partie droite de la page
 }
 
 .rw-sub-container .rw-sub-advantages {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-around;
   background-color: #ebebe6;
   width: 100%;
   margin: 50px auto 0;
@@ -1540,16 +1366,10 @@ partie droite de la page
 
 .rw-sub-container .rw-sub-advantages .rw-sub-advantages-zone {
   margin: 10px auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   width: 320px;
   border: 2px solid #FFFFFF;
-  background: -webkit-linear-gradient(#FFFFFF, #ebebe6);
   background: linear-gradient(#FFFFFF, #ebebe6);
 }
 
@@ -1574,9 +1394,7 @@ partie droite de la page
 
 @media screen and (max-width: 750px) {
   .rw-sub-container .rw-sub-advantages {
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 }
 
@@ -1644,22 +1462,16 @@ partie droite de la page
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(1) {
-  -webkit-transform: translateY(-20px) translateX(20px);
-      -ms-transform: translateY(-20px) translateX(20px);
-          transform: translateY(-20px) translateX(20px);
+  transform: translateY(-20px) translateX(20px);
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(2) {
-  -webkit-transform: translateY(20px);
-      -ms-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
   z-index: 1;
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(3) {
-  -webkit-transform: translateY(-20px) translateX(-20px);
-      -ms-transform: translateY(-20px) translateX(-20px);
-          transform: translateY(-20px) translateX(-20px);
+  transform: translateY(-20px) translateX(-20px);
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres {
@@ -1703,15 +1515,8 @@ partie droite de la page
 .rw-carrous {
   width: 1200px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .rw-carrous-header {
@@ -1721,50 +1526,26 @@ partie droite de la page
 
 .rw-carrous-nav {
   width: 1200px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .rw-carrous-nav-road {
   width: 380px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .rw-carrous-nav-icon-menu {
   width: 80px;
   height: 80px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   background-color: #bf382a;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .rw-carrous-nav-label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   color: #bf382a;
   width: 120px;
@@ -1773,9 +1554,6 @@ partie droite de la page
 }
 
 .rw-carrous-nav .rw-icon-exagone {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 28px;
   line-height: 24px;
@@ -1784,103 +1562,54 @@ partie droite de la page
 .rw-carrous-navbar {
   position: relative;
   width: 1000px;
-  line-height: -webkit-calc(91px*1.2);
   line-height: calc(91px*1.2);
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .rw-carrous-navbar-path,
 .rw-carrous-navbar-content {
   position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .rw-carrous-navbar-path {
   height: 4px;
   left: -80px;
   line-height: 4px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .rw-carrous-navbar-line {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  width: -webkit-calc(91px*1.2);
   width: calc(91px*1.2);
   width: 100%;
   height: 4px;
   background-color: #bf382a;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .rw-carrous-navbar-content {
   top: -80px;
-  height: -webkit-calc(79px*1.2);
   height: calc(79px*1.2);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .rw-carrous-navbar-job {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .rw-carrous-navbar-job a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   text-decoration: none;
 }
 
@@ -1888,23 +1617,23 @@ partie droite de la page
   z-index: 2;
   width: 91px;
   height: 79px;
-  margin: 0 -webkit-calc(91px*0.1);
   margin: 0 calc(91px*0.1);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .rw-carrous-navbar-job .rw-icon-job:hover {
-  width: -webkit-calc(91px*1.2);
   width: calc(91px*1.2);
-  height: -webkit-calc(79px*1.2);
   height: calc(79px*1.2);
   margin: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1913,16 +1642,8 @@ partie droite de la page
   top: -30px;
   opacity: 0;
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: -webkit-calc(91px*1.2);
+  flex-direction: column;
   width: calc(91px*1.2);
 }
 
@@ -1931,6 +1652,9 @@ partie droite de la page
   top: 0;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1938,22 +1662,12 @@ partie droite de la page
 .rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
   position: absolute;
   font-size: 8px;
-  width: -webkit-calc(91px*1.2);
   width: calc(91px*1.2);
   height: 50px;
   line-height: 100%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .rw-carrous-navbar-job-label span {
@@ -1962,22 +1676,12 @@ partie droite de la page
   top: 6px;
   color: #333;
   background-color: white;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rw-carrous-navbar-vertical-line .rw-navbar-vertical-line {
@@ -2045,15 +1749,8 @@ partie droite de la page
   top: 280px;
   min-width: 80px;
   height: inherit;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .rw-lognews-newsletter {
@@ -2068,19 +1765,9 @@ partie droite de la page
 .rw-login,
 .rw-newsletter {
   width: inherit;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .rw-lognews-container {
@@ -2089,21 +1776,15 @@ partie droite de la page
   height: 0;
   overflow: hidden;
   left: 80px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 0 6px 6px 6px;
   box-shadow: 0 0 6px;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2112,9 +1793,6 @@ partie droite de la page
   left: 0;
   width: 80px;
   height: 80px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   background-color: #bf382a;
 }
@@ -2125,14 +1803,8 @@ partie droite de la page
   height: 58px;
   margin: 11px 17px;
   background-color: #bf382a;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .rw-icon-newsletter {
@@ -2144,19 +1816,9 @@ partie droite de la page
   width: 220px;
   padding: 10px;
   height: inherit;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #ebebe6;
   border-radius: 0 4px 4px 4px;
 }
@@ -2169,6 +1831,9 @@ partie droite de la page
   height: auto;
   box-shadow: 0 0 4px;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   padding: 10px;
   background-color: white;
@@ -2176,36 +1841,18 @@ partie droite de la page
 
 .rw-lognews-form-group {
   width: 200px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
 }
 
 .rw-lognews-container-header {
   min-height: 60px;
   line-height: 30px;
   padding: 10px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .rw-lognews-container-row,
@@ -2217,42 +1864,20 @@ partie droite de la page
   width: 200px;
   height: 50px;
   border-radius: 2px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .rw-lognews-container-forgoten,
 .rw-lognews-container-remember {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .rw-lognews-container-forgoten {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .rw-lognews-container-btn {
@@ -2269,13 +1894,8 @@ partie droite de la page
 .rw-lognews-container-btn .rw-lognews-icon {
   width: 40px;
   height: 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  justify-content: space-around;
   border-radius: 2px 0 0 2px;
 }
 
@@ -2311,9 +1931,6 @@ partie droite de la page
 }
 
 .rw-lognews-form-group h1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: auto;
   line-height: center;
@@ -2321,6 +1938,9 @@ partie droite de la page
 
 .rw-lognews-form-group a:hover {
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2330,14 +1950,8 @@ partie droite de la page
 }
 
 .rw-lognews-btn-send {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: 40px;
   width: 160px;
   color: white;
@@ -2351,10 +1965,7 @@ partie droite de la page
   line-height: 30px;
   width: 200px;
   display: block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -2379,39 +1990,43 @@ partie droite de la page
 .rw-lognews-form-group .rw-bg-connect:hover {
   background-color: #037E69;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .rw-lognews-form-group .rw-bg-disconnect:hover {
   background-color: #C1392B;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .rw-lognews-form-group .rw-font-connect:hover {
   color: #C1392B;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .rw-lognews-form-group .rw-font-disconnect:hover {
   color: #C1392B;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .rw-cpt-main-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   line-height: 1.5em;
   max-width: 1200px;
   margin: 50px auto;
@@ -2436,21 +2051,11 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content {
   margin: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   height: auto;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   width: 90%;
   /*************************
     progress bar
@@ -2482,16 +2087,9 @@ partie droite de la page
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: space-around;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form fieldset {
@@ -2501,13 +2099,8 @@ partie droite de la page
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form fieldset .rw-cpt-content-profil-field-share {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   background-color: #ebebe6;
   color: #7e8b8c;
   padding: 0 2px;
@@ -2526,17 +2119,9 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form fieldset > * {
   padding: 10px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form fieldset input {
@@ -2565,13 +2150,8 @@ partie droite de la page
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-button {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
   margin: 50px auto 0;
   height: 150px;
 }
@@ -2600,14 +2180,8 @@ partie droite de la page
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-avatar {
   margin: auto;
   padding: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  background: -webkit-linear-gradient(#FFFFFF, #ebebe6);
+  flex-flow: column nowrap;
   background: linear-gradient(#FFFFFF, #ebebe6);
   border-radius: 20px;
   box-shadow: 1px 1px 2px #7e8b8c;
@@ -2623,13 +2197,8 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-avatar .rw-cpt-content-legend {
   margin: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-avatar .rw-cpt-content-legend span {
@@ -2696,9 +2265,6 @@ partie droite de la page
   position: absolute;
   padding: 20px 0;
   top: 280px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: auto;
   height: auto;
