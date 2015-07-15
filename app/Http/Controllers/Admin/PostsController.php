@@ -75,7 +75,13 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
+        $post = Post::find($id);
+        $auth_id = Auth::user()->id;
+        $categories = Category::lists('name', 'id');
+        $jobs = Job::lists('name', 'id');
 
+
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post'));
     }
 
     /**
@@ -91,6 +97,9 @@ class PostsController extends Controller
         if ($request->has('publication')) {
             $post->published = $request->get('publication');
             $post->save();
+        } else {
+            dd('Hello');
+            $post->update($request->all());
         }
 
         return redirect(route('admin.posts.index'));
