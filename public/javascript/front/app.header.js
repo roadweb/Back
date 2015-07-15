@@ -6,12 +6,13 @@ $(function () {
 
             $('#rw-nav').addClass('fixNavigation');
             $('#rw-search').addClass('transSearch');
+            $('body').addClass('has-nav-fixed');
             //on ajoute la classe "fixNavigation" à <div id="navigation">
         }
         else {
             $('#rw-nav').removeClass("fixNavigation");
             $('#rw-search').removeClass('transSearch');
-
+            $('body').removeClass('has-nav-fixed');
             //sinon on retire la classe "fixNavigation" à <div id="navigation">
         }
     });
