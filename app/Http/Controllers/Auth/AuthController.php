@@ -31,8 +31,11 @@ class AuthController extends Controller {
 	{
 		$this->auth = $auth;
 		$this->registrar = $registrar;
+        $this->loginPath = '/admin/auth/login';
+        $this->redirectPath = '/admin';
+        $this->loginPath = '/admin/auth/login';
 
-		$this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('guest', ['except' => 'getLogout']);
 	}
 
 }

@@ -8,6 +8,11 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0 auto;
+	padding-top: 0;
+
+	&.has-nav-fixed {
+		padding-top: $header-height;
+	}
 }
 
 .container {

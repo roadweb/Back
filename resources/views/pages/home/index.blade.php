@@ -1,7 +1,9 @@
 @extends('pages.app')
 
+
 @section('content')
 
+    @include('pages.carrousel.component.jobnav')
 
 
     <div class="container">
