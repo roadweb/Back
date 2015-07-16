@@ -26,10 +26,9 @@
                     </div>
                 @endif
                 @if(isset($post))
-                    {!! Form::model($post, ['route' => ['admin.posts.update', $post->id], 'method' => 'patch', 'id' =>
-                    'form-main']) !!}
+                    {!! Form::model($post, ['route' => ['admin.posts.update', $post->id], 'method' => 'patch', 'id' => 'form-main']) !!}
                 @else
-                    <form action="{{ route('admin.posts.store') }}" method="post" id="form-main">
+                    {!! Form::open(['route' => ['admin.posts.store'], 'id' => 'form-main']) !!}
                         @endif
 
                         <input type="hidden" name="user_id" value="{{ $auth_id }}">
