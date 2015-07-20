@@ -22,6 +22,10 @@ class BlogController extends Controller
 
     public function article($id)
     {
-        return view('pages.blog.article');
+        $post = Post::findOrFail($id);
+        $userPosts = Post::where('user_id', $post->user->id)->orderBy('created_at', 'desc')->take(2)->get();
+        $jobPosts = Post::where('job_id', $post->job->id)->orderBy('created_at', 'desc')->take(2)->get();
+
+        return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts'));
     }
 }

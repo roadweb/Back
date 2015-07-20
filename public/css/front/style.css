@@ -1092,14 +1092,14 @@ Bloc contenu de l'article
   padding: 15px;
 }
 
-.rw-blog-article-content p, .rw-blog-article-content h4 {
+.rw-blog-article-content p, .rw-blog-article-content-auth {
   text-align: justify;
   margin: auto;
   width: 90%;
   padding: 10px;
 }
 
-.rw-blog-article-content h4 {
+.rw-blog-article-content-auth {
   color: #72CFF5;
   font-weight: bold;
 }
@@ -1166,6 +1166,11 @@ partie droite de la page
   height: auto;
   text-align: center;
   padding: 2% 0;
+}
+
+.rw-blog-band-container .rw-blog-band-auth h3 span, .rw-blog-band-container .rw-blog-band-auth h3 a span {
+  text-transform: capitalize;
+  font-size: 1.1em;
 }
 
 .rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-avatar {
@@ -2505,6 +2510,13 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil h2 span:hover {
   color: #E84C3D;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil:nth-child(1) .rw-cpt-content-profil-field-allvisible {
+  color: #7e8b8c;
+  background: -webkit-linear-gradient(#ebebe6, #FFFFFF);
+  background: linear-gradient(#ebebe6, #FFFFFF);
+  border-radius: 20px;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form {
