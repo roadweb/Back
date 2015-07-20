@@ -3,7 +3,7 @@
 
     <div class="rw-index-footer-container">
         <div class="rw-index-footer-contact">
-            <p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="{{ url('/') }}">formulaire</a>
+            <p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="{{ url('/contact') }}">formulaire</a>
                 du site. Nous vous répondrons le plus rapidement possible.</p>
         </div>
         <div class="rw-index-footer-btn-subscription">
@@ -37,7 +37,7 @@
             <div class="rw-index-footer-nav-list">
                 <ul>
                     <li><a href="{{ url('/mentions') }}">Mentions légales</a></li>
-                    <li><a href="{{ url('/') }}">Contact</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                     <li><a href="{{ url('/') }}">Adhésion</a></li>
                 </ul>
             </div>
