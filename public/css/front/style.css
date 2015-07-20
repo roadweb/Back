@@ -2028,6 +2028,12 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
+.rw-hide {
+  background-color: #bf382a;
+  color: #FFFFFF;
+  visibility: hidden;
+}
+
 .rw-cpt-main-container {
   display: flex;
   flex-flow: column nowrap;
@@ -2258,6 +2264,7 @@ partie droite de la page
   width: 65%;
 }
 
+<<<<<<< HEAD
 .rw-contact-container {
   line-height: 1.5em;
   margin: 50px auto;
@@ -2314,6 +2321,18 @@ partie droite de la page
 .rw-contact-container form fieldset .rw-contact-field {
   margin: auto;
   width: 100%;
+=======
+.rw-cpt-checkbox {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+  /*************************
+    design des checkboxs
+  **************************/
+}
+
+.rw-cpt-checkbox p {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2321,6 +2340,7 @@ partie droite de la page
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+<<<<<<< HEAD
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -2370,23 +2390,44 @@ partie droite de la page
 }
 
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked), .rw-contact-container form fieldset [type="checkbox"]:checked {
+=======
+  margin: auto;
+  padding: 0 0 0 10px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked), .rw-cpt-checkbox [type="checkbox"]:checked {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   left: -9999px;
   position: absolute;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label, .rw-contact-container form fieldset [type="checkbox"]:checked + label {
+=======
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label, .rw-cpt-checkbox [type="checkbox"]:checked + label {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   cursor: pointer;
   padding-left: 75px;
   position: relative;
   text-align: left;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::before, .rw-contact-container form fieldset [type="checkbox"]:checked + label::before, .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::after, .rw-contact-container form fieldset [type="checkbox"]:checked + label::after {
+=======
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-cpt-checkbox [type="checkbox"]:checked + label::before, .rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   content: "";
   position: absolute;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::before, .rw-contact-container form fieldset [type="checkbox"]:checked + label::before {
+=======
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-cpt-checkbox [type="checkbox"]:checked + label::before {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   background: #E84C3D none repeat scroll 0 0;
   border-radius: 15px;
   height: 30px;
@@ -2397,7 +2438,11 @@ partie droite de la page
   width: 65px;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::after, .rw-contact-container form fieldset [type="checkbox"]:checked + label::after {
+=======
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   background: #C1392B none repeat scroll 0 0;
   border-radius: 50%;
   height: 20px;
@@ -2408,17 +2453,29 @@ partie droite de la page
   width: 20px;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:checked + label::before {
   background: #16A086 none repeat scroll 0 0;
 }
 
 .rw-contact-container form fieldset [type="checkbox"]:checked + label::after {
+=======
+.rw-cpt-checkbox [type="checkbox"]:checked + label::before {
+  background: #16A086 none repeat scroll 0 0;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   background: #037E69 none repeat scroll 0 0;
   left: 40px;
   top: 2px;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:checked + label .ui, .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label .ui::before, .rw-contact-container form fieldset [type="checkbox"]:checked + label .ui::after {
+=======
+.rw-cpt-checkbox [type="checkbox"]:checked + label .ui, .rw-cpt-checkbox [type="checkbox"]:not(:checked) + label .ui::before, .rw-cpt-checkbox [type="checkbox"]:checked + label .ui::after {
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   border-radius: 15px;
   font-size: 14px;
   font-weight: bold;
@@ -2430,13 +2487,20 @@ partie droite de la page
   width: 65px;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label .ui::before {
   content: "non";
   left: 32px;
+=======
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label .ui::before {
+  content: "non";
+  left: -9px;
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
   color: #ebebe6;
   top: 0;
 }
 
+<<<<<<< HEAD
 .rw-contact-container form fieldset [type="checkbox"]:checked + label .ui::after {
   color: #ebebe6;
   content: "oui";
@@ -2557,6 +2621,19 @@ partie droite de la page
   border: none;
 }
 
+=======
+.rw-cpt-checkbox [type="checkbox"]:checked + label .ui::after {
+  color: #ebebe6;
+  content: "oui";
+  top: 1px;
+  left: -37px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:focus + label::before {
+  box-sizing: border-box;
+}
+
+>>>>>>> 58baa116a1caa41d1a423c8f27ee539bf9e2d9fc
 /*
 |--------------------------------------------------------------------------
 | Background

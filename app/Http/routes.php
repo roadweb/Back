@@ -59,13 +59,13 @@ Route::get('/jobs', 'JobsController@index');
 
 Route::get('/jobs/job', 'JobsController@description');
 
-Route::get('/motions', 'MotionsController@index');
+Route::get('/mentions', 'MotionsController@index');
 
-Route::get('/subscribe', 'SubController@sub');
+Route::get('/inscription', 'SubController@sub');
 
-Route::get('/subscribe/validation', 'SubController@subvalid');
+Route::get('/inscription/validation', 'SubController@subvalid');
 
-Route::get('/about', 'AboutusController@index');
+Route::get('/apropos', 'AboutusController@index');
 
 Route::get('/compte', 'CompteController@index');
 

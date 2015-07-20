@@ -25,10 +25,10 @@
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ url('/blog') }}">Blog</a></li>
             <li><a href="{{ url('/jobs') }}">Nos métiers</a></li>
-            <li><a href="{{ url('/about') }}">Qui sommes nous</a></li>
+            <li><a href="{{ url('/apropos') }}">Qui sommes nous</a></li>
         </ul>
         <ul class="rw-ul_red">
-            <li><a href="{{ url('/compte') }}">Inscription</a></li>
+            <li><a href="{{ url('/inscription') }}">Inscription</a></li>
         </ul>
     </nav>
     {{--<div class="rw-clear"></div>--}}
