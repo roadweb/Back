@@ -36,7 +36,7 @@
             </div>
             <div class="rw-index-footer-nav-list">
                 <ul>
-                    <li><a href="{{ url('/motions') }}">Mentions légales</a></li>
+                    <li><a href="{{ url('/mentions') }}">Mentions légales</a></li>
                     <li><a href="{{ url('/') }}">Contact</a></li>
                     <li><a href="{{ url('/') }}">Adhésion</a></li>
                 </ul>
