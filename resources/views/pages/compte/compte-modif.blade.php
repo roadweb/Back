@@ -29,6 +29,18 @@
                     <form action="#">
 
                         <fieldset class="rw-cpt-checkbox">
+                            <div class="rw-cpt-content-profil-field rw-cpt-content-profil-field-allvisible">
+
+                                <p>Masquer / Afficher tous les items</p>
+                                <p>
+                                    <input type="checkbox" id="visibleall" />
+                                    <label for="visibleall">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
+
+                            </div>
+
 
                             <div class="rw-cpt-content-profil-field">
 
@@ -224,6 +236,7 @@
                                 </p>
 
                             </div>
+
 
 
 
