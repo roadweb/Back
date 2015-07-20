@@ -2028,6 +2028,12 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
+.rw-hide {
+  background-color: #bf382a;
+  color: #FFFFFF;
+  visibility: hidden;
+}
+
 .rw-cpt-main-container {
   display: flex;
   flex-flow: column nowrap;
@@ -2256,6 +2262,108 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-progress-bar-container .rw-cpt-progress-bar:nth-of-type(4) .rw-cpt-bar {
   width: 65%;
+}
+
+.rw-cpt-checkbox {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+  /*************************
+    design des checkboxs
+  **************************/
+}
+
+.rw-cpt-checkbox p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin: auto;
+  padding: 0 0 0 10px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked), .rw-cpt-checkbox [type="checkbox"]:checked {
+  left: -9999px;
+  position: absolute;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label, .rw-cpt-checkbox [type="checkbox"]:checked + label {
+  cursor: pointer;
+  padding-left: 75px;
+  position: relative;
+  text-align: left;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-cpt-checkbox [type="checkbox"]:checked + label::before, .rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::before, .rw-cpt-checkbox [type="checkbox"]:checked + label::before {
+  background: #E84C3D none repeat scroll 0 0;
+  border-radius: 15px;
+  height: 30px;
+  left: 0;
+  top: -3px;
+  -webkit-transition: background-color 0.2s ease 0s;
+          transition: background-color 0.2s ease 0s;
+  width: 65px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label::after, .rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+  background: #C1392B none repeat scroll 0 0;
+  border-radius: 50%;
+  height: 20px;
+  left: 5px;
+  top: 2px;
+  -webkit-transition: all 0.2s ease 0s;
+          transition: all 0.2s ease 0s;
+  width: 20px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:checked + label::before {
+  background: #16A086 none repeat scroll 0 0;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:checked + label::after {
+  background: #037E69 none repeat scroll 0 0;
+  left: 40px;
+  top: 2px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:checked + label .ui, .rw-cpt-checkbox [type="checkbox"]:not(:checked) + label .ui::before, .rw-cpt-checkbox [type="checkbox"]:checked + label .ui::after {
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  left: 6px;
+  line-height: 22px;
+  position: absolute;
+  -webkit-transition: all 0.2s ease 0s;
+          transition: all 0.2s ease 0s;
+  width: 65px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:not(:checked) + label .ui::before {
+  content: "non";
+  left: -9px;
+  color: #ebebe6;
+  top: 0;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:checked + label .ui::after {
+  color: #ebebe6;
+  content: "oui";
+  top: 1px;
+  left: -37px;
+}
+
+.rw-cpt-checkbox [type="checkbox"]:focus + label::before {
+  box-sizing: border-box;
 }
 
 /*
