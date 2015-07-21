@@ -1,7 +1,7 @@
 @extends('pages.app')
 
 @section('content')
-
+ @include('pages.carrousel.component.jobnav')
 
     <div class="rw-main-container-articleon">
 
@@ -9,17 +9,17 @@
      développé par Pauline: article blog ouvert
     ----------------------->
 
-        <div class="rw-blog-article-container rw-blog-article-brd-design">
-            <div class="rw-blog-article-content-fct">
+        <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
+            <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
                     <span>
-                        Temps de lecture moyen de l'article $temps
+                        <i class="fa fa-clock-o"></i> $temps
                     </span>
 
                 <span>
-                <span>
+                    <p>
                     Partagez !
-                </span>
+                    </p>
                         <i class="fa fa-facebook"></i>
                         <i class="fa fa-twitter"></i>
                         <i class="fa fa-google-plus"></i>
@@ -139,9 +139,7 @@
 
 
                 </div>
-
-
-                <div class="rw-bdc-triangle-design"></div>
+    <div class="rw-bdc-triangle rw-job-color-triangle-{{$post->job_id}}"></div>
             </div>
         </div>
 
@@ -172,7 +170,7 @@
                 </div>
             </div>
 @foreach($userPosts as $userPost)
-            <div class="rw-blog-band-others-sameAuth rw-blog-article-brd-inte">
+            <div class="rw-blog-band-others-sameAuth rw-job-color-{{$userPost->job_id}}">
 
                 <div class="rw-blog-band-others-sameAuth-header">
 
@@ -196,7 +194,7 @@
 
                 </div>
 
-                <div class="rw-bdc-triangle-inte"></div>
+                <div class="rw-bdc-triangle rw-job-color-triangle-{{$userPost->job_id}}"></div>
 
             </div>
             @endforeach
@@ -206,7 +204,7 @@
                 <h3><a href="">Article du même métier</a></h3>
             </div>
             @foreach($jobPosts as $jobPost)
-            <div class="rw-blog-band-others-sameAuth rw-blog-article-brd-design">
+            <div class="rw-blog-band-others-sameAuth rw-job-color-{{$jobPost->job_id}}">
 
                 <div class="rw-blog-band-others-sameAuth-header">
 
@@ -229,7 +227,7 @@
 
 
                 </div>
-                <div class="rw-bdc-triangle-design"></div>
+                <div class="rw-bdc-triangle rw-job-color-triangle-{{$jobPost->job_id}}"></div>
 
 
             </div>

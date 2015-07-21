@@ -102,12 +102,87 @@ EXTENDS
   clear: both;
 }
 
-.rw-index-open-article-min .rw-index-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-bdc-triangle-design, .rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
+.rw-index-open-article-min .rw-index-open-article-min-triangle, .rw-jobs-index-webmarketing .rw-jobs-index-triangle, .rw-jobs-index-developpement .rw-jobs-index-triangle, .rw-jobs-index-webdesign .rw-jobs-index-triangle, .rw-jobs-index-referencement .rw-jobs-index-triangle, .rw-jobs-index-integration .rw-jobs-index-triangle, .rw-jobs-index-community-management .rw-jobs-index-triangle, .rw-jobs-job-description .rw-jobs-job-triangle, .rw-bdc-triangle {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 0;
   border-style: solid;
+}
+
+/*couleurs job triangles*/
+.rw-job-color-triangle-1 {
+  border-color: transparent transparent #F6D432 transparent !important;
+}
+
+.rw-job-color-triangle-2 {
+  border-color: transparent transparent #36A7DE transparent !important;
+}
+
+.rw-job-color-triangle-3 {
+  border-color: transparent transparent #F59E36 transparent !important;
+}
+
+.rw-job-color-triangle-4 {
+  border-color: transparent transparent #EB6441 transparent !important;
+}
+
+.rw-job-color-triangle-5 {
+  border-color: transparent transparent #38AA49 transparent !important;
+}
+
+.rw-job-color-triangle-6 {
+  border-color: transparent transparent #B76DAB transparent !important;
+}
+
+/*couleurs job bordures*/
+.rw-job-color-1 {
+  border: 2px solid #F6D432 !important;
+}
+
+.rw-job-color-2 {
+  border: 2px solid #36A7DE !important;
+}
+
+.rw-job-color-3 {
+  border: 2px solid #F59E36 !important;
+}
+
+.rw-job-color-4 {
+  border: 2px solid #EB6441 !important;
+}
+
+.rw-job-color-5 {
+  border: 2px solid #38AA49 !important;
+}
+
+.rw-job-color-6 {
+  border: 2px solid #B76DAB !important;
+}
+
+/*couleurs job background*/
+.rw-job-color-bgc-1 {
+  background-color: #F6D432 !important;
+}
+
+.rw-job-color-bgc-2 {
+  background-color: #36A7DE !important;
+}
+
+.rw-job-color-bgc-3 {
+  background-color: #F59E36 !important;
+}
+
+.rw-job-color-bgc-4 {
+  background-color: #EB6441 !important;
+}
+
+.rw-job-color-bgc-5 {
+  background-color: #38AA49 !important;
+}
+
+.rw-job-color-bgc-6 {
+  background-color: #B76DAB !important;
 }
 
 /*
@@ -951,7 +1026,6 @@ bloc de l'article
 }
 
 .rw-blog-article-container .rw-blog-article-content-fct {
-  background-color: #36A7DE;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -975,8 +1049,13 @@ bloc de l'article
   padding: 5px 10px;
 }
 
+.rw-blog-article-container .rw-blog-article-content-fct span p {
+  display: inline;
+}
+
 .rw-blog-article-container .rw-blog-article-content-fct span:nth-child(2) i {
   cursor: pointer;
+  padding: 0 2px;
 }
 
 .rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i {
@@ -993,12 +1072,10 @@ bloc de l'article
   padding: 0;
 }
 
-.rw-blog-article-brd-design {
-  border: 2px solid #36A7DE;
-}
-
-.rw-bdc-triangle-design {
-  border-color: transparent transparent #36A7DE transparent;
+/*.rw-blog-article-brd-design {
+  border: 2px solid $colorDesignFonce;
+}*/
+.rw-bdc-triangle {
   border-width: 0 0 40px 40px;
 }
 
@@ -1250,15 +1327,6 @@ partie droite de la page
   height: 50px;
 }
 
-.rw-blog-band-container .rw-blog-article-brd-inte {
-  border: 2px solid #38AA49;
-}
-
-.rw-blog-band-container .rw-blog-article-brd-inte .rw-bdc-triangle-inte {
-  border-color: transparent transparent #38AA49 transparent;
-  border-width: 0 0 40px 40px;
-}
-
 .rw-blog-band-container .rw-blog-band-others-sameAuth-header-picto {
   background: #ffffff;
 }
@@ -1266,6 +1334,8 @@ partie droite de la page
 .rw-blog-band-container .rw-blog-band-others-Une {
   text-align: center;
   margin: 0 2% 2% 2%;
+  background: -webkit-linear-gradient(#FFFFFF, #ebebe6);
+  background: linear-gradient(#FFFFFF, #ebebe6);
   box-shadow: 0 3px 2px #7e8b8c;
 }
 
@@ -1274,6 +1344,7 @@ partie droite de la page
 }
 
 .rw-blog-band-container .rw-blog-band-others-Une .rw-blog-band-others-Une-illus img {
+  margin: 20px 0 0 0;
   width: 234px;
   height: 128px;
   border-bottom: 2px solid #7e8b8c;
@@ -1286,10 +1357,6 @@ partie droite de la page
 
 .rw-blog-band-container .rw-blog-band-others-Une .rw-blog-band-others-Une-header h3 {
   padding: 25px 0 0;
-}
-
-.rw-blog-band-container .rw-blog-article-Une-design {
-  border-bottom: 3px solid #72CFF5;
 }
 
 .rw-blog-band-container .rw-blog-band-rsx {
