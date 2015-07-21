@@ -5,9 +5,8 @@
 
     <div class="rw-main-container-articleon">
 
-        <!---------------------
-     développé par Pauline: article blog ouvert
-    ----------------------->
+        <!--
+     développé par Pauline: article blog ouvert-->
 
         <div class="rw-blog-article-container rw-blog-article-brd-design">
             <div class="rw-blog-article-content-fct">
