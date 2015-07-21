@@ -17,7 +17,9 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Post::published()->where('is_sticky', 'on')->get()->take(3);
-        $vignettes = Post::published()->orderBy('created_at', 'desc')->where('is_sticky', '0')->get()->take(6);
+
+        $vignettes = Post::published()->orderBy('created_at', 'desc')->where('is_sticky', '0')->get();
+
         return view('pages.blog.index', compact('posts', 'vignettes'));
     }
 

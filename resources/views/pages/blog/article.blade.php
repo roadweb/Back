@@ -5,9 +5,8 @@
 
     <div class="rw-main-container-articleon">
 
-        <!---------------------
-     développé par Pauline: article blog ouvert
-    ----------------------->
+        <!--
+     développé par Pauline: article blog ouvert-->
 
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
             <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
