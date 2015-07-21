@@ -3,7 +3,7 @@
     <article class="rw-index-open-article-min">
         <div class="rw-index-open-article-min-date">
             <p>
-                <span class="rw-index-day">{{-- exDate($vignette->created_at) -- }} </span>
+                <span class="rw-index-day">12</span>
                 <br />
                 Janvier
                 <br />

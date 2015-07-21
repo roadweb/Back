@@ -29,13 +29,3 @@ function sticky($post, $class = 'default')
     return 'default';
 }
 
-/*
-function exDate($created_at) {
-	$dateNewFormat = array(
-	[0] => date("d", strtotime($created_at)),
-	[1] => date("F", strtotime($created_at)),
-	[2] => date("Y", strtotime($created_at))
-	);
-	return $dateNewFormat();
-}
-*/
