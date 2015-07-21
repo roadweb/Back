@@ -1,12 +1,12 @@
 /******************BLOC ARTICLES OUVERTS MINIS******************/
 .rw-index-open-articles-container-min {
-	width:100%;
+	width:80%;
 	height:auto;
 	padding:15px;
-	margin-top: 10px;
+	margin: 10px auto 0 auto;
 	display:flex;
 	flex-flow: row wrap;
-	justify-content:space-around;
+	justify-content:space-between;
 }
 
 .rw-index-open-article-min {
@@ -19,8 +19,7 @@
 	.rw-index-open-article-min-triangle {
 		@extend %arrow;
         border-width: 0 0 40px 40px;
-        border-color: transparent transparent $colorDev transparent;
-	}
+ 	}
 }
 
 .rw-index-open-article-min-date {
@@ -47,7 +46,6 @@
 	flex-direction: column;
 	justify-content:center;
 	height: 90px;
-	border:2px solid $colorDev;
 	background-color:#fff;
 	.rw-index-open-article-min-title {
 		height: 40px;
