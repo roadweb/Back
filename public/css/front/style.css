@@ -2076,17 +2076,10 @@ partie droite de la page
           flex-direction: column;
 }
 
-.rw-lognews-newsletter {
-  top: 380px;
-}
-
-.rw-lognews-login:hover,
-.rw-lognews-newsletter:hover {
-  z-index: 10000;
-}
-
-.rw-login,
-.rw-newsletter {
+.rw-lognews-login .rw-login,
+.rw-lognews-login .rw-newsletter,
+.rw-lognews-newsletter .rw-login,
+.rw-lognews-newsletter .rw-newsletter {
   width: inherit;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2103,11 +2096,18 @@ partie droite de la page
           justify-content: flex-end;
 }
 
-.rw-lognews-container {
+.rw-lognews-login .rw-login .rw-login-container,
+.rw-lognews-login .rw-login .rw-newsletter-container,
+.rw-lognews-login .rw-newsletter .rw-login-container,
+.rw-lognews-login .rw-newsletter .rw-newsletter-container,
+.rw-lognews-newsletter .rw-login .rw-login-container,
+.rw-lognews-newsletter .rw-login .rw-newsletter-container,
+.rw-lognews-newsletter .rw-newsletter .rw-login-container,
+.rw-lognews-newsletter .rw-newsletter .rw-newsletter-container {
+  overflow: hidden;
   z-index: 9;
   width: 0;
   height: 0;
-  overflow: hidden;
   left: 80px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2125,8 +2125,31 @@ partie droite de la page
   box-shadow: 0 0 6px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  background-color: white;
 }
 
+.rw-lognews-login .rw-login:hover .rw-login-container,
+.rw-lognews-login .rw-newsletter:hover .rw-newsletter-container,
+.rw-lognews-newsletter .rw-login:hover .rw-login-container,
+.rw-lognews-newsletter .rw-newsletter:hover .rw-newsletter-container {
+  overflow: visible;
+  width: inherit;
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+}
+
+.rw-lognews-newsletter {
+  top: 380px;
+}
+
+.rw-lognews-login:hover,
+.rw-lognews-newsletter:hover {
+  z-index: 10000;
+}
+
+/*    POPUPS login + newsletter  */
 .rw-square {
   top: 0;
   left: 0;
@@ -2144,7 +2167,6 @@ partie droite de la page
   width: 46px;
   height: 58px;
   margin: 11px 17px;
-  background-color: #bf382a;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2153,6 +2175,7 @@ partie droite de la page
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #bf382a;
 }
 
 .rw-icon-newsletter {
@@ -2160,10 +2183,11 @@ partie droite de la page
   background-color: white;
 }
 
+/*    formulaires  */
 .rw-lognews-form {
-  width: 220px;
   padding: 10px;
-  height: inherit;
+  padding-bottom: 0;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2179,23 +2203,11 @@ partie droite de la page
           align-items: center;
   background-color: #ebebe6;
   border-radius: 0 4px 4px 4px;
-}
-
-.rw-login:hover .rw-lognews-container,
-.rw-newsletter:hover .rw-lognews-container {
-  overflow: visible;
-  right: 10px;
-  width: 240px;
-  height: auto;
   box-shadow: 0 0 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  padding: 10px;
-  background-color: white;
 }
 
-.rw-lognews-form-group {
-  width: 200px;
+.rw-lognews-form .rw-lognews-form-group {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2205,90 +2217,51 @@ partie droite de la page
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  /*.rw-lognews-container,
+        .rw-lognews-container-btn
+        */
 }
 
-.rw-lognews-container-header {
-  min-height: 60px;
-  line-height: 30px;
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.rw-lognews-container-row,
-.rw-lognews-container-welcome,
-.rw-lognews-container-btn,
-.rw-lognews-container-forgoten,
-.rw-lognews-container-remember {
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn {
   line-height: 50px;
-  width: 200px;
-  height: 50px;
-  border-radius: 2px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: 10px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.rw-lognews-container-forgoten,
-.rw-lognews-container-remember {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container label,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container a,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container h1,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container button,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input, .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn label, .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn a, .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn h1, .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button {
+  line-height: 1.5em;
+  font-size: 1em;
+  height: 60px;
+  background: none;
+  border: none;
+  text-align: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.rw-lognews-container-forgoten {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.rw-lognews-container-btn {
-  height: 40px;
-  line-height: 50px;
-  margin: 5px 0;
-}
-
-.rw-lognews-form-group .rw-checkbox {
-  width: 30px;
-}
-
-.rw-lognews-container-row .rw-lognews-icon,
-.rw-lognews-container-btn .rw-lognews-icon {
-  width: 40px;
-  height: 40px;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-icon,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn .rw-lognews-icon {
+  width: 50px;
+  height: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2297,103 +2270,132 @@ partie droite de la page
       -ms-flex-pack: distribute;
           justify-content: space-around;
   border-radius: 2px 0 0 2px;
-}
-
-.rw-lognews-container-row .rw-lognews-icon {
   background-color: #333;
 }
 
-.rw-lognews-icon img {
-  width: 20px;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-icon img,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn .rw-lognews-icon img {
+  width: 50%;
   height: auto;
   display: block;
   margin: auto;
 }
 
-.rw-lognews-container-row input,
-.rw-lognews-container-row label,
-.rw-lognews-container-row a,
-.rw-lognews-form-group h1 {
-  line-height: 40px;
-  height: 40px;
-  width: 160px;
-  background: none;
-  border: none;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container button[type="submit"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="email"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="password"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button[type="submit"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input[type="email"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input[type="password"] {
+  width: 180px;
+  border-left: 1px solid white;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
 }
 
-.rw-lognews-container-row input {
-  border-bottom: 1px solid #333;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-welcome,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn .rw-welcome {
+  line-height: 1.75em;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #bf382a;
 }
 
-.rw-lognews-form-group a {
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-subscriber,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn .rw-subscriber {
+  line-height: 1.5em;
+  font-size: 1em;
   color: #333;
+  font-weight: normal;
 }
 
-.rw-lognews-form-group h1 {
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container h1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  line-height: center;
-}
-
-.rw-lognews-form-group a:hover {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.rw-lognews-pwd-forgoten,
-.rw-lognews-remember {
-  font-size: 12px;
-}
-
-.rw-lognews-btn-send {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 40px;
-  width: 160px;
-  color: white;
-  background: none;
-  border: none;
-  font-weight: 600;
-  border-left: 1px solid white;
-}
-
-.rw-lognews-form-group .rw-lognews-sub {
-  line-height: 30px;
-  width: 200px;
+  width: 100%;
+  margin: 8px 0;
   display: block;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
-.rw-lognews-form-group .rw-welcome {
-  color: #bf382a;
-  font-size: 20px;
-  font-weight: 800;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-create-accompte,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-myaccompt {
+  line-height: 60px;
+  font-size: 1.25em;
+  height: 60px;
 }
 
-.rw-lognews-form-group .rw-subscriber {
-  font-size: 20px;
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="email"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="password"] {
+  border-bottom: 1px solid #333;
+  line-height: 1.625em;
+  font-size: 1.125em;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container a {
+  height: auto;
+  width: 100%;
+  color: #333;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container a:hover {
+  color: #C1392B;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-pwd-forgoten,
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container .rw-lognews-remember {
+  font-size: 0.75em;
+  line-height: 20px;
+  height: 20px;
+  text-align: left;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="checkbox"] {
+  width: 16px;
+  margin-left: 20px;
+  height: 20px;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn {
+  border-radius: 2px;
+  height: inherit;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn .rw-lognews-icon {
+  background: none;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button[type="submit"] {
+  color: white;
+  font-weight: 600;
 }
 
 .rw-lognews-form-group .rw-bg-connect {
   background-color: #16A086;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .rw-lognews-form-group .rw-bg-disconnect {
   background-color: #E84C3D;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .rw-lognews-form-group .rw-bg-connect:hover {
@@ -2408,18 +2410,27 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
-.rw-lognews-form-group .rw-font-connect:hover {
-  color: #C1392B;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+.rw-justify-content-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.rw-lognews-form-group .rw-font-disconnect:hover {
-  color: #C1392B;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+/*
+.rw-justify-content-start{
+    justify-content:flex-start;
 }
-
+.rw-justify-content-center{
+    justify-content:center;
+}
+.rw-justify-content-arround{
+    justify-content:space-around;
+}
+.rw-justify-content-between{
+    justify-content:space-between;
+}
+*/
 .rw-hide {
   background-color: #bf382a;
   color: #FFFFFF;

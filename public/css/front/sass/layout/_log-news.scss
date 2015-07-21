@@ -10,226 +10,275 @@
     height:inherit;
     display: flex;
     flex-direction: column;
-}
-.rw-lognews-newsletter{
-    top:380px;
-}
-    .rw-lognews-login:hover,
-    .rw-lognews-newsletter:hover{
-        z-index: 10000;
-    }
+    
     .rw-login,
     .rw-newsletter{
         width:inherit;
         display:flex;
         flex-direction: row;
         justify-content: flex-end;
+
+        .rw-login-container,
+        .rw-newsletter-container{
+            overflow:hidden;
+            z-index:9;
+            width:0;
+            height:0;
+            left:80px;
+            display:inline-flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 0 6px 6px 6px;
+            box-shadow: 0 0 6px;
+            @include transition(all, 0.2s, ease-in-out);
+            background-color:white;
+        }
     }
-    .rw-lognews-container{
-        z-index:9;
-        width:0;
-        height:0;
-        overflow:hidden;
-        left:80px;
-        display:inline-flex;
-        flex-direction: column;
-        justify-content: space-around;
-        border-radius: 0 6px 6px 6px;
-        box-shadow: 0 0 6px;
+    .rw-login:hover .rw-login-container,
+    .rw-newsletter:hover .rw-newsletter-container{
+        overflow:visible;
+        width:inherit;
+        height:auto;
         @include transition(all, 0.2s, ease-in-out);
+        padding:10px;
     }
-        .rw-square{
-            top:0;
-            left:0;
-            width:80px;
-            height:80px;
+}
+
+.rw-lognews-newsletter{
+    top:380px;
+}
+.rw-lognews-login:hover,
+.rw-lognews-newsletter:hover{
+    z-index: 10000;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+/*    POPUPS login + newsletter  */
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+    .rw-square{
+        top:0;
+        left:0;
+        width:80px;
+        height:80px;
+        display:flex;
+        background-color: $red;
+    }
+        .rw-icon-login,
+        .rw-icon-newsletter{
+            width:46px;
+            height:58px;
+            margin:11px 17px;
             display:flex;
+            align-items: center;
             background-color: $red;
         }
-            .rw-icon-login,
-            .rw-icon-newsletter{
-                width:46px;
-                height:58px;
-                margin:11px 17px;
-                background-color: $red;
-                display:flex;
-                align-items: center;
-            }
-            .rw-icon-newsletter{
-                padding: 4.5px 8.5px;
-                background-color: white;
-            }
+        .rw-icon-newsletter{
+            padding: 4.5px 8.5px;
+            background-color: white;
+        }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////
+/*    formulaires  */
+//////////////////////////////////////////////////////////////////////////////////////
+
 
 .rw-lognews-form{
-    width:220px;
     padding:10px;
-    height:inherit;
+    padding-bottom:0;
+    height:auto;
     display:flex;
     flex-direction: column;
     align-items: center;
     background-color: $grey-light;
     border-radius: 0 4px 4px 4px;
-}
-
-.rw-login:hover .rw-lognews-container,
-.rw-newsletter:hover .rw-lognews-container{
-    overflow:visible;
-    right:10px;
-    width:240px;
-    height:auto;
     box-shadow: 0 0 4px;
-    @include transition(all, 0.2s, ease-in-out);
-    padding:10px;
-    background-color: white;
-}
-
+    
     .rw-lognews-form-group{
-        width:200px;
+        width:100%;
         display:flex;
         flex-direction:column;
-        justify-content:space-around;
-        align-content: center;
-    }
-        .rw-lognews-container-header{
-            min-height:60px;
-            line-height: 30px;
-            padding:10px 0;
-            display:flex;
-            flex-direction: column;
-        }
-        .rw-lognews-container-row,
-        .rw-lognews-container-welcome,
-        .rw-lognews-container-btn,
-        .rw-lognews-container-forgoten,
-        .rw-lognews-container-remember{
-            line-height:50px;////////////////////////////////////////////////////////
-            
-            width:200px;
-            height:50px;
-            border-radius: 2px;
-            display: flex;
+        align-content:stretch;
+
+        /*.rw-lognews-container,
+        .rw-lognews-container-btn
+        */
+        
+        .rw-lognews-container,
+        .rw-lognews-container-btn{
+            line-height:50px;
+            margin-bottom:10px;
+            display: inline-flex;
             flex-direction:row;
-            align-items: stretch;
-            justify-content: center;
-        }
-            .rw-lognews-container-forgoten,
-            .rw-lognews-container-remember{
-                justify-content: flex-end;
+            //border:1px solid red;
+   
+            input, label, a, h1, button{
+                line-height:$lineHeight;
+                font-size:$fontSize;
+                height:60px;
+                background:none;
+                border:none;
+                text-align: center;
                 align-items: center;
-            }
-            .rw-lognews-container-forgoten{
-                justify-content: flex-start;
-            }
-            .rw-lognews-container-btn{
-                height:40px;
-                line-height: 50px;
-                margin:5px 0;
-            }
-
-        .rw-lognews-form-group .rw-checkbox{
-            width:30px;
-        }
-
-            .rw-lognews-container-row .rw-lognews-icon,
-            .rw-lognews-container-btn .rw-lognews-icon{
-                width:40px;
-                height:40px;
-                display:flex;
-                justify-content: space-around;
-                border-radius:2px 0 0 2px;
-            }
-                .rw-lognews-container-row .rw-lognews-icon{
-                    background-color:#333;
-                }
-                    .rw-lognews-icon img{
-                        width:20px;
-                        height:auto;
-                        display:block;
-                        margin:auto;
-                    }
-
-        .rw-lognews-container-row input,
-        .rw-lognews-container-row label,
-        .rw-lognews-container-row a,
-        .rw-lognews-form-group h1{
-            line-height:40px;////////////////////////////////////////////////////
+                //border:1px dotted #333;
+            }   
+////////////////////////////////////////////////////////////////////////////////////////          
+// la largeur du formulaire '.rw-lognews-form' est definie par celle des elements suivants   
+//      >>> LargeurFormulaire = largeurIcon + largeur[ button | input ]
+//
+//    .rw-lognews-icon{}
+//            
+//    button[type="submit"],
+//    input[type="email"],
+//    input[type="password"]{}    
+//   
             
-            height:40px;
-            width:160px;
-            background:none;
-            border:none;
-            text-align: center;
-        }
-        .rw-lognews-container-row input{
-            border-bottom:1px solid #333;
-        }
-        .rw-lognews-form-group a{
-            color:#333;
-        }
-        .rw-lognews-form-group h1{
-            display:flex; 
-            height:auto;
-            line-height:center;
-        }
-        .rw-lognews-form-group a:hover{
-            @include transition(all, 0.2s, ease-in-out);
-        }
+            .rw-lognews-icon{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                border-radius: 2px 0 0 2px;
+                background-color: #333;
+                
+                img{
+                    width: 50%;
+                    height: auto;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            button[type="submit"],
+            input[type="email"],
+            input[type="password"]{
+                width: 180px;
+                border-left: 1px solid white;
+                justify-content: center;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+            }
+                                                                                      //
+                                                                                      //
+                                                                                      //
+                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////
+            
 
-        .rw-lognews-pwd-forgoten, 
-        .rw-lognews-remember{
-            font-size: 12px;/////////////////////////////////////
+            .rw-welcome{
+                line-height: $lineHeight + 0.25em;
+                font-size: $fontSize + 0.25em;
+                font-weight: 600;
+                color: $red;
+            }
+            .rw-subscriber{
+                line-height: $lineHeight;
+                font-size: $fontSize;
+                color: #333;
+                font-weight: normal;
+            }
         }
-
-        .rw-lognews-btn-send{
-            display:flex;
-            justify-content: center;
-            height:40px;
-            width:160px;
-            color:white;
-            background:none;
-            border:none;
-            font-weight: 600;
-            border-left:1px solid white;
+        
+        .rw-lognews-container{
+            
+            h1{
+                display: flex; 
+                height: auto;
+                width: 100%;
+                margin: 8px 0;
+                display: block;
+                justify-content: center;
+                text-align: center;
+                font-size: $fontSize + 0.25em;
+                font-weight: 600;
+            }
+            .rw-lognews-create-accompte,
+            .rw-lognews-myaccompt{
+                line-height: 60px;
+                font-size: $fontSize + 0.25em;
+                height: 60px;
+            }
+            input[type="email"],
+            input[type="password"]{
+                border-bottom: 1px solid #333;
+                line-height: $lineHeight + 0.125em;
+                font-size: $fontSize + 0.125em;
+            }
+            a{
+                height: auto;
+                width: 100%;
+                color: #333;
+            }
+            a:hover{
+                color: $colorCloseHover;
+                @include transition(all, 0.2s, ease-in-out);
+            }
+            .rw-lognews-pwd-forgoten, 
+            .rw-lognews-remember{
+                font-size: $fontSize - 0.25em;/////////////////////////////////////
+                line-height: 20px;
+                height: 20px;
+                text-align: left;
+            }
+            input[type="checkbox"]{
+                width: 16px;
+                margin-left: 20px;
+                height: 20px;
+            }
         }
-
-    .rw-lognews-form-group .rw-lognews-sub{
-        line-height: 30px;///////////////////////////////////////////////////////
-
-        width: 200px;
-        display:block;
-        justify-content: center;
-        text-align: center;
+        
+        .rw-lognews-container-btn{
+            border-radius: 2px;
+            height: inherit;
+            
+            .rw-lognews-icon{
+                background: none;
+            }
+            button[type="submit"]{
+                color: white;
+                font-weight: 600;
+            }
+        }
     }
-    .rw-lognews-form-group .rw-welcome{
-        color:$red;
-        font-size:20px;
-        font-weight: 800;
-    }
-    .rw-lognews-form-group .rw-subscriber{
-        font-size:20px;
-    }
+}
 
-.rw-lognews-form-group .rw-bg-connect{
-    background-color:$colorOpen;
+.rw-lognews-form-group{
+    
+    .rw-bg-connect{
+        background-color: $colorOpen;
+        @include transition(all, 0.2s, ease-in-out);
+    }
+    .rw-bg-disconnect{
+        background-color: $colorClose;
+        @include transition(all, 0.2s, ease-in-out);
+    }
+    .rw-bg-connect:hover{
+        background-color: $colorOpenHover;
+        @include transition(all, 0.2s, ease-in-out);
+    }
+    .rw-bg-disconnect:hover{
+        background-color: $colorCloseHover;
+        @include transition(all, 0.2s, ease-in-out);
+    }
 }
-.rw-lognews-form-group .rw-bg-disconnect{
-    background-color:$colorClose;
+
+
+.rw-justify-content-end{
+    justify-content: flex-end;
 }
-.rw-lognews-form-group .rw-bg-connect:hover{
-    background-color:$colorOpenHover;
-    @include transition(all, 0.2s, ease-in-out);
+/*
+.rw-justify-content-start{
+    justify-content:flex-start;
 }
-.rw-lognews-form-group .rw-bg-disconnect:hover{
-    background-color:$colorCloseHover;
-    @include transition(all, 0.2s, ease-in-out);
+.rw-justify-content-center{
+    justify-content:center;
 }
-.rw-lognews-form-group .rw-font-connect:hover{
-    color:$colorCloseHover;
-    @include transition(all, 0.2s, ease-in-out);
+.rw-justify-content-arround{
+    justify-content:space-around;
 }
-.rw-lognews-form-group .rw-font-disconnect:hover{
-    color:$colorCloseHover;
-    @include transition(all, 0.2s, ease-in-out);
+.rw-justify-content-between{
+    justify-content:space-between;
 }
+*/
