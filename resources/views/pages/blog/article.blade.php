@@ -4,19 +4,9 @@
  @include('pages.carrousel.component.jobnav')
 
     <div class="rw-main-container-articleon">
-<<<<<<< HEAD
-        
-                    <!---------------------
-     développé par Pauline: article blog ouvert
-    ----------------------->
-
-            <div class="rw-blog-article-container rw-blog-article-brd-design">
-                <div class="rw-blog-article-content-fct">
-=======
 
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
             <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
->>>>>>> df28d5d242160f9d87c79a3a9bb3213e5f6851fa
 
                     <span>
                         <i class="fa fa-clock-o"></i> $temps
@@ -45,18 +35,12 @@
                     <div class="rw-blog-article-header-date">
                         <p class="rw-blog-article-header-date-red">12</p>
 
-<<<<<<< HEAD
                         <p>janvier</p>
 
                         <p>2015</p>
                     </div>
 
 
-                    <!----todo-popix Le titre sera récupéré dans la bdd---->
-                    <h3> Que ce soit du print ou du digital comment aborder le langage couleur avec votre
-                        prestataire.</h3>
-
-=======
                 <h3> {{ $post->title }}</h3>
 
 
@@ -76,7 +60,6 @@
 
                 <!----todo-popix auteur devra être récupéré dans la BDD ---->
                 <p class="rw-blog-article-content-auth"> {{ $post->user->username }}</p>
->>>>>>> df28d5d242160f9d87c79a3a9bb3213e5f6851fa
 
                 </div>
 
@@ -176,7 +159,6 @@
                                     <!---- avatar dans bdd---->
                                     <img src="http://lorempixel.com/60/60/people/1/" alt="avatar"/>
 
-<<<<<<< HEAD
                                     <!---- date commentaire dans bdd---->
                                     <p>16 janvier 2015 08h49</p>
 
@@ -184,23 +166,18 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
                                 </div>
-=======
                 </div>
     <div class="rw-bdc-triangle rw-job-color-triangle-{{$post->job_id}}"></div>
             </div>
         </div>
->>>>>>> df28d5d242160f9d87c79a3a9bb3213e5f6851fa
 
                             </div>
 
                         </div>
 
-<<<<<<< HEAD
-=======
         <!---------------------
      Partie droite de la page : bio auteur + autres articles même auteur + autre article même métier + mis en avant
     ----------------------->
->>>>>>> df28d5d242160f9d87c79a3a9bb3213e5f6851fa
 
                     </div>
 
