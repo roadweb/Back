@@ -4,9 +4,9 @@
         @foreach($posts as $post)
         <a href="blog/{{ $post->id }}">
             <article class="rw-index-last-article">
-                <h1>{{ substr($post->title,0, 70) }}[...]</h1>
+                <h1>{{ str_limit($post->title, $limit = 70, $end = '...') }}</h1>
                 <img src="http://lorempixel.com/200/200/technics/{{$post->job_id}}/" alt="{{$post->img_alt}}" />
-                <p>{{ substr($post->resume,0,70) }}[...]</p>
+                <p>{{ str_limit($post->resume, $limit = 70, $end = '...') }}</p>
             </article>
         </a>
         @endforeach
