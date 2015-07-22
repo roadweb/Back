@@ -66,10 +66,22 @@
           color: $colorClose;
         }
       }
+
+      &:nth-child(1){
+
+        .rw-cpt-content-profil-field-allvisible {
+          color: $grey-dark;
+
+          background:linear-gradient($grey-light, #FFFFFF);
+          border-radius: 20px;
+        }
+      }
+
       form {
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
+
 
         fieldset {
           width: auto;

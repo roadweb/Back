@@ -20,8 +20,8 @@
              les checkbox apparaissent
 ----------------------->
                     <h2>Profil
-                        <span>
-                            <i class="fa fa-edit rw-hide"></i>
+                        <span><!-- ajouter la class rw-hide pour masquer l'un ou l'autre icone-->
+                            <i class="fa fa-edit"></i>
                             <i class="fa fa-save"></i>
                         </span>
                     </h2>
@@ -29,6 +29,18 @@
                     <form action="#">
 
                         <fieldset class="rw-cpt-checkbox">
+                            <div class="rw-cpt-content-profil-field rw-cpt-content-profil-field-allvisible">
+
+                                <p>Masquer / Afficher tous les items</p>
+                                <p>
+                                    <input type="checkbox" id="visibleall" />
+                                    <label for="visibleall">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
+
+                            </div>
+
 
                             <div class="rw-cpt-content-profil-field">
 
@@ -227,6 +239,7 @@
 
 
 
+
                         </fieldset>
 
 
@@ -261,7 +274,7 @@
                         <div class="rw-cpt-content-legend">
 
                             <span>
-                            <i class="fa fa-edit rw-hide"></i>
+                            <i class="fa fa-edit"></i>
                             <i class="fa fa-save"></i>
                             </span>
 
@@ -280,7 +293,7 @@
                     <div class="rw-cpt-content-infos">
                         <h2>Informations personnelles
                         <span>
-                            <i class="fa fa-edit rw-hide"></i>
+                            <i class="fa fa-edit"></i>
                             <i class="fa fa-save"></i>
 
                         </span>
@@ -345,7 +358,7 @@
                 <div class="rw-cpt-content-profil">
                     <h2>Un mot sur moi
                         <span>
-                            <i class="fa fa-edit rw-hide"></i>
+                            <i class="fa fa-edit"></i>
                             <i class="fa fa-save"></i>
 
                         </span>
@@ -362,21 +375,21 @@
                 </div>
 
 
-                <div class="rw-cpt-content-profil">
+         <!--       <div class="rw-cpt-content-profil">
 
                     <div class="rw-cpt-content-compet">
 
                         <h2>Mes compétences
                             <span>
-                            <i class="fa fa-edit rw-hide"></i>
+                            <i class="fa fa-edit"></i>
                             <i class="fa fa-save"></i>
 
                             </span>
-                        </h2>
+                        </h2>-->
                         <!---------------------
  attention dans CSS taille de bar définie
 ----------------------->
-                        <div class="rw-cpt-progress-bar-container">
+                        <!--<div class="rw-cpt-progress-bar-container">
                             <div class="rw-cpt-progress-bar">
                                 <div class="rw-cpt-bar"> HTML</div>
                             </div>
@@ -389,7 +402,7 @@
                             <div class="rw-cpt-progress-bar">
                                 <div class="rw-cpt-bar">Wordpress</div>
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>

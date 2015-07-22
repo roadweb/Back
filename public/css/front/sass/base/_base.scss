@@ -7,6 +7,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 	margin: 0 auto;
 	padding-top: 0;
 
@@ -44,4 +45,79 @@ EXTENDS
   bottom:0;
   width: 0;
   border-style: solid;
+}
+
+/*couleurs job triangles*/
+.rw-job-color-triangle-1 {
+	border-color: transparent transparent $colorDev transparent !important;
+}
+
+.rw-job-color-triangle-2 {
+	border-color: transparent transparent $colorDesignFonce transparent !important;
+}
+
+.rw-job-color-triangle-3 {
+	border-color: transparent transparent $colorMarket transparent !important;
+}
+
+.rw-job-color-triangle-4 {
+	border-color: transparent transparent $colorCmClair transparent !important;
+}
+
+.rw-job-color-triangle-5 {
+	border-color: transparent transparent $colorInteFonce transparent !important;
+}
+
+.rw-job-color-triangle-6 {
+	border-color: transparent transparent $colorRefClair transparent !important;
+}
+
+/*couleurs job bordures*/
+.rw-job-color-1 {
+  border:2px solid $colorDev !important;
+}
+
+.rw-job-color-2 {
+  border:2px solid $colorDesignFonce !important;
+}
+
+.rw-job-color-3 {
+  border:2px solid $colorMarket !important;
+}
+
+.rw-job-color-4 {
+  border:2px solid $colorCmClair !important;
+}
+
+.rw-job-color-5 {
+  border:2px solid $colorInteFonce !important;
+}
+
+.rw-job-color-6 {
+  border:2px solid $colorRefClair !important;
+}
+
+/*couleurs job background*/
+.rw-job-color-bgc-1 {
+  background-color: $colorDev !important;
+}
+
+.rw-job-color-bgc-2 {
+  background-color: $colorDesignFonce !important;
+}
+
+.rw-job-color-bgc-3 {
+  background-color: $colorMarket !important;
+}
+
+.rw-job-color-bgc-4 {
+  background-color: $colorCmClair !important;
+}
+
+.rw-job-color-bgc-5 {
+  background-color: $colorInteFonce !important;
+}
+
+.rw-job-color-bgc-6 {
+  background-color: $colorRefClair !important;
 }
