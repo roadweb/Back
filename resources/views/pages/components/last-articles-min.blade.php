@@ -13,7 +13,7 @@
         <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">
             <div class="rw-index-open-article-min-title">
 
-                <a href="blog/{{$vignette->id}}" > {{ substr($vignette->title,0,37) }}</a>
+                <a href="blog/{{$vignette->id}}" >{{ str_limit($vignette->title, $limit = 37, $end = '...') }}</a>
 
             </div>
             <div class="rw-index-open-article-min-icons">

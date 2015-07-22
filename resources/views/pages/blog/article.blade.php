@@ -188,7 +188,7 @@
                     <!----todo-popix  Le titre sera récupéré dans la bdd---->
                     <h3>
                         <a href="{{ $userPost->id }}">
-                        {{substr($userPost->title,0,60)}}
+                            {{ str_limit($userPost->title, $limit = 57, $end = '...') }}
                         </a>
                     </h3>
 
@@ -227,7 +227,7 @@
                     <!----todo-popix  Le titre sera récupéré dans la bdd---->
                     <h3>
                         <a href="{{$jobPost->id}}">
-                            {{ substr($jobPost->title,0,60)}}
+                            {{ str_limit($jobPost->title, $limit = 57, $end = '...') }}
                         </a>
                     </h3>
 

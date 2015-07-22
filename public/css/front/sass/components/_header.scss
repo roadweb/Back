@@ -131,6 +131,13 @@
   background-color: $grey-light;
   margin-bottom: 10px;
 
+  .active {
+    a {
+      color:$red;
+      font-weight: 400;
+    }
+  }
+
   li {
     display: inline-block;
     vertical-align: top;
@@ -157,9 +164,9 @@
     background-color: $grey-light;
     //    text-align: right;
     //    padding-right:30px;
-    li:first-child a {
-      color: $red;
-    }
+    //li:first-child a {
+      //color: $red;
+    //}
   }
 
   .rw-ul_red {
@@ -173,4 +180,5 @@
       color: white;
     }
   }
+
 }
