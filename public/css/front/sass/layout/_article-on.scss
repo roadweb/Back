@@ -376,7 +376,24 @@ partie droite de la page
     margin: 3%;
     position: relative;
 
+    .rw-blog-band-others-sameAuth-all-articles {
+      font-size: $fontSize - 0.1;
+      text-align: right;
+      font-style: italic;
+      margin: auto;
+      display: block;
+      width: 100%;
+      color: $grey-dark;
+
+      span {
+        text-transform: capitalize;
+      }
+    }
+
+
     .rw-blog-band-others-sameAuth-header {
+
+
 
       background-image: linear-gradient(#ffffff, $grey-light);
 

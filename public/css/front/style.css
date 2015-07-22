@@ -1394,6 +1394,20 @@ partie droite de la page
   position: relative;
 }
 
+.rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-all-articles {
+  font-size: 0.9em;
+  text-align: right;
+  font-style: italic;
+  margin: auto;
+  display: block;
+  width: 100%;
+  color: #7e8b8c;
+}
+
+.rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-all-articles span {
+  text-transform: capitalize;
+}
+
 .rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-header {
   background-image: -webkit-linear-gradient(#ffffff, #ebebe6);
   background-image: linear-gradient(#ffffff, #ebebe6);

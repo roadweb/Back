@@ -201,10 +201,17 @@
 
                 </div>
 
-                <div class="rw-bdc-triangle rw-job-color-triangle-{{$userPost->job_id}}"></div>
+                <div class="rw-bdc-triangle rw-job-color-triangle-{{$userPost->job_id}}">
+                </div>
 
             </div>
+
             @endforeach
+            <div class="rw-blog-band-others-sameAuth">
+                <a class="rw-blog-band-others-sameAuth-all-articles" href="{{$post->user->id}}">Tous les articles de <span>{{$post->user->first_name}}</span>
+                </a>
+
+            </div>
 
             <hr/>
 
