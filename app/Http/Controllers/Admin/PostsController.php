@@ -68,7 +68,7 @@ class PostsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Permet de voir la page d'édition
      *
      * @param  int $id
      * @return Response
@@ -85,7 +85,7 @@ class PostsController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Permet de mettre à jour
      *
      * @param  int $id
      * @return Response
@@ -98,7 +98,6 @@ class PostsController extends Controller
             $post->published = $request->get('publication');
             $post->save();
         } else {
-            dd('Hello');
             $post->update($request->all());
         }
 

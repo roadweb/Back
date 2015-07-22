@@ -28,4 +28,3 @@ function sticky($post, $class = 'default')
 
     return 'default';
 }
-
