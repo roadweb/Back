@@ -22,14 +22,14 @@ footer {
 
 .rw-index-footer-contact {
 	background-color:white;
-	margin:10px;
-	width:72%;
+	margin:auto 0;
+	width:73%;
 	min-height:80px;
 	height:auto;
-	padding:10px 60px;
+	padding:10px;
 	border-radius: 3px;
 	p {
-		text-align:left;
+		text-align:center;
 		font-size: $fontSize;
 		line-height: $lineHeight;
 		a {
@@ -41,9 +41,8 @@ footer {
 .rw-index-footer-btn-subscription {
 	width:25%;
 	display:flex;
-	margin:auto 10px;
+	margin:auto 0;
 	min-height:80px;
-	margin:auto;
 	position:relative;
 	background-color: $grey-dark;
 	border-radius: 8px;
@@ -61,21 +60,22 @@ footer {
 	display:flex;
 	flex-flow:row nowrap;
 	justify-content:space-between;
-	margin-top:20px;
+	margin:20px 0;
 	width:100%;
 	.rw-index-footer-nav-networks {
 		display:flex;
 		flex-flow:row nowrap;
 		.rw-index-footer-nav-bcg-icon {
-			min-width:65px;
-			height:65px;
+			width:40px;
+			height:40px;
 			background: $red url('../../images/reseaux-icon/reseaux-sociaux.png') no-repeat center;
+			background-size:30px 30px;
 			margin:auto;
 		}
 		p {
 			color: $red;
 			font-size: $fontSize + 0.25em;
-			margin:auto 5px;
+			margin:auto 20px;
 		}
 		ul {
 			display:flex;
@@ -111,9 +111,13 @@ footer {
 				list-style:none;
 				a {
 					display:block;
-					margin:15px;
+					margin:auto;
+					padding:20px 50px;
 					color: #ccc;
 					font-size: $fontSize + 0.25em;
+					&:last-child {
+						padding-right:0 !important;
+					}
 				}
 			}
 		}
