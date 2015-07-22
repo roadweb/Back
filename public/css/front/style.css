@@ -223,16 +223,16 @@ footer {
 
 .rw-index-footer-contact {
   background-color: white;
-  margin: 10px;
-  width: 72%;
+  margin: auto 0;
+  width: 73%;
   min-height: 80px;
   height: auto;
-  padding: 10px 60px;
+  padding: 10px;
   border-radius: 3px;
 }
 
 .rw-index-footer-contact p {
-  text-align: left;
+  text-align: center;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -247,9 +247,8 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: auto 10px;
+  margin: auto 0;
   min-height: 80px;
-  margin: auto;
   position: relative;
   background-color: #7e8b8c;
   border-radius: 8px;
@@ -276,7 +275,7 @@ footer {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 100%;
 }
 
@@ -291,16 +290,17 @@ footer {
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks .rw-index-footer-nav-bcg-icon {
-  min-width: 65px;
-  height: 65px;
+  width: 40px;
+  height: 40px;
   background: #bf382a url("../../images/reseaux-icon/reseaux-sociaux.png") no-repeat center;
+  background-size: 30px 30px;
   margin: auto;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks p {
   color: #bf382a;
   font-size: 1.25em;
-  margin: auto 5px;
+  margin: auto 20px;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-networks ul {
@@ -360,9 +360,14 @@ footer {
 
 .rw-index-footer-nav .rw-index-footer-nav-list ul li a {
   display: block;
-  margin: 15px;
+  margin: auto;
+  padding: 20px 50px;
   color: #ccc;
   font-size: 1.25em;
+}
+
+.rw-index-footer-nav .rw-index-footer-nav-list ul li a:last-child {
+  padding-right: 0 !important;
 }
 
 .has-nav-fixed .rw-logo {
