@@ -10,6 +10,9 @@ Bloc content page
 
  // @extend %clearfix;
 
+  a {
+    color: inherit;
+  }
 }
 
 /*************************
@@ -159,6 +162,7 @@ Bloc contenu de l'article
 .rw-blog-article-content-auth {
   color: $colorDesignClair;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 /*************************
@@ -216,14 +220,22 @@ partie droite de la page
 
 .rw-blog-band-container {
   width: 29%;
-  height: auto;
+  height: 100%;
   margin: 20px auto;
 
   background-color: $grey-light;
 
+  hr {
+    margin: 40px 0;
+    border: 1px solid #fff;
+  }
+
   .rw-blog-band-auth {
 
+    width: 90%;
+    margin: auto;
     padding: 3%;
+
 
     h3, h3 a {
       color: $red;
@@ -242,7 +254,7 @@ partie droite de la page
       margin: auto;
       width: 100%;
       text-align: center;
-      padding: 15px;
+      padding: 18px;
 
       img {
 
@@ -255,18 +267,22 @@ partie droite de la page
 
     p {
 
-      padding: 3%;
+      padding: 20px 0;
       line-height: $lineHeight;
       text-align: left;
     }
 
     .rw-blog-band-auth-rsx {
-      text-align: center;
 
-      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 10px 0;
+      margin: auto;
 
       img {
-        padding: 0 2%;
+        padding: 0;
+        margin: auto;
       }
     }
 
@@ -286,11 +302,16 @@ partie droite de la page
       flex-flow: row nowrap;
       height: 80px;
 
-      h3 {
+      h3, a {
         height: 53px;
         margin: auto;
         padding: 0 1%;
         line-height: $lineHeight;
+        color: inherit;
+      }
+
+      a:hover {
+        font-weight: 400;
       }
 
       .rw-blog-band-others-sameAuth-header-date {

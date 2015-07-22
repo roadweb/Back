@@ -5,9 +5,6 @@
 
     <div class="rw-main-container-articleon">
 
-        <!--
-     développé par Pauline: article blog ouvert-->
-
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
             <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
@@ -44,7 +41,6 @@
                 </div>
 
 
-                <!----todo-popix Le titre sera récupéré dans la bdd---->
                 <h3> {{ $post->title }}</h3>
 
 
@@ -55,7 +51,7 @@
 
                 <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
-                <img src="{{ $post->img_link }}" alt="{{ $post->img_alt }}"/>
+                <img src="http://lorempixel.com/700/300/technics/{{$post->job_id}}/" alt="{{ $post->img_alt }}"/>
 
                 <!---------------------
                 todo-popix VOTRE AVIS:Ici le contenu de l'article. J'ai mis des <p> pour l'instant mais éventuellement mettre une div complète?
@@ -151,7 +147,7 @@
         <div class="rw-blog-band-container">
 
             <div class="rw-blog-band-auth">
-                <h3><a href="">Autres sujets de <span>{{$post->user->first_name}} {{$post->user->last_name}}</span></a></h3>
+                <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias <span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
                     <img src="http://lorempixel.com/100/100/people/1" alt="avatar"/>
@@ -168,12 +164,20 @@
                     <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Twitter"/>
                 </div>
             </div>
-@foreach($userPosts as $userPost)
-            <div class="rw-blog-band-others-sameAuth rw-job-color-{{$userPost->job_id}}">
+            <hr/>
 
+            <div class="rw-blog-band-auth">
+                <h3>Autres articles de <span>{{$post->user->first_name}}</span></h3>
+            </div>
+
+
+            @foreach($userPosts as $userPost)
+
+            <div class="rw-blog-band-others-sameAuth rw-job-color-{{$userPost->job_id}}">
                 <div class="rw-blog-band-others-sameAuth-header">
 
                     <!----todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
+
                     <div class="rw-blog-band-others-sameAuth-header-date">
                         <p class="rw-blog-band-others-sameAuth-header-date-red">09</p>
 
@@ -182,7 +186,11 @@
                         <p>2015</p>
                     </div>
                     <!----todo-popix  Le titre sera récupéré dans la bdd---->
-                    <h3> {{$userPost->title}}</h3>
+                    <h3>
+                        <a href="{{ $userPost->id }}">
+                        {{substr($userPost->title,0,60)}}
+                        </a>
+                    </h3>
 
                 </div>
 
@@ -198,9 +206,10 @@
             </div>
             @endforeach
 
+            <hr/>
 
             <div class="rw-blog-band-auth">
-                <h3><a href="">Article du même métier</a></h3>
+                <h3><a href="">Autres articles <span>{{$post->job->name}}</span></a></h3>
             </div>
             @foreach($jobPosts as $jobPost)
             <div class="rw-blog-band-others-sameAuth rw-job-color-{{$jobPost->job_id}}">
@@ -216,7 +225,11 @@
                         <p>2015</p>
                     </div>
                     <!----todo-popix  Le titre sera récupéré dans la bdd---->
-                    <h3> {{$jobPost->title}}</h3>
+                    <h3>
+                        <a href="{{$jobPost->id}}">
+                            {{ substr($jobPost->title,0,60)}}
+                        </a>
+                    </h3>
 
                 </div>
 
@@ -232,9 +245,7 @@
             </div>
             @endforeach
 
-            <div class="rw-blog-band-auth">
-                <h3><a href="">Voir tous les articles</a></h3>
-            </div>
+            <hr/>
 
             <div class="rw-blog-band-auth">
                 <h3><a href="">Article à la une</a></h3>
