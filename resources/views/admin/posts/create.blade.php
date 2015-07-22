@@ -26,162 +26,167 @@
                     </div>
                 @endif
                 @if(isset($post))
-                    {!! Form::model($post, ['route' => ['admin.posts.update', $post->id], 'method' => 'patch', 'id' => 'form-main']) !!}
+                    {!! Form::model($post, ['route' => ['admin.posts.update', $post->id], 'method' => 'patch', 'id' =>
+                    'form-main']) !!}
                 @else
                     {!! Form::open(['route' => ['admin.posts.store'], 'id' => 'form-main']) !!}
-                        @endif
+                @endif
 
-                        <input type="hidden" name="user_id" value="{{ $auth_id }}">
+                <input type="hidden" name="user_id" value="{{ $auth_id }}">
 
-                        <!--
-                        |--------------------------------------------------------------------------
-                        | Informations sur l'article
-                        |--------------------------------------------------------------------------
-                        *-->
+                <!--
+                |--------------------------------------------------------------------------
+                | Informations sur l'article
+                |--------------------------------------------------------------------------
+                *-->
 
-                        <div class="panel panel-default" id="infos">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Les informations sur l'article
-                                </h3>
+                <div class="panel panel-default" id="infos">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Les informations sur l'article
+                        </h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="type">Le domaine lié de l'article</label>
+                                    {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                                </div>
                             </div>
-
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="type">Le domaine lié de l'article</label>
-                                            {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="type">Le type d'article</label>
-                                            {!! Form::select('category_id', $categories, null, ['class' =>
-                                            'form-control'])
-                                            !!}
-                                        </div>
-                                    </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="type">Le type d'article</label>
+                                    {!! Form::select('category_id', $categories, null, ['class' =>
+                                    'form-control'])
+                                    !!}
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!--
-                        |--------------------------------------------------------------------------
-                        | Mise en avant
-                        |--------------------------------------------------------------------------
-                        *-->
+                <!--
+                |--------------------------------------------------------------------------
+                | Mise en avant
+                |--------------------------------------------------------------------------
+                *-->
 
-                        <div class="panel panel-default" id="sticky">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Mise en avant</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <div class="checkbox checkbox-success">
-                                        <input id="sticky-check"
-                                               type="checkbox"
-                                               class="checkbox checkbox-success"
-                                               name="is_sticky">
-                                        <label for="sticky-ckeck">
-                                            Mettre en avant ?
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="sticky">Fin de mise en avant</label>
-                                    <input type="date" name="sticky_end" class="form-control"/>
-                                </div>
+                <div class="panel panel-default" id="sticky">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mise en avant</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="checkbox checkbox-success">
+                                <input id="sticky-check"
+                                       type="checkbox"
+                                       class="checkbox checkbox-success"
+                                       name="is_sticky">
+                                <label for="sticky-ckeck">
+                                    Mettre en avant ?
+                                </label>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="sticky">Fin de mise en avant</label>
+                            <input type="date" name="sticky_end" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
 
-                        <!--
-                        |--------------------------------------------------------------------------
-                        | Le contenu de l'article
-                        |--------------------------------------------------------------------------
-                        *-->
-                        <div class="panel panel-default" id="content">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span> Le contenu de
-                                    l'article</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <label for="title">Le titre de l'article (100 max)</label>
-                                    {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez
-                                    le titre ici..."])!!}
-                                </div>
-                                <div class="form-group">
-                                    <label for="content">Le résumé de l'article (200 max)</label>
+                <!--
+                |--------------------------------------------------------------------------
+                | Le contenu de l'article
+                |--------------------------------------------------------------------------
+                *-->
+                <div class="panel panel-default" id="content">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-pencil"></span> Le contenu de
+                            l'article</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="title">Le titre de l'article (100 max)</label>
+                            {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez
+                            le titre ici..."])!!}
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Le résumé de l'article (200 max)</label>
                                     <textarea class="form-control"
                                               name="resume"
                                               cols="30"
                                               rows="3"
                                               placeholder="Tapez votre texte ici..."></textarea>
-                                </div>
-                                <div class="form-group" ng-app="app" ng-controller="textArea">
-                                    <label for="text">Le texte de l'article</label>
+                        </div>
+                        <div class="form-group" ng-app="app" ng-controller="textArea">
+                            <label for="text">Le texte de l'article</label>
 
-                                    <div name="content" text-angular="text-angular"></div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="image">Le lien de l'image</label>
-                                    {{--<input type="text" name="img_link" class="form-control"--}}
-                                    {{--placeholder="Copiez ici l'url de votre image">--}}
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="checkbox checkbox-success">
-                                        <input id="checkbox1"
-                                               type="checkbox"
-                                               class="checkbox checkbox-success"
-                                               name="published">
-                                        <label for="checkbox1">
-                                            Publier l'article ?
-                                        </label>
-                                    </div>
-                                </div>
+                            <div name="content" text-angular="text-angular">
+                                @if(isset($post))
+                                    {!! $post->content !!}
+                                @endif
                             </div>
                         </div>
 
-                        <!--
-                        |--------------------------------------------------------------------------
-                        | Optimisation référencement
-                        |--------------------------------------------------------------------------
-                        *-->
+                        {{--<div class="form-group">--}}
+                            {{--<label for="image">Le lien de l'image</label>--}}
+                            {{--<input type="text" name="img_link" class="form-control"--}}
+                            {{--placeholder="Copiez ici l'url de votre image">--}}
+                        {{--</div>--}}
 
-                        <div class="panel panel-default" id="referencement">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span>
-                                    Optimisation du
-                                    référencement</h3>
+                        <div class="form-group">
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox1"
+                                       type="checkbox"
+                                       class="checkbox checkbox-success"
+                                       name="published">
+                                <label for="checkbox1">
+                                    Publier l'article ?
+                                </label>
                             </div>
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <label>Mots clés référencement image</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           placeholder="Écrire ici..."
-                                           name="ref_thumb"/>
-                                </div>
-                                <div class="form-group">
-                                    <label>Balise title</label>
-                                    <input type="text"
-                                           class="form-control"
-                                           placeholder="Écrire ici..."
-                                           name="ref_title"/>
-                                </div>
-                                <div class="form-group">
-                                    <label>Balise description</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                |--------------------------------------------------------------------------
+                | Optimisation référencement
+                |--------------------------------------------------------------------------
+                *-->
+
+                <div class="panel panel-default" id="referencement">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span>
+                            Optimisation du
+                            référencement</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Mots clés référencement image</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Écrire ici..."
+                                   name="ref_thumb"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Balise title</label>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Écrire ici..."
+                                   name="ref_title"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Balise description</label>
                                 <textarea name="ref_description"
                                           rows="5"
                                           class="form-control"
                                           placeholder="Écrire ici..."></textarea>
-                                </div>
-                            </div>
                         </div>
-                        {!! Form::close() !!}
+                    </div>
+                </div>
+                {!! Form::close() !!}
             </div>
 
             <div class="col-xs-3">

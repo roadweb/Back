@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -23,12 +24,15 @@ class BlogController extends Controller
         return view('pages.blog.index', compact('posts', 'vignettes'));
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\View\View
+     */
     public function article($id)
     {
         $post = Post::findOrFail($id);
         $userPosts = Post::orderByRaw('RAND()')->where('user_id', $post->user->id)->orderBy('created_at', 'desc')->take(3)->get();
         $jobPosts = Post::orderByRaw('RAND()')->where('job_id', $post->job->id)->get()->take(2);
-
 
         return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts'));
     }
