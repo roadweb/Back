@@ -15,7 +15,7 @@ class CompteController extends Controller
      */
     public function index()
     {
-        return view('pages.compte.index');
+        return view('pages.compte.compte-modif');
     }
 
 

@@ -16,17 +16,20 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = Post::published()->where('is_sticky', 'on')->get()->take(3);
+        $posts = Post::orderByRaw('RAND()')->where('is_sticky', 'on')->get()->take(3);
 
-        $vignettes = Post::published()->orderBy('created_at', 'desc')->where('is_sticky', '0')->get();
+        $vignettes = Post::published()->orderBy('created_at', 'desc')->take(1000)->get();
 
         return view('pages.blog.index', compact('posts', 'vignettes'));
     }
 
-     
-
     public function article($id)
     {
-        return view('pages.blog.article');
+        $post = Post::findOrFail($id);
+        $userPosts = Post::orderByRaw('RAND()')->where('user_id', $post->user->id)->orderBy('created_at', 'desc')->take(3)->get();
+        $jobPosts = Post::orderByRaw('RAND()')->where('job_id', $post->job->id)->get()->take(2);
+
+
+        return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts'));
     }
 }

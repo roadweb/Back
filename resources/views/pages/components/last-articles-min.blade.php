@@ -12,7 +12,9 @@
         </div>
         <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">
             <div class="rw-index-open-article-min-title">
-            	<a href="#">{{ $vignette->title }} </a>
+
+                <a href="blog/{{$vignette->id}}" > {{ substr($vignette->title,0,37) }}</a>
+
             </div>
             <div class="rw-index-open-article-min-icons">
             	<img src="{{ asset('images/icon_blog_test_1.jpg') }}" />	
