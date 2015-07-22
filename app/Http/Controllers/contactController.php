@@ -18,5 +18,15 @@ class ContactController extends Controller
         return view('pages.contact.index');
     }
 
+    public function getContact()
+    {
+
+    }
+
+    public function postContact()
+    {
+
+    }
+
 
 }

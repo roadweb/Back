@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -20,8 +21,15 @@ class BlogController extends Controller
         return view('pages.blog.index', compact('posts'));
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\View\View
+     */
     public function article($id)
     {
-        return view('pages.blog.article');
+        $post = Post::findOrFail($id);
+        $userPosts = Post::where('user_id', $post->user->id)->orderBy('created_at', 'desc')->take(2)->get();
+
+        return view('pages.blog.article', compact('post', 'userPosts'));
     }
 }

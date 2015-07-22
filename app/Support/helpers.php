@@ -28,3 +28,15 @@ function sticky($post, $class = 'default')
 
     return 'default';
 }
+
+
+/**
+ * Permet de mettre une classe CSS en fonction du job
+ *
+ * @param $job
+ * @return string
+ */
+function jobColors($job)
+{
+    return $job;
+}
