@@ -3,11 +3,11 @@
     <article class="rw-index-open-article-min">
         <div class="rw-index-open-article-min-date">
             <p>
-                <span class="rw-index-day">12</span>
+                <span class="rw-index-day">{{ $vignette->created_at->format('d') }}</span>
                 <br />
-                Janvier
+                {{ dateConvert($vignette->created_at->format('F')) }}
                 <br />
-                2015
+                {{ $vignette->created_at->format('Y') }}
             </p>
         </div>
         <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">

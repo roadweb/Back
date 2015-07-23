@@ -18,7 +18,7 @@
                         <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="linkedin"/></a>
                     </li>
                     <li>
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="twitter"/></a>
+                        <a href="{{ url('https://twitter.com/road_web/') }}"><img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="twitter"/></a>
                     </li>
                     <li>
                         <a href="{{ url('https://www.facebook.com/roadweb.fr?fref=ts') }}"><img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="facebook"/></a>
