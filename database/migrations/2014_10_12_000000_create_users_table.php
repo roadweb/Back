@@ -28,6 +28,23 @@ class CreateUsersTable extends Migration {
             $table->date('subscribe_date');
 			$table->rememberToken();
 			$table->timestamps();
+            $table->string('www')->default('null');
+            $table->string('skype')->default('null');
+            $table->string('facebook')->default('null');
+            $table->string('twitter')->default('null');
+            $table->string('pinterest')->default('null');
+            $table->string('behance')->default('null');
+            $table->string('linkedin')->default('null');
+            $table->string('viadeo')->default('null');
+            $table->string('youtube')->default('null');
+            $table->string('googleplus')->default('null');
+            $table->string('blogrw')->default('null');
+            $table->string('abonnement_id');
+            $table->string('avatar')->default('null');
+            $table->longText('bio');
+
+
+
 		});
 
         Schema::table('users', function(Blueprint $table){

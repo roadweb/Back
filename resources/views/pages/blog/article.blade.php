@@ -33,11 +33,11 @@
 
                 <!---- todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-article-header-date">
-                    <p class="rw-blog-article-header-date-red">12</p>
+                    <p class="rw-blog-article-header-date-red">{{$post->created_at->format('d')}}</p>
 
-                    <p>janvier</p>
+                    <p>{{dateConvert($post->created_at->format('F'))}}</p>
 
-                    <p>2015</p>
+                    <p>{{ $post->created_at->format('Y') }}</p>
                 </div>
 
 

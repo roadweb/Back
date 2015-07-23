@@ -18,12 +18,20 @@ class CreateJobsTable extends Migration {
 			$table->increments('id');
             $table->string('name');
 			$table->timestamps();
+            $table->string('resume');
+            $table->longText('content');
+            $table->string('title');
+            $table->string('job_icone');
+
 		});
 
         Job::create(['name' => 'Developpeur']);
         Job::create(['name' => 'Designer']);
         Job::create(['name' => 'Community Manager']);
         Job::create(['name' => 'Web Marketer']);
+        Job::create(['name' => 'Integrateur']);
+        Job::create(['name' => 'Referenceur']);
+        Job::create(['name' => 'Non EMWeb']);
 	}
 
 	/**
