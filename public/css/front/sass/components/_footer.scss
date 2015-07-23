@@ -24,14 +24,12 @@ footer {
 	background-color:white;
 	margin:auto 0;
 	width:73%;
-	min-height:80px;
-	height:auto;
-	padding:10px;
+	height:80px;
 	border-radius: 3px;
 	p {
 		text-align:center;
 		font-size: $fontSize;
-		line-height: $lineHeight;
+		line-height: 80px;
 		a {
 			color: $red;
 		}

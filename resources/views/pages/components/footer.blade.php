@@ -15,22 +15,25 @@
                 <p>Nos Réseaux Sociaux</p>
                 <ul>
                     <li class="rw-hidden">
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="linkedin"/></a>
+                        <a href="{{ url('/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="linkedin"/></a>
                     </li>
                     <li>
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="twitter"/></a>
+                        <a href="{{ url('https://twitter.com/road_web/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="twitter"/></a>
                     </li>
                     <li>
-                        <a href="{{ url('https://www.facebook.com/roadweb.fr?fref=ts') }}"><img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="facebook"/></a>
+                        <a href="{{ url('https://www.facebook.com/roadweb.fr?fref=ts') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="facebook"/></a>
                     </li>
                     <li class="rw-hidden">
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="pinterest"/></a>
+                        <a href="{{ url('/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="pinterest"/></a>
                    </li>
-                    <li class="rw-hidden">
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="google +"/></a>
+                    <li>
+                        <a href="{{ url('https://plus.google.com/+RoadWebfr/posts') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="google +"/></a>
+                    </li>
+                    <li>
+                        <a href="{{ url('https://twitter.com/road_web/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="youtube"/></a>
                     </li>
                     <li class="rw-hidden">
-                        <a href="{{ url('/') }}"><img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="behance"/></a>
+                        <a href="{{ url('https://www.youtube.com/channel/UC29cmztuUzb7CLjqfE6865A/feed') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="behance"/></a>
                     </li>
                 </ul>
             </div>

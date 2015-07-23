@@ -225,16 +225,14 @@ footer {
   background-color: white;
   margin: auto 0;
   width: 73%;
-  min-height: 80px;
-  height: auto;
-  padding: 10px;
+  height: 80px;
   border-radius: 3px;
 }
 
 .rw-index-footer-contact p {
   text-align: center;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 80px;
 }
 
 .rw-index-footer-contact p a {
