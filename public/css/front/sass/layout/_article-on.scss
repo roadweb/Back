@@ -243,7 +243,6 @@ Bloc contenu de l'article
 }
 
 .rw-blog-article-content-auth {
-  color: $colorDesignClair;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -344,6 +343,7 @@ partie droite de la page
         margin: auto;
         box-shadow: 1px 1px 4px $grey-dark;
         border-radius:50%;
+        max-height: 100px;
 
       }
     }

@@ -1,7 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    @include('pages.carrousel.component.jobnav')
 
     <div class="rw-main-container-articleon">
 
@@ -50,11 +49,11 @@
 
                 <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
-                <img src="http://lorempixel.com/700/300/technics/{{$post->job_id}}/" alt="{{ $post->img_alt }}"/>
+                <img src="{{$post->img_link}}" alt="{{ $post->img_alt }}"/>
 
                 <p> {!! $post->content !!} </p>
 
-                <p class="rw-blog-article-content-auth"> {{ $post->user->username }}</p>
+                <p class="rw-blog-article-content-auth rw-job-color-txt-{{$post->job_id}}"> {{ $post->user->username }}</p>
 
             </div>
 
@@ -145,7 +144,7 @@
                 <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias <span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
-                    <img src="http://lorempixel.com/100/100/people/1" alt="avatar"/>
+                    <img src="{{ asset('images/avatar-base.png')}}" alt="avatar"/>
                 </div>
 
                 <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
@@ -162,7 +161,7 @@
             <hr/>
 
             <div class="rw-blog-band-auth">
-                <h3>Autres articles de <span>{{$post->user->first_name}}</span></h3>
+                <h3>Autres articles de <span>{{$post->user->username}}</span></h3>
             </div>
 
 
@@ -206,7 +205,7 @@
 
             @endforeach
             <div class="rw-blog-band-others-sameAuth">
-                <a class="rw-blog-band-others-sameAuth-all-articles" href="{{$post->user->id}}">Tous les articles de <span>{{$post->user->first_name}}</span>
+                <a class="rw-blog-band-others-sameAuth-all-articles" href="monblog/{{$post->user->id}}">Tous les articles de <span>{{$post->user->username}}</span>
                 </a>
 
             </div>

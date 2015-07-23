@@ -10,7 +10,7 @@
 <div class="rw-sub-container">
 
     <div class="rw-sub-header rw-subvalid-header">
-       <h1>Félicitations <span>Nom du membre</span>, nous t'invitons à profiter de nos avantages. </h1>
+       <h1>Félicitations <span>{{$user->username}}</span>, nous t'invitons à profiter de nos avantages. </h1>
         <h2>A tout de suite.</h2>
 
     </div>

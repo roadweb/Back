@@ -186,6 +186,31 @@ EXTENDS
   background-color: #B76DAB !important;
 }
 
+/*couleurs job pour du texte*/
+.rw-job-color-txt-1 {
+  color: #F6D432 !important;
+}
+
+.rw-job-color-txt-2 {
+  color: #36A7DE !important;
+}
+
+.rw-job-color-txt-3 {
+  color: #F59E36 !important;
+}
+
+.rw-job-color-txt-4 {
+  color: #EB6441 !important;
+}
+
+.rw-job-color-txt-5 {
+  color: #38AA49 !important;
+}
+
+.rw-job-color-txt-6 {
+  color: #B76DAB !important;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -1271,7 +1296,6 @@ Bloc contenu de l'article
 }
 
 .rw-blog-article-content-auth {
-  color: #72CFF5;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -1363,6 +1387,7 @@ partie droite de la page
   margin: auto;
   box-shadow: 1px 1px 4px #7e8b8c;
   border-radius: 50%;
+  max-height: 100px;
 }
 
 .rw-blog-band-container .rw-blog-band-auth p {
@@ -3321,6 +3346,133 @@ partie droite de la page
   background-color: #bf382a;
   color: #ffffff;
   border: none;
+}
+
+.rw-allartus-title {
+  margin: 30px auto;
+  padding: 20px;
+  border-bottom: 2px solid #ebebe6;
+  width: auto;
+  font-size: 1.3em;
+}
+
+.rw-allartus-title span {
+  text-transform: capitalize;
+  color: #bf382a;
+}
+
+.rw-allartus-container {
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.rw-allartus-container .rw-allartus-header-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 96%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.rw-allartus-container .rw-allartus-header-flex article {
+  margin: 0 15px 15px;
+}
+
+.rw-allartus-container .rw-allartus-header {
+  background-color: #ebebe6;
+  width: 35%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding: 0 15px;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 500px;
+  text-align: center;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content span {
+  margin: auto;
+  width: 100%;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-content-job {
+  margin: auto;
+  width: auto;
+  color: #bf382a;
+  font-size: 1.2em;
+  border-radius: 50px;
+  box-shadow: 1px 1px 4px #7e8b8c;
+  padding: 10px;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar {
+  margin: auto;
+  width: 100%;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar img {
+  margin: auto;
+  box-shadow: 1px 1px 4px #7e8b8c;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-content p {
+  margin: auto;
+  width: 100%;
+}
+
+.rw-allartus-container .rw-allartus-header .rw-allartus-header-rs {
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 
 /*
