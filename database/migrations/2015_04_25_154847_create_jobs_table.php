@@ -31,7 +31,6 @@ class CreateJobsTable extends Migration {
         Job::create(['name' => 'Web Marketer']);
         Job::create(['name' => 'Integrateur']);
         Job::create(['name' => 'Referenceur']);
-        Job::create(['name' => 'Non EMWeb']);
 	}
 
 	/**

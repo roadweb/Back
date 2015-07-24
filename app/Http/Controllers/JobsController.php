@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Job;
+
 class JobsController extends Controller
 {
 
@@ -15,7 +17,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        return view('pages.jobs.index');
+        $jobs = Job::all();
+        return view('pages.jobs.index', compact('jobs'));
     }
 
     public function description()
