@@ -33,25 +33,6 @@ class CreateJobsTable extends Migration {
         Job::create(['name' => 'Web Marketer']);
         Job::create(['name' => 'Integrateur']);
         Job::create(['name' => 'Referenceur']);
-
-        //couleur des jobs dans l'ordre des id
-        Job::create(['job_color_clair' => '#F6D432']);
-        Job::create(['job_color_fonce' => '#F6D432']);
-
-        Job::create(['job_color_clair' => '#72CFF5']);
-        Job::create(['job_color_fonce' => '#36A7DE']);
-
-        Job::create(['job_color_clair' => '#EB6441']);
-        Job::create(['job_color_fonce' => '#E72E2D']);
-
-        Job::create(['job_color_clair' => '#F59E36']);
-        Job::create(['job_color_fonce' => '#F59E36']);
-
-        Job::create(['job_color_clair' => '#DCDD1F']);
-        Job::create(['job_color_fonce' => '#38AA49']);
-
-        Job::create(['job_color_clair' => '#B76DAB']);
-        Job::create(['job_color_fonce' => '#942581']);
 	}
 
 	/**
