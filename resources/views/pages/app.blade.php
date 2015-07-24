@@ -31,6 +31,7 @@
 <script type="text/javascript" src="{{ asset('javascript/front/app.header.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.aboutus.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.sub.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('javascript/front/app.jobs.js') }}" ></script>
 
 </body>
 </html>

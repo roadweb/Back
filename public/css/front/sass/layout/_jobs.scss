@@ -25,55 +25,93 @@
 	justify-content:space-around;
 }
 
-.rw-jobs-index-webmarketing {
-	margin:20px;
-	border:2px solid $colorMarket;
-	width:440px;
-	height:120px;
-	display:flex;
-	flex-flow:row nowrap;
-	justify-content:space-around;
-	background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
-	position:relative;
-	div {
-		float:left;
-		vertical-align:top;
-		height:100%;
-		position:relative;
-		padding:5px 0;
-	}	
-	.rw-jobs-index-icon {
-		width:80px;
-		img {
-			padding:12px 0;
-			position:absolute;
-			left:-35px;
-		}
+.rw-jobs-index {
+  margin:20px;
+
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-around;
+
+  background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+  position:relative;
+
+  div {
+    float:left;
+    vertical-align:top;
+    height:100%;
+    position:relative;
+    padding:5px 0;
 	}
-	.rw-jobs-index-description {
-		width:315px;
-		h1 {
-			font-size:26px;
-			color:$colorMarket;
-			margin:2px;
-		}
-		p {
-			margin:0;
-			padding:8px 0 0 0;
-			width:100%;
-			font-size:$fontSize - 0.1em;
-			line-height:$lineHeight - 0.1em;
-			a {
-				color:$colorMarket;
-				font-weight:600 !important;
-			}
-		}
-	}
-	.rw-jobs-index-triangle {
-		@extend %arrow;
-      border-width: 0 0 40px 40px;
-      border-color: transparent transparent $colorMarket transparent;
-	}	
+  .rw-jobs-index-icon {
+    width:80px;
+
+    img {
+      padding:12px 0;
+      position:absolute;
+      left:-35px;
+    }
+  }
+
+  .rw-jobs-hide {
+    display: none;
+  }
+
+  .rw-jobs-rotate {
+    transform: rotate(180deg);
+  }
+
+  .rw-jobs-index-description-width {
+    width: 1200px!important;
+  }
+
+  .rw-jobs-index-description {
+    width:315px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    transition: all 1s ease;
+
+    h1 {
+      font-size:26px;
+      color:$colorMarket;
+      margin:2px;
+    }
+
+    p {
+      margin:0;
+
+      padding:10px 15px 0 0;
+      width:100%;
+      font-size:$fontSize - 0.1em;
+      line-height:$lineHeight - 0.1em;
+
+    }
+    button {
+      margin: auto 0;
+      padding: 0 40px;
+
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      text-align: right;
+
+      i {
+        padding: 2px;
+
+        font-weight:600 !important;
+        font-size: $fontSize + 0.2;
+
+        background-color: $grey-light;
+        transition: all 0.5s ease-in-out;
+
+      }
+    }
+  }
+  .rw-jobs-index-triangle {
+    @extend %arrow;
+    border-width: 0 0 40px 40px;
+  }
 }
 
 .rw-jobs-index-developpement {
