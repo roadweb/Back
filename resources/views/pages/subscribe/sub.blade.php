@@ -2,9 +2,6 @@
 
 @section('content')
 
-    <!---------------------
- développé par Pauline: Inscription : creation de compte et proposition d'adhésion association
------------------------>
 
 <div class="rw-sub-container">
 
@@ -16,28 +13,40 @@
     </div>
 
     <div class="rw-sub-content">
-        <form action="" method="" class="rw-sub-form">
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> Il semble qu'il y a un problème.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{url('/validation')}}" method="POST" class="rw-sub-form">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <fieldset>
-                <input type="text" name="nom" placeholder="Nom"/>
-                <input type="text" name="prenom" placeholder="Prénom"/>
+                <input type="text" name="nom" placeholder="Nom" value="{{ old('last_name') }}"/>
+                <input type="text" name="prenom" placeholder="Prénom" value="{{ old('first_name') }}"/>
             </fieldset>
 
             <fieldset>
-                <input type="text" name="pseudo" placeholder="Pseudonyme"/>
-                <input type="email" name="mail" placeholder="Adresse mail"/>
+                <input type="text" name="pseudo" placeholder="Pseudonyme" value="{{ old('username') }}"/>
+                <input type="email" name="mail" placeholder="Adresse mail" value=" {{old('email')}}"/>
             </fieldset>
 
 
             <fieldset>
             <input type="password" name="password" placeholder="Mot de passe"/>
-            <input type="password" name="password" placeholder="Confirmation de mot de passe"/>
+            <input type="password" name="password_confirmation" placeholder="Confirmation de mot de passe"/>
             </fieldset>
 
             <fieldset class="rw-sub-checkbox">
 
                 <p>
-                    <input type="checkbox" id="emweb" />
+                    <input type="checkbox" id="emweb" value="{{old('emweb')}}" />
                     <label for="emweb">
             <span class="ui">
 
@@ -58,7 +67,7 @@
                 <p class="rw-sub-file-return"></p>
 
                 <p>
-                    <input type="checkbox" id="assorw" />
+                    <input type="checkbox" id="assorw" value="association"/>
                     <label for="assorw">
             <span class="ui">
 
@@ -71,7 +80,7 @@
              validation du formulaire
             ----------------------->
 
-            <button>Valider</button>
+            <button type="submit">Valider</button>
 
 
         </form>

@@ -22,6 +22,8 @@ class CreateJobsTable extends Migration {
             $table->longText('content');
             $table->string('title');
             $table->string('job_icone');
+            $table->string('job_color_clair');
+            $table->string('job_color_fonce');
 
 		});
 
@@ -31,7 +33,6 @@ class CreateJobsTable extends Migration {
         Job::create(['name' => 'Web Marketer']);
         Job::create(['name' => 'Integrateur']);
         Job::create(['name' => 'Referenceur']);
-        Job::create(['name' => 'Non EMWeb']);
 	}
 
 	/**

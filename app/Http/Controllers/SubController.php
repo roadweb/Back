@@ -15,6 +15,7 @@ class SubController extends Controller
      */
     public function sub()
     {
+        $this->middleware('auth');
         return view('pages.subscribe.sub');
     }
 
