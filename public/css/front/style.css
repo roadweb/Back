@@ -1996,78 +1996,25 @@ partie droite de la page
           flex-direction: column;
 }
 
-.rw-carrous-header {
-  width: 1200px;
-  padding: 60px 0;
-}
-
 .rw-carrous-nav {
-  width: 1200px;
+  position: relative;
+  width: 900px;
+  margin: 40px auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.rw-carrous-nav-road {
-  width: 380px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.rw-carrous-nav-icon-menu {
-  width: 80px;
-  height: 80px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #bf382a;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.rw-carrous-nav-label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #bf382a;
-  width: 120px;
-  font-size: 18px;
-  margin-left: 40px;
-}
-
-.rw-carrous-nav .rw-icon-exagone {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 28px;
-  line-height: 24px;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 120px;
 }
 
 .rw-carrous-navbar {
+  z-index: 1;
   position: relative;
-  width: 1000px;
-  line-height: -webkit-calc(91px*1.2);
-  line-height: calc(91px*1.2);
+  width: 600px;
   padding: 0;
   list-style: none;
   display: -webkit-box;
@@ -2081,75 +2028,15 @@ partie droite de la page
           flex-direction: row;
 }
 
-.rw-carrous-navbar-path,
-.rw-carrous-navbar-content {
-  position: absolute;
-  width: 100%;
+.rw-icon-exagone {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.rw-carrous-navbar-path {
-  height: 4px;
-  left: -80px;
-  line-height: 4px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.rw-carrous-navbar-line {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-calc(91px*1.2);
-  width: calc(91px*1.2);
-  width: 100%;
-  height: 4px;
-  background-color: #bf382a;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.rw-carrous-navbar-content {
-  top: -80px;
-  height: -webkit-calc(79px*1.2);
-  height: calc(79px*1.2);
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  width: 28px;
 }
 
 .rw-carrous-navbar-job {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.rw-carrous-navbar-job a {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2163,15 +2050,84 @@ partie droite de la page
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rw-carrous-navbar-job .rw-carrous-navbar-job-label {
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 0;
+  margin-bottom: 54px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.rw-carrous-navbar-job .rw-carrous-navbar-job-label span {
+  display: block;
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 8px;
+  left: 0;
+  opacity: 0;
+  font-size: 12px;
+  line-height: auto;
+  color: #333;
+  background-color: white;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.rw-carrous-navbar-job .rw-carrous-navbar-job-label .rw-navbar-vertical-line {
+  width: 4px;
+  height: 30px;
+  background-color: #bf382a;
+}
+
+.rw-carrous-navbar-job .rw-carrous-navbar-job-label .rw-icon-exagone {
+  width: 28px;
+  height: 24px;
+}
+
+.rw-carrous-navbar-job a {
+  width: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
 }
 
-.rw-carrous-navbar-job .rw-icon-job {
-  z-index: 2;
-  width: 91px;
-  height: 79px;
-  margin: 0 -webkit-calc(91px*0.1);
-  margin: 0 calc(91px*0.1);
+.rw-carrous-navbar-job a .rw-icon-job {
+  width: 80px;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2180,97 +2136,44 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job .rw-icon-job:hover {
-  width: -webkit-calc(91px*1.2);
-  width: calc(91px*1.2);
-  height: -webkit-calc(79px*1.2);
-  height: calc(79px*1.2);
-  margin: 0;
+.rw-carrous-navbar-job a .rw-icon-job:hover {
+  width: -webkit-calc(80px*1.2);
+  width: calc(80px*1.2);
+  height: auto;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job .rw-carrous-navbar-job-label {
-  overflow: hidden;
-  top: -30px;
-  opacity: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: -webkit-calc(91px*1.2);
-  width: calc(91px*1.2);
-}
-
-.rw-carrous-navbar-job a:hover .rw-carrous-navbar-job-label {
+.rw-carrous-navbar-job:hover .rw-carrous-navbar-job-label {
   overflow: visible;
-  top: 0;
-  opacity: 1;
+  height: 54px;
+  margin-bottom: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job-label span,
-.rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
+.rw-carrous-navbar-job:hover .rw-carrous-navbar-job-label span {
+  opacity: 1;
+}
+
+.rw-carrous-navbar-path {
+  z-index: 0;
   position: absolute;
-  font-size: 8px;
-  width: -webkit-calc(91px*1.2);
-  width: calc(91px*1.2);
-  height: 50px;
-  line-height: 100%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  top: 50px;
+  left: -75px;
 }
 
-.rw-carrous-navbar-job-label span {
-  height: 12px;
-  line-height: 100%;
-  top: 6px;
-  color: #333;
-  background-color: white;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.rw-carrous-navbar-vertical-line .rw-navbar-vertical-line {
-  width: 4px;
-  height: 26px;
+.rw-carrous-navbar-path .rw-carrous-navbar-line {
+  position: absolute;
+  height: 4px;
   background-color: #bf382a;
 }
 
-.rw-carrous-navbar-vertical-line .rw-icon-exagone {
+.rw-carrous-navbar-path .rw-icon-exagone-first {
+  position: absolute;
   width: 28px;
-  height: 24px;
+  top: -11px;
+  left: -14px;
 }
 
 .white {
@@ -2281,18 +2184,18 @@ partie droite de la page
   width: 1200px;
 }
 
-.rw-carrous-body-content {
+.rw-carrous-body .rw-carrous-body-content {
   position: relative;
 }
 
-.rw-carrous-body-content-article-screen {
+.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article-screen {
   display: inline-block;
   width: 416px;
   height: 370px;
   margin-left: 40px;
 }
 
-.rw-carrous-body-content-article {
+.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article {
   position: absolute;
   display: inline-block;
   width: 600px;
@@ -2300,7 +2203,7 @@ partie droite de la page
   margin-left: 30px;
 }
 
-.rw-carrous-body-content-article-text-h1 {
+.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-h1 {
   display: block;
   color: blue;
   font-size: 32px;
@@ -2308,7 +2211,7 @@ partie droite de la page
   margin-bottom: 10px;
 }
 
-.rw-carrous-body-content-article-text-p {
+.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p {
   display: block;
   font-size: 24px;
   line-height: 32px;
