@@ -1,7 +1,7 @@
 <!-- dev: mathieu -->
 
 <form class="rw-lognews-form" role="form" method="POST" action="#">  <!-- action="{{ url('/admin/auth/login') }}" -->
-    <input type="hidden" name="_token" value="#"> <!-- value="{{ csrf_token() }}" -->
+    <input type="hidden" name="_token" value="#"> {{-- value="{{ csrf_token() }}" --}}
 
     <div class="rw-lognews-form-group">
         <div class="rw-lognews-container-row">

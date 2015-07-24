@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration {
             $table->string('last_name');
 			$table->string('email')->unique();
 			$table->string('password', 60);
+			$table->string('emweb')->default('null');
             $table->string('adress')->default('null');
             $table->string('city')->default('null');
             $table->string('country')->default('null');
