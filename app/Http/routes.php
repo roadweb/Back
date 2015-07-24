@@ -12,6 +12,7 @@
 */
 
 use App\Post;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,8 @@ Route::get('/landing', 'HomeController@landing');
 Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}', 'BlogController@article');
+
+Route::get('/blog/monblog/{id}', 'BlogController@allArticlesUser');
 
 Route::get('/jobs', 'JobsController@index');
 

@@ -36,4 +36,12 @@ class BlogController extends Controller
 
         return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts'));
     }
+
+    public function allArticlesUser($id){
+
+        $user = User::findOrFail($id);
+
+        $vignettes = Post::published()->where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
+        return view ('pages.blog.all-articles-user', compact('user', 'vignettes'));
+    }
 }

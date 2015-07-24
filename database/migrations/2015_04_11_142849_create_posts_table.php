@@ -25,6 +25,10 @@ class CreatePostsTable extends Migration {
             $table->string('ref_thumb');
             $table->string('ref_description');
 			$table->timestamps();
+			$table->string('img_link');
+			$table->string('img_alt');
+            $table->string('title_alt');
+            $table->string('resume_alt');
 		});
 
         Schema::table('posts', function(Blueprint $table){
@@ -32,7 +36,7 @@ class CreatePostsTable extends Migration {
             $table->integer('job_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
         });
-	}
+    }
 
 	/**
 	 * Reverse the migrations.

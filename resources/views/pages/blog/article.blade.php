@@ -1,7 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    @include('pages.carrousel.component.jobnav')
 
     <div class="rw-main-container-articleon">
 
@@ -31,13 +30,12 @@
             </div>
             <div class="rw-blog-article-header">
 
-                <!---- todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                 <div class="rw-blog-article-header-date">
-                    <p class="rw-blog-article-header-date-red">12</p>
+                    <p class="rw-blog-article-header-date-red">{{$post->created_at->format('d')}}</p>
 
-                    <p>janvier</p>
+                    <p>{{dateConvert($post->created_at->format('F'))}}</p>
 
-                    <p>2015</p>
+                    <p>{{ $post->created_at->format('Y') }}</p>
                 </div>
 
 
@@ -51,15 +49,11 @@
 
                 <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
-                <img src="http://lorempixel.com/700/300/technics/{{$post->job_id}}/" alt="{{ $post->img_alt }}"/>
+                <img src="{{$post->img_link}}" alt="{{ $post->img_alt }}"/>
 
-                <!---------------------
-                todo-popix VOTRE AVIS:Ici le contenu de l'article. J'ai mis des <p> pour l'instant mais éventuellement mettre une div complète?
-                ----------------------->
                 <p> {!! $post->content !!} </p>
 
-                <!----todo-popix auteur devra être récupéré dans la BDD ---->
-                <p class="rw-blog-article-content-auth"> {{ $post->user->username }}</p>
+                <p class="rw-blog-article-content-auth rw-job-color-txt-{{$post->job_id}}"> {{ $post->user->username }}</p>
 
             </div>
 
@@ -150,11 +144,11 @@
                 <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias <span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
-                    <img src="http://lorempixel.com/100/100/people/1" alt="avatar"/>
+                    <img src="{{ asset('images/avatar-base.png')}}" alt="avatar"/>
                 </div>
 
                 <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
-                    praesentium quis {{ $post->user->user_bio }}</p>
+                    praesentium quis {{ $post->user->bio }}</p>
 
 
                 <div class="rw-blog-band-auth-rsx">
@@ -167,7 +161,7 @@
             <hr/>
 
             <div class="rw-blog-band-auth">
-                <h3>Autres articles de <span>{{$post->user->first_name}}</span></h3>
+                <h3>Autres articles de <span>{{$post->user->username}}</span></h3>
             </div>
 
 
@@ -176,16 +170,19 @@
                 <div class="rw-blog-band-others-sameAuth rw-job-color-{{$userPost->job_id}}">
                     <div class="rw-blog-band-others-sameAuth-header">
 
-                        <!----todo-popix attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
-
                         <div class="rw-blog-band-others-sameAuth-header-date">
-                            <p class="rw-blog-band-others-sameAuth-header-date-red">09</p>
+                            <p class="rw-blog-band-others-sameAuth-header-date-red">
+                                {{$userPost->created_at->format('d')}}
+                            </p>
 
-                            <p>janvier</p>
+                            <p>
+                                {{ dateConvert($userPost->created_at->format('F')) }}
+                            </p>
 
-                            <p>2015</p>
+                            <p>
+                                {{ $userPost->created_at->format('Y') }}
+                            </p>
                         </div>
-                        <!----todo-popix  Le titre sera récupéré dans la bdd---->
                         <h3>
                             <a href="{{ $userPost->id }}">
                                 {{ str_limit($userPost->title, $limit = 57, $end = '...') }}
@@ -208,7 +205,7 @@
 
             @endforeach
             <div class="rw-blog-band-others-sameAuth">
-                <a class="rw-blog-band-others-sameAuth-all-articles" href="{{$post->user->id}}">Tous les articles de <span>{{$post->user->first_name}}</span>
+                <a class="rw-blog-band-others-sameAuth-all-articles" href="monblog/{{$post->user->id}}">Tous les articles de <span>{{$post->user->username}}</span>
                 </a>
 
             </div>
@@ -223,15 +220,19 @@
 
                     <div class="rw-blog-band-others-sameAuth-header">
 
-                        <!----todo-popix  attention la date devra être récupérée dans la bdd de manière scindée: jour / mois / année ==> séparés---->
                         <div class="rw-blog-band-others-sameAuth-header-date">
-                            <p class="rw-blog-band-others-sameAuth-header-date-red">12</p>
+                            <p class="rw-blog-band-others-sameAuth-header-date-red">
+                                {{$jobPost->created_at->format('d')}}
+                            </p>
 
-                            <p>février</p>
+                            <p>
+                                {{ dateConvert($jobPost->created_at->format('F')) }}
+                            </p>
 
-                            <p>2015</p>
+                            <p>
+                                {{$jobPost->created_at->format('Y')}}
+                            </p>
                         </div>
-                        <!----todo-popix  Le titre sera récupéré dans la bdd---->
                         <h3>
                             <a href="{{$jobPost->id}}">
                                 {{ str_limit($jobPost->title, $limit = 57, $end = '...') }}
