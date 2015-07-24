@@ -5,168 +5,144 @@
     flex-direction: column;
 }
 
-.rw-carrous-header{
-    width:1200px;
-    padding: 60px 0;
-    }    
+  
     .rw-carrous-nav{
-        width:1200px;
+        position: relative;
+        width:900px;
+        margin:40px auto;
         display: flex;
-        align-items: center;
-    }
-    .rw-carrous-nav-road{
-        width:380px;
-        display: flex;
-        align-items: center;
-    }
-       .rw-carrous-nav-icon-menu{
-            width:80px;
-            height:80px;
-            display:flex;
-            background-color: $red;
-            justify-content: center;
-            align-items: center;
-        }
-        .rw-carrous-nav-label{
-            display:flex;
-            color:$red;
-            width:120px;
-            font-size:18px;
-            margin-left:40px;
-        }
-            .rw-carrous-nav .rw-icon-exagone{
-                display:flex;
-                width:28px;
-                line-height:24px;
-            }
+        align-items: flex-end;
+        height:120px;
+            //border: 1px solid brown;
 
+    }
 
     .rw-carrous-navbar{
+        z-index: 1;
         position:relative;
-        width: 1000px;
-        line-height: calc(91px*1.2);
+        width: 600px;
         padding:0;
         list-style: none;
         display:flex;
         flex-direction: row;
     }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-    .rw-carrous-navbar-path,
-    .rw-carrous-navbar-content{
-        position: absolute;
-        width:  100%;
-        display:flex;
-        flex-direction: row;
-    }
-/////////////////////////////////////////////////
-
-        .rw-carrous-navbar-path {
-            height:4px;
-            left:-80px;
-            line-height: 4px;
-            flex-direction: row;
+        .rw-icon-exagone{
+            display:flex;
+            width:28px;
         }
-            .rw-carrous-navbar-line{
-                display:flex;
-                width: calc(91px*1.2);
-                width:100%;
-                height: 4px;
-                background-color:$red;
-                justify-content:center;
-                align-items:baseline;
-            }
-
-/////////////////////////////////////////////////
-
-    .rw-carrous-navbar-content{
-        top:-80px;
-        height: calc(79px*1.2);
-        justify-content:flex-start;
-    }
 
         .rw-carrous-navbar-job{
             display:flex;
-            width:100%;
-            justify-content:center;
-        }
-            .rw-carrous-navbar-job a{
-                display:flex;
-                flex-direction: column;
-                justify-content:flex-end;
-                text-decoration: none;
+            flex-direction: column;
+            justify-content:flex-end;
+            align-items: center;
 
-            }
-            .rw-carrous-navbar-job .rw-icon-job{
-                z-index:2;
-                width: 91px;
-                height: 79px;
-                margin: 0 calc(91px*0.1);
-                display:flex;
-                @include transition(all, 0.2s, ease-in-out);
-            } 
-
-                .rw-carrous-navbar-job .rw-icon-job:hover{
-                    width: calc(91px*1.2);
-                    height: calc(79px*1.2);
-                    margin:0;
-                    @include transition(all, 0.2s, ease-in-out);
-                }
-
-            .rw-carrous-navbar-job .rw-carrous-navbar-job-label{
-                overflow:hidden;
-                top:-30px;
-                opacity: 0;
+            .rw-carrous-navbar-job-label {
+                overflow: hidden;
                 position:relative;
-                display:inline-flex;
+                width:150px;
+                //opacity:0;
+                height:0;
+                margin-bottom:54px;
+                display:flex;
+                align-items: center;
                 flex-direction: column;
-                width: calc(91px*1.2);
-            }
-
-                .rw-carrous-navbar-job a:hover .rw-carrous-navbar-job-label{
-                    overflow: visible;
-                    top:0;
-                    opacity:1;
-                    @include transition(all, 0.2s, ease-in-out);
-                }
-
+                @include transition(all, 0.2s, ease-in-out);
             
-            .rw-carrous-navbar-job-label span,
-            .rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line{
-                position:absolute;
-                font-size:8px;
-                width: calc(91px*1.2);
-                height:50px;
-                line-height:100%;
-                display:inline-flex;
-                align-items: baseline;
-                justify-content: center;
-            }
+                span {
+                    display: block;
+                    overflow: visible;
+                    position:absolute;
+                    width:100%;
+                    height:auto;
+                    top: 8px;
+                    left:0;
+                    opacity:0;
+                    font-size:12px;
+                    line-height: auto;
+                    color:#333;
+                    background-color: white;
+                    justify-content: center;
+                    text-align: center;
+                    @include transition(all, 0.2s, ease-in-out);
 
-            .rw-carrous-navbar-job-label span{
-                height:12px;
-                line-height:100%;
-                top:6px;
-                color:#333;
-                background-color: white;
-                align-items: center;
-            }
-
-            .rw-carrous-navbar-job-label .rw-carrous-navbar-vertical-line{
-                align-items: center;
-                flex-direction: column;
-            }
-
-                .rw-carrous-navbar-vertical-line .rw-navbar-vertical-line{
+                }
+                .rw-navbar-vertical-line{
                     width:4px;
-                    height:26px;
+                    height:30px;
                     background-color: $red;
                 }
-                .rw-carrous-navbar-vertical-line .rw-icon-exagone{
+                .rw-icon-exagone{
                     width:28px;
                     height:24px;
                 }
+            }
+    
+                            
+            
+            
+            
+        a{
+            width:150px;
+            display:flex;
+            justify-content:center;
+            text-decoration: none;
+                
+            .rw-icon-job{
+                //z-index:2;
+                width: 80px;
+                height: auto;
+                display:flex;
+                @include transition(all, 0.2s, ease-in-out);
+            } 
+            
+            .rw-icon-job:hover{
+                width: calc(80px*1.2);
+                height: auto;
+                @include transition(all, 0.2s, ease-in-out);
+            }
+        }
+    }
+
+    .rw-carrous-navbar-job:hover {
+        .rw-carrous-navbar-job-label{
+        overflow: visible;
+        //opacity:1;
+        height:54px;
+        margin-bottom: 0;
+        @include transition(all, 0.2s, ease-in-out);
+            span {
+                opacity:1;
+            }
+            
+        }
+    }
+
+
+
+
+    .rw-carrous-navbar-path{
+        z-index:0;
+        position: absolute;
+        top:50px;
+        left:-75px;
+        
+        .rw-carrous-navbar-line{
+            position: absolute;
+            //width:50px;
+            height: 4px;
+            background-color:$red;
+        }
+        
+        .rw-icon-exagone-first{
+            position: absolute;
+            width:28px;
+            top: -11px;
+            left: -14px;
+        }
+    }
+
 
 
 
