@@ -69,7 +69,7 @@
                                     title="voir les articles">
                                 <span class="glyphicon glyphicon-edit"></span>  {{ $user->posts->count() }}
                             </button></td>
-                            <td>{{$user->find('job_id')->name}}</td>
+                            <td>{{$user->job_id}}</td>
                             <td>{{$user->abonnement_id}}</td>
                         </tr>
                          @endforeach
