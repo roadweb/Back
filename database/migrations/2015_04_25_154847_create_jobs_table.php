@@ -15,7 +15,7 @@ class CreateJobsTable extends Migration {
 	{
 		Schema::create('jobs', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('id')->unsigned();
             $table->string('name');
 			$table->timestamps();
             $table->string('resume');

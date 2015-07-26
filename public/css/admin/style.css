@@ -801,18 +801,20 @@ section table th select.form-control {
   font-size: 12px;
   box-shadow: none;
   width: 100%;
+  text-align: center;
+  padding: 8px 10px;
 }
-/* line 14, sass/custom/_users-table.scss */
+/* line 16, sass/custom/_users-table.scss */
 section table td {
   text-align: center;
 }
-/* line 16, sass/custom/_users-table.scss */
+/* line 18, sass/custom/_users-table.scss */
 section table td .user-avatar {
   width: 50px;
   height: 50px;
   border-radius: 25px;
 }
-/* line 21, sass/custom/_users-table.scss */
+/* line 23, sass/custom/_users-table.scss */
 section table td .thumbnail {
   background-color: #7e8b8c;
   margin: auto;
