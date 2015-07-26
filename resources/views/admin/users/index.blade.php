@@ -3,6 +3,8 @@
 @section('content')
 
     <div class="container">
+        <!-- users développé par Kevin
+
         <div class="row">
             @foreach($users as $user)
                 <div class="col-sm-6 col-md-3">
@@ -30,5 +32,14 @@
                 </div>
             @endforeach
         </div>
+        -->
+
+         <!-- users développé par Céline -->
+
+         <table class="table condensed">
+
+         </table>
+
+
     </div>
 @endsection
