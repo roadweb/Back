@@ -39,13 +39,7 @@ class CreateUsersTable extends Migration {
 		});
 
         Schema::table('users', function(Blueprint $table){
-            /*$table->integer('job_id')->unsigned()->index();*/
-            $table->integer('job_id')->unsigned();
-            $table->foreign('job_id')
-                  ->references('id')
-                  ->on('jobs')
-                  ->onDelete('restrict')
-                  ->onUpdate('restrict');
+            $table->integer('job_id')->unsigned()->index();
         });
 	}
 
