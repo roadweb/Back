@@ -10,7 +10,7 @@
 		margin:0 20px;
 	}
 	p {
-		text-align:justify;
+		text-align:center;
 		font-size:$fontSize;
 		line-height:$lineHeight;
 		width:100%;
@@ -61,10 +61,11 @@
   }
 
   .rw-jobs-index-description-width {
-    width: 1200px!important;
+    width: 885px!important;
   }
 
-  .rw-jobs-index-description {
+  .rw-jobs-index-description-1, .rw-jobs-index-description-2, .rw-jobs-index-description-3, .rw-jobs-index-description-4, .rw-jobs-index-description-5, .rw-jobs-index-description-6, {
+
     width:315px;
     display: flex;
     flex-flow: column nowrap;
@@ -84,7 +85,15 @@
       width:100%;
       font-size:$fontSize - 0.1em;
       line-height:$lineHeight - 0.1em;
+      text-align: justify;
 
+    }
+    a {
+      color: inherit;
+      width: 100%;
+      margin: auto 0;
+
+      text-align: right;
     }
     button {
       margin: auto 0;
@@ -95,6 +104,8 @@
       cursor: pointer;
 
       text-align: right;
+
+
 
       i {
         padding: 2px;
@@ -114,75 +125,10 @@
   }
 }
 
-.rw-jobs-index-developpement {
-	@extend .rw-jobs-index-webmarketing;	
-	border:2px solid $colorDev !important;
-	h1 {
-		color:$colorDev !important;
-	}
-	a {
-		color:$colorDev !important;
-	}
-	.rw-jobs-index-triangle {
-		border-color: transparent transparent $colorDev transparent !important;
-	}	
-}
 
-.rw-jobs-index-webdesign {
-	@extend .rw-jobs-index-webmarketing;	
-	border:2px solid $colorDesignFonce !important;
-	h1 {
-		color:$colorDesignFonce !important;
-	}
-	a {
-		color:$colorDesignFonce !important;
-	}
-	.rw-jobs-index-triangle {
-		border-color: transparent transparent $colorDesignFonce transparent !important;
-	}	
-}
 
-.rw-jobs-index-referencement {
-	@extend .rw-jobs-index-webmarketing;	
-	border:2px solid $colorRefClair !important;
-	h1 {
-		color:$colorRefClair !important;
-	}
-	a {
-		color:$colorRefClair !important;
-	}
-	.rw-jobs-index-triangle {
-		border-color: transparent transparent $colorRefClair transparent !important;
-	}	
-}
 
-.rw-jobs-index-integration {
-	@extend .rw-jobs-index-webmarketing;	
-	border:2px solid $colorInteFonce !important;
-	h1 {
-		color:$colorInteFonce !important;
-	}
-	a {
-		color:$colorInteFonce !important;
-	}
-	.rw-jobs-index-triangle {
-		border-color: transparent transparent $colorInteFonce transparent !important;
-	}	
-}
 
-.rw-jobs-index-community-management {
-	@extend .rw-jobs-index-webmarketing;	
-	border:2px solid $colorCmClair !important;
-	h1 {
-		color:$colorCmClair !important;
-	}
-	a {
-		color:$colorCmClair !important;
-	}
-	.rw-jobs-index-triangle {
-		border-color: transparent transparent $colorCmClair transparent !important;
-	}	
-}
 
 /*FICHE METIER*/
 
