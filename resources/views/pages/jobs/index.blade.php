@@ -19,7 +19,7 @@
                 @foreach($jobs as $job)
         		<div class="rw-jobs-index rw-job-color-{{$job->id}}">
     	    		<div class="rw-jobs-index-icon">
-    	    			<img src="{{ asset('images/developpement.png') }} "/>
+    	    			<img src="{{ asset($job->job_icon) }} "/>
     	    		</div>
                     <div class="rw-jobs-index-description">
                         <h1 class="rw-job-color-txt-{{$job->id}}">{{$job->name}}</h1>

@@ -25,7 +25,7 @@ class CreateJobsTable extends Migration {
 
 		});
 
-        Job::create(['name' => 'Developpeur', 'job_icon' => 'pipicaca']);
+        Job::create(['name' => 'Developpeur', 'job_icon' => 'images/jobs-icon/developpement.png']);
         Job::create(['name' => 'Designer', 'job_icon' => 'images/jobs-icon/webdesign.png']);
         Job::create(['name' => 'Community Manager', 'job_icon' => 'images/jobs-icon/cm.png']);
         Job::create(['name' => 'Web Marketer', 'job_icon' => 'images/jobs-icon/webmarketing.png']);
