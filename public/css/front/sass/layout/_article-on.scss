@@ -20,7 +20,7 @@ bloc de l'article
 **************************/
 .rw-blog-article-container {
   width: 70%;
-  height: auto;
+  height: 100%;
 
   margin: 20px auto;
   position: relative;
@@ -139,6 +139,7 @@ Bloc contenu de l'article
   padding: 10px;
   display: flex;
   flex-flow: column nowrap;
+  height: auto;
 
   h1 {
     font-size: $fontSize + 1.3;
@@ -473,8 +474,9 @@ partie droite de la page
 
   .rw-blog-band-rsx {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row nowrap;
+    padding-bottom: 8px;
   }
 
 }

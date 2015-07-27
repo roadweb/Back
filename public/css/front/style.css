@@ -1012,7 +1012,7 @@ bloc de l'article
 **************************/
 .rw-blog-article-container {
   width: 70%;
-  height: auto;
+  height: 100%;
   margin: 20px auto;
   position: relative;
   padding-bottom: 2%;
@@ -1150,6 +1150,7 @@ Bloc contenu de l'article
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  height: auto;
 }
 
 .rw-blog-article-content h1 {
@@ -1483,13 +1484,13 @@ partie droite de la page
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  padding-bottom: 8px;
 }
 
 .rw-sub-container {
