@@ -1,5 +1,5 @@
 <?php
-use App\Job;
+use App\Right;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
