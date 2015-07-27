@@ -24,17 +24,17 @@
             </div>
         @endif
 
-        <form action="{{url('/validation')}}" method="POST" class="rw-sub-form">
+        <form action="{{url('/admin/auth/register')}}" role="form" method="POST" class="rw-sub-form">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
             <fieldset>
-                <input type="text" name="nom" placeholder="Nom" value="{{ old('last_name') }}"/>
-                <input type="text" name="prenom" placeholder="Prénom" value="{{ old('first_name') }}"/>
+                <input type="text" name="last_name" placeholder="Nom" value="{{ old('last_name') }}"/>
+                <input type="text" name="first_name" placeholder="Prénom" value="{{ old('first_name') }}"/>
             </fieldset>
 
             <fieldset>
-                <input type="text" name="pseudo" placeholder="Pseudonyme" value="{{ old('username') }}"/>
-                <input type="email" name="mail" placeholder="Adresse mail" value=" {{old('email')}}"/>
+                <input type="text" name="username" placeholder="Pseudonyme" value="{{ old('username') }}"/>
+                <input type="email" name="email" placeholder="Adresse mail" value=" {{old('email')}}"/>
             </fieldset>
 
 
