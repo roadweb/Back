@@ -1,18 +1,12 @@
-$(document).ready(function($id){
-    
-    var jobItem = document.getElementsByTagName('.rw-carrous-navbar-job');   
-    
-    jobItem.addEventListener( "click", function( event ) {
-        
-        $('.rw-carrous-navbar-line').css({
-            width : 'calc(150px * ' + $id + ')'
-        });
-    });
-    
-/*    $('.rw-carrous-navbar-line').css({
-        width : 'calc(300px * ' + $id + ')'
-        //width: '300px'
-    });
-*/
-    
-});
+function myLine(id){ 
+
+	var navLine = $('.rw-carrous-navbar-line');
+	var baseWidth = 150;
+	var newWidth;
+
+
+	newWidth = baseWidth * id;
+
+	navLine.css('width', newWidth + 'px');
+
+};
