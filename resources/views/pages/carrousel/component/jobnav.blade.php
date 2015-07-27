@@ -25,7 +25,7 @@
         <div class="rw-carrous-navbar-job">
 
             <a href="#" onfocus="myFunction({{$job->id}})" onactive="myFunction({{$job->id}})">  {{-- voir 'addlistener' --}}
-                <img class="rw-icon-job" src="{{ asset($job->icon_job)}}" alt=""/> {{-- necessite l'integration des chemin image dans la table job --}}
+                <img class="rw-icon-job" src="{{ asset($job->job_icon)}}" alt=""/> {{-- necessite l'integration des chemin image dans la table job --}}
             </a>
             <div class="rw-carrous-navbar-job-label">
                 <span>{{$job->name}}</span>  
@@ -40,7 +40,7 @@
         
         
         
-     {{ $job->job_icon }}
+    
         
         
         

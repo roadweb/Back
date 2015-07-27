@@ -199,8 +199,7 @@ Bloc contenu de l'article
 
     img {
       margin: auto;
-      width: auto;
-
+      max-width: 100%;
     }
   }
 
@@ -226,6 +225,7 @@ Bloc contenu de l'article
 
   img {
     margin: auto;
+    max-width: 100%;
   }
 
   a {
