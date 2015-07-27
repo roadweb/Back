@@ -35,8 +35,9 @@ class BlogController extends Controller
         $post = Post::findOrFail($id);
         $userPosts = Post::published()->orderByRaw('RAND()')->where('user_id', $post->user->id)->orderBy('created_at', 'desc')->take(3)->get();
         $jobPosts = Post::published()->orderByRaw('RAND()')->where('job_id', $post->job->id)->get()->take(2);
+        $postSticky = Post::published()->orderByRaw('RAND()')->where('is_sticky', 'on')->take(1)->get();
 
-        return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts'));
+        return view('pages.blog.article', compact('post', 'userPosts', 'jobPosts', 'postSticky'));
     }
 
     public function allArticlesUser($id){

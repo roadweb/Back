@@ -17,16 +17,16 @@
     	    </p>
             <div class="rw-jobs-index-container-flex">
                 @foreach($jobs as $job)
-        		<div class="rw-jobs-index rw-job-color-{{$job->id}}">
+        		<div id="rw-jobs-index-{{$job->id}}" class="rw-jobs-index rw-job-color-{{$job->id}}">
     	    		<div class="rw-jobs-index-icon">
     	    			<img src="{{ asset($job->job_icon) }} "/>
     	    		</div>
-                    <div class="rw-jobs-index-description">
+                    <div class="rw-jobs-index-description-{{$job->id}}">
                         <h1 class="rw-job-color-txt-{{$job->id}}">{{$job->name}}</h1>
                         <p>Issu du métier de graphiste, le webdesigner conçoit le site web du point de vue visuel mais aussi ergonomique...
                         </p>
 
-                        <div class="rw-jobs-index-fiche rw-jobs-hide">
+                        <div  class="rw-jobs-index-fiche-{{$job->id}} rw-jobs-hide">
                             <p>
                                 Le webmarketer est la personne en charge de la création et de l’augmentation de trafic sur un site Web.
                                 Il doit mettre en place une stratégie regroupant différentes actions pour augmenter la fréquentation du site et/ou ses ventes.
@@ -71,7 +71,9 @@
                             </p>
                         </div>
 
-           <button class="rw-jobs-click-view rw-job-color-txt-{{$job->id}}" onclick="clickView({{$job->id}})"><i class="fa fa-angle-down"></i></button>
+                        <a href="#rw-jobs-index-{{$job->id}}">           <button class="rw-jobs-click-view-{{$job->id}} rw-job-color-txt-{{$job->id}}">
+               <i class="fa fa-angle-down"></i>
+           </button></a>
 
     	    		</div>
 

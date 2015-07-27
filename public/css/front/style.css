@@ -793,7 +793,7 @@ footer {
 }
 
 .rw-jobs-index-container p {
-  text-align: justify;
+  text-align: center;
   font-size: 1em;
   line-height: 1.5em;
   width: 100%;
@@ -861,10 +861,10 @@ footer {
 }
 
 .rw-jobs-index .rw-jobs-index-description-width {
-  width: 1200px !important;
+  width: 885px !important;
 }
 
-.rw-jobs-index .rw-jobs-index-description {
+.rw-jobs-index .rw-jobs-index-description-1, .rw-jobs-index .rw-jobs-index-description-2, .rw-jobs-index .rw-jobs-index-description-3, .rw-jobs-index .rw-jobs-index-description-4, .rw-jobs-index .rw-jobs-index-description-5, .rw-jobs-index .rw-jobs-index-description-6 {
   width: 315px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -877,21 +877,29 @@ footer {
           transition: all 1s ease;
 }
 
-.rw-jobs-index .rw-jobs-index-description h1 {
+.rw-jobs-index .rw-jobs-index-description-1 h1, .rw-jobs-index .rw-jobs-index-description-2 h1, .rw-jobs-index .rw-jobs-index-description-3 h1, .rw-jobs-index .rw-jobs-index-description-4 h1, .rw-jobs-index .rw-jobs-index-description-5 h1, .rw-jobs-index .rw-jobs-index-description-6 h1 {
   font-size: 26px;
   color: #F59E36;
   margin: 2px;
 }
 
-.rw-jobs-index .rw-jobs-index-description p {
+.rw-jobs-index .rw-jobs-index-description-1 p, .rw-jobs-index .rw-jobs-index-description-2 p, .rw-jobs-index .rw-jobs-index-description-3 p, .rw-jobs-index .rw-jobs-index-description-4 p, .rw-jobs-index .rw-jobs-index-description-5 p, .rw-jobs-index .rw-jobs-index-description-6 p {
   margin: 0;
   padding: 10px 15px 0 0;
   width: 100%;
   font-size: 0.9em;
   line-height: 1.4em;
+  text-align: justify;
 }
 
-.rw-jobs-index .rw-jobs-index-description button {
+.rw-jobs-index .rw-jobs-index-description-1 a, .rw-jobs-index .rw-jobs-index-description-2 a, .rw-jobs-index .rw-jobs-index-description-3 a, .rw-jobs-index .rw-jobs-index-description-4 a, .rw-jobs-index .rw-jobs-index-description-5 a, .rw-jobs-index .rw-jobs-index-description-6 a {
+  color: inherit;
+  width: 100%;
+  margin: auto 0;
+  text-align: right;
+}
+
+.rw-jobs-index .rw-jobs-index-description-1 button, .rw-jobs-index .rw-jobs-index-description-2 button, .rw-jobs-index .rw-jobs-index-description-3 button, .rw-jobs-index .rw-jobs-index-description-4 button, .rw-jobs-index .rw-jobs-index-description-5 button, .rw-jobs-index .rw-jobs-index-description-6 button {
   margin: auto 0;
   padding: 0 40px;
   border: none;
@@ -900,7 +908,7 @@ footer {
   text-align: right;
 }
 
-.rw-jobs-index .rw-jobs-index-description button i {
+.rw-jobs-index .rw-jobs-index-description-1 button i, .rw-jobs-index .rw-jobs-index-description-2 button i, .rw-jobs-index .rw-jobs-index-description-3 button i, .rw-jobs-index .rw-jobs-index-description-4 button i, .rw-jobs-index .rw-jobs-index-description-5 button i, .rw-jobs-index .rw-jobs-index-description-6 button i {
   padding: 2px;
   font-weight: 600 !important;
   font-size: 1.2em;
@@ -911,86 +919,6 @@ footer {
 
 .rw-jobs-index .rw-jobs-index-triangle {
   border-width: 0 0 40px 40px;
-}
-
-.rw-jobs-index-developpement {
-  border: 2px solid #F6D432 !important;
-}
-
-.rw-jobs-index-developpement h1 {
-  color: #F6D432 !important;
-}
-
-.rw-jobs-index-developpement a {
-  color: #F6D432 !important;
-}
-
-.rw-jobs-index-developpement .rw-jobs-index-triangle {
-  border-color: transparent transparent #F6D432 transparent !important;
-}
-
-.rw-jobs-index-webdesign {
-  border: 2px solid #36A7DE !important;
-}
-
-.rw-jobs-index-webdesign h1 {
-  color: #36A7DE !important;
-}
-
-.rw-jobs-index-webdesign a {
-  color: #36A7DE !important;
-}
-
-.rw-jobs-index-webdesign .rw-jobs-index-triangle {
-  border-color: transparent transparent #36A7DE transparent !important;
-}
-
-.rw-jobs-index-referencement {
-  border: 2px solid #B76DAB !important;
-}
-
-.rw-jobs-index-referencement h1 {
-  color: #B76DAB !important;
-}
-
-.rw-jobs-index-referencement a {
-  color: #B76DAB !important;
-}
-
-.rw-jobs-index-referencement .rw-jobs-index-triangle {
-  border-color: transparent transparent #B76DAB transparent !important;
-}
-
-.rw-jobs-index-integration {
-  border: 2px solid #38AA49 !important;
-}
-
-.rw-jobs-index-integration h1 {
-  color: #38AA49 !important;
-}
-
-.rw-jobs-index-integration a {
-  color: #38AA49 !important;
-}
-
-.rw-jobs-index-integration .rw-jobs-index-triangle {
-  border-color: transparent transparent #38AA49 transparent !important;
-}
-
-.rw-jobs-index-community-management {
-  border: 2px solid #EB6441 !important;
-}
-
-.rw-jobs-index-community-management h1 {
-  color: #EB6441 !important;
-}
-
-.rw-jobs-index-community-management a {
-  color: #EB6441 !important;
-}
-
-.rw-jobs-index-community-management .rw-jobs-index-triangle {
-  border-color: transparent transparent #EB6441 transparent !important;
 }
 
 /*FICHE METIER*/
