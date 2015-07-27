@@ -1,0 +1,32 @@
+section {
+	table {
+		th {
+			text-align:center;
+			padding:0 0 1px 0 !important;
+			select.form-control {
+				background-color: #2B3E50;
+				color:white;
+				font-size: 12px;
+				box-shadow: none;
+				width:100%;
+				text-align: center;
+				padding: 8px 10px;
+			}
+		}
+		td {
+			text-align:center;
+			.user-avatar {
+				width:50px;
+				height:50px;
+				border-radius:25px;
+			}
+			.thumbnail {
+			    background-color: $grey-dark;
+			    margin:auto;
+			    display:block;
+			    padding:3px;
+			}
+		}
+	}
+}
+

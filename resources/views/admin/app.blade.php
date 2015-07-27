@@ -9,7 +9,6 @@
     <link href="{{ asset('/bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/bootstrap.theme.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/style.css') }}" rel="stylesheet">
-
 </head>
 <body class="relative">
 
@@ -74,5 +73,10 @@
 
 <script src="{{ asset('/javascript/admin/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/admin/app.js') }}"></script>
+<script src="{{ asset('javascript/admin/userstable.js') }}"></script>
+ <script type="text/javascript">
+    $('#filter').ddTableFilter()
+  </script>
+
 </body>
 </html>
