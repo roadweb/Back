@@ -92,14 +92,14 @@
             .rw-icon-job{
                 //z-index:2;
                 width: 80px;
-                height: auto;
+                height: 70px;
                 display:flex;
                 @include transition(all, 0.2s, ease-in-out);
             } 
             
             .rw-icon-job:hover{
                 width: calc(80px*1.2);
-                height: auto;
+                height: calc(70px*1.2);
                 @include transition(all, 0.2s, ease-in-out);
             }
         }

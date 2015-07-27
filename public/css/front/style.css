@@ -2127,7 +2127,7 @@ partie droite de la page
 
 .rw-carrous-navbar-job a .rw-icon-job {
   width: 80px;
-  height: auto;
+  height: 70px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2139,7 +2139,8 @@ partie droite de la page
 .rw-carrous-navbar-job a .rw-icon-job:hover {
   width: -webkit-calc(80px*1.2);
   width: calc(80px*1.2);
-  height: auto;
+  height: -webkit-calc(70px*1.2);
+  height: calc(70px*1.2);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

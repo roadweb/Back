@@ -20,11 +20,39 @@
 
             
             
-            
+    @foreach ($jobs as $job)
+   
+        <div class="rw-carrous-navbar-job">
+
+            <a href="#" onfocus="myFunction({{$job->id}})" onactive="myFunction({{$job->id}})">  {{-- voir 'addlistener' --}}
+                <img class="rw-icon-job" src="{{ asset($job->icon_job)}}" alt=""/> {{-- necessite l'integration des chemin image dans la table job --}}
+            </a>
+            <div class="rw-carrous-navbar-job-label">
+                <span>{{$job->name}}</span>  
+                <div class="rw-navbar-vertical-line"></div>
+                <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
+            </div>
+
+        </div>
+        
+    @endforeach
+        
+        
+        
+        
+     {{ $job->job_icon }}
+        
+        
+        
+        
+        
+        
+        
+        
             
         <div class="rw-carrous-navbar-job">
 
-            <a href="#" onfocus="myFunction()" onactive="myFunction()">
+            <a href="#" onfocus="myFunction()" onactive="myFunction()">  {{-- voir 'addlistener' --}}
                 <img class="rw-icon-job" src="{{ asset('images/jobs-icon/referencement.png')}}" alt=""/>
             </a>
             <div class="rw-carrous-navbar-job-label">
@@ -32,8 +60,6 @@
                 <div class="rw-navbar-vertical-line"></div>
                 <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
             </div>
-
-
 
         </div>
 
@@ -47,9 +73,9 @@
                 <div class="rw-navbar-vertical-line"></div>
                 <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
             </div>
-            
 
         </div>
+        
         
         <div class="rw-carrous-navbar-job">
 
@@ -61,9 +87,9 @@
                 <div class="rw-navbar-vertical-line"></div>
                 <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
             </div>
-            
 
         </div>
+        
         
         <div class="rw-carrous-navbar-job">
             <a href="#">
@@ -77,6 +103,7 @@
             
         </div>
         
+        
         <div class="rw-carrous-navbar-job">
             <a href="#">
                 <img class="rw-icon-job" src="{{ asset('images/jobs-icon/cm.png')}}" alt=""/>
@@ -88,6 +115,7 @@
             </div>
             
         </div>
+
         
         <div class="rw-carrous-navbar-job">
             <a href="#">
@@ -98,7 +126,6 @@
                 <div class="rw-navbar-vertical-line"></div>
                 <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
             </div>
-            
                 
         </div>
 

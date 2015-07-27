@@ -1,37 +1,18 @@
-
-/*
-var maReg = 'rw-carrous-navbar-line-',
-    maRegLength = maReg.length,
-    monElem = document.getElementsByName("rw-carrous-navbar-line");
-
-
-
-var maClass = document.getElementsByName("rw-carrous-navbar-line");
-var CmaClass = maClass.substring(0, maClass.length() - 1);
-
-
-
+$(document).ready(function($id){
+    
+    var jobItem = document.getElementsByTagName('.rw-carrous-navbar-job');   
+    
+    jobItem.addEventListener( "click", function( event ) {
+        
+        $('.rw-carrous-navbar-line').css({
+            width : 'calc(150px * ' + $id + ')'
+        });
+    });
+    
+/*    $('.rw-carrous-navbar-line').css({
+        width : 'calc(300px * ' + $id + ')'
+        //width: '300px'
+    });
 */
-
-
-
-
-
-
-
-
-
-
-
-// partie code ok!!! //
-
     
-var compteur = 1; // compteur doit prendre les valeurs des id_jobs
-    
-    
-//$('.rw-carrous-navbar-line-' + compteur).css({
-function
-$('.rw-carrous-navbar-line').css({
-    //width : 'calc(300px * ' + compteur + ')'
-    width: '300px'
 });
