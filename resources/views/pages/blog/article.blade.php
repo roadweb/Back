@@ -258,28 +258,27 @@
             <div class="rw-blog-band-auth">
                 <h3><a href="">Article à la une</a></h3>
             </div>
+            @foreach($postSticky as $postStic)
 
             <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
 
                 <div class="rw-blog-band-others-Une-illus">
 
-                    <!----todo-popix  L'image sera récupérée dans la bdd---->
-
-                    <img src="{{asset('images/blog1.png')}}" alt="Photoshop et CSS"/>
+                    <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>
 
                 </div>
 
 
                 <div class="rw-blog-band-others-Une-header">
 
-                    <!----todo-popix  Le titre sera récupéré dans la bdd---->
-                    <h3> Depuis Photoshop directement en CSS </h3>
+                    <h3> {{ $postStic->title }} </h3>
 
                 </div>
 
 
             </div>
 
+            @endforeach
             <div class="rw-blog-band-auth">
                 <h3><a href="">Partager l'article</a></h3>
             </div>
