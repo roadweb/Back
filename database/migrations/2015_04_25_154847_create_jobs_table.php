@@ -17,13 +17,11 @@ class CreateJobsTable extends Migration {
 		{
 			$table->increments('id');
             $table->string('name');
-            $table->string('job_icone');
+            $table->string('job_icon');
 			$table->timestamps();
             $table->string('resume');
             $table->longText('content');
             $table->string('title');
-            $table->string('job_color_clair');
-            $table->string('job_color_fonce');
 
 		});
 

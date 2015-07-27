@@ -1288,7 +1288,7 @@ Bloc contenu de l'article
 
 .rw-blog-article-content p img {
   margin: auto;
-  width: auto;
+  max-width: 100%;
 }
 
 .rw-blog-article-content ul {
@@ -1313,6 +1313,7 @@ Bloc contenu de l'article
 
 .rw-blog-article-content img {
   margin: auto;
+  max-width: 100%;
 }
 
 .rw-blog-article-content a {

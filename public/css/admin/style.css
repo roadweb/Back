@@ -737,7 +737,7 @@ Bloc contenu de l'article
 /* line 357, sass/custom/_show.scss */
 .rw-blog-article-content p img {
   margin: auto;
-  width: auto;
+  max-width: 100%;
 }
 /* line 364, sass/custom/_show.scss */
 .rw-blog-article-content ul {
@@ -762,13 +762,14 @@ Bloc contenu de l'article
 /* line 384, sass/custom/_show.scss */
 .rw-blog-article-content img {
   margin: auto;
+  max-width: 100%;
 }
-/* line 388, sass/custom/_show.scss */
+/* line 389, sass/custom/_show.scss */
 .rw-blog-article-content a {
   text-decoration: underline;
 }
 
-/* line 393, sass/custom/_show.scss */
+/* line 394, sass/custom/_show.scss */
 .rw-blog-article-content p, .rw-blog-article-content-auth {
   text-align: justify;
   margin: auto;
@@ -777,13 +778,13 @@ Bloc contenu de l'article
   line-height: 1.5em;
 }
 
-/* line 402, sass/custom/_show.scss */
+/* line 403, sass/custom/_show.scss */
 .rw-blog-article-content-auth {
   font-weight: bold;
   text-transform: capitalize;
 }
 
-/* line 407, sass/custom/_show.scss */
+/* line 408, sass/custom/_show.scss */
 .rw-show-panel {
   font-weight: 600;
   color: #16A086;
