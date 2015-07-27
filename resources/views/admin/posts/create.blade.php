@@ -114,16 +114,8 @@
                         </div>
                         <div class="form-group">
                             <label for="content">Le résumé de l'article (200 max)</label>
-                                    <textarea class="form-control"
-                                              name="resume"
-                                              maxlength="200"
-                                              cols="30"
-                                              rows="3"
-                                              placeholder="Tapez votre texte ici...">
-                                              @if(isset($post))
-                                                {{ $post->resume }}
-                                              @endif
-                                          </textarea>
+                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez
+                            le resume ici...", "size" => "30x3", "maxlength" => "200"])!!}
                         </div>
                         <div class="form-group" ng-app="app" ng-controller="textArea">
                             <label for="text">Le texte de l'article</label>
