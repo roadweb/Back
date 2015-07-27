@@ -80,10 +80,7 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                <input id="sticky-check"
-                                       type="checkbox"
-                                       class="checkbox checkbox-success"
-                                       name="is_sticky">
+                                {!! Form::checkbox('is_sticky', 'value', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
                                 <label for="sticky-ckeck">
                                     Mettre en avant ?
                                 </label>
@@ -92,6 +89,8 @@
                         <div class="form-group">
                             <label for="sticky">Fin de mise en avant</label>
                             <input type="date" name="sticky_end" class="form-control"/>
+                            {!! Form::input('date', 'sticky_end', null, ["class" => "form-control", "placeholder" => "aaaa/mm/jj"])!!}
+
                         </div>
                     </div>
                 </div>
@@ -109,13 +108,11 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <label for="title">Le titre de l'article (100 max)</label>
-                            {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez
-                            le titre ici..."])!!}
+                            {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez le titre ici..."])!!}
                         </div>
                         <div class="form-group">
                             <label for="content">Le résumé de l'article (200 max)</label>
-                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez
-                            le resume ici...", "size" => "30x3", "maxlength" => "200"])!!}
+                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200"])!!}
                         </div>
                         <div class="form-group" ng-app="app" ng-controller="textArea">
                             <label for="text">Le texte de l'article</label>
@@ -129,16 +126,13 @@
 
                         <div class="form-group">
                             <label for="image">Le lien de l'image</label>
-                            <input type="text" name="img_link" class="form-control"
-                            placeholder="Copiez ici l'url de votre image">
+                            {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale"])!!}
                         </div>
 
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                <input id="checkbox1"
-                                       type="checkbox"
-                                       class="checkbox checkbox-success"
-                                       name="published">
+                                {!! Form::checkbox('published', 'value', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
+
                                 <label for="checkbox1">
                                     Publier l'article ?
                                 </label>
@@ -162,24 +156,15 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <label>Mots clés référencement image</label>
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Écrire ici..."
-                                   name="ref_thumb"/>
+                            {!! Form::text('ref_thumb', null, ["class" => "form-control", "placeholder" => "balise alt de l'image principale de l'article"])!!}
                         </div>
                         <div class="form-group">
                             <label>Balise title</label>
-                            <input type="text"
-                                   class="form-control"
-                                   placeholder="Écrire ici..."
-                                   name="ref_title"/>
+                            {!! Form::text('ref_title', null, ["class" => "form-control", "placeholder" => "balise alt du titre de l'article"])!!}
                         </div>
                         <div class="form-group">
                             <label>Balise description</label>
-                                <textarea name="ref_description"
-                                          rows="5"
-                                          class="form-control"
-                                          placeholder="Écrire ici..."></textarea>
+                            {!! Form::textarea('ref_description', null, ["class" => "form-control", "placeholder" => "mots clefs séparés par une virgule", "row" => "5"])!!}
                         </div>
                     </div>
                 </div>
