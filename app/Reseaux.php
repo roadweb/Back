@@ -16,7 +16,7 @@ class Reseaux extends Model {
         'pinterest',
         'behance',
         'linkedin',
-        'viado',
+        'viadeo',
         'youtube',
         'googleplus'
     ];

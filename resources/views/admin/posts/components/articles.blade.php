@@ -6,7 +6,7 @@
             <div class="panel panel-{{ sticky($post->is_sticky, 'danger') }}">
 
                 <div class="panel-heading">
-                    {{ $post->title }}
+                    {{ str_limit($post->title, $limit = 40, $end = '...') }}
                     @if($post->published)
                         <span class="pull-right label label-success">Publié</span>
                     @else
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="panel-body">
-                    {!! $post->content !!}
+                    {{ str_limit($post->resume, $limit = 70, $end = '...') }}
                 </div>
             </div>
         </div>
