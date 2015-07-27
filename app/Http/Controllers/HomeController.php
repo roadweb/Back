@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $jobs = Job::all();
         $posts = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->get()->take(3);
-        $vignettes = Post::published()->orderByRaw('RAND()')->orderBy('created_at', 'desc')->where('is_sticky', '0')->get()->take(6);
+        $vignettes = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1' and 'is_sticky', '0')->skip(3)->take(6)->get();
         return view('pages.home.index', compact('jobs', 'posts', 'vignettes'));
     }
 
