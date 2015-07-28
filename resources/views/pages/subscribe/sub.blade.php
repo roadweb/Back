@@ -43,10 +43,17 @@
             <input type="password" name="password_confirmation" placeholder="Confirmation de mot de passe"/>
             </fieldset>
 
+            <fieldset class="rw-sub-select">
+                <label for="job_id"></label>
+                {!! Form::select('job_id', $jobs, null, ['id' => 'job_id']) !!}
+
+            </fieldset>
             <fieldset class="rw-sub-checkbox">
 
                 <p>
-                    <input type="checkbox" id="emweb" value="{{old('emweb')}}" />
+                    <!--<input type="checkbox" id="emweb" value="{{old('emweb')}}" />-->
+                    {!! Form::checkbox('emweb', 'on', false, ["id" => "emweb"]); !!}
+
                     <label for="emweb">
             <span class="ui">
 
@@ -67,7 +74,9 @@
                 <p class="rw-sub-file-return"></p>
 
                 <p>
-                    <input type="checkbox" id="assorw" value="association"/>
+                    <!--<input type="checkbox" id="assorw" value="association"/>-->
+                    {!! Form::checkbox('assorw', 'on', true, ["id" => "assorw"]); !!}
+
                     <label for="assorw">
             <span class="ui">
 

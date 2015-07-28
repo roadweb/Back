@@ -122,8 +122,94 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('image','Le lien de l\'image') !!}
                             {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale"])!!}
+                            {!! Form::label('image','Le lien de l\'image') !!}
+                        </div>
+
+                        <div class="form-group form-inline">
+
+                            <div class="checkbox checkbox-success">
+                                {!! Form::checkbox('html5', 'on', false, ["id" => "checkboxhtml5", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxhtml5','HTML 5') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('CSS', 'on', false, ["id" => "checkboxCSS", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxCSS','CSS 3') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                                {!! Form::checkbox('php', 'on', false, ["id" => "checkboxphp", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxphp','PHP') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+                                {!! Form::checkbox('js', 'on', false, ["id" => "checkboxjs", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxjs','JavaScript') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+                                {!! Form::checkbox('photoshop', 'on', false, ["id" => "checkboxphotoshop", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxphotoshop','Photoshop') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+
+                                {!! Form::checkbox('illustrator', 'on', false, ["id" => "checkboxillustrator", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxillustrator','Illustrator') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+
+                                {!! Form::checkbox('aftereffect', 'on', false, ["id" => "checkboxaftereffect", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxaftereffect','After Effect') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+
+                                {!! Form::checkbox('adobepremiere', 'on', false, ["id" => "checkboxadobepremiere", "class" => "checkbox checkbox-success"]);!!}
+                                {!! Form::label('checkboxadobepremiere','Adobe Premiere') !!}
+
+                            </div>
+                            <div class="checkbox checkbox-success">
+
+                                {!! Form::checkbox('flash', 'on', false, ["id" => "checkboxflash", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxflash','Adobe Flash') !!}
+                            </div>
+                            <div class="checkbox checkbox-success">
+                                {!! Form::checkbox('github', 'on', false, ["id" => "checkboxgithub", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxgithub','Github') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('buffer', 'on', false, ["id" => "checkboxbuffer", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxbuffer','Buffer') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('wordpress', 'on', false, ["id" => "checkboxwordpress", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxwordpress','Wordpress') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('amp', 'on', false, ["id" => "checkboxamp", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxamp','Lamp, Mamp, Wamp, Xamp') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('ajax', 'on', false, ["id" => "checkboxajax", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxajax','Ajax') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('angularjs', 'on', false, ["id" => "checkboxangularjs", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxangularjs','Angular JS') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('sql', 'on', false, ["id" => "checkboxsql", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxsql','SQL') !!}
+                            </div>
+
+                            <div class="checkbox checkbox-success">
+                            {!! Form::checkbox('c', 'on', false, ["id" => "checkboxc", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::label('checkboxc','langage C/C++') !!}
+                            </div>
                         </div>
 
                         <div class="form-group">
