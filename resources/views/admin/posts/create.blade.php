@@ -80,7 +80,7 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                {!! Form::checkbox('is_sticky', 'value', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
                                 <label for="sticky-ckeck">
                                     Mettre en avant ?
                                 </label>
@@ -131,7 +131,7 @@
 
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                {!! Form::checkbox('published', 'value', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::checkbox('published', 'on', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
 
                                 <label for="checkbox1">
                                     Publier l'article ?
