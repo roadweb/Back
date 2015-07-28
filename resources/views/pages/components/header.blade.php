@@ -35,7 +35,7 @@
             </li>
         </ul>
         <ul class="rw-ul_red">
-            <li><a href="{{ url('/inscription') }}">Inscription</a></li>
+            <li><a href="{{ url('/inscription') }}">S'inscrire</a></li>
         </ul>
     </nav>
     {{--<div class="rw-clear"></div>--}}

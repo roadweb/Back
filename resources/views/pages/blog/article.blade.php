@@ -49,7 +49,7 @@
 
                 <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
-                <img src="{{$post->img_link}}" alt="{{ $post->img_alt }}"/>
+                <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 
                 <p> {!! $post->content !!} </p>
 
@@ -144,7 +144,7 @@
                 <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias <span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
-                    <img src="{{ asset('images/avatar-base.png')}}" alt="avatar"/>
+                    <img src="{{ asset( $post->user->avatar )}}" alt="avatar"/>
                 </div>
 
                 <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
