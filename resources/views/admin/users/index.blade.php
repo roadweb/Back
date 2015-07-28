@@ -58,7 +58,7 @@
                         @foreach($users as $user)
                         <tr>
                             <td>{{$user->username}}</td>
-                            <td><img src="{{$user->avatar}}" class="user-avatar thumbnail" /></td>
+                            <td><img src="{{asset($user->avatar)}}" class="user-avatar thumbnail" /></td>
                             <td>{{$user->last_name}}</td>
                             <td>{{$user->first_name}}</td>
                             <td>{{$user->email}}</td>

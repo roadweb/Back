@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration {
 			$table->rememberToken();
 			$table->timestamps();
             $table->string('blogrw')->default('null');
-            $table->string('avatar')->default('null');
+            $table->string('avatar')->default('images/avatar-base.png');
             $table->longText('bio');
 
 
@@ -38,8 +38,8 @@ class CreateUsersTable extends Migration {
 		});
 
         Schema::table('users', function(Blueprint $table){
-            $table->integer('job_id')->unsigned()->index();
-            $table->integer('right_id')->unsigned()->index();
+            $table->integer('job_id')->default('1')->index();
+            $table->integer('right_id')->default('1')->index();
         });
 	}
 
