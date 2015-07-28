@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Job;
+use App\User;
 
 class SubController extends Controller
 {
@@ -16,7 +18,9 @@ class SubController extends Controller
     public function sub()
     {
         $this->middleware('auth');
-        return view('pages.subscribe.sub');
+        $jobs = Job::lists('name', 'id');
+
+        return view('pages.subscribe.sub', compact('jobs'));
     }
 
     public function subvalid()

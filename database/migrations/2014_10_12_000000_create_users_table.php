@@ -38,7 +38,7 @@ class CreateUsersTable extends Migration {
 		});
 
         Schema::table('users', function(Blueprint $table){
-            $table->integer('job_id')->default('1')->index();
+            $table->integer('job_id')->unsigned()->index();
             $table->integer('right_id')->default('1')->index();
         });
 	}

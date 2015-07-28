@@ -35,6 +35,23 @@
         flex-flow: column nowrap;
         height: auto;
 
+      .rw-sub-select {
+
+        select {
+          padding:3px;
+          margin: 0;
+          border-radius:4px;
+          box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+          background: #f8f8f8;
+          color:#888;
+          border:none;
+          outline:none;
+          appearance:none;
+          cursor: pointer;
+        }
+
+
+      }
       .rw-sub-checkbox {
         width: 50%;
         text-align: left;
