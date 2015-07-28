@@ -2,9 +2,8 @@
 	line-height: $lineHeight;
   	margin:auto 30px;
   	display: flex;
-	        flex-flow: row wrap;
-	        justify-content:center;
-
+	flex-flow: row wrap;
+	justify-content:center;
 	h1 {
 		color: $red;
 		text-align: center;
@@ -13,20 +12,18 @@
 		text-shadow: 2px 2px 2px white;
 		margin:20px auto;
 	}
-
 	p {
 		margin:20px auto;
 		font-size: $fontSize;
 		line-height:$lineHeight;
+		text-align:center;
 	}
-
 	h2 {
         margin:20px auto;
         color: $colorOpen;
         font-weight: 400;
         font-size: $fontSize + 0.5;
     }
-
     form {
        	width:100%;
        	margin:auto;
@@ -41,7 +38,7 @@
 	          	display: flex;
 	            flex-flow: row wrap;
 	            justify-content:center;
-	            padding: 5px;
+	            padding: 10px;
 		    	label {
 		        	text-align: right;
 			        width: 220px;
@@ -78,6 +75,19 @@
 		            font-size:$fontSize - 0.1em;
 		            color:$grey-dark;
 		        }
+		        input[type="submit"] {
+					margin-top:30px;
+					background-color: $red;
+					color:white;
+					font-size: 20px;
+				    font-weight: 300;
+				    padding:10px;
+				    cursor: pointer;
+				    font-weight:600;
+				}
+				.rw-hidden {
+					visibility:hidden;
+				}
 	        }
 	        /*************************
         		design des checkboxs
@@ -89,9 +99,11 @@
 		        }
 		        [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
 		          cursor: pointer;
-		          padding-left: 75px;
+		          padding:0 0 0 55px;
 		          position: relative;
-		          text-align: left;
+		          text-align: center;
+		          width: 535px;
+		          margin-left: 150px;
 		        }
 		        [type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before, [type="checkbox"]:not(:checked) + label::after, [type="checkbox"]:checked + label::after {
 		          content: "";
@@ -135,21 +147,19 @@
 		        }
 		        [type="checkbox"]:not(:checked) + label .ui::before {
 		          content: "non";
-		          left: 32px;
+		          left: 10px;
 		          color: $grey-light;
 		          top: 0;
 		        }
 		        [type="checkbox"]:checked + label .ui::after {
 		          color: $grey-light;
 		          content: "oui";
+		          left: -15px;
 		          top: 1px;
 		        }
 		        [type="checkbox"]:focus + label::before {
 		          box-sizing: border-box;
 		        }    
-
-	        
-
 
 			/*************************
 		    design du bouton upload de fichier
@@ -159,11 +169,11 @@
 		    .rw-sub-input-file-container {
 		    	position: relative;
 		        width:100%;
-		        height:54px;
+		        height:64px;
 		        display:flex;
-		        flex-flow:row nowrap;
+		        flex-flow:row wrap;
 		        justify-content:center;
-		        padding:10px;
+		        padding:5px;
 				p {
 					text-align: right;
 			        width: 220px;
@@ -176,10 +186,14 @@
 			        padding:5px auto;
 			        position:relative;
 			        height:54px;
+			        display:flex;
+			        flex-flow:row nowrap;
+			        justify-content:center;
 				}
 		        .rw-sub-input-file-trigger {
 			        display: block;
-			        padding: 10px 45px;
+			        padding:5px;
+			        text-align:center;
 			        background: $colorOpen;
 			        color:white;
 			        transition: all .4s;
@@ -189,7 +203,6 @@
 			        margin: auto;
 			    }
 	      		.rw-sub-input-file {
-			        position: absolute;
 			        top: 0; 
 			        left: 0;
 			        width: 250px;
@@ -197,7 +210,6 @@
 			        opacity: 0;
 			        cursor: pointer;
 	      		}
-
 			    /* quelques styles d'interactions */
 			    .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
 				.rw-sub-input-file:focus + .rw-sub-input-file-trigger,
@@ -205,7 +217,6 @@
 				.rw-sub-input-file-trigger:focus {
 				    background: $colorClose;
 			    }
-
 	      		/* styles du retour visuel */
 			    .rw-sub-file-return {
 			        margin: 0;
@@ -234,22 +245,7 @@
 			        margin: auto;
 			        padding: 0 10px;
 		        }
-
-
 			}
-
-			button {
-		        width: 450px;
-			    padding: 10px;
-			    margin-left: 290px;
-			    cursor: pointer;
-			    font-size: 20px;
-			    font-weight: 300;
-			    background-color: $red;
-			    color: #ffffff;
-			    border: none;
-		    }
       	}
-   
     }
 }

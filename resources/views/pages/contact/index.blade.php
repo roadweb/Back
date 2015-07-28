@@ -79,10 +79,12 @@
                     <span class="ui"></span>
                     Je désire recevoir une copie de mon message par email
                 </label>
-            
-                    </div>
+            </div>
 
-            <button name="envoyer">Envoyer</button>
+            <div class="rw-contact-field">
+                <label for="envoyer" class="rw-hidden">Envoyer l'email :</label>
+                <input type="submit" name="envoyer" id="envoyer" />
+            </div>
 
         </fieldset>
 

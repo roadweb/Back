@@ -2946,6 +2946,7 @@ partie droite de la page
   margin: 20px auto;
   font-size: 1em;
   line-height: 1.5em;
+  text-align: center;
 }
 
 .rw-contact-container h2 {
@@ -2996,7 +2997,7 @@ partie droite de la page
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 .rw-contact-container form fieldset .rw-contact-field label {
@@ -3040,6 +3041,21 @@ partie droite de la page
   color: #7e8b8c;
 }
 
+.rw-contact-container form fieldset .rw-contact-field input[type="submit"] {
+  margin-top: 30px;
+  background-color: #bf382a;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.rw-contact-container form fieldset .rw-contact-field .rw-hidden {
+  visibility: hidden;
+}
+
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked), .rw-contact-container form fieldset [type="checkbox"]:checked {
   left: -9999px;
   position: absolute;
@@ -3047,9 +3063,11 @@ partie droite de la page
 
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label, .rw-contact-container form fieldset [type="checkbox"]:checked + label {
   cursor: pointer;
-  padding-left: 75px;
+  padding: 0 0 0 55px;
   position: relative;
-  text-align: left;
+  text-align: center;
+  width: 535px;
+  margin-left: 150px;
 }
 
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::before, .rw-contact-container form fieldset [type="checkbox"]:checked + label::before, .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label::after, .rw-contact-container form fieldset [type="checkbox"]:checked + label::after {
@@ -3103,7 +3121,7 @@ partie droite de la page
 
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked) + label .ui::before {
   content: "non";
-  left: 32px;
+  left: 10px;
   color: #ebebe6;
   top: 0;
 }
@@ -3111,6 +3129,7 @@ partie droite de la page
 .rw-contact-container form fieldset [type="checkbox"]:checked + label .ui::after {
   color: #ebebe6;
   content: "oui";
+  left: -15px;
   top: 1px;
 }
 
@@ -3121,19 +3140,19 @@ partie droite de la page
 .rw-contact-container form fieldset .rw-sub-input-file-container {
   position: relative;
   width: 100%;
-  height: 54px;
+  height: 64px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
+  padding: 5px;
   /* quelques styles d'interactions */
   /* styles du retour visuel */
   /* on complète l'information d'un contenu textuel
@@ -3153,11 +3172,23 @@ partie droite de la page
   padding: 5px auto;
   position: relative;
   height: 54px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file-trigger {
   display: block;
-  padding: 10px 45px;
+  padding: 5px;
+  text-align: center;
   background: #16A086;
   color: white;
   -webkit-transition: all 0.4s;
@@ -3169,7 +3200,6 @@ partie droite de la page
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file {
-  position: absolute;
   top: 0;
   left: 0;
   width: 250px;
@@ -3222,18 +3252,6 @@ partie droite de la page
   color: #037E69;
   margin: auto;
   padding: 0 10px;
-}
-
-.rw-contact-container form fieldset button {
-  width: 450px;
-  padding: 10px;
-  margin-left: 290px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 300;
-  background-color: #bf382a;
-  color: #ffffff;
-  border: none;
 }
 
 .rw-allartus-title {
