@@ -22,6 +22,7 @@ class CreateCategoriesTable extends Migration {
 
         Category::create(['name' => 'Blog']);
         Category::create(['name' => 'Tutoriel']);
+        //Category::create(['name' => 'Fiches métiers']);
 	}
 
 	/**

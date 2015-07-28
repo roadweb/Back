@@ -61,7 +61,7 @@
                     </p>
 
                     <div class="rw-allartus-header-avatar">
-                        <img src="{{ asset('images/avatar-base.png')}}" alt="avatar"/>
+                        <img src="{{ asset( $user->avatar)}}" alt="avatar"/>
                     </div>
 
                     <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
