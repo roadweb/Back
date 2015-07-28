@@ -11,7 +11,7 @@
             <div class="panel-body">
 
                 <p class="col-sm-3">
-                    <span class="rw-show-panel">Auteur : </span>{{ $post->user->first_name }} {{$post->user->last_name}} | </p>
+                    <span class="rw-show-panel">Auteur : </span>{{ $post->user->first_name }} {{$post->user->last_name}}</p>
 
                 <p class="col-sm-7">
                     <span class="rw-show-panel">Description : </span>{{ $post->resume }}</p>
@@ -80,5 +80,30 @@
     </div>
 
     </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>
+                    <span class="rw-show-panel">Autres infos concernant mon article : </span>
+                    {{ $post->title }}</h4>
+            </div>
+            <div class="panel-body">
+
+                <p class="col-sm-2">
+                    <span class="rw-show-panel">Date de fin de mise en avant : </span>{{ $post->sticky_end }}</p>
+
+                <p class="col-sm-6">
+                    <span class="rw-show-panel">Mots clefs : </span>{{ $post->ref_description }}</p>
+
+                <p class="col-sm-2">
+                    <span class="rw-show-panel">Balises alt titre : </span> {{$post->ref_title}} <br/>
+                </p>
+                <p class="col-sm-2">
+                    <span class="rw-show-panel">Balises alt image principale :</span> {{ $post->ref_thumb }}
+                </p>
+
+            </div>
+        </div>
+
     </div>
 @endsection()
