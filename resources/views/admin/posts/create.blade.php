@@ -32,7 +32,7 @@
                     {!! Form::open(['route' => ['admin.posts.store'], 'id' => 'form-main']) !!}
                 @endif
 
-                <input type="hidden" name="user_id" value="{{ $auth_id }}">
+                    {!! Form::hidden('user_id',$auth_id) !!}
 
                 <!--
                 |--------------------------------------------------------------------------
@@ -51,13 +51,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="type">Le domaine lié de l'article</label>
+                                    {!! Form::label('type', 'Le domaine lié de l\'article') !!}
                                     {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="type">Le type d'article</label>
+                                    {!! Form::label('type', 'Le type d\'article') !!}
                                     {!! Form::select('category_id', $categories, null, ['class' =>
                                     'form-control'])
                                     !!}
@@ -81,14 +81,11 @@
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
                                 {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
-                                <label for="sticky-ckeck">
-                                    Mettre en avant ?
-                                </label>
+                                {!! Form::label('sticky-check', 'Mettre en avant ?') !!}
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="sticky">Fin de mise en avant</label>
-                            <input type="date" name="sticky_end" class="form-control"/>
+                            {!! Form::label('sticky', 'Fin de mise en avant') !!}
                             {!! Form::input('date', 'sticky_end', null, ["class" => "form-control", "placeholder" => "aaaa/mm/jj"])!!}
 
                         </div>
@@ -107,15 +104,15 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label for="title">Le titre de l'article (100 max)</label>
+                            {!! Form::label('title','Le titre de l\'article (100 max)') !!}}
                             {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez le titre ici..."])!!}
                         </div>
                         <div class="form-group">
-                            <label for="content">Le résumé de l'article (200 max)</label>
+                            {!! Form::label('content','Le résumé de l\'article (200 max)') !!}
                                      {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200"])!!}
                         </div>
                         <div class="form-group" ng-app="app" ng-controller="textArea">
-                            <label for="text">Le texte de l'article</label>
+                            {!! Form::label('text','Le texte de l\'article') !!}
 
                             <div name="content" text-angular="text-angular">
                                 @if(isset($post))
@@ -125,7 +122,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="image">Le lien de l'image</label>
+                            {!! Form::label('image','Le lien de l\'image') !!}
                             {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale"])!!}
                         </div>
 
@@ -133,9 +130,7 @@
                             <div class="checkbox checkbox-success">
                                 {!! Form::checkbox('published', 'on', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
 
-                                <label for="checkbox1">
-                                    Publier l'article ?
-                                </label>
+                                {!! Form::label('checkbox1','Publier l\'article ?') !!}
                             </div>
                         </div>
                     </div>
@@ -155,15 +150,15 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label>Mots clés référencement image</label>
+                            {!! Form::label('','Mots clés référencement image') !!}
                             {!! Form::text('ref_thumb', null, ["class" => "form-control", "placeholder" => "balise alt de l'image principale de l'article"])!!}
                         </div>
                         <div class="form-group">
-                            <label>Balise title</label>
+                            {!! Form::label('','Balise title') !!}
                             {!! Form::text('ref_title', null, ["class" => "form-control", "placeholder" => "balise alt du titre de l'article"])!!}
                         </div>
                         <div class="form-group">
-                            <label>Balise description</label>
+                            {!! Form::label('','Balise description') !!}
                             {!! Form::textarea('ref_description', null, ["class" => "form-control", "placeholder" => "mots clefs séparés par une virgule", "row" => "5"])!!}
                         </div>
                     </div>
