@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration {
 			$table->rememberToken();
 			$table->timestamps();
             $table->string('blogrw')->default('null');
-            $table->string('avatar')->default('images/avatar-base.png');
+            $table->string('avatar')->default('images/avatars/avatar-base.png');
             $table->longText('bio');
 
 

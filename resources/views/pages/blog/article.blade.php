@@ -193,8 +193,8 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset('images/html5.png')}}" alt="html5"/>
-                        <img src="{{asset('images/css3.png')}}" alt="css3"/>
+                        <img src="{{asset('images/technos/html5.png')}}" alt="html5"/>
+                        <img src="{{asset('images/technos/css3.png')}}" alt="css3"/>
 
                     </div>
 
@@ -243,7 +243,7 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset('images/photoshop.png')}}" alt="photoshop"/>
+                        <img src="{{asset('images/technos/photoshop.png')}}" alt="photoshop"/>
 
 
                     </div>

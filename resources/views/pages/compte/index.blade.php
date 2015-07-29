@@ -14,28 +14,56 @@
             <div class="rw-cpt-content">
 
                 <div class="rw-cpt-content-profil">
+                    <!---------------------
+ les input de cette partie sont bloqués en mode visualisation et débloqué en mode modification. Une modification est sauvegarder au clic sur le i fa-save et les données sont mises à jour dans la bdd
 
+             les checkbox apparaissent
+----------------------->
                     <h2>Profil
-                        <span>
+                        <span><!-- ajouter la class rw-hide pour masquer l'un ou l'autre icone-->
                             <i class="fa fa-edit"></i>
+                            <i class="fa fa-save"></i>
                         </span>
                     </h2>
 
                     <form action="#">
 
-                        <fieldset>
+                        <fieldset class="rw-cpt-checkbox">
+                            <div class="rw-cpt-content-profil-field rw-cpt-content-profil-field-allvisible">
+
+                                <p>Masquer / Afficher tous les items</p>
+                                <p>
+                                    <input type="checkbox" id="visibleall" />
+                                    <label for="visibleall">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
+
+                            </div>
+
 
                             <div class="rw-cpt-content-profil-field">
 
                                 <label for="prenom">Prénom : </label>
                                 <input type="text" name="prenom" placeholder="Martin"/>
-
+                                <p>
+                                    <input type="checkbox" id="visibleprenom" />
+                                    <label for="visibleprenom">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
                             </div>
 
                             <div class="rw-cpt-content-profil-field">
 
                                 <label for="nom">Nom : </label>
                                 <input type="text" name="nom" placeholder="Duvent"/>
+                                <p>
+                                    <input type="checkbox" id="visiblenom" />
+                                    <label for="visiblenom">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -43,6 +71,12 @@
 
                                 <label for="username">Pseudo : </label>
                                 <input type="text" name="username" placeholder="Martin D"/>
+                                <p>
+                                    <input type="checkbox" id="visibleusername" />
+                                    <label for="visibleusername">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -50,6 +84,12 @@
 
                                 <label for="birth">Date de naissance : </label>
                                 <input type="date" name="birth" placeholder="01/05/1979"/>
+                                <p>
+                                    <input type="checkbox" id="visiblebirth" />
+                                    <label for="visiblebirth">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -57,6 +97,12 @@
 
                                 <label for="email">Email : </label>
                                 <input type="email" name="email" placeholder="mduvent@monmail.com"/>
+                                <p>
+                                    <input type="checkbox" id="visibleemail" />
+                                    <label for="visibleemail">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -64,14 +110,25 @@
 
                                 <label for="localite">Localité : </label>
                                 <input type="text" name="localite" placeholder="Deauville"/>
+                                <p>
+                                    <input type="checkbox" id="visiblelocalite" />
+                                    <label for="visiblelocalite">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
                             <div class="rw-cpt-content-profil-field">
 
-                                <label for="profession">Formation EMWeb : </label>
-                                <select name="formation" id="formation"></select>
-                                <input type="" name="profession" placeholder="infographiste"/>
+                                <label for="formation">formations : </label>
+                                <input type="text" name="formation" placeholder="développeur"/>
+                                <p>
+                                    <input type="checkbox" id="visibleformation" />
+                                    <label for="visibleformation">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -80,6 +137,12 @@
 
                                 <label for="siteweb">Site Web : </label>
                                 <input type="url" name="siteweb" placeholder="www.monsupersite.fr"/>
+                                <p>
+                                    <input type="checkbox" id="visiblesiteweb" />
+                                    <label for="visiblesiteweb">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -87,6 +150,12 @@
 
                                 <label for="skype">Skype : </label>
                                 <input type="text" name="skype" placeholder="duvendoux"/>
+                                <p>
+                                    <input type="checkbox" id="visibleskype" />
+                                    <label for="visibleskype">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -94,6 +163,12 @@
 
                                 <label for="facebook">Facebook : </label>
                                 <input type="url" name="facebook" placeholder="http://facebook.com/monfacebook"/>
+                                <p>
+                                    <input type="checkbox" id="visiblefacebook" />
+                                    <label for="visiblefacebook">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -101,6 +176,12 @@
 
                                 <label for="twitter">Twitter : </label>
                                 <input type="text" name="twitter" placeholder="@duvendoux"/>
+                                <p>
+                                    <input type="checkbox" id="visibletwitter" />
+                                    <label for="visibletwitter">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -108,6 +189,12 @@
 
                                 <label for="pinterest">Pinterest : </label>
                                 <input type="url" name="pinterest" placeholder="http://pinterest.com/monpinterest"/>
+                                <p>
+                                    <input type="checkbox" id="visiblepint" />
+                                    <label for="visiblepint">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -115,6 +202,12 @@
 
                                 <label for="behance">Behance : </label>
                                 <input type="url" name="behance" placeholder="http://behance.com/monbehance"/>
+                                <p>
+                                    <input type="checkbox" id="visiblebehance" />
+                                    <label for="visiblebehance">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -122,6 +215,12 @@
 
                                 <label for="linkedin">Linkedin : </label>
                                 <input type="url" name="linkedin" placeholder="http://linkedin.com/monlinkedin"/>
+                                <p>
+                                    <input type="checkbox" id="visiblelinked" />
+                                    <label for="visiblelinked">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
 
@@ -129,8 +228,15 @@
 
                                 <label for="viadeo">Viadeo : </label>
                                 <input type="url" name="viadeo" placeholder="http://viadeo.com/monviadeo"/>
+                                <p>
+                                    <input type="checkbox" id="visibleviadeo" />
+                                    <label for="visibleviadeo">
+                                        <span class="ui"></span>visible
+                                    </label>
+                                </p>
 
                             </div>
+
 
 
 
@@ -163,13 +269,18 @@
 
                     <div class="rw-cpt-content-avatar">
 
-                        <img src="http://lorempixel.com/200/200/people/9/" alt="Avatar"/>
+                        <img src="{{asset('images/avatars/avatar-base.png')}}" alt="Avatar"/>
 
                         <div class="rw-cpt-content-legend">
 
                             <span>
-                                <i class="fa fa-edit"></i>
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-save"></i>
                             </span>
+
+                            <!---------------------
+                             le i fa-trash permet de supprimer la photo de la bdd et de mettre l'avatar de base
+                            ----------------------->
                             <span>
                                 <i class="fa fa-trash-o"></i>
                             </span>
@@ -183,6 +294,8 @@
                         <h2>Informations personnelles
                         <span>
                             <i class="fa fa-edit"></i>
+                            <i class="fa fa-save"></i>
+
                         </span>
                         </h2>
 
@@ -246,6 +359,8 @@
                     <h2>Un mot sur moi
                         <span>
                             <i class="fa fa-edit"></i>
+                            <i class="fa fa-save"></i>
+
                         </span>
                     </h2>
 
@@ -260,19 +375,21 @@
                 </div>
 
 
-                <div class="rw-cpt-content-profil">
+         <!--       <div class="rw-cpt-content-profil">
 
                     <div class="rw-cpt-content-compet">
 
                         <h2>Mes compétences
                             <span>
-                                <i class="fa fa-edit"></i>
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-save"></i>
+
                             </span>
-                        </h2>
+                        </h2>-->
                         <!---------------------
  attention dans CSS taille de bar définie
 ----------------------->
-                        <div class="rw-cpt-progress-bar-container">
+                        <!--<div class="rw-cpt-progress-bar-container">
                             <div class="rw-cpt-progress-bar">
                                 <div class="rw-cpt-bar"> HTML</div>
                             </div>
@@ -285,7 +402,7 @@
                             <div class="rw-cpt-progress-bar">
                                 <div class="rw-cpt-bar">Wordpress</div>
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>
