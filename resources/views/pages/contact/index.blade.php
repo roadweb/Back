@@ -15,6 +15,13 @@
             @endforeach
         </ul>
 
+        @if(Session::has('message'))
+    <div class="alert alert-info">
+      {{Session::get('message')}}
+    </div>
+@endif
+
+
     <h2>Formulaire à remplir</h2>
 
     {!! Form::open(array('route' => 'contact_store')) !!}
@@ -44,7 +51,7 @@
 
             <div class="rw-contact-field">
                 {!! Form::label('objet', 'Objet de votre Email :') !!}
-                {!! Form::select('Objet', array (
+                {!! Form::select('objet', array (
                 'Site web' => array('bug' => 'Je veux signaler un bug', '?' => '???'),
                 'Blog' => array('?' => '???', '?' => '???'),
                 'Association' => array('?' => '???', '?' => '???'),
@@ -62,8 +69,7 @@
             <div class="rw-contact-field">
                 {!! Form::label('url', 'Url de la page concernée :') !!}
                 {!! Form::url('url', null, 
-                array('required', 
-                      'placeholder'=>'Copiez-collez l\'url de la page concernée si besoin' )) !!}
+                array('placeholder'=>'Copiez-collez l\'url de la page concernée si besoin' )) !!}
             </div>
 
             <div class="rw-sub-input-file-container">
@@ -80,9 +86,8 @@
             <div class="rw-contact-field">
                 {!! Form::checkbox('copie', 'yes', false, 
                     array('id'=>'copie')) !!}
-                {!! Form::label('copie', ' ') !!}
-                    <span class="ui"></span>
-                    Je désire recevoir une copie de mon message par email
+                {!! HTML::decode(Form::label('copie', '<span class="ui"></span> Je désire recevoir une copie de mon message par email')) !!}
+                    
                 </label>
             </div>
             <div class="rw-contact-field">
@@ -96,7 +101,7 @@
 
         </fieldset>
 
-    </form>
+    {!! Form::close() !!}
 
     </div>
 </div>
