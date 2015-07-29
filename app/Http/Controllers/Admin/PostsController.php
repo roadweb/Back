@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller as Controller;
 use App\Job;
 use App\Post;
+use App\Techno;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -38,9 +39,9 @@ class PostsController extends Controller
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
         $jobs = Job::lists('name', 'id');
+        $technos = Techno::all();
 
-
-        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs'));
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'technos'));
     }
 
     /**
@@ -79,9 +80,10 @@ class PostsController extends Controller
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
         $jobs = Job::lists('name', 'id');
+        $technos = Techno::all();
 
 
-        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post'));
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post', 'technos'));
     }
 
     /**

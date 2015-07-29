@@ -36,7 +36,7 @@ class CreateTechnosTable extends Migration {
         Techno::create(['name' => 'wordpress', 'img_link' => 'images/technos/wordpress.png']);
         Techno::create(['name' => 'amp', 'img_link' => 'images/technos/amp.png']);
         Techno::create(['name' => 'ajax', 'img_link' => 'images/technos/ajax.png']);
-        Techno::create(['name' => 'angularjs', 'img_link' => 'images/technos/aunglarjs.png']);
+        Techno::create(['name' => 'angularjs', 'img_link' => 'images/technos/angularjs.png']);
         Techno::create(['name' => 'sql', 'img_link' => 'images/technos/sql.png']);
         Techno::create(['name' => 'c', 'img_link' => 'images/technos/c.png']);
         Techno::create(['name' => 'autre', 'img_link' => 'images/technos/defaut.png']);
