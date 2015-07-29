@@ -85,7 +85,6 @@
                     Je désire recevoir une copie de mon message par email
                 </label>
             </div>
-
             <div class="rw-contact-field">
                 {!! Form::label('envoyer', '', ['class' => 'rw-hidden']) !!}
                 {!! Form::submit('Envoyer', 
