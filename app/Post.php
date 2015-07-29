@@ -19,7 +19,8 @@ class Post extends Model
         'sticky_end',
         'ref_thumb',
         'ref_title',
-        'ref_description'
+        'ref_description',
+        'techno_id'
     ];
 
     /**
@@ -44,6 +45,11 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function techno()
+    {
+        return $this->belongsTo('App\Techno');
     }
 
     /**
