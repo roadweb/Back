@@ -76,6 +76,9 @@ Route::get('/adhesion', 'AdhesionController@index');
 
 Route::get('/contact', 'ContactController@index');
 
+Route::post('/contact', 
+  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
 /*
 |--------------------------------------------------------------------------
 | API
