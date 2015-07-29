@@ -9,7 +9,7 @@
 
         <p>Un souci, une demande, des suggestions ? N'hésitez pas à remplir le formulaire ci-dessous et à nous le faire parvenir ! Nous vous recontacterons par mail au plus vite et ferons notre possible pour régler votre problème :) </p>
 
-    <h2>Formulaire de contact </h2>
+    <h2>Formulaire à remplir</h2>
 
     <form action="" method="">
 
@@ -74,15 +74,17 @@
             </div>
 
             <div class="rw-contact-field">
-                <input type="checkbox" name="copie" />
+                <input type="checkbox" name="copie" id="copie" />
                 <label for="copie">
                     <span class="ui"></span>
                     Je désire recevoir une copie de mon message par email
                 </label>
-            
-                    </div>
+            </div>
 
-            <button name="envoyer">Envoyer</button>
+            <div class="rw-contact-field">
+                <label for="envoyer" class="rw-hidden">Envoyer l'email :</label>
+                <input type="submit" name="envoyer" id="envoyer" />
+            </div>
 
         </fieldset>
 
