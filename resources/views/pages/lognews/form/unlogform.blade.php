@@ -17,7 +17,7 @@
     
     <div class="rw-lognews-form-group">
         <div class="rw-lognews-container">  
-            <a class="rw-lognews-myaccompt" href="#">Mon compte</a> 
+            <a class="rw-lognews-myaccompt" href="{{ url('/compte') }}">Mon compte</a>
         </div>
     </div>  
 

@@ -993,7 +993,7 @@ Bloc content page
 **************************/
 .rw-main-container-articleon {
   margin: 30px auto;
-  width: 1200px;
+  width: 1050px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1011,7 +1011,7 @@ Bloc content page
 bloc de l'article
 **************************/
 .rw-blog-article-container {
-  width: 70%;
+  width: 67%;
   height: 100%;
   margin: 20px auto;
   position: relative;
@@ -1349,7 +1349,8 @@ partie droite de la page
   margin: auto;
   box-shadow: 1px 1px 4px #7e8b8c;
   border-radius: 50%;
-  max-height: 100px;
+  height: 120px;
+  width: 120px;
 }
 
 .rw-blog-band-container .rw-blog-band-auth p {
@@ -1391,7 +1392,7 @@ partie droite de la page
   margin: auto;
   display: block;
   width: 100%;
-  color: #7e8b8c;
+  color: #bf382a;
 }
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth .rw-blog-band-others-sameAuth-all-articles span {
@@ -3267,7 +3268,11 @@ partie droite de la page
   padding: 0 10px;
 }
 
-.rw-allartus-title {
+.rw-allartus-main {
+  max-width: 1050px;
+}
+
+.rw-allartus-main .rw-allartus-title {
   margin: 30px auto;
   padding: 20px;
   border-bottom: 2px solid #ebebe6;
@@ -3275,12 +3280,12 @@ partie droite de la page
   font-size: 1.3em;
 }
 
-.rw-allartus-title span {
+.rw-allartus-main .rw-allartus-title span {
   text-transform: capitalize;
   color: #bf382a;
 }
 
-.rw-allartus-container {
+.rw-allartus-main .rw-allartus-container {
   margin: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3291,7 +3296,7 @@ partie droite de la page
           flex-flow: row nowrap;
 }
 
-.rw-allartus-container .rw-allartus-header-flex {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header-flex {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3308,11 +3313,11 @@ partie droite de la page
   margin: 0 auto;
 }
 
-.rw-allartus-container .rw-allartus-header-flex article {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header-flex article {
   margin: 0 15px 15px;
 }
 
-.rw-allartus-container .rw-allartus-header {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header {
   background-color: #ebebe6;
   width: 35%;
   display: -webkit-box;
@@ -3328,7 +3333,7 @@ partie droite de la page
   padding: 0 15px;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3344,14 +3349,14 @@ partie droite de la page
   text-align: center;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content span {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content span {
   margin: auto;
   width: 100%;
   font-size: 1.3em;
   text-transform: capitalize;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-content-job {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-content-job {
   margin: auto;
   width: auto;
   color: #bf382a;
@@ -3361,12 +3366,12 @@ partie droite de la page
   padding: 10px;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar {
   margin: auto;
   width: 100%;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar img {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-avatar img {
   margin: auto;
   box-shadow: 1px 1px 4px #7e8b8c;
   border-radius: 50%;
@@ -3374,12 +3379,12 @@ partie droite de la page
   width: 150px;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-content p {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content p {
   margin: auto;
   width: 100%;
 }
 
-.rw-allartus-container .rw-allartus-header .rw-allartus-header-rs {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-rs {
   margin: auto;
   width: 100%;
   display: -webkit-box;

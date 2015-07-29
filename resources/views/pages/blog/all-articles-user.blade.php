@@ -6,6 +6,8 @@
 
     <div class="container">
 
+        <div class="rw-allartus-main">
+
         <h1 class="rw-allartus-title">
             Tous les articles de
             <span>{{$user->username}}</span>
@@ -35,7 +37,7 @@
                             </div>
 
                             <div class="rw-index-open-article-min-icons">
-                                <img src="{{ asset('images/icon_blog_test_1.jpg') }}" />
+                                <img src="{{ asset('images/technos/wordpress.png') }}" />
 
                             </div>
                         </div>
@@ -76,6 +78,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     </div>
 
