@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Job;
+use App\Techno;
 
 class BlogController extends Controller
 {
@@ -20,9 +21,7 @@ class BlogController extends Controller
     {
         $jobs = Job::all();
         $posts = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->get()->take(3);
-
         $vignettes = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->skip(3)->take(1000)->get();
-
         return view('pages.blog.index', compact('posts', 'vignettes', 'jobs'));
     }
 

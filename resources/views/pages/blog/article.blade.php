@@ -193,8 +193,7 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset('images/technos/html5.png')}}" alt="html5"/>
-                        <img src="{{asset('images/technos/css3.png')}}" alt="css3"/>
+                        <img src="{{asset($userPost->techno->img_link)}}" alt="html5"/>
 
                     </div>
 
@@ -243,7 +242,7 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset('images/technos/photoshop.png')}}" alt="photoshop"/>
+                        <img src="{{asset( $jobPost->techno->img_link)}}" alt="photoshop"/>
 
 
                     </div>
