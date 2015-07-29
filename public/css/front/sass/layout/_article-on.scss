@@ -4,7 +4,7 @@ Bloc content page
 
 .rw-main-container-articleon {
   margin: 30px auto;
-  width: 1200px;
+  width: 1050px;
   display: flex;
   flex-flow: row nowrap;
 
@@ -19,7 +19,7 @@ Bloc content page
 bloc de l'article
 **************************/
 .rw-blog-article-container {
-  width: 70%;
+  width: 67%;
   height: 100%;
 
   margin: 20px auto;
@@ -344,7 +344,8 @@ partie droite de la page
         margin: auto;
         box-shadow: 1px 1px 4px $grey-dark;
         border-radius:50%;
-        max-height: 100px;
+        height: 120px;
+        width: 120px;
 
       }
     }
@@ -384,7 +385,7 @@ partie droite de la page
       margin: auto;
       display: block;
       width: 100%;
-      color: $grey-dark;
+      color: $red;
 
       span {
         text-transform: capitalize;

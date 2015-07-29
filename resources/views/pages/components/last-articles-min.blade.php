@@ -17,7 +17,7 @@
 
             </div>
             <div class="rw-index-open-article-min-icons">
-            	<img src="{{ asset('images/icon_blog_test_1.jpg') }}" />	
+            	<img src="{{ asset('images/technos/wordpress.png') }}" />
            	</div>
         </div>
         <div class="rw-index-open-article-min-triangle rw-job-color-triangle-{{ $vignette->job_id }}"></div>

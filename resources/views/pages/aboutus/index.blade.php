@@ -11,9 +11,9 @@
 
 
             <div class="rw-aboutus-content-img">
-                <img src="{{asset('images/florian.png')}}" alt=""/>
-                <img src="{{asset('images/stephanie.png')}}" alt=""/>
-                <img src="{{asset('images/kevin.png')}}" alt=""/>
+                <img src="{{asset('images/avatars/florian.png')}}" alt=""/>
+                <img src="{{asset('images/avatars/stephanie.png')}}" alt=""/>
+                <img src="{{asset('images/avatars/kevin.png')}}" alt=""/>
             </div>
 
 
@@ -41,7 +41,7 @@
 
             </p>
 
-            <img class="rw-aboutus-content-txt-pres" src="{{asset('images/pauline.png')}}" alt=""/>
+            <img class="rw-aboutus-content-txt-pres" src="{{asset('images/avatars/pauline.png')}}" alt=""/>
 
 
             <h2>
@@ -126,15 +126,6 @@
                 </li>
                 <li>
                     <img src="http://lorempixel.com/80/80/people/3/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/4/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/5/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/6/" alt="Image bleue" />
                 </li>
 
             </ul>
