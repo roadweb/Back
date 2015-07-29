@@ -1,5 +1,5 @@
 .rw-carrous{
-    width:1200px;
+    max-width:1200px;
     margin:0 auto;
     display: flex;
     flex-direction: column;
@@ -8,23 +8,24 @@
   
     .rw-carrous-nav{
         position: relative;
-        width:900px;
+        max-width:1200px;
         margin:40px auto;
         display: flex;
         align-items: flex-end;
         height:120px;
-            //border: 1px solid brown;
-
     }
 
     .rw-carrous-navbar{
         z-index: 1;
+        width:100%;
         position:relative;
-        width: 600px;
+        min-width: calc(80px*1.2*7);
         padding:0;
         list-style: none;
         display:flex;
         flex-direction: row;
+        //border: 1px solid blue;
+        
     }
 
         .rw-icon-exagone{
@@ -32,17 +33,26 @@
             width:28px;
         }
 
+    .rw-carrous-navbar-extremite,
+    .rw-carrous-navbar-job{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: center;
+        //border:1px dotted red;
+        }
+
+        .rw-carrous-navbar-extremite{
+            min-width:calc(100%/14);
+        }
+
         .rw-carrous-navbar-job{
-            display:flex;
-            flex-direction: column;
-            justify-content:flex-end;
-            align-items: center;
+            min-width: calc(100%/7);
 
             .rw-carrous-navbar-job-label {
                 overflow: hidden;
                 position:relative;
-                width:150px;
-                //opacity:0;
+                min-width: calc(80px*1.2);
                 height:0;
                 margin-bottom:54px;
                 display:flex;
@@ -83,14 +93,14 @@
             
             
             
-        a{
-            width:150px;
+        rw-carrous-navbar-job-a{
+            width:auto;
+            min-width:calc(80px*1.2);
             display:flex;
             justify-content:center;
             text-decoration: none;
                 
             .rw-icon-job{
-                //z-index:2;
                 width: 80px;
                 height: 70px;
                 display:flex;
@@ -104,6 +114,7 @@
             }
         }
     }
+
 
     .rw-carrous-navbar-job:hover {
         .rw-carrous-navbar-job-label{
@@ -124,9 +135,13 @@
 
     .rw-carrous-navbar-path{
         z-index:0;
+        width:100%;
+        min-width: calc(80px*1.2*7);
         position: absolute;
         top:50px;
-        left:-75px;
+        left:0;
+        border: 1px solid green;
+
         
         .rw-carrous-navbar-line{
             position: absolute;
@@ -135,11 +150,17 @@
             background-color:$red;
         }
         
-        .rw-icon-exagone-first{
+        .rw-icon-exagone-first,
+        .rw-icon-exagone-last{
             position: absolute;
             width:28px;
-            top: -11px;
+            top: -12px;
+        }
+        .rw-icon-exagone-first{
             left: -14px;
+        }
+        .rw-icon-exagone-last{
+            right: -14px;
         }
     }
 

@@ -1927,7 +1927,7 @@ partie droite de la page
 
 /*    MATHIEU   */
 .rw-carrous {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1942,7 +1942,7 @@ partie droite de la page
 
 .rw-carrous-nav {
   position: relative;
-  width: 900px;
+  max-width: 1200px;
   margin: 40px auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1957,8 +1957,10 @@ partie droite de la page
 
 .rw-carrous-navbar {
   z-index: 1;
+  width: 100%;
   position: relative;
-  width: 600px;
+  min-width: -webkit-calc(80px*1.2*7);
+  min-width: calc(80px*1.2*7);
   padding: 0;
   list-style: none;
   display: -webkit-box;
@@ -1980,6 +1982,7 @@ partie droite de la page
   width: 28px;
 }
 
+.rw-carrous-navbar-extremite,
 .rw-carrous-navbar-job {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2000,10 +2003,21 @@ partie droite de la page
           align-items: center;
 }
 
+.rw-carrous-navbar-extremite {
+  min-width: -webkit-calc(100%/14);
+  min-width: calc(100%/14);
+}
+
+.rw-carrous-navbar-job {
+  min-width: -webkit-calc(100%/7);
+  min-width: calc(100%/7);
+}
+
 .rw-carrous-navbar-job .rw-carrous-navbar-job-label {
   overflow: hidden;
   position: relative;
-  width: 150px;
+  min-width: -webkit-calc(80px*1.2);
+  min-width: calc(80px*1.2);
   height: 0;
   margin-bottom: 54px;
   display: -webkit-box;
@@ -2056,8 +2070,10 @@ partie droite de la page
   height: 24px;
 }
 
-.rw-carrous-navbar-job a {
-  width: 150px;
+.rw-carrous-navbar-job rw-carrous-navbar-job-a {
+  width: auto;
+  min-width: -webkit-calc(80px*1.2);
+  min-width: calc(80px*1.2);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2069,7 +2085,7 @@ partie droite de la page
   text-decoration: none;
 }
 
-.rw-carrous-navbar-job a .rw-icon-job {
+.rw-carrous-navbar-job rw-carrous-navbar-job-a .rw-icon-job {
   width: 80px;
   height: 70px;
   display: -webkit-box;
@@ -2080,7 +2096,7 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job a .rw-icon-job:hover {
+.rw-carrous-navbar-job rw-carrous-navbar-job-a .rw-icon-job:hover {
   width: -webkit-calc(80px*1.2);
   width: calc(80px*1.2);
   height: -webkit-calc(70px*1.2);
@@ -2103,9 +2119,13 @@ partie droite de la page
 
 .rw-carrous-navbar-path {
   z-index: 0;
+  width: 100%;
+  min-width: -webkit-calc(80px*1.2*7);
+  min-width: calc(80px*1.2*7);
   position: absolute;
   top: 50px;
-  left: -75px;
+  left: 0;
+  border: 1px solid green;
 }
 
 .rw-carrous-navbar-path .rw-carrous-navbar-line {
@@ -2114,11 +2134,19 @@ partie droite de la page
   background-color: #bf382a;
 }
 
-.rw-carrous-navbar-path .rw-icon-exagone-first {
+.rw-carrous-navbar-path .rw-icon-exagone-first,
+.rw-carrous-navbar-path .rw-icon-exagone-last {
   position: absolute;
   width: 28px;
-  top: -11px;
+  top: -12px;
+}
+
+.rw-carrous-navbar-path .rw-icon-exagone-first {
   left: -14px;
+}
+
+.rw-carrous-navbar-path .rw-icon-exagone-last {
+  right: -14px;
 }
 
 .white {
@@ -3269,7 +3297,7 @@ partie droite de la page
 }
 
 .rw-allartus-main {
-  max-width: 1050px;
+  max-width: 1200px;
 }
 
 .rw-allartus-main .rw-allartus-title {
