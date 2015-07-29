@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="rw-index-open-article-min-icons">
-                                <img src="{{ asset('images/technos/wordpress.png') }}" />
+                                <img src="{{ asset( $vignette->techno->img_link) }}" />
 
                             </div>
                         </div>
