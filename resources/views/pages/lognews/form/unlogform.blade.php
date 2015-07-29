@@ -31,12 +31,4 @@
         </div>
     </div>
     
-    
-    <div class="rw-lognews-form-group">
-        <div class="rw-lognews-container">
-            <a class="rw-lognews-create-accompte" href="#">Créer un compte</a> <!-- value="{{ old('email') }}" -->
-        </div>
-    </div>
-    
-    
 </form>
