@@ -9,86 +9,99 @@
 
         <p>Un souci, une demande, des suggestions ? N'hésitez pas à remplir le formulaire ci-dessous et à nous le faire parvenir ! Nous vous recontacterons par mail au plus vite et ferons notre possible pour régler votre problème :) </p>
 
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+
+        @if(Session::has('message'))
+    <div class="alert alert-info">
+      {{Session::get('message')}}
+    </div>
+@endif
+
+
     <h2>Formulaire à remplir</h2>
 
-    <form action="" method="">
+    {!! Form::open(array('route' => 'contact_store')) !!}
 
         <fieldset>
 
             <div class="rw-contact-field">
-                <label for="prenom">Prénom : </label>
-                <input type="text" name="prenom" placeholder="Votre prénom" />
+                {!! Form::label('prenom', 'Prénom :') !!}
+                {!! Form::text('firstname', null, 
+                array('required', 
+                    'placeholder'=>'Votre Prénom')) !!}
            </div>
 
             <div class="rw-contact-field">
-                <label for="nom">Nom : </label>
-                <input type="text" name="nom" placeholder="Votre Nom" />
+                {!! Form::label('nom', 'Nom :') !!}
+                {!! Form::text('lastname', null, 
+                array('required', 
+                    'placeholder'=>'Votre Nom')) !!}
             </div>
 
             <div class="rw-contact-field">
-                <label for="mail">Adresse mail : </label>
-                <input type="email" name="mail" placeholder="votremail@mail.fr" />
+                {!! Form::label('email', 'Email :') !!}
+                {!! Form::email('email', null, 
+                array('required', 
+                    'placeholder'=>'votremail@mail.fr')) !!}
             </div>
 
             <div class="rw-contact-field">
-                <label for="objet">Objet de votre email :</label>
-                <select name="objet" size="1">
-                    <optgroup label="Site web"> 
-                        <option>Je veux signaler un bug</option>
-                        <option>Je veux signaler un bug</option>
-                        <option>Je veux signaler un bug</option>
-                    </optgroup>
-                    <optgroup label="Blog"> 
-                        <option>????</option>
-                        <option>????</option>
-                        <option>????</option>
-                    </optgroup>
-                    <optgroup label="Association"> 
-                        <option>????</option>
-                        <option>????</option>
-                        <option>????</option>
-                    </optgroup>
-                    <optgroup label="Autre"> 
-                        <option>Autre</option>
-                    </optgroup>
-                </select>
+                {!! Form::label('objet', 'Objet de votre Email :') !!}
+                {!! Form::select('objet', array (
+                'Site web' => array('bug' => 'Je veux signaler un bug', '?' => '???'),
+                'Blog' => array('?' => '???', '?' => '???'),
+                'Association' => array('?' => '???', '?' => '???'),
+                'Autre' => array('Autre')
+                )) !!}
             </div>
 
             <div class="rw-contact-field">
-                <label for="message">Message : </label>
-                <textarea name="message" placeholder="Entrez votre message" /></textarea>
+                {!! Form::label('message', 'Message :') !!}
+                {!! Form::textarea('message', null, 
+                array('required', 
+                      'placeholder'=>'Entrez votre message')) !!}
             </div>
 
             <div class="rw-contact-field">
-                <label for="url">Url de la page concernée : </label>
-                <input type="url" name="url" placeholder="Copiez-collez l'url de la page concernée" />
+                {!! Form::label('url', 'Url de la page concernée :') !!}
+                {!! Form::url('url', null, 
+                array('placeholder'=>'Copiez-collez l\'url de la page concernée si besoin' )) !!}
             </div>
 
             <div class="rw-sub-input-file-container">
                 <p>Capture d'écran :</p>
                 <div>
-                    <label for="my-file" class="rw-sub-input-file-trigger" tabindex="0">Joindre une image...</label>
-                    <input class="rw-sub-input-file" id="my-file" type="file">
-                     <p class="rw-sub-file-return"></p>
+                    {!! Form::label('my-file', 'Joindre une image...', 
+                    array('class' => 'rw-sub-input-file-trigger',
+                        'tabindex' => '0' )) !!}
+                    {!! Form::file('file', ['class' => 'rw-sub-input-file', 'id' => 'my-file']) !!}
+                    <p class="rw-sub-file-return"></p>
                 </div>
             </div>
 
             <div class="rw-contact-field">
-                <input type="checkbox" name="copie" id="copie" />
-                <label for="copie">
-                    <span class="ui"></span>
-                    Je désire recevoir une copie de mon message par email
+                {!! Form::checkbox('copie', 'yes', false, 
+                    array('id'=>'copie')) !!}
+                {!! HTML::decode(Form::label('copie', '<span class="ui"></span> Je désire recevoir une copie de mon message par email')) !!}
+                    
                 </label>
             </div>
-
             <div class="rw-contact-field">
-                <label for="envoyer" class="rw-hidden">Envoyer l'email :</label>
-                <input type="submit" name="envoyer" id="envoyer" />
+                {!! Form::label('envoyer', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::submit('Envoyer', 
+                array ('required', 
+                        'name' => 'envoyer', 
+                        'id' => 'envoyer'
+                )) !!}
             </div>
 
         </fieldset>
 
-    </form>
+    {!! Form::close() !!}
 
     </div>
 </div>
