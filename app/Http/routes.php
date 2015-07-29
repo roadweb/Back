@@ -74,7 +74,11 @@ Route::get('/compte', 'CompteController@index');
 
 Route::get('/adhesion', 'AdhesionController@index');
 
-Route::get('/contact', 'ContactController@index');
+Route::get('/contact', 
+  ['as' => 'contact', 'uses' => 'ContactController@index']);
+
+Route::post('/contact', 
+  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
 
 /*
 |--------------------------------------------------------------------------
