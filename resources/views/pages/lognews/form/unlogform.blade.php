@@ -6,7 +6,10 @@
         <div class="rw-lognews-container">
             <h1 class="rw-welcome">
                 Bienvenue
-                <p class="rw-subscriber">$abonné(e)</p>
+                @if(Auth::check())
+                    <p class="rw-subscriber">{{Auth::user()->username}}</p>
+                @endif
+
             </h1>
         </div>
     </div>    
