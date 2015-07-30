@@ -51,7 +51,6 @@
             <fieldset class="rw-sub-checkbox">
 
                 <p>
-                    <!--<input type="checkbox" id="emweb" value="{{old('emweb')}}" />-->
                     {!! Form::checkbox('emweb', 'on', false, ["id" => "emweb"]); !!}
 
                     <label for="emweb">
@@ -59,31 +58,6 @@
 
             </span>Je suis ou j'ai été élève de l'EMWeb</label>
                 </p>
-            <!---------------------
-             upload de fichier uniquement si checkbox élèves EmWeb sélectionnée
-            ----------------------->
-               <p>
-                La validation de votre inscription en tant qu'élève ou ancien élève de l'EMWeb se fait par l'envoi d'un certificat de scolarité à votre nom directement par ce formulaire.
-
-               </p>
-
-                <div class="rw-sub-input-file-container">
-                    <input class="rw-sub-input-file" id="my-file" type="file">
-                    <label for="my-file" class="rw-sub-input-file-trigger" tabindex="0">Choisir un fichier...</label>
-                </div>
-                <p class="rw-sub-file-return"></p>
-
-                <p>
-                    <!--<input type="checkbox" id="assorw" value="association"/>-->
-                    {!! Form::checkbox('assorw', 'on', true, ["id" => "assorw"]); !!}
-
-                    <label for="assorw">
-            <span class="ui">
-
-            </span>Je désire des renseignements concernant l'association Road Web.</label>
-                </p>
-
-
             </fieldset>
             <!---------------------
              validation du formulaire
