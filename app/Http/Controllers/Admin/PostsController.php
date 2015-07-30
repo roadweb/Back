@@ -39,7 +39,7 @@ class PostsController extends Controller
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
         $jobs = Job::lists('name', 'id');
-        $technos = Techno::all();
+        $technos = Techno::orderBy('name', 'asc')->get();
 
         return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'technos'));
     }
@@ -80,7 +80,7 @@ class PostsController extends Controller
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
         $jobs = Job::lists('name', 'id');
-        $technos = Techno::all();
+        $technos = Techno::orderBy('name', 'asc')->get();
 
 
         return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post', 'technos'));

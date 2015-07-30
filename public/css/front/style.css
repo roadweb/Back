@@ -1555,9 +1555,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -2155,46 +2153,60 @@ partie droite de la page
   color: white;
 }
 
-.rw-carrous-body {
-  width: 1200px;
-}
-
-.rw-carrous-body .rw-carrous-body-content {
+.rw-carrous {
+  margin: 70px auto;
+  width: 900px;
+  height: 370px;
   position: relative;
 }
 
-.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article-screen {
-  display: inline-block;
+.rw-carrous .rw-carrous-body {
+  width: 900px;
+  height: 370px;
+  padding: 5px;
+  position: relative;
+}
+
+.rw-carrous .rw-carrous-body .rw-carrous-body-content {
+  position: relative;
+  height: 370px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article-screen {
+  display: inline;
   width: 416px;
   height: 370px;
-  margin-left: 40px;
+  margin: auto;
 }
 
-.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article {
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article {
   position: absolute;
-  display: inline-block;
+  display: inline;
   width: 600px;
   top: 20px;
-  margin-left: 30px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-h1 {
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-h1 {
   display: block;
-  color: blue;
   font-size: 32px;
   line-height: 40px;
   margin-bottom: 10px;
 }
 
-.rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p {
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p {
   display: block;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  width: 70%;
 }
 
 .rw-readmore,
 .rw-readmore a {
-  color: blue;
+  color: inherit;
 }
 
 .rw-lognews-login,

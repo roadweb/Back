@@ -7,7 +7,6 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Job;
-use App\Techno;
 
 class BlogController extends Controller
 {
