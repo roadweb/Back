@@ -34,8 +34,8 @@ Route::group(['prefix' => 'admin'], function() {
     });
 
     Route::controllers([
-        'auth'     => 'Auth\AuthController',
-        'password' => 'Auth\PasswordController',
+        'auth'     => 'Admin\Auth\AuthController',
+        'password' => 'Admin\Auth\PasswordController',
     ]);
 });
 
@@ -56,7 +56,7 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}', 'BlogController@article');
 
-Route::get('/blog/monblog/{id}', 'BlogController@allArticlesUser');
+Route::get('/monblog/{id}/{username}', 'BlogController@allArticlesUser');
 
 Route::get('/jobs', 'JobsController@index');
 
@@ -70,15 +70,29 @@ Route::get('/inscription/validation', 'SubController@subvalid');
 
 Route::get('/apropos', 'AboutusController@index');
 
-Route::get('/compte', 'CompteController@index');
+Route::get('/compte', [
+    'as' => 'compte',
+    'uses' => 'CompteController@index',
+    'middleware' => 'auth.public'
+]);
 
 Route::get('/adhesion', 'AdhesionController@index');
 
 Route::get('/contact', 
   ['as' => 'contact', 'uses' => 'ContactController@index']);
 
-Route::post('/contact', 
-  ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+Route::post('/contact', ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+/*
+|--------------------------------------------------------------------------
+| Authentification de la partie public
+|--------------------------------------------------------------------------
+*/
+
+Route::controllers([
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
 
 /*
 |--------------------------------------------------------------------------

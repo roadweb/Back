@@ -1,10 +1,7 @@
 <!-- dev: mathieu -->
 
-<form class="rw-lognews-form" role="form" method="POST" action="#">  <!-- action="{{ url('/admin/auth/login') }}" -->
-    <input type="hidden" name="_token" value="#"> <!-- value="{{ csrf_token() }}" -->
+<div class="rw-lognews-form">
 
-    
-    
     <div class="rw-lognews-form-group">
         <div class="rw-lognews-container">
             <h1 class="rw-welcome">
@@ -27,8 +24,8 @@
             <div class="rw-lognews-icon">
                 <img src="{{ asset('images/icons-manquantes/ok.png') }}" alt="ok"/>
             </div>
-            <button type="submit">Se déconnecter</button>
+            <a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a>
         </div>
     </div>
     
-</form>
+</div>
