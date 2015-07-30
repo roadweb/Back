@@ -9,7 +9,7 @@
                     @include('admin.posts.components.articles', ['posts' => $posts])
                 @else
                     <div class="alert alert-info">
-                        Aucun article n'a encore été publiés.
+                        Aucun article n'a encore été publié.
                     </div>
                 @endif
             </div>
