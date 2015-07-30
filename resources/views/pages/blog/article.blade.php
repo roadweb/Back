@@ -204,7 +204,9 @@
 
             @endforeach
             <div class="rw-blog-band-others-sameAuth">
-                <a class="rw-blog-band-others-sameAuth-all-articles" href="monblog/{{$post->user->id}}">Tous les articles de <span>{{$post->user->username}}</span>
+                <a class="rw-blog-band-others-sameAuth-all-articles" href="{{URL::to('/monblog', ['id' => $post->user->id, 'username' => $post->user->username])}}">Tous les articles de <span>{{$post->user->username}}
+
+                    </span>
                 </a>
 
             </div>
