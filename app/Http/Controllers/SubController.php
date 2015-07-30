@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Job;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class SubController extends Controller
 {
@@ -25,7 +26,12 @@ class SubController extends Controller
 
     public function subvalid()
     {
-        return view('pages.subscribe.subvalid');
+        if(Auth::check()) {
+            $user = Auth::user();
+            return view('pages.subscribe.subvalid', compact('user'));
+        }
+
+        return redirect('/inscription');
     }
 
 }

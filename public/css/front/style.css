@@ -2439,11 +2439,9 @@ partie droite de la page
 }
 
 .rw-lognews-form .rw-lognews-form-group .rw-lognews-container button[type="submit"],
-.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="email"],
-.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input[type="password"],
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container input,
 .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button[type="submit"],
-.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input[type="email"],
-.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input[type="password"] {
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn input {
   width: 180px;
   border-left: 1px solid white;
   -webkit-box-pack: center;
