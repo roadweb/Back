@@ -1555,7 +1555,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -2378,8 +2380,8 @@ partie droite de la page
       -ms-flex-line-pack: stretch;
           align-content: stretch;
   /*.rw-lognews-container,
-        .rw-lognews-container-btn
-        */
+    .rw-lognews-container-btn
+    */
 }
 
 .rw-lognews-form .rw-lognews-form-group .rw-lognews-container,
@@ -2539,6 +2541,10 @@ partie droite de la page
 .rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button[type="submit"] {
   color: white;
   font-weight: 600;
+}
+
+.rw-lognews-form .rw-lognews-form-group .rw-lognews-container-btn button[type="submit"] a {
+  color: inherit;
 }
 
 .rw-lognews-form-group .rw-bg-connect {

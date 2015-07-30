@@ -24,7 +24,8 @@
             <div class="rw-lognews-icon">
                 <img src="{{ asset('images/icons-manquantes/ok.png') }}" alt="ok"/>
             </div>
-            <a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a>
+            <button type="submit"><a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a></button>
+            {{--<a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a>--}}
         </div>
     </div>
     
