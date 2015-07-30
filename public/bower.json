@@ -17,6 +17,7 @@
   "dependencies": {
     "textAngular": "~1.3.11",
     "bootstrap-sass-official": "~3.3.4",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "dw-bxslider-4": "~4.2.5"
   }
 }

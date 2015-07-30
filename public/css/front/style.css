@@ -2211,6 +2211,20 @@ partie droite de la page
   color: inherit;
 }
 
+.bx-wrapper {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.bx-wrapper .bx-prev {
+  left: -35px;
+}
+
+.bx-wrapper .bx-next {
+  right: -35px;
+}
+
 .rw-lognews-login,
 .rw-lognews-newsletter {
   z-index: 9999;
