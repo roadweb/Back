@@ -37,15 +37,16 @@ class ContactController extends Controller
             'firstname' => $request->get('firstname'),
             'lastname' => $request->get('lastname'),
             'email' => $request->get('email'),
-            'objet' => $request->get('object'),
+            'objet' => $request->get('objet'),
             'bodyMessage' => $request->get('message'),
             'url' => $request->get('url'),
             'file'=> $request->get('file'),
             'copie' => $request->get('copie')
         ), function($message)
         {
-            $message->from('wj@wjgilmore.com');
-            $message->to('hello@road-web.fr', 'Admin')->subject('TODOParrot Feedback');
+            $message->from('nen@gmail.com');
+            $message->to('peyrot.celine@gmail.com', 'Admin')->subject('objet');
+            $message->setReplyTo('n@g.com');
         });
 
 

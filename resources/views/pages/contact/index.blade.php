@@ -55,7 +55,7 @@
                 'Site web' => array('bug' => 'Je veux signaler un bug', '?' => '???'),
                 'Blog' => array('?' => '???', '?' => '???'),
                 'Association' => array('?' => '???', '?' => '???'),
-                'Autre' => array('Autre')
+                'Autre' => array('?' => 'Autre')
                 )) !!}
             </div>
 
