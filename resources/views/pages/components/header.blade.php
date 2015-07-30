@@ -18,24 +18,28 @@
     <nav id="rw-nav">
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
         <div class="rw-logo-fix">
-        <img alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
+            <img alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
         </div>
         <ul class="rw-ul_grey">
             <li class="{{ Request::is( '/') ? 'active' : '' }}">
                 <a href="{{ URL::to( '/') }}">Accueil</a>
             </li>
-            <li class="{{ Request::is( 'blog') ? 'active' : '' }}">
+            <li class="{{ Request::is('blog') ? 'active' : '' }}">
                 <a href="{{ URL::to( 'blog') }}">Blog</a>
             </li>
             <li class="{{ Request::is( 'jobs') ? 'active' : '' }}">
                 <a href="{{ URL::to( 'jobs')  }}">Nos métiers</a>
             </li>
-            <li class="{{ Request::is( 'apropos') ? 'active' : '' }}">
+            <li class="{{ Request::is('apropos') ? 'active' : '' }}">
                 <a href="{{ URL::to( 'apropos')  }}">Qui sommes nous</a>
             </li>
         </ul>
         <ul class="rw-ul_red">
-            <li><a href="{{ url('/inscription') }}">S'inscrire</a></li>
+            @if(Auth::check())
+                <li><a href="{{ route('compte') }}">Mon compte</a></li>
+            @else()
+                <li><a href="{{ url('/inscription') }}">S'inscrire</a></li>
+            @endif
         </ul>
     </nav>
     {{--<div class="rw-clear"></div>--}}

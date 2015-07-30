@@ -51,6 +51,14 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            //...
+        ]);
+
+        if($validator->fails()) {
+            redirect(route('admin.posts.create'))->withErrors($validator);
+        }
+
         Post::create($request->all());
 
         return redirect(route('admin.posts.index'));
