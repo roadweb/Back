@@ -146,92 +146,14 @@
                         <div class="panel-body">
                             <div class="form-group form-inline">
 
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 1, false, ["id" => "checkboxhtml5", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxhtml5','HTML 5') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 2, false, ["id" => "checkboxCSS", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxCSS','CSS 3') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 3, false, ["id" => "checkboxphp", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxphp','PHP') !!}
-                                </div>
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 4, false, ["id" => "checkboxjs", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxjs','JavaScript') !!}
-                                </div>
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 5, false, ["id" => "checkboxphotoshop", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxphotoshop','Photoshop') !!}
-                                </div>
+                                @foreach($technos as $techno)
                                 <div class="radio radio-success">
 
-                                    {!! Form::radio('techno_id', 6, false, ["id" => "checkboxillustrator", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxillustrator','Illustrator') !!}
-                                </div>
-                                <div class="radio radio-success">
-
-                                    {!! Form::radio('techno_id', 7, false, ["id" => "checkboxaftereffect", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxaftereffect','After Effect') !!}
-                                </div>
-                                <div class="radio radio-success">
-
-                                    {!! Form::radio('techno_id', 8, false, ["id" => "checkboxadobepremiere", "class" => "radio radio-success"]);!!}
-                                    {!! Form::label('checkboxadobepremiere','Adobe Premiere') !!}
-
-                                </div>
-                                <div class="radio radio-success">
-
-                                    {!! Form::radio('techno_id', 9, false, ["id" => "checkboxflash", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxflash','Adobe Flash') !!}
-                                </div>
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 10, false, ["id" => "checkboxgithub", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxgithub','Github') !!}
+                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success"]); !!}
+                                    {!! Form::label($techno->id,$techno->name) !!}
                                 </div>
 
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 11, false, ["id" => "checkboxbuffer", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxbuffer','Buffer') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 12, false, ["id" => "checkboxwordpress", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxwordpress','Wordpress') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 13, false, ["id" => "checkboxamp", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxamp','Lamp, Mamp, Wamp, Xamp') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 14, false, ["id" => "checkboxajax", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxajax','Ajax') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 15, false, ["id" => "checkboxangularjs", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxangularjs','Angular JS') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 16, false, ["id" => "checkboxsql", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxsql','SQL') !!}
-                                </div>
-
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 17, false, ["id" => "checkboxc", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxc','langage C/C++') !!}
-                                </div>
-                                <div class="radio radio-success">
-                                    {!! Form::radio('techno_id', 18, true, ["id" => "checkboxc", "class" => "radio radio-success"]); !!}
-                                    {!! Form::label('checkboxc','Autre') !!}
-                                </div>
+                                @endforeach
                             </div>
 
                         </div>
