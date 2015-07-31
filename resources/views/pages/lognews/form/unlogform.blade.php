@@ -6,7 +6,10 @@
         <div class="rw-lognews-container">
             <h1 class="rw-welcome">
                 Bienvenue
-                <p class="rw-subscriber">$abonné(e)</p>
+                @if(Auth::check())
+                    <p class="rw-subscriber">{{Auth::user()->username}}</p>
+                @endif
+
             </h1>
         </div>
     </div>    
@@ -24,7 +27,8 @@
             <div class="rw-lognews-icon">
                 <img src="{{ asset('images/icons-manquantes/ok.png') }}" alt="ok"/>
             </div>
-            <a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a>
+            <button type="submit"><a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a></button>
+            {{--<a href="{{ URL::to('/auth/logout') }}">Se déconnecter</a>--}}
         </div>
     </div>
     
