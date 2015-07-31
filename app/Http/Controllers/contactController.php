@@ -42,11 +42,11 @@ class ContactController extends Controller
             'url' => $request->get('url'),
             'file'=> $request->get('file'),
             'copie' => $request->get('copie')
-        ), function($message)
+        ), function($message) use ($request)
         {
-            $message->from('nen@gmail.com');
-            $message->to('peyrot.celine@gmail.com', 'Admin')->subject('objet');
-            $message->setReplyTo('n@g.com');
+            $message->from($request->email);
+            $message->to('peyrot.celine@gmail.com', 'Admin')->subject($request->objet);
+            $message->setReplyTo($request->email);
         });
 
 
