@@ -21,8 +21,7 @@
 		<p style="margin-left:20px;"><span style="font-weight:bold;">Objet du Message :</span> {{ $objet }}</p>
 		<p style="margin-left:20px;"><span style="font-weight:bold;">Corps du Message :</span></p>
 		<p style="background-color:white;padding:20px;margin:20px;">{{ $bodyMessage }}</p>
-		<p>
-		<p style="margin-left:20px;margin-bottom:20px;"><span style="font-weight:bold;">Url de la page concernée</span> (s'il y a lieu): {{ $url }}</p>
+		<p style="margin-left:20px;padding-bottom:50px;"><span style="font-weight:bold;">Url de la page concernée</span> (s'il y a lieu): {{ $url }} <br /></p>
 	</div>
 
 </body>

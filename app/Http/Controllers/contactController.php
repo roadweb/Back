@@ -32,6 +32,7 @@ class ContactController extends Controller
 
     public function store(ContactFormRequest $request)
     {
+       
          \Mail::send('emails.contact',
         array(
             'firstname' => $request->get('firstname'),
@@ -45,13 +46,17 @@ class ContactController extends Controller
         ), function($message) use ($request)
         {
             $message->from($request->email);
-            $message->to('peyrot.celine@gmail.com', 'Admin')->subject($request->objet);
+            if ($request->copie === 'yes') {
+                $message->to($request->email, $request->firstname)->subject('copie de mon message à roadweb');
+            }
+            $message->to('peyrot.celine@gmail.com', 'Equipe Roadweb')->subject($request->objet);
             $message->setReplyTo($request->email);
+            //$message->attach($request->file);
         });
 
 
 
         return \Redirect::route('contact')
-      ->with('message', 'Votre mail a bien été envoyé !');
+      ->with('message', 'Votre email a bien été envoyé ! L\'équipe Roadweb vous répondra dans les plus brefs délais.');
     }
 }

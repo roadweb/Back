@@ -18,6 +18,26 @@
 		line-height:$lineHeight;
 		text-align:center;
 	}
+
+	ul.rw-contact-error {
+		width:100%;
+		li {
+			color: $red;
+			font-size: $fontSize +0.2;
+			line-height:$lineHeight;
+			width:100%;
+			font-weight: 400;
+			text-align:center;
+		}
+	}
+	p.rw-contact-success {
+		color: $colorOpen;
+		font-size: $fontSize +0.2;
+		line-height:$lineHeight;
+		width:100%;
+		font-weight: 400;
+		text-align:center;
+	}
 	h2 {
         margin:20px auto;
         color: $colorOpen;
