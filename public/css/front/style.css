@@ -3023,6 +3023,28 @@ partie droite de la page
   text-align: center;
 }
 
+.rw-contact-container ul.rw-contact-error {
+  width: 100%;
+}
+
+.rw-contact-container ul.rw-contact-error li {
+  color: #bf382a;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rw-contact-container p.rw-contact-success {
+  color: #16A086;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+
 .rw-contact-container h2 {
   margin: 20px auto;
   color: #16A086;
