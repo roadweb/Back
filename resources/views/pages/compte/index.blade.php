@@ -75,23 +75,23 @@
                 <h2>Mon avatar</h2>
 
 
-                {!! Form::model($user, ['route' => ['admin.users.update', $user->id], 'method' => 'patch', 'id' => '', 'files' => true ]) !!}
+                {{--{!! Form::model($user, ['route' => ['admin.users.update', $user->id], 'method' => 'patch', 'id' => '', 'files' => true ]) !!}--}}
 
 
                 <div class="rw-cpt-content-avatar">
 
                     <img class="rw-cpt-avatar" src="{{$user->avatar}}" alt="{{$user->username}}"/>
 
-                    {!! Form::submit('Sauvegarder les informations', ["id" => "rw-cpt-btn-submit-avatar"]) !!}
+                    {{--{!! Form::submit('Sauvegarder les informations', ["id" => "rw-cpt-btn-submit-avatar"]) !!}--}}
 
                     
 
-                    {!! Form::close() !!}
+                    {{--{!! Form::close() !!}--}}
 
 
                 </div>
 
-                <button id="rw-cpt-button-avatar">Editer mes informations</button>
+                {{--<button id="rw-cpt-button-avatar">Editer mes informations</button>--}}
             </div>
 
 
