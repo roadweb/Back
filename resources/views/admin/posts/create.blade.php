@@ -104,7 +104,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            {!! Form::label('title','Le titre de l\'article (100 max)') !!}}
+                            {!! Form::label('title','Le titre de l\'article (100 max)') !!}
                             {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez le titre ici..."])!!}
                         </div>
                         <div class="form-group">

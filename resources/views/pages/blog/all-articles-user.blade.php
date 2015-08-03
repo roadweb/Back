@@ -30,7 +30,7 @@
                         <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">
                             <div class="rw-index-open-article-min-title">
 
-                                <a href="../{{$vignette->id}}" >
+                                <a href="../../blog/{{$vignette->id}}" >
                                     {{ str_limit($vignette->title, $limit = 37, $end = '...') }}
                                 </a>
 
@@ -59,16 +59,14 @@
                     </span>
 
                     <p class="rw-allartus-header-content-job">
-                        {{$user->job_name}}Développeur
+                        {{$user->job->name}}
                     </p>
 
                     <div class="rw-allartus-header-avatar">
                         <img src="{{ asset( $user->avatar)}}" alt="avatar"/>
                     </div>
 
-                    <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
-                    praesentium quis
-                    {{$user->bio}}</p>
+                    <p>{{$user->bio}}</p>
 
                     <div class="rw-allartus-header-rs">
                         <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
