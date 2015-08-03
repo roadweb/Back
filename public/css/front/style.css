@@ -1155,6 +1155,7 @@ Bloc contenu de l'article
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   height: auto;
+  font-size: 1em;
 }
 
 .rw-blog-article-content h1 {
@@ -1261,6 +1262,18 @@ Bloc contenu de l'article
   line-height: 1.5em;
 }
 
+#rw-blog-article-content-p {
+  font-size: 1em;
+}
+
+.rw-blog-article-content-p-plus {
+  font-size: 1.85em;
+}
+
+.rw-blog-article-content-p-moins {
+  font-size: 0.8em;
+}
+
 .rw-blog-article-content-auth {
   font-weight: bold;
   text-transform: capitalize;
@@ -1324,7 +1337,7 @@ partie droite de la page
 .rw-blog-band-container .rw-blog-band-auth p {
   padding: 20px 0;
   line-height: 1.5em;
-  text-align: left;
+  text-align: center;
 }
 
 .rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-rsx {
@@ -2166,7 +2179,7 @@ partie droite de la page
   display: block;
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p {
@@ -2174,6 +2187,19 @@ partie droite de la page
   font-size: 1.2em;
   line-height: 1.5em;
   width: 70%;
+}
+
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.rw-carrous .rw-carrous-body .rw-carrous-body-content .rw-carrous-body-content-article .rw-carrous-body-content-article-text-p button:hover {
+  background-color: rgba(126, 139, 140, 0.5);
+  color: #FFFFFF !important;
+  border-radius: 10px;
 }
 
 .rw-readmore,

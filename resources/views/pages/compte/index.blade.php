@@ -81,6 +81,11 @@
                  fin bouton en attendant la page plume!
                 ----------------------->
 
+                <a href="{{URL::to('/monblog', ['id' => $user->id, 'username' => $user->username])}}">
+                    <button id="rw-cpt-button">Ma vue publique</button>
+                </a>
+
+
                 <h2>Mon avatar</h2>
 
 

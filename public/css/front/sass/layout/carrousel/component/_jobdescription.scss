@@ -39,7 +39,7 @@
                 display: block;
                 font-size:32px;
                 line-height: 40px;
-                margin-bottom:10px;
+                margin-bottom:20px;
             }
 
             .rw-carrous-body-content-article-text-p{
@@ -47,6 +47,19 @@
                 font-size:$fontSize + 0.2;
                 line-height: $lineHeight;
                 width: 70%;
+
+              button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+
+                &:hover {
+                  background-color: rgba($grey-dark, 0.5);
+                  color: #FFFFFF!important;
+                  border-radius: 10px;
+                }
+              }
             }
         }
     }

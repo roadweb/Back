@@ -30,7 +30,7 @@
                         <p class="rw-carrous-body-content-article-text-p">
                             {{ $job->job_description }}
                             Le webmarketer est la personne en charge de la création et de l’augmentation de trafic sur un site Web. Il doit mettre en place une stratégie regroupant différentes actions pour augmenter la
-                            <button>
+                            <button class="rw-job-color-txt-{{$job->id}}">
                                 <i class="fa fa-hand-o-right"></i> Lire la suite
                             </button>
                         </p>
