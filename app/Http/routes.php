@@ -76,6 +76,9 @@ Route::get('/compte', [
     'middleware' => 'auth.public'
 ]);
 
+Route::resource('compte', 'CompteController');
+
+
 Route::get('/adhesion', 'AdhesionController@index');
 
 Route::get('/contact', 

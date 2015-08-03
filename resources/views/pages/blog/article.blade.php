@@ -5,7 +5,7 @@
     <div class="rw-main-container-articleon">
 
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
-            <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
+           <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
                     <span>
                         <i class="fa fa-clock-o"></i> $temps
@@ -147,8 +147,7 @@
                     <img src="{{ asset( $post->user->avatar )}}" alt="avatar"/>
                 </div>
 
-                <p>Un mot sur l'auteur..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore minus mollitia neque omnis
-                    praesentium quis {{ $post->user->bio }}</p>
+                <p>{{ $post->user->bio }}</p>
 
 
                 <div class="rw-blog-band-auth-rsx">
@@ -262,7 +261,7 @@
             @foreach($postSticky as $postStic)
 
             <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
-
+                <a href="{{$postStic->id}}">
                 <div class="rw-blog-band-others-Une-illus">
 
                     <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>
@@ -275,7 +274,7 @@
                     <h3> {{ $postStic->title }} </h3>
 
                 </div>
-
+                </a>
 
             </div>
 

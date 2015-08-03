@@ -44,12 +44,14 @@ class BlogController extends Controller
         $jobPosts = Post::published()
             ->orderByRaw('RAND()')
             ->where('job_id', $post->job->id)
+            ->where('id', '!=', $post->id)
             ->get()
             ->take(2);
 
         $postSticky = Post::published()
             ->orderByRaw('RAND()')
             ->where('is_sticky', 'on')
+            ->where('id', '!=', $post->id)
             ->take(1)
             ->get();
 

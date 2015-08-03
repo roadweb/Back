@@ -2,10 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\User;
-use App\Job;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class UsersController extends Controller {
 
@@ -69,7 +67,7 @@ class UsersController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+        //
 	}
 
 	/**
