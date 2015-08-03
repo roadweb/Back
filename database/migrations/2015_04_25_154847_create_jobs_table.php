@@ -22,15 +22,16 @@ class CreateJobsTable extends Migration {
             $table->string('resume');
             $table->longText('content');
             $table->string('title');
+            $table->string('slide_img');
 
 		});
 
-        Job::create(['name' => 'Developpeur', 'job_icon' => 'images/jobs-icon/developpement.png']);
-        Job::create(['name' => 'Designer', 'job_icon' => 'images/jobs-icon/webdesign.png']);
-        Job::create(['name' => 'Community Manager', 'job_icon' => 'images/jobs-icon/cm.png']);
-        Job::create(['name' => 'Web Marketer', 'job_icon' => 'images/jobs-icon/webmarketing.png']);
-        Job::create(['name' => 'Integrateur', 'job_icon' => 'images/jobs-icon/integration.png']);
-        Job::create(['name' => 'Referenceur', 'job_icon' => 'images/jobs-icon/referencement.png']);
+        Job::create(['name' => 'Developpeur', 'job_icon' => 'images/jobs-icon/developpement.png', 'slide_img' => 'images/ecran_slide/ecran-developement.png']);
+        Job::create(['name' => 'Designer', 'job_icon' => 'images/jobs-icon/webdesign.png', 'slide_img' => 'images/ecran_slide/ecran-webdesigne.png']);
+        Job::create(['name' => 'Community Manager', 'job_icon' => 'images/jobs-icon/cm.png', 'slide_img' => 'images/ecran_slide/ecran-cm.png']);
+        Job::create(['name' => 'Web Marketer', 'job_icon' => 'images/jobs-icon/webmarketing.png', 'slide_img' => 'images/ecran_slide/ecran-webmarketing.png']);
+        Job::create(['name' => 'Integrateur', 'job_icon' => 'images/jobs-icon/integration.png', 'slide_img' => 'images/ecran_slide/ecran-integration.png']);
+        Job::create(['name' => 'Referenceur', 'job_icon' => 'images/jobs-icon/referencement.png', 'slide_img' => 'images/ecran_slide/ecran-referencement.png']);
 	}
 
 	/**
