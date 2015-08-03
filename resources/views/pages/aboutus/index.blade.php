@@ -65,10 +65,10 @@
         <div class="rw-aboutus-slideshow">
             <ul class="rw-aboutus-sContent">
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/1/" alt="Image bleue" />
+                    <img src="{{ asset('images/avatars/laetitiacaille.jpg') }}" alt="Laetitia Caille" title="Laetitia Caille" />
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/2/" alt="Image verte" />
+                    <img src="{{ asset('images/avatars/valerieottaviano.jpg') }}" alt="Valérie Ottaviano" title="Valérie Ottaviano" />
                 </li>
                 <li>
                     <img src="http://lorempixel.com/80/80/people/3/" alt="Image bleue" />
@@ -93,33 +93,6 @@
                 </li>
                 <li>
                     <img src="http://lorempixel.com/80/80/people/1/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/2/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/3/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/4/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/5/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/6/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/7/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/8/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/9/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/1/" alt="Image bleue" />
                 </li>
                 <li>
                     <img src="http://lorempixel.com/80/80/people/2/" alt="Image bleue" />

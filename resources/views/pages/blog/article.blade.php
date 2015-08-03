@@ -8,7 +8,7 @@
            <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
                     <span>
-                        <i class="fa fa-clock-o"></i> $temps
+                        {{--<i class="fa fa-clock-o"></i>--}}
                     </span>
 
                 <span>
@@ -22,9 +22,9 @@
                 </span>
 
                     <span>
-                        <i class="fa fa-font"></i>
-                        <i class="fa fa-font"></i>
-                        <i class="fa fa-print"></i>
+                        <i id="rw-blog-fct-plus" class="fa fa-font"></i>
+                        <i id="rw-blog-fct-moins" class="fa fa-font"></i>
+                        {{--<i class="fa fa-print"></i>--}}
                     </span>
 
             </div>
@@ -47,7 +47,6 @@
             <div class="rw-blog-article-content">
 
 
-                <!----todo-popix L'image sera récupérée dans la BDD ==> penser à inclure dans le CMS l'ajout de l'image d'illustration!!!! ---->
 
                 <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 

@@ -77,7 +77,9 @@
 
     .rw-aboutus-slideshow {
 
-      width: 1046px;
+      text-align: center;
+      margin: auto;
+      width: auto;
       height: 120px;
 
       overflow: hidden;
@@ -92,6 +94,8 @@
         img {
           box-shadow: 2px 2px 3px $grey-dark;
           margin:0 0 40px 0;
+          height: 80px;
+          width: 80px;
         }
 
       }

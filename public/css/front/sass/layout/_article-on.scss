@@ -140,6 +140,7 @@ Bloc contenu de l'article
   display: flex;
   flex-flow: column nowrap;
   height: auto;
+  font-size: $fontSize;
 
   h1 {
     font-size: $fontSize + 1.3;
@@ -243,6 +244,18 @@ Bloc contenu de l'article
 
 }
 
+#rw-blog-article-content-p {
+  font-size: $fontSize;
+}
+
+.rw-blog-article-content-p-plus {
+  font-size: $fontSize + 0.85;
+}
+.rw-blog-article-content-p-moins {
+  font-size: $fontSize - 0.2;
+}
+
+
 .rw-blog-article-content-auth {
   font-weight: bold;
   text-transform: capitalize;
@@ -313,7 +326,7 @@ partie droite de la page
 
       padding: 20px 0;
       line-height: $lineHeight;
-      text-align: left;
+      text-align: center;
     }
 
     .rw-blog-band-auth-rsx {

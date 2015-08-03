@@ -71,6 +71,20 @@
 
 
             <div class="rw-cpt-content-profil">
+                <!---------------------
+                 Bouton en attendant de faire la page plume!
+                ----------------------->
+                <a href="{{url('/admin/posts')}}">
+                    <button id="rw-cpt-button">Ecrire un article</button>
+                </a>
+                <!---------------------
+                 fin bouton en attendant la page plume!
+                ----------------------->
+
+                <a href="{{URL::to('/monblog', ['id' => $user->id, 'username' => $user->username])}}">
+                    <button id="rw-cpt-button">Ma vue publique</button>
+                </a>
+
 
                 <h2>Mon avatar</h2>
 
@@ -90,6 +104,9 @@
 
 
                 </div>
+
+
+
 
                 {{--<button id="rw-cpt-button-avatar">Editer mes informations</button>--}}
             </div>

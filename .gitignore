@@ -5,6 +5,7 @@ bower_components/
 .sass-cache/
 prepros.cfg
 
+public/css/admin/css
 public/css/front/css
 
 .DS_Store
