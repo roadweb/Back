@@ -1876,7 +1876,9 @@ partie droite de la page
 }
 
 .rw-aboutus-container .rw-aboutus-slide .rw-aboutus-slideshow {
-  width: 1046px;
+  text-align: center;
+  margin: auto;
+  width: auto;
   height: 120px;
   overflow: hidden;
   background-color: #ebebe6;
@@ -1891,6 +1893,8 @@ partie droite de la page
 .rw-aboutus-container .rw-aboutus-slide .rw-aboutus-slideshow .rw-aboutus-sContent li img {
   box-shadow: 2px 2px 3px #7e8b8c;
   margin: 0 0 40px 0;
+  height: 80px;
+  width: 80px;
 }
 
 /*    MATHIEU   */

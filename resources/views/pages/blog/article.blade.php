@@ -8,7 +8,7 @@
            <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
                     <span>
-                        <i class="fa fa-clock-o"></i> $temps
+                        <i class="fa fa-clock-o"></i>
                     </span>
 
                 <span>

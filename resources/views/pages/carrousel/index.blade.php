@@ -7,7 +7,20 @@
     <div  class="rw-carrous-body">
 
         <ul class="bxslider rw-carrous-body">
-            @foreach($jobs as $job)
+
+            <li class="rw-carrous-body-content">
+                <img class="rw-carrous-body-content-article-screen" src="{{asset('images/ecran.png') }}"/>
+
+                <div class="rw-carrous-body-content-article">
+                    <h1 class="rw-carrous-body-content-article-text-h1 rw-job-color-txt-2"> Les métiers du web</h1>
+                    <p class="rw-carrous-body-content-article-text-p">
+                        Road-Web est un site communautaire rassemblant des élèves et des professionnels débutants dans les métiers du web.
+                    </p>
+                </div>
+
+            </li>
+
+        @foreach($jobs as $job)
 
                 <li class="rw-carrous-body-content">
                     <img class="rw-carrous-body-content-article-screen" src="{{ $job->slide_img }}"/>
@@ -16,7 +29,10 @@
                         <h1 class="rw-carrous-body-content-article-text-h1 rw-job-color-txt-{{$job->id}}"> {{$job->name}}</h1>
                         <p class="rw-carrous-body-content-article-text-p">
                             {{ $job->job_description }}
-                            Le webmarketer est la personne en charge de la création et de l’augmentation de trafic sur un site Web. Il doit mettre en place une stratégie regroupant différentes actions pour augmenter la fréquentation du site et/ou ses ventes. Il analyse ses actions via des reportings réguliers sur les différentes campagnes qu’il a menées.
+                            Le webmarketer est la personne en charge de la création et de l’augmentation de trafic sur un site Web. Il doit mettre en place une stratégie regroupant différentes actions pour augmenter la
+                            <button>
+                                <i class="fa fa-hand-o-right"></i> Lire la suite
+                            </button>
                         </p>
                     </div>
 
