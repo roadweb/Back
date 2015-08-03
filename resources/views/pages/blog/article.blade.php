@@ -60,74 +60,21 @@
 
             <div class="rw-blog-article-comment">
 
-                <div class="rw-blog-article-comment-nbr">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES * * */
+                    var disqus_shortname = 'roadweb';
 
-                    <!---------------------todo-popix Le nombre de commentaire devra être récupéré dans la base de données ----------------------->
-                    <p class="rw-blog-article-comment-nbr-red">3</p>
-
-                    <!---------------------todo-popix
-                     Faire un script pour le pluriel du mot commentaire!!
-                        si 0 ou 1 ==> singulier
-                        si 2 ou + ==> pluriel
-                    ----------------------->
-                    <p>commentaires</p>
-
-                    <div class="rw-blog-article-comment-arrow"></div>
-
-                </div>
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
-                <div class="rw-blog-article-comment-cmt">
-
-                    <div class="rw-blog-article-comment-cmt-ord">
-
-                        <!----todo-popix avatar dans bdd idem pour chaque coms---->
-                        <img src="http://lorempixel.com/60/60/people/1/" alt="avatar"/>
-
-                        <!----todo-popix date commentaire dans bdd idem pour chaque coms---->
-                        <p>15 janvier 2015 14h39</p>
-
-                        <!----todo-popix contenu du commentaire dans bdd idem pour chaque coms---->
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                    </div>
-
-                    <div class="rw-blog-article-comment-cmt">
-
-                        <div class="rw-blog-article-comment-cmt-ord">
-
-                            <!---- avatar dans bdd, peut être autre façon de récupérer img?---->
-                            <img src="http://lorempixel.com/60/60/people/9/" alt="avatar"/>
-
-                            <!---- date commentaire dans bdd---->
-                            <p>15 janvier 2015 20h16</p>
-
-                            <!---- contenu du commentaire dans bdd---->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                        </div>
-
-                        <div class="rw-blog-article-comment-cmt">
-
-                            <div class="rw-blog-article-comment-cmt-ord">
-
-                                <!---- avatar dans bdd---->
-                                <img src="http://lorempixel.com/60/60/people/1/" alt="avatar"/>
-
-                                <!---- date commentaire dans bdd---->
-                                <p>16 janvier 2015 08h49</p>
-
-                                <!---- contenu du commentaire dans bdd---->
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
                 <div class="rw-bdc-triangle rw-job-color-triangle-{{$post->job_id}}"></div>
             </div>
         </div>

@@ -96,15 +96,14 @@ a {
 EXTENDS
 **************************/
 .rw-blog-article-container:before,
-.rw-blog-article-comment-cmt-ord img:before,
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:before,
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:before,
-.rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+.rw-blog-article-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
   content: " ";
   display: table;
 }
 
-.rw-blog-article-container:after, .rw-blog-article-comment-cmt-ord img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
+.rw-blog-article-container:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img:after, .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres:after {
   clear: both;
 }
 
@@ -1270,44 +1269,8 @@ Bloc contenu de l'article
 /*************************
 Bloc commentaire de l'article
 **************************/
-.rw-blog-article-comment-nbr {
-  width: 150px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 5%;
-}
-
-.rw-blog-article-comment-arrow {
-  width: 0;
-  height: 0;
-  margin: 10px auto;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid #000000;
-}
-
-.rw-blog-article-comment-cmt-ord {
-  min-height: 80px;
-  width: 90%;
-  margin: 2% 5%;
-  padding: 10px;
-  box-shadow: 0 3px 2px #ebebe6;
-}
-
-.rw-blog-article-comment-cmt-ord img {
-  float: left;
-  display: block;
-}
-
-.rw-blog-article-comment-cmt-ord p {
-  padding: 2% 0;
-  margin-left: 15%;
-  height: auto;
-}
-
-.rw-blog-article-comment-cmt-ord p:nth-child(2) {
-  padding: 0 2%;
-  font-size: 80%;
+.rw-blog-article-comment {
+  padding: 0 30px;
 }
 
 /*************************
