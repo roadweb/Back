@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration {
             $table->date('subscribe_date');
 			$table->rememberToken();
 			$table->timestamps();
-            $table->string('blogrw')->default('http://road-web.fr/{id}/{username}');
+            $table->string('blogrw')->default('null');
             $table->string('avatar')->default('images/avatars/avatar-base.png');
             $table->longText('bio');
 
