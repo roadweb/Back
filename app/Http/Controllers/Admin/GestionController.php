@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Right;
 use App\User;
 use Illuminate\Support\Facades\Response;
 
@@ -14,10 +15,17 @@ class GestionController extends Controller {
 	 */
 	public function index()
 	{
-		$users = User::all();
-
-		return view('admin.gestion.index', compact('users'));
+		$groupes = Right::all();
+		return view('admin.gestion.index', compact('groupes'));
 	}
+
+	public function groupe($id)
+	{
+		$groupe = Right::findOrFail($id);
+		$users = User::where('right_id', $groupe->id)->get();
+		return view('admin.gestion.groupe', compact('groupe', 'users'));
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.
