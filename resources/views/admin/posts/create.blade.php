@@ -214,7 +214,7 @@
                         <button type="submit" form="form-main" class="btn btn-success">
                             <span class="glyphicon glyphicon-download-alt"></span> Sauvegarder
                         </button>
-                        <button type="reset" form="form-main" class="btn btn-default" href="#">Reset</button>
+                        <button type="reset" form="form-main" class="btn btn-default rw-btn-red" href="#">Reset</button>
                     </div>
                 </div>
             </div>

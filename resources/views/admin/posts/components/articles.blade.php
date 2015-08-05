@@ -32,7 +32,7 @@
                 <div class="panel-heading">
                     Auteur : {{ $post->user->last_name }} {{ $post->user->first_name }}
                     <span class="pull-right label label-info">{{ $post->category->name }}</span>
-                    <span class="pull-right label label-primary">{{$post->job->name}}</span>
+                    <span class="pull-right label rw-job-color-bgc-{{$post->job_id}}">{{$post->job->name}}</span>
                 </div>
                 <div class="panel-body">
                     {!! Form::open([
