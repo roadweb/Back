@@ -252,3 +252,10 @@ table a:not(.btn), .table a:not(.btn) {
 table, .table {
     font-size: 13px;
 }
+
+section table th select.form-control {
+  background-color: #FFFFFF !important;
+  color: #333 !important;
+  font-size: 13px !important;
+
+}

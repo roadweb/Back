@@ -37,12 +37,14 @@
                 <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
 
+
+{{--                    @if(Auth::check('right_id') === '3')--}}
+                <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des droits</a></li>
+                    {{--@endif--}}
+                {{--<li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>--}}
+
                 @endif
 
-                    @if(Auth::check('right_id') === '1')
-                <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des droits</a></li>
-                    @endif
-                {{--<li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>--}}
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
