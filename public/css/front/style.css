@@ -1267,7 +1267,7 @@ Bloc contenu de l'article
 }
 
 .rw-blog-article-content-p-plus {
-  font-size: 1.85em;
+  font-size: 1.2em;
 }
 
 .rw-blog-article-content-p-moins {
@@ -2211,6 +2211,7 @@ partie droite de la page
   border: none;
   background: none;
   box-shadow: none;
+  z-index: 999;
 }
 
 .bx-wrapper .bx-prev {
