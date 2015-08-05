@@ -9,7 +9,7 @@
         <ul class="bxslider rw-carrous-body">
 
             <li class="rw-carrous-body-content">
-                <img class="rw-carrous-body-content-article-screen" src="{{asset('images/ecran.png') }}"/>
+                <img class="rw-carrous-body-content-article-screen" src="{{asset('images/ecran_slide/ecran-metiers.png') }}"/>
 
                 <div class="rw-carrous-body-content-article">
                     <h1 class="rw-carrous-body-content-article-text-h1 rw-job-color-txt-2"> Les métiers du web</h1>
