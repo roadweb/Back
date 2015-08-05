@@ -32,6 +32,8 @@ Route::group(['prefix' => 'admin'], function() {
         Route::resource('questions', 'Admin\QuestionsController');
         Route::resource('stats', 'Admin\StatsController');
         Route::resource('gestion', 'Admin\GestionController');
+        Route::get('groupe/{id}', 'Admin\GestionController@groupe');
+
     });
 
     Route::controllers([
