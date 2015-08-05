@@ -1,0 +1,120 @@
+
+.rw-cpt-main-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  line-height: $lineHeight;
+  max-width: 1000px;
+  margin: 50px auto;
+
+  a {
+    color: inherit;
+  }
+
+  .rw-cpt-header {
+    margin: 20px auto;
+    
+    h1 {
+      font-size: $fontSize + 1;
+
+      span {
+        color: $red;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .rw-cpt-content {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    width: 100%;
+
+    .rw-cpt-content-profil {
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      h2 {
+        padding: 25px 0;
+        color: $colorOpen;
+        font-weight: 400;
+        font-size: $fontSize + 0.5;
+        width: 100%;
+        text-align: center;
+      }
+
+
+      form {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0 auto;
+        text-align: right;
+
+
+        .rw-cpt-input, .rw-cpt-textarea {
+          margin: 10px auto;
+
+          border: none;
+          background-color: $grey-light;
+          padding: 5px;
+          width: 240px;
+          color: darken($grey-dark, 20);
+          font-style: italic;
+        }
+        #rw-cpt-btn-submit-infos, #rw-cpt-btn-submit-avatar {
+          @extend .rw-cpt-input;
+          background-color: $colorOpen;
+          color: #FFFFFF;
+          margin: 10px auto;
+          opacity:0;
+          transition: all 0.5s ease-in-out;
+
+        }
+
+      }
+
+      button {
+
+        margin: 10px auto;
+
+        border: none;
+        padding: 5px;
+        font-style: italic;
+
+        background-color: $colorOpen;
+        color: #FFFFFF;
+        width: 240px;
+        transition: all 0.5s ease-in-out;
+
+      }
+
+
+      .rw-cpt-content-avatar {
+        margin: 0 auto;
+        padding: 30px;
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        background: linear-gradient(#FFFFFF, $grey-light);
+        border-radius: 20px;
+        box-shadow: 1px 1px 2px $grey-dark;
+
+        .rw-cpt-avatar {
+          margin: auto;
+          text-align: center;
+          box-shadow: 1px 1px 4px $grey-dark;
+          border-radius: 50%;
+
+          width: 200px;
+          height: 200px;
+        }
+      }
+//      fin content profil
+    }
+//    fin content
+  }
+  //    fin container main
+}

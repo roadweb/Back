@@ -1,5 +1,12 @@
 @extends('pages.app')
 
 @section('content')
-    <p>Je suis le blog</p>
+
+    @include('pages.carrousel.component.jobnav')
+
+    <div class="container">
+        @include('pages.components.last-articles')
+        @include('pages.components.last-articles-min')
+    </div>
+
 @stop

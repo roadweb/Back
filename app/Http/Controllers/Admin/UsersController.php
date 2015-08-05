@@ -2,9 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class UsersController extends Controller {
 
@@ -16,7 +15,7 @@ class UsersController extends Controller {
 	public function index()
 	{
 		$users = User::get();
-        return view('admin.users.index', compact('users'));
+		return view('admin.users.index', compact('users'));
 	}
 
 	/**
@@ -68,7 +67,7 @@ class UsersController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+        //
 	}
 
 	/**

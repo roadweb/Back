@@ -12,6 +12,7 @@
 */
 
 use App\Post;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +31,12 @@ Route::group(['prefix' => 'admin'], function() {
         Route::resource('users', 'Admin\UsersController');
         Route::resource('questions', 'Admin\QuestionsController');
         Route::resource('stats', 'Admin\StatsController');
+        Route::resource('gestion', 'Admin\GestionController');
     });
 
     Route::controllers([
-        'auth'     => 'Auth\AuthController',
-        'password' => 'Auth\PasswordController',
+        'auth'     => 'Admin\Auth\AuthController',
+        'password' => 'Admin\Auth\PasswordController',
     ]);
 });
 
@@ -55,6 +57,46 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}', 'BlogController@article');
 
+Route::get('/monblog/{id}/{username}', 'BlogController@allArticlesUser');
+
+Route::get('/jobs', 'JobsController@index');
+
+Route::get('/jobs/job', 'JobsController@description');
+
+Route::get('/mentions', 'MotionsController@index');
+
+Route::get('/inscription', 'SubController@sub');
+
+Route::get('/inscription/validation', 'SubController@subvalid');
+
+Route::get('/apropos', 'AboutusController@index');
+
+Route::get('/compte', [
+    'as' => 'compte',
+    'uses' => 'CompteController@index',
+    'middleware' => 'auth.public'
+]);
+
+Route::resource('compte', 'CompteController');
+
+
+Route::get('/adhesion', 'AdhesionController@index');
+
+Route::get('/contact', 
+  ['as' => 'contact', 'uses' => 'ContactController@index']);
+
+Route::post('/contact', ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
+/*
+|--------------------------------------------------------------------------
+| Authentification de la partie public
+|--------------------------------------------------------------------------
+*/
+
+Route::controllers([
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -65,13 +107,13 @@ Route::get('/blog/{id}', 'BlogController@article');
 |
 */
 
-Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
-    Route::get('posts', function(){
-        $posts = Post::get();
-        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
-    });
-    Route::get('posts/{id}', function($id){
-        $posts = Post::find($id);
-        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
-    });
-});
+//Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function () {
+//    Route::get('posts', function(){
+//        $posts = Post::get();
+//        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+//    });
+//    Route::get('posts/{id}', function($id){
+//        $posts = Post::find($id);
+//        return Response::json(['status' => 200, 'posts' => $posts->toArray()]);
+//    });
+//});

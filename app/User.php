@@ -22,7 +22,18 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['username', 'email', 'password', 'last_name', 'first_name'];
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'last_name',
+        'first_name',
+        'job_id',
+        'emweb',
+        'right_id',
+        'bio',
+        'avatar'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -48,6 +59,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Question');
     }
 
+    public function reseaux()
+    {
+        return $this->hasMany('App\Reseaux');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | BelongsTo
@@ -58,4 +74,28 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         return $this->belongsTo('App\Job');
     }
+
+    public function right()
+    {
+        return $this->belongsTo('App\Right');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | scope
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeRight($query)
+    {
+        return $query->where('right', '>', '2');
+    }
+
 }
+
+
+

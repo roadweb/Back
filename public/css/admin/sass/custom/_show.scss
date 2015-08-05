@@ -1,0 +1,273 @@
+/*couleurs job triangles*/
+.rw-job-color-triangle-1 {
+  border-color: transparent transparent $colorDev transparent !important;
+}
+
+.rw-job-color-triangle-2 {
+  border-color: transparent transparent $colorDesignFonce transparent !important;
+}
+
+.rw-job-color-triangle-3 {
+  border-color: transparent transparent $colorMarket transparent !important;
+}
+
+.rw-job-color-triangle-4 {
+  border-color: transparent transparent $colorCmClair transparent !important;
+}
+
+.rw-job-color-triangle-5 {
+  border-color: transparent transparent $colorInteFonce transparent !important;
+}
+
+.rw-job-color-triangle-6 {
+  border-color: transparent transparent $colorRefClair transparent !important;
+}
+
+
+.rw-blog-article-main-container {
+
+  margin: 30px 0;
+  width: 100%;
+  padding: 20px 0;
+
+
+  background-color: #fff;
+  color: #000;
+
+  a {
+    color: inherit;
+  }
+}
+
+.rw-blog-article-container {
+  width: 70%;
+  height: auto;
+
+
+  margin: 20px auto;
+  position: relative;
+
+  padding-bottom: 2%;
+  font-size: $fontSize;
+
+  @extend %clearfix;
+
+  .rw-blog-article-content-fct {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: $fontSize - 0.125;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+
+    span {
+      margin: auto 0;
+      padding: 5px 10px;
+
+      p {
+        display: inline;
+      }
+      &:nth-child(2){
+        i {
+          cursor: pointer;
+          padding: 0 2px;
+        }
+      }
+      &:nth-child(3){
+
+        i {
+          cursor: pointer;
+          padding: 0 2px;
+          &:nth-child(1), &:nth-child(3) {
+            font-size: $fontSize + 0.25;
+          }
+          &:nth-child(2) {
+            font-size: $fontSize - 0.2;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rw-bdc-triangle {
+  @extend %arrow;
+  border-width: 0 0 40px 40px;
+}
+
+/*************************
+Bloc Titre de l'article
+**************************/
+.rw-blog-article-header {
+  background-image: linear-gradient(#ffffff, $grey-light);
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  height: 75px;
+
+  p {
+    padding: 2%;
+    margin: auto;
+  }
+}
+
+.rw-blog-article-header-date {
+  width: 100px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $grey-light;
+  font-size: 14px;
+}
+
+.rw-blog-article-header h4 {
+  text-align: left;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  text-shadow: 2px 2px 2px #ffffff;
+  line-height: $lineHeight;
+}
+
+/*************************
+jour date et nombre commentaires en rouge
+**************************/
+
+.rw-blog-article-header-date-red {
+  color: $red;
+  font-size: 20px;
+}
+
+.rw-blog-article-comment-nbr-red {
+  color: $red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*************************
+Bloc contenu de l'article
+**************************/
+
+.rw-blog-article-content {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  h1 {
+    font-size: $fontSize + 1.3;
+  }
+  h2 {
+    font-size: $fontSize + 1;
+  }
+  h3 {
+    font-size: $fontSize + 0.8;
+  }
+  h3 {
+    font-size: $fontSize + 0.6;
+  }
+  h4 {
+    font-size: $fontSize + 0.4;
+  }
+  h5 {
+    font-size: $fontSize + 0.2;
+  }
+  h6 {
+    font-size: $fontSize;
+  }
+
+  pre {
+    color: #ff1010;
+  }
+
+  blockquote {
+    border-left: 2px solid $grey-dark;
+    padding: 10px;
+    letter-spacing: 3px;
+    font-size: $fontSize - 0.1;
+    background-color: $grey-light;
+    width: 80%;
+    margin: auto;
+
+    &:before, &:after {
+      content:"\"";
+    }
+  }
+
+  p {
+    b {
+      font-weight: 400;
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    u {
+      text-decoration: underline;
+    }
+
+    strike {
+      text-decoration: line-through;
+    }
+
+    img {
+      margin: auto;
+      max-width: 100%;
+
+    }
+  }
+
+  ul {
+    list-style: circle inside;
+    width: 90%;
+    margin: auto;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  ol {
+    list-style: normal inside;
+    width: 90%;
+    margin: auto;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  img {
+    margin: auto;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.rw-blog-article-content p, .rw-blog-article-content-auth {
+  text-align: justify;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  line-height: $lineHeight;
+
+}
+
+.rw-blog-article-content-auth {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.rw-show-panel {
+  font-weight: 600;
+  color: $colorOpen;
+}

@@ -1,0 +1,192 @@
+/*INDEX DES METIERS*/
+
+.rw-jobs-index-container {
+	width:100%;
+	padding:30px;
+	h1 {
+		font-size:30px;
+		color:$red;
+		text-align:center;
+		margin:0 20px;
+	}
+	p {
+		text-align:center;
+		font-size:$fontSize;
+		line-height:$lineHeight;
+		width:100%;
+		padding:50px;
+		margin:0 auto;
+	}
+}
+
+.rw-jobs-index-container-flex {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+}
+
+.rw-jobs-index {
+  margin:20px;
+
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-around;
+
+  background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+  position:relative;
+
+  div {
+    float:left;
+    vertical-align:top;
+    height:100%;
+    position:relative;
+    padding:5px 0;
+	}
+  .rw-jobs-index-icon {
+    width:80px;
+
+    img {
+      padding:12px 0;
+      position:absolute;
+      left:-35px;
+    }
+  }
+
+  .rw-jobs-hide {
+    display: none;
+  }
+
+  .rw-jobs-rotate {
+    transform: rotate(180deg);
+  }
+
+  .rw-jobs-index-description-width {
+    width: 885px!important;
+  }
+
+  .rw-jobs-index-description-1, .rw-jobs-index-description-2, .rw-jobs-index-description-3, .rw-jobs-index-description-4, .rw-jobs-index-description-5, .rw-jobs-index-description-6, {
+
+    width:315px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    transition: all 1s ease;
+
+    h1 {
+      font-size:26px;
+      color:$colorMarket;
+      margin:2px;
+    }
+
+    p {
+      margin:0;
+
+      padding:10px 15px 0 0;
+      width:100%;
+      font-size:$fontSize - 0.1em;
+      line-height:$lineHeight - 0.1em;
+      text-align: justify;
+
+    }
+    a {
+      color: inherit;
+      width: 100%;
+      margin: auto 0;
+
+      text-align: right;
+    }
+    button {
+      margin: auto 0;
+      padding: 0 40px;
+
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      text-align: right;
+
+
+
+      i {
+        padding: 2px;
+
+        font-weight:600 !important;
+        font-size: $fontSize + 0.2;
+
+        background-color: $grey-light;
+        transition: all 0.5s ease-in-out;
+
+      }
+    }
+  }
+  .rw-jobs-index-triangle {
+    @extend %arrow;
+    border-width: 0 0 40px 40px;
+  }
+}
+
+
+
+
+
+
+/*FICHE METIER*/
+
+.rw-jobs-job-description {
+	margin:30px;
+	width:100%;
+	border:2px solid $colorMarket;
+	position:relative;
+		h1 {
+			color:$colorMarket;
+			font-size:30px;
+			line-height:70px;
+			height:70px;
+			width:100%;
+			text-align:center;
+			background: white; /* Old browsers */
+			background: -moz-linear-gradient(top, white 0%, $grey-light 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, $grey-light)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, white 0%, $grey-light 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ */
+			background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0); /* IE6-9 */
+		}
+	.rw-jobs-job-text{
+		margin:40px;
+		h2 {
+			color:$colorMarket;
+			font-size:20px;
+			margin:30px 0 10px 0;
+			font-weight:600;
+			border-bottom:1px solid $colorMarket;
+			padding-bottom:5px;
+		}
+		h3 {
+			font-size:16px;
+			color:black;
+			font-weight:600;
+			margin:20px 0 5px 0;
+		}
+		p {
+			line-height:$lineHeight;
+			font-size:$fontSize;
+			text-align:justify;
+		}
+		ul {
+			li {
+				line-height:$lineHeight;
+				font-size:$fontSize;
+				margin-left:30px;
+			}
+		}
+	}
+	.rw-jobs-job-triangle {
+      @extend %arrow;
+      border-width: 0 0 40px 40px;
+      border-color: transparent transparent $colorMarket transparent;
+	}	
+
+}
+

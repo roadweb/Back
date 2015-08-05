@@ -1,0 +1,61 @@
+
+@import "sass/base/reset";
+
+@import "sass/base/variables";
+
+@import "sass/base/base";
+
+/*
+|--------------------------------------------------------------------------
+| Components
+|--------------------------------------------------------------------------
+*/
+
+@import "sass/components/footer";
+ 
+@import "sass/components/header";
+
+@import "sass/components/last-articles-min";
+
+/*
+|--------------------------------------------------------------------------
+| Layouts
+|--------------------------------------------------------------------------
+*/
+
+@import "sass/layout/home";
+
+@import "sass/layout/blog";
+
+@import "sass/layout/jobs";
+
+@import "sass/layout/landing";
+
+@import "sass/layout/article-on";
+
+@import "sass/layout/sub";
+
+@import "sass/layout/mentions";
+
+@import "sass/layout/aboutus";
+
+@import "sass/layout/carrousel/carrousel";
+
+
+@import "sass/layout/adhesion";
+
+@import "sass/layout/log-news";
+
+@import "sass/layout/compte";
+
+@import "sass/layout/contact";
+
+@import "sass/layout/all-articles-user";
+
+/*
+|--------------------------------------------------------------------------
+| Background
+|--------------------------------------------------------------------------
+*/
+
+@import "sass/background/background";

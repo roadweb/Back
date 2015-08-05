@@ -1,6 +1,12 @@
 /vendor
-/node_modules
 .env
 .idea/
 bower_components/
 .sass-cache/
+prepros.cfg
+
+public/css/admin/css
+public/css/front/css
+
+.DS_Store
+npm-debug.log

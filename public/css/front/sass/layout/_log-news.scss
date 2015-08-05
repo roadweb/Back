@@ -1,0 +1,282 @@
+////////    LOGNEWS    :    mathieu     ////////////////////////////////////////////////////////////////
+
+.rw-lognews-login,
+.rw-lognews-newsletter {
+  z-index: 9999;
+  position: fixed;
+  right: 0;
+  top: 280px;
+  min-width: 50px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+
+  .rw-login,
+  .rw-newsletter {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .rw-login-container,
+    .rw-newsletter-container {
+      overflow: hidden;
+      z-index: 9;
+      width: 0;
+      height: 0;
+      left: 50px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-radius: 0 6px 6px 6px;
+      box-shadow: 0 0 6px;
+      @include transition(all, 0.2s, ease-in-out);
+      background-color: white;
+    }
+  }
+  .rw-login:hover .rw-login-container,
+  .rw-newsletter:hover .rw-newsletter-container {
+    overflow: visible;
+    width: inherit;
+    height: auto;
+    @include transition(all, 0.2s, ease-in-out);
+    padding: 10px;
+  }
+}
+
+.rw-lognews-newsletter {
+  top: 350px;
+}
+
+.rw-lognews-login:hover,
+.rw-lognews-newsletter:hover {
+  z-index: 10000;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+/*    POPUPS login + newsletter  */
+//////////////////////////////////////////////////////////////////////////////////////
+
+.rw-square {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  background-color: $red;
+}
+
+.rw-icon-login,
+.rw-icon-newsletter {
+  width: auto;
+  height: 30px;
+  margin: auto;
+}
+
+.rw-icon-newsletter {
+  padding: 4.5px 8.5px;
+  background-color: white;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+/*    formulaires  */
+//////////////////////////////////////////////////////////////////////////////////////
+
+.rw-lognews-form {
+  padding: 10px;
+  padding-bottom: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $grey-light;
+  border-radius: 0 4px 4px 4px;
+  box-shadow: 0 0 4px;
+
+  .rw-lognews-form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+
+    /*.rw-lognews-container,
+    .rw-lognews-container-btn
+    */
+
+    .rw-lognews-container,
+    .rw-lognews-container-btn {
+      line-height: 50px;
+      margin-bottom: 10px;
+      display: inline-flex;
+      flex-direction: row;
+      //border:1px solid red;
+
+      input, label, a, h1, button {
+        line-height: $lineHeight;
+        font-size: $fontSize;
+        height: 60px;
+        background: none;
+        border: none;
+        text-align: center;
+        align-items: center;
+        //border:1px dotted #333;
+      }
+      ////////////////////////////////////////////////////////////////////////////////////////
+      // la largeur du formulaire '.rw-lognews-form' est definie par celle des elements suivants
+      //      >>> LargeurFormulaire = largeurIcon + largeur[ button | input ]
+      //
+      //    .rw-lognews-icon{}
+      //
+      //    button[type="submit"],
+      //    input[type="email"],
+      //    input[type="password"]{}
+      //
+
+      .rw-lognews-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 2px 0 0 2px;
+        background-color: #333;
+
+        img {
+          width: 50%;
+          height: auto;
+          display: block;
+          margin: auto;
+        }
+      }
+      button[type="submit"],
+      input {
+        width: 180px;
+        border-left: 1px solid white;
+        justify-content: center;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+      }
+      //
+      //
+      //
+      //
+      ////////////////////////////////////////////////////////////////////////////////////////
+
+      .rw-welcome {
+        line-height: $lineHeight + 0.25em;
+        font-size: $fontSize + 0.25em;
+        font-weight: 600;
+        color: $red;
+      }
+      .rw-subscriber {
+        line-height: $lineHeight;
+        font-size: $fontSize;
+        color: #333;
+        font-weight: normal;
+      }
+    }
+
+    .rw-lognews-container {
+
+      h1 {
+        display: flex;
+        height: auto;
+        width: 100%;
+        margin: 8px 0;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        font-size: $fontSize + 0.25em;
+        font-weight: 600;
+      }
+      .rw-lognews-create-accompte,
+      .rw-lognews-myaccompt {
+        line-height: 60px;
+        font-size: $fontSize + 0.25em;
+        height: 60px;
+      }
+      input[type="email"],
+      input[type="password"] {
+        border-bottom: 1px solid #333;
+        line-height: $lineHeight + 0.125em;
+        font-size: $fontSize + 0.125em;
+      }
+      a {
+        height: auto;
+        width: 100%;
+        color: #333;
+      }
+      a:hover {
+        color: $colorCloseHover;
+        @include transition(all, 0.2s, ease-in-out);
+      }
+      .rw-lognews-pwd-forgoten,
+      .rw-lognews-remember {
+        font-size: $fontSize - 0.25em; /////////////////////////////////////
+        line-height: 20px;
+        height: 20px;
+        text-align: left;
+      }
+      input[type="checkbox"] {
+        width: 16px;
+        margin-left: 20px;
+        height: 20px;
+      }
+    }
+
+    .rw-lognews-container-btn {
+      border-radius: 2px;
+      height: inherit;
+
+      .rw-lognews-icon {
+        background: none;
+      }
+      button[type="submit"] {
+        color: white;
+        font-weight: 600;
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.rw-lognews-form-group {
+
+  .rw-bg-connect {
+    background-color: $colorOpen;
+    @include transition(all, 0.2s, ease-in-out);
+  }
+  .rw-bg-disconnect {
+    background-color: $colorClose;
+    @include transition(all, 0.2s, ease-in-out);
+  }
+  .rw-bg-connect:hover {
+    background-color: $colorOpenHover;
+    @include transition(all, 0.2s, ease-in-out);
+  }
+  .rw-bg-disconnect:hover {
+    background-color: $colorCloseHover;
+    @include transition(all, 0.2s, ease-in-out);
+  }
+}
+
+.rw-justify-content-end {
+  justify-content: flex-end;
+}
+
+/*
+.rw-justify-content-start{
+    justify-content:flex-start;
+}
+.rw-justify-content-center{
+    justify-content:center;
+}
+.rw-justify-content-arround{
+    justify-content:space-around;
+}
+.rw-justify-content-between{
+    justify-content:space-between;
+}
+*/

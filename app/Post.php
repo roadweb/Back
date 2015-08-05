@@ -11,13 +11,16 @@ class Post extends Model
         'content',
         'published',
         'user_id',
+        'resume',
+        'img_link',
         'category_id',
         'is_sticky',
         'job_id',
         'sticky_end',
         'ref_thumb',
         'ref_title',
-        'ref_description'
+        'ref_description',
+        'techno_id'
     ];
 
     /**
@@ -42,6 +45,11 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function techno()
+    {
+        return $this->belongsTo('App\Techno');
     }
 
     /**

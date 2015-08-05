@@ -1,0 +1,172 @@
+.rw-carrous{
+    max-width:1200px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+  
+    .rw-carrous-nav{
+        position: relative;
+        max-width:1200px;
+        margin:40px auto;
+        display: flex;
+        align-items: flex-end;
+        height:120px;
+    }
+
+    .rw-carrous-navbar{
+        z-index: 1;
+        width:100%;
+        position:relative;
+        min-width: calc(80px*1.2*7);
+        padding:0;
+        list-style: none;
+        display:flex;
+        flex-direction: row;
+        //border: 1px solid blue;
+        
+    }
+
+        .rw-icon-exagone{
+            display:flex;
+            width:28px;
+        }
+
+    .rw-carrous-navbar-extremite,
+    .rw-carrous-navbar-job{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: center;
+        //border:1px dotted red;
+        }
+
+        .rw-carrous-navbar-extremite{
+            min-width:calc(100%/14);
+        }
+
+        .rw-carrous-navbar-job{
+            min-width: calc(100%/7);
+
+            .rw-carrous-navbar-job-label {
+                overflow: hidden;
+                position:relative;
+                min-width: calc(80px*1.2);
+                height:0;
+                margin-bottom:54px;
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+                @include transition(all, 0.2s, ease-in-out);
+            
+                span {
+                    display: block;
+                    overflow: visible;
+                    position:absolute;
+                    width:100%;
+                    height:auto;
+                    top: 8px;
+                    left:0;
+                    opacity:0;
+                    font-size:12px;
+                    line-height: auto;
+                    color:#333;
+                    background-color: white;
+                    justify-content: center;
+                    text-align: center;
+                    @include transition(all, 0.2s, ease-in-out);
+
+                }
+                .rw-navbar-vertical-line{
+                    width:4px;
+                    height:30px;
+                    background-color: $red;
+                }
+                .rw-icon-exagone{
+                    width:28px;
+                    height:24px;
+                }
+            }
+    
+                            
+            
+            
+            
+        rw-carrous-navbar-job-a{
+            width:auto;
+            min-width:calc(80px*1.2);
+            display:flex;
+            justify-content:center;
+            text-decoration: none;
+                
+            .rw-icon-job{
+                width: 80px;
+                height: 70px;
+                display:flex;
+                @include transition(all, 0.2s, ease-in-out);
+            } 
+            
+            .rw-icon-job:hover{
+                width: calc(80px*1.2);
+                height: calc(70px*1.2);
+                @include transition(all, 0.2s, ease-in-out);
+            }
+        }
+    }
+
+
+    .rw-carrous-navbar-job:hover {
+        .rw-carrous-navbar-job-label{
+        overflow: visible;
+        //opacity:1;
+        height:54px;
+        margin-bottom: 0;
+        @include transition(all, 0.2s, ease-in-out);
+            span {
+                opacity:1;
+            }
+            
+        }
+    }
+
+
+
+
+    .rw-carrous-navbar-path{
+        z-index:0;
+        width:100%;
+        min-width: calc(80px*1.2*7);
+        position: absolute;
+        top:50px;
+        left:0;
+        border: 1px solid green;
+
+        
+        .rw-carrous-navbar-line{
+            position: absolute;
+            //width:1050px;
+            height: 4px;
+            background-color:$red;
+        }
+        
+        .rw-icon-exagone-first,
+        .rw-icon-exagone-last{
+            position: absolute;
+            width:28px;
+            top: -12px;
+        }
+        .rw-icon-exagone-first{
+            left: -14px;
+        }
+        .rw-icon-exagone-last{
+            right: -14px;
+        }
+    }
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+.white{color:white;}

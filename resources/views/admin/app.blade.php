@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard | Roadweb</title>
 
+    <link href="{{ asset('/bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/bootstrap.theme.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/style.css') }}" rel="stylesheet">
-
 </head>
 <body class="relative">
 
@@ -23,15 +23,22 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Dashboard</a>
+            <a href="{{ url('compte') }}" class="rw-adm-logo">
+                <img src="{{asset('images/logo.png')}}" alt="roadweb" title="retour sur le site"/>
+            </a>
+
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                @if (Auth::check())
                 <li {{ active('home') }}><a href="{{ route('admin.home') }}">Home</a></li>
                 <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
-                <li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>
+                <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des droits</a></li>
+                {{--<li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>--}}
+                @endif
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -73,5 +80,10 @@
 
 <script src="{{ asset('/javascript/admin/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/admin/app.js') }}"></script>
+<script src="{{ asset('javascript/admin/userstable.js') }}"></script>
+ <script type="text/javascript">
+    $('#filter').ddTableFilter()
+  </script>
+
 </body>
 </html>

@@ -5,13 +5,14 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller as Controller;
 use App\Job;
 use App\Post;
+use App\Techno;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class PostsController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -38,9 +39,9 @@ class PostsController extends Controller
         $auth_id = Auth::user()->id;
         $categories = Category::lists('name', 'id');
         $jobs = Job::lists('name', 'id');
+        $technos = Techno::orderBy('name', 'asc')->get();
 
-
-        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs'));
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'technos'));
     }
 
     /**
@@ -50,6 +51,14 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            //...
+        ]);
+
+        if($validator->fails()) {
+            redirect(route('admin.posts.create'))->withErrors($validator);
+        }
+
         Post::create($request->all());
 
         return redirect(route('admin.posts.index'));
@@ -63,22 +72,30 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        dd('Show');
+        $post = Post::find($id);
+        return view('admin.posts.show', compact('post'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Permet de voir la page d'édition
      *
      * @param  int $id
      * @return Response
      */
     public function edit($id)
     {
+        $post = Post::find($id);
+        $auth_id = Auth::user()->id;
+        $categories = Category::lists('name', 'id');
+        $jobs = Job::lists('name', 'id');
+        $technos = Techno::orderBy('name', 'asc')->get();
 
+
+        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post', 'technos'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Permet de mettre à jour
      *
      * @param  int $id
      * @return Response
@@ -90,6 +107,8 @@ class PostsController extends Controller
         if ($request->has('publication')) {
             $post->published = $request->get('publication');
             $post->save();
+        } else {
+            $post->update($request->all());
         }
 
         return redirect(route('admin.posts.index'));
