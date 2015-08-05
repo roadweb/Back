@@ -22,7 +22,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Dashboard</a>
+            {{--<a class="navbar-brand" href="#">Dashboard</a>--}}
             <a href="{{ url('/') }}" class="rw-adm-logo">
                 <img src="{{asset('images/logo.png')}}" alt="roadweb" title="retour sur le site"/>
             </a>
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @if (Auth::check())
-                <li {{ active('home') }}><a href="{{ route('admin.home') }}">Home</a></li>
+                <li {{ active('home') }}><a href="{{ route('admin.home') }}">Accueil</a></li>
                 <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
