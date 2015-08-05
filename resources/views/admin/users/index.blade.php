@@ -45,8 +45,8 @@
                         <tr>
                             <th class="col-lg-1 skip-filter">Pseudo</th>
                             <th class="col-lg-1 skip-filter">Avatar</th>
-                            <th class="col-lg-1 skip-filter">Nom</th>
-                            <th class="col-lg-1 skip-filter">Prénom</th>
+                            <th class="col-lg-1 skip-filter">Nom </th>
+                            <th class="col-lg-1 skip-filter">Date d'inscription</th>
                             <th class="col-lg-1 skip-filter">Email</th>
                             <th class="col-lg-1 skip-filter">Blog</th>
                             <th class="col-lg-1 skip-filter">Articles</th>
@@ -59,16 +59,13 @@
                         <tr>
                             <td>{{$user->username}}</td>
                             <td><img src="{{asset($user->avatar)}}" class="user-avatar thumbnail" /></td>
-                            <td>{{$user->last_name}}</td>
-                            <td>{{$user->first_name}}</td>
+                            <td>{{$user->first_name . ' ' . $user->last_name}}</td>
+                            <td>{{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}</td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->blogrw}}</td>
-                            <td><button class="btn btn-default" 
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="voir les articles">
+                            <td><a href="#">
                                 <span class="glyphicon glyphicon-edit"></span>  {{ $user->posts->count() }}
-                            </button></td>
+                            </a></td>
                             <td>{{$user->job->name}}</td>
                             <td>{{$user->right->name}}</td>
                         </tr>
