@@ -52,14 +52,14 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('type', 'Le domaine lié de l\'article') !!}
-                                    {!! Form::select('job_id', $jobs, null, ['class' => 'form-control', "required"]) !!}
+                                    {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('type', 'Le type d\'article') !!}
                                     {!! Form::select('category_id', $categories, null, ['class' =>
-                                    'form-control', "required"])
+                                    'form-control'])
                                     !!}
                                 </div>
                             </div>

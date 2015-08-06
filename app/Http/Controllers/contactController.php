@@ -49,7 +49,7 @@ class ContactController extends Controller
             if ($request->copie === 'yes') {
                 $message->to($request->email, $request->firstname)->subject('copie de mon message à roadweb');
             }
-            $message->to('peyrot.celine@gmail.com', 'Equipe Roadweb')->subject($request->objet);
+            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
             $message->setReplyTo($request->email);
             //$message->attach($request->file);
         });

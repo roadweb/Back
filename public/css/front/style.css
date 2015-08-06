@@ -215,6 +215,10 @@ EXTENDS
   color: #B76DAB !important;
 }
 
+.rw-hidden {
+  display: none !important;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -1536,7 +1540,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -2903,10 +2909,7 @@ partie droite de la page
   padding: 10px;
   cursor: pointer;
   font-weight: 600;
-}
-
-.rw-contact-container form fieldset .rw-contact-field .rw-hidden {
-  visibility: hidden;
+  margin-left: 222px;
 }
 
 .rw-contact-container form fieldset [type="checkbox"]:not(:checked), .rw-contact-container form fieldset [type="checkbox"]:checked {

@@ -4,7 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Right;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use App\Http\Requests\GestionFormRequest;
 
 class GestionController extends Controller {
 
@@ -74,11 +76,25 @@ class GestionController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-
-        return view('admin.gestion.groupe');
+		return redirect(route('groupe'));
 	}
+
+	public function addUser(GestionFormRequest $request)
+	{
+		$username = $request->username;
+		$id = $request->groupe_id;
+		$affectedRows = User::where('username', $username)->update(['right_id' => $id]);
+		//if ($affectedRows > 0) {
+		//	return 'l\'utilisateur existe bien';
+		//}
+		//else {
+		//	return 'l\'utilisateur n\'existe pas';
+		//}
+		 
+        return redirect(route('admin.gestion.index'));
+    } 
 
 	/**
 	 * Remove the specified resource from storage.
