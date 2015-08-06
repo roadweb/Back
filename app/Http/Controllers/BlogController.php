@@ -63,7 +63,7 @@ class BlogController extends Controller
 
         $user = User::findOrFail($id);
 
-        $vignettes = Post::published()->where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
+        $vignettes = Post::published()->where('user_id', $user->id)->where('category_id', '1')->orderBy('created_at', 'desc')->get();
 
         return view('pages.blog.all-articles-user', compact('user', 'vignettes'));
     }

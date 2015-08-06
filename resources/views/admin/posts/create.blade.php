@@ -52,14 +52,14 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('type', 'Le domaine lié de l\'article') !!}
-                                    {!! Form::select('job_id', $jobs, null, ['class' => 'form-control']) !!}
+                                    {!! Form::select('job_id', $jobs, null, ['class' => 'form-control', "required"]) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('type', 'Le type d\'article') !!}
                                     {!! Form::select('category_id', $categories, null, ['class' =>
-                                    'form-control'])
+                                    'form-control', "required"])
                                     !!}
                                 </div>
                             </div>
@@ -105,11 +105,11 @@
                     <div class="panel-body">
                         <div class="form-group">
                             {!! Form::label('title','Le titre de l\'article (100 max)') !!}
-                            {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez le titre ici..."])!!}
+                            {!! Form::text('title', null, ["class" => "form-control", "placeholder" => "Entrez le titre ici...", "required"])!!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('content','Le résumé de l\'article (200 max)') !!}
-                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200"])!!}
+                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200", "required"])!!}
                         </div>
                         <div class="form-group" ng-app="app" ng-controller="textArea">
                             {!! Form::label('text','Le texte de l\'article') !!}
@@ -122,7 +122,7 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale"])!!}
+                            {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale", "required"])!!}
                             {!! Form::label('image','Le lien de l\'image') !!}
                         </div>
 
@@ -154,7 +154,7 @@
                                 @foreach($technos as $techno)
                                 <div class="radio radio-success">
 
-                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success"]); !!}
+                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success", "required"]); !!}
                                     {!! Form::label($techno->id,$techno->name) !!}
                                 </div>
 
@@ -173,17 +173,16 @@
                 <div class="panel panel-default" id="referencement">
                     <div class="panel-heading">
                         <h3 class="panel-title"><span class="glyphicon glyphicon-screenshot"></span>
-                            Optimisation du
-                            référencement</h3>
+                            Optimisation du référencement</h3>
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            {!! Form::label('','Mots clés référencement image') !!}
-                            {!! Form::text('ref_thumb', null, ["class" => "form-control", "placeholder" => "balise alt de l'image principale de l'article"])!!}
+                            {!! Form::label('','Mots clés référencement de l\'image principale') !!}
+                            {!! Form::text('ref_thumb', null, ["class" => "form-control", "placeholder" => "balise alt de l'image principale de l'article", "required"])!!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('','Balise title') !!}
-                            {!! Form::text('ref_title', null, ["class" => "form-control", "placeholder" => "balise alt du titre de l'article"])!!}
+                            {!! Form::label('','Balise alt du titre principal de l\'article') !!}
+                            {!! Form::text('ref_title', null, ["class" => "form-control", "placeholder" => "balise alt du titre de l'article", "required"])!!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('','Balise description') !!}

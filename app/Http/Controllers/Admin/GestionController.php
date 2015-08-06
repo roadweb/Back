@@ -76,7 +76,8 @@ class GestionController extends Controller {
 	 */
 	public function update($id)
 	{
-        //
+
+        return view('admin.gestion.groupe');
 	}
 
 	/**
