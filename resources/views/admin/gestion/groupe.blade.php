@@ -8,16 +8,17 @@
         <div class="row"> 
             <section class="col-lg-12">
 
-                @if(isset($user))
-                    {!! Form::model($user, ['route' => ['gestion.update', $user->id], 'method' => 'patch']) !!}
-                @endif
+                
+                {!! Form::open(array('route' => 'gestion_utilisateur')) !!}
+               
 
                 <h4>Groupe <span style="color:red;">{{$groupe->name}}</span> : </h4>
 
                 <table class="table-bordered table-striped table-condensed col-lg-12">
 
                     {!! Form::label('add_user', 'Ajouter un utilisateur :') !!}
-                    {!! Form::text('add', null, array('id' => 'add_user')) !!}
+                    {!! Form::text('username', null, array('id' => 'add_user')) !!}
+                    {!! Form::hidden('groupe_id', $groupe->id) !!}
 
                     {!! Form::submit('Ajouter l\'utilisateur au groupe', array('name' => 'add_user_action')) !!}
                     <thead>
@@ -45,7 +46,7 @@
                     </tbody>
                 </table>
 
-                {!! Form::submit('Supprimer la sélection', ["id" => "rw-cpt-btn-submit-infos"]) !!}
+                
 
                 {!! Form::close() !!}
             </section>

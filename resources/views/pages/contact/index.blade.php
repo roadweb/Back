@@ -71,7 +71,7 @@
                     array('placeholder'=>'Copiez-collez l\'url de la page concernée si besoin' )) !!}
                 </div>
 
-                <div class="rw-sub-input-file-container">
+                <div class="rw-sub-input-file-container rw-hidden">
                     <p>Capture d'écran :</p>
                     <div>
                         {!! Form::label('my-file', 'Joindre une image...', 
@@ -90,7 +90,6 @@
                     </label>
                 </div>
                 <div class="rw-contact-field">
-                    {!! Form::label('envoyer', '', ['class' => 'rw-hidden']) !!}
                     {!! Form::submit('Envoyer', 
                     array ('required', 
                             'name' => 'envoyer', 

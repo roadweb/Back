@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin'], function() {
         Route::resource('stats', 'Admin\StatsController');
         Route::resource('gestion', 'Admin\GestionController');
         Route::get('groupe/{id}', 'Admin\GestionController@groupe');
+        Route::post('/gestion', ['as' => 'gestion_utilisateur', 'uses' => 'Admin\GestionController@addUser']);
 
     });
 
