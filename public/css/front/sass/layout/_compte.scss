@@ -13,15 +13,40 @@
 
   .rw-cpt-header {
     margin: 20px auto;
+    text-align: center;
     
     h1 {
       font-size: $fontSize + 1;
+      padding: 10px 0;
 
       span {
         color: $red;
         font-weight: 600;
+        text-transform: capitalize;
       }
+
     }
+    .rw-cpt-created {
+      font-size: $fontSize - 0.1;
+      color: $grey-dark;
+      font-style: italic;
+    }
+
+    button {
+      margin: 10px auto;
+
+      border: none;
+      border-radius: 20px;
+      padding: 5px;
+      font-style: italic;
+
+      background-color: $colorOpen;
+      color: #FFFFFF;
+      width: 240px;
+      transition: all 0.5s ease-in-out;
+
+    }
+
   }
 
   .rw-cpt-content {
@@ -70,9 +95,8 @@
           margin: 10px auto;
           opacity:0;
           transition: all 0.5s ease-in-out;
-
+          border-radius: 20px;
         }
-
       }
 
       button {
@@ -87,6 +111,8 @@
         color: #FFFFFF;
         width: 240px;
         transition: all 0.5s ease-in-out;
+        border-radius: 20px;
+
 
       }
 

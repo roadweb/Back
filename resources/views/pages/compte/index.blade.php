@@ -6,6 +6,25 @@
         <div class="rw-cpt-header">
 
             <h1>Compte de <span>{{ $user->username }}</span></h1>
+            <p class="rw-cpt-created">( Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}} )</p>
+                <p class="rw-cpt-created">
+                    Status : {{ $user->right->name }} | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
+                </p>
+            <!---------------------
+             Bouton en attendant de faire la page plume!
+            ----------------------->
+            @if (Auth::user()->right_id >= '2')
+                <a href="{{url('/admin/posts')}}">
+                    <button id="rw-cpt-button" title="Accès au CMS">Ecrire un article</button>
+                </a>
+                @endif
+                        <!---------------------
+                 fin bouton en attendant la page plume!
+                ----------------------->
+
+                <a href="{{URL::to('/monblog', ['id' => $user->id, 'username' => $user->username])}}">
+                    <button id="rw-cpt-button" title="Accès à mon blog RW">Ma vue publique</button>
+                </a>
 
         </div>
 
@@ -14,9 +33,10 @@
 
                 <h2>Mes informations</h2>
 
+
                 <button id="rw-cpt-button-infos">Editer mes informations</button>
 
-                @if(isset($user))
+            @if(isset($user))
                 {!! Form::model($user, ['route' => ['compte.update', $user->id], 'method' => 'patch']) !!}
 
                 @else
@@ -26,38 +46,25 @@
 
                 <div>
                     {{--{!! Form::label('first_name','Prénom') !!}--}}
-                    {!! Form::text('first_name', null, ["class" => "rw-cpt-input", "placeholder" => "Prénom"])!!}
+                    {!! Form::text('first_name', null, ["class" => "rw-cpt-input", "placeholder" => "Prénom", "required"])!!}
                 </div>
 
                 <div>
                     {{--{!! Form::label('last_name','Nom') !!}--}}
-                    {!! Form::text('last_name', null, ["class" => "rw-cpt-input", "placeholder" => "Nom"])!!}
+                    {!! Form::text('last_name', null, ["class" => "rw-cpt-input", "placeholder" => "Nom", "required"])!!}
                 </div>
 
                 <div>
                     {{--{!! Form::label('username','Pseudo') !!}--}}
-                    {!! Form::text('username', null, ["class" => "rw-cpt-input", "placeholder" => "Pseudo"])!!}
+                    {!! Form::text('username', null, ["class" => "rw-cpt-input", "placeholder" => "Pseudo", "required"])!!}
                 </div>
 
                 <div>
                     {{--{!! Form::label('email','Email') !!}--}}
-                    {!! Form::text('email', null, ["class" => "rw-cpt-input", "placeholder" => "Email de contact"])!!}
+                    {!! Form::text('email', null, ["class" => "rw-cpt-input", "placeholder" => "Email de contact", "required"])!!}
                 </div>
 
-                <div>
-                    {{--{!! Form::label('created_at','Date d\'inscription') !!}--}}
-                    {!! Form::text('created_at', null, ["class" => "rw-cpt-input", "placeholder" => "Date d'inscription"])!!}
-                </div>
 
-                <div>
-                    {{--{!! Form::label('abonnement','abonnement') !!}--}}
-                    {!! Form::text('right_name', null, ["class" => "rw-cpt-input", "placeholder" => $user->right->name])!!}
-                </div>
-
-                <div>
-                    {{--{!! Form::label('abonnement','Blog road-web') !!}--}}
-                    {!! Form::text('blog', null, ["class" => "rw-cpt-input", "placeholder" => "http://road-web.fr/monblog/$user->id/$user->username"])!!}
-                </div>
 
                 <div>
                     {{--{!! Form::label('bio','Ma Bio(200 max)') !!}--}}
@@ -71,19 +78,6 @@
 
 
             <div class="rw-cpt-content-profil">
-                <!---------------------
-                 Bouton en attendant de faire la page plume!
-                ----------------------->
-                <a href="{{url('/admin/posts')}}">
-                    <button id="rw-cpt-button">Ecrire un article</button>
-                </a>
-                <!---------------------
-                 fin bouton en attendant la page plume!
-                ----------------------->
-
-                <a href="{{URL::to('/monblog', ['id' => $user->id, 'username' => $user->username])}}">
-                    <button id="rw-cpt-button">Ma vue publique</button>
-                </a>
 
 
                 <h2>Mon avatar</h2>

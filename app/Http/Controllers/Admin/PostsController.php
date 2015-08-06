@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use App\User;
 
 class PostsController extends Controller
 {
@@ -20,13 +21,18 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        $req = Post::with('user')->with('category')->with('job')->orderBy('updated_at', 'desc');
-        if ($request->has('filterBy')) {
-            $req->where($request->get('filterBy') . '_id', $request->get('id'));
-        }
-        $posts = $req->get();
+//        $req = Post::with('user')->with('category')->with('job')->orderBy('updated_at', 'desc');
+//        if ($request->has('filterBy')) {
+//            $req->where($request->get('filterBy') . '_id', $request->get('id'));
+//        }
+//        $posts = $req->get();
 
-        return view('admin.posts.index', compact('posts'));
+        $user = Auth::user();
+        $posts = Post::orderBy('updated_at', 'desc')->get();
+
+        $post_user = Post::where('user_id', $user->id)->get();
+
+        return view('admin.posts.index', compact('posts', 'post_user'));
     }
 
     /**
