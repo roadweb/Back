@@ -2612,15 +2612,37 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-header {
   margin: 20px auto;
+  text-align: center;
 }
 
 .rw-cpt-main-container .rw-cpt-header h1 {
   font-size: 2em;
+  padding: 10px 0;
 }
 
 .rw-cpt-main-container .rw-cpt-header h1 span {
   color: #bf382a;
   font-weight: 600;
+  text-transform: capitalize;
+}
+
+.rw-cpt-main-container .rw-cpt-header .rw-cpt-created {
+  font-size: 0.9em;
+  color: #7e8b8c;
+  font-style: italic;
+}
+
+.rw-cpt-main-container .rw-cpt-header button {
+  margin: 10px auto;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-style: italic;
+  background-color: #16A086;
+  color: #FFFFFF;
+  width: 240px;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 .rw-cpt-main-container .rw-cpt-content {
@@ -2685,6 +2707,7 @@ partie droite de la page
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
+  border-radius: 20px;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil button {
@@ -2697,6 +2720,7 @@ partie droite de la page
   width: 240px;
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
+  border-radius: 20px;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-avatar {

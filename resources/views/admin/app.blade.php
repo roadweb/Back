@@ -36,13 +36,10 @@
                 <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
-
-
-{{--                    @if(Auth::check('right_id') === '3')--}}
+                    @if (Auth::user()->right_id == '4')
                 <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des droits</a></li>
-                    {{--@endif--}}
+                    @endif
                 {{--<li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>--}}
-
                 @endif
 
             </ul>
