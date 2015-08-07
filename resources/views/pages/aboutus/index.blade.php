@@ -71,7 +71,7 @@
                     <img src="{{ asset('images/avatars/valerieottaviano.jpg') }}" alt="Valérie Ottaviano" title="Valérie Ottaviano" />
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/3/" alt="Image bleue" />
+                    <img src="{{ asset('images/avatars/celinepeyrot.jpg') }}" alt="Céline Peyrot" />
                 </li>
                 <li>
                     <img src="http://lorempixel.com/80/80/people/4/" alt="Image bleue" />
