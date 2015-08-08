@@ -2,9 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests\ContactFormRequest;
 
 class ContactController extends Controller
@@ -55,11 +53,11 @@ class ContactController extends Controller
                     $img->move($path, $name);
                 }
                 $file = $path . '/' . $name;
-                $message->attach($file);   
+                $message->attach($file);  
             }
 
             $message->from($request->email);
-            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
+            $message->to('peyrot.celine@gmail.com', 'Equipe Roadweb')->subject($request->objet);
             $message->setReplyTo($request->email);
         });
         return \Redirect::route('contact')
@@ -67,5 +65,5 @@ class ContactController extends Controller
     }
 }
 
-/*File::delete($file); + FileController
+/*File::delete($file); + FileControllerhello@road-web.fr
 essayer de rajouter une fonction pour supprimer les captures d'écran du dossier après envoi de l'email*/
