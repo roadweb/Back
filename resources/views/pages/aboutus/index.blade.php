@@ -18,12 +18,12 @@
 
 
             <p>
-                Au cours d’un évènement Meetup 2 élèves de l’EMWeb se sont rencontrer. De cette rencontre est née l’idée folle de faire un projet commun avec les volontaires de la communauté EMWeb. Dès lors, ils lancent l’idée sur un réseau social bien connu et quelqu’un propose un thème pour le projet! Moins de 24h après, 20 élèves se retrouvent autour d’un même objectif: la création de Road-Web.
+                Au cours d’un évènement Meetup, 2 élèves de l’EMWeb s'abordent'. De cette rencontre naît l’idée folle d'un projet commun aux volontaires de la communauté EMWeb. Dès lors, ils lancent l’idée sur un réseau social bien connu et quelqu’un propose un thème pour le projet ; moins de 24h après, 20 élèves se retrouvent autour d’un même objectif : la création de Road-Web.
 
             </p>
 
             <p>
-                L’objectif commun était là, l’outil utilisé pour permettre une collaboration efficace était mis à disposition et les élèves souhaitant participer continuaient de rejoindre le groupe. Nous sommes passés à 40 personnes en quelques jours représentant tous les corps de métiers. Des chefs de projet ainsi que des référents pour chaque corps de métiers ont été nommé et chacun a pu définir la place qui lui convenait pour participer. Au cours des semaines suivantes nous avons trouvé un nom pour ce projet: Road-Web. De là, le projet est devenu plus concret! Tous ensemble sur la route du web! Les mois ont passé et le travail a continué. Road-Web a rapidement eu son identité visuelle d’établi, ses contenus ont commencé à se dessiner et s’étoffer..
+                L’objectif commun était là, l’outil utilisé pour permettre une collaboration efficace était mis à disposition et les élèves souhaitant participer continuaient de rejoindre le groupe. En quelques jours, nous sommes passés à 40 personnes, représentant tous les corps de métiers. Des chefs de projet ainsi que des référents pour chacun d'eux ont été nommés et chacun a pu définir la place qui lui convenait pour participer. Au cours des semaines suivantes, nous avons trouvé un nom pour ce projet : Road-Web. De là, ce dernier est devenu plus concret : tous ensemble sur la route du web ! Les mois ont passé et le travail a continué. L'identité visuelle de Road-Web s'est rapidement établie, ses contenus ont commencé à se dessiner et s’étoffer...
 
             </p>
 
@@ -32,12 +32,12 @@
             </p>
 
             <p>
-                6 moins sont passés et Road-Web fait ses premiers pas sur la toile.
-                Le site road-web.fr ainsi que l’association se joignent pour vous apportez à tous une autre expérience dans l’apprentissage à distance ou en autodidacte. Beaucoup d’idées d’évolutions du site collaboratif sont déjà en cours de développement.
+                6 mois ont passé depuis et Road-Web fait ses premiers pas sur la toile.
+                Le site road-web.fr ainsi que l’association se joignent pour vous apporter à tous une nouvelle expérience de l’apprentissage à distance ou en autodidacte. Beaucoup d’idées d’évolutions du site collaboratif sont déjà en cours de développement.
             </p>
 
             <p>
-                Nous espérons vous apporter pleine satisfaction.
+                En espérant vous apporter pleine satisfaction.
 
             </p>
 
