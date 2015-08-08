@@ -28,7 +28,7 @@ class ContactFormRequest extends Request {
     		'objet' => 'required',
     		'message' => 'required',
     		'url',
-    		'file' => 'mimes:jpeg,bmp,png',
+    		'file' => 'image|max:1000|mimes:jpeg,bmp,png',
     		'copie',
 		];
 	}
