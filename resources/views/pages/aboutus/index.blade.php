@@ -71,34 +71,16 @@
                     <img src="{{ asset('images/avatars/valerieottaviano.jpg') }}" alt="Valérie Ottaviano" title="Valérie Ottaviano" />
                 </li>
                 <li>
-                    <img src="{{ asset('images/avatars/celinepeyrot.jpg') }}" alt="Céline Peyrot" />
+                    <img src="{{ asset('images/avatars/celinepeyrot.jpg') }}" alt="Céline Peyrot" title="Céline Peyrot" />
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/4/" alt="Image bleue" />
+                    <img src="{{ asset('images/avatars/florianchambolle.jpg') }}" alt="Florian Chambolle" title="Florian Chambolle" />
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/5/" alt="Image bleue" />
+                    <img src="{{ asset('images/avatars/paulinelateulere.jpg') }}" alt="Pauline Lateulere" title="Pauline Lateulere" />
                 </li>
                 <li>
-                    <img src="http://lorempixel.com/80/80/people/6/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/7/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/8/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/9/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/1/" alt="Image verte" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/2/" alt="Image bleue" />
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/80/80/people/3/" alt="Image bleue" />
+                    <img src="{{ asset('images/avatars/stephaniedesa.jpg') }}" alt="Stéphanie De Sa" title="Stéphanie De Sa" />
                 </li>
 
             </ul>
