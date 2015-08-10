@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('pages.carrousel.component.jobnav')
+    {{--@include('pages.carrousel.component.jobnav')--}}
 
     <div class="container">
         @include('pages.components.last-articles')
