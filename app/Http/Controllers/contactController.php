@@ -2,9 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests\ContactFormRequest;
 
 class ContactController extends Controller
@@ -20,20 +18,9 @@ class ContactController extends Controller
         return view('pages.contact.index');
     }
 
-    public function getContact()
-    {
-
-    }
-
-    public function postContact()
-    {
-
-    }
-
     public function store(ContactFormRequest $request)
-    {
-       
-         \Mail::send('emails.contact',
+    {    
+        \Mail::send('emails.contact',
         array(
             'firstname' => $request->get('firstname'),
             'lastname' => $request->get('lastname'),
@@ -45,18 +32,38 @@ class ContactController extends Controller
             'copie' => $request->get('copie')
         ), function($message) use ($request)
         {
-            $message->from($request->email);
+            /*si l'utilisateur a demandé à recevoir une copie du message par mail :*/
             if ($request->copie === 'yes') {
                 $message->to($request->email, $request->firstname)->subject('copie de mon message à roadweb');
             }
-            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
+
+            /*si l'utilisateur a envoyé une capture d'écran :*/
+            if(file_exists($request->file('file'))) {
+                $img = $request->file('file');
+                if($img->isValid())
+                {
+                    $path = config('images.contact');
+                    
+                    $extension = $img->getClientOriginalExtension();
+                    do 
+                    {
+                        $name = str_random(10) . '.' . $extension;
+                    } 
+                    while(file_exists($path . '/' . $name));
+                    $img->move($path, $name);
+                }
+                $file = $path . '/' . $name;
+                $message->attach($file);  
+            }
+
+            $message->from($request->email);
+            $message->to('peyrot.celine@gmail.com', 'Equipe Roadweb')->subject($request->objet);
             $message->setReplyTo($request->email);
-            //$message->attach($request->file);
         });
-
-
-
         return \Redirect::route('contact')
-      ->with('message', 'Votre email a bien été envoyé ! L\'équipe Roadweb vous répondra dans les plus brefs délais.');
+        ->with('message', 'Votre email a bien été envoyé ! L\'équipe Roadweb vous répondra dans les plus brefs délais.');
     }
 }
+
+/*File::delete($file); + FileControllerhello@road-web.fr
+essayer de rajouter une fonction pour supprimer les captures d'écran du dossier après envoi de l'email*/

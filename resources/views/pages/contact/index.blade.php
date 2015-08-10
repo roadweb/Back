@@ -71,7 +71,7 @@
                     array('placeholder'=>'Copiez-collez l\'url de la page concernée si besoin' )) !!}
                 </div>
 
-                <div class="rw-sub-input-file-container rw-hidden">
+                <div class="rw-sub-input-file-container">
                     <p>Capture d'écran :</p>
                     <div>
                         {!! Form::label('my-file', 'Joindre une image...', 
