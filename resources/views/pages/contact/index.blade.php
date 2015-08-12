@@ -7,7 +7,8 @@
 
         <h1>Nous contacter</h1>
 
-        <p>Un souci, une demande, des suggestions ? N'hésitez pas à remplir le formulaire ci-dessous et à nous le faire parvenir ! Nous vous recontacterons par mail au plus vite et ferons notre possible pour régler votre problème :) </p>
+        <p>Un souci, une demande, des suggestions ? N'hésitez pas à remplir le formulaire ci-dessous et à nous le faire parvenir !
+            <br/> Nous vous recontacterons par mail au plus vite et ferons notre possible pour régler votre problème :) </p>
 
         <ul class="rw-contact-error">
             @foreach($errors->all() as $error)

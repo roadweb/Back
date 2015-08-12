@@ -110,9 +110,9 @@ footer {
 				a {
 					display:block;
 					margin:auto;
-					padding:20px 50px;
-					color: #ccc;
-					font-size: $fontSize + 0.25em;
+					padding:30px 50px;
+					color: $red;
+					font-size: $fontSize + 0.15;
 					&:last-child {
 						padding-right:0 !important;
 					}
