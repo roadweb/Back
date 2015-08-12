@@ -84,8 +84,13 @@ body.has-nav-fixed {
   margin: auto;
 }
 
-a {
+a, a:visited {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:visited:hover {
+  color: inherit;
 }
 
 .clear {
@@ -1540,7 +1545,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -2230,7 +2237,7 @@ partie droite de la page
   z-index: 9999;
   position: fixed;
   right: 0;
-  top: 280px;
+  top: 105px;
   min-width: 50px;
   height: inherit;
   display: -webkit-box;

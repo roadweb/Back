@@ -7,10 +7,9 @@
 
 body {
 	font-family: $fontFamily;
-    font-weight: 300;
+  font-weight: 300;
 	margin: 0 auto;
 	padding-top: 0;
-
   & > * {
     font-family: $fontFamily;
     font-weight: 300;
@@ -27,13 +26,18 @@ body {
 	margin: auto;
 }
 
-a {
+a, a:visited {
 	text-decoration:none;
+  color:inherit;
+  &:hover {
+    color:inherit;
+  }
 }
 
 .clear {
 	clear:both;
 }
+
 
 /*************************
 EXTENDS

@@ -1,6 +1,28 @@
+.green {
+  color:$colorOpen;
+  font-weight:400;
+}
+
+label, .radio label, .checkbox label, .help-block {
+    font-size: 14px;
+    padding : 5px;
+}
+
+table {
+    margin-top:10px;
+}
+
+.table-bordered > tbody > tr > td {
+    border: 0px solid #000 !important;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    margin-left:5px;
+}
+
 .theme-header {
 	@include box-shadow(0 2px rgba(black, 0.1));
-	}
+}
 
 .thumbnail, .panel {
 	@include box-shadow(0 2px rgba(black, 0.1));
