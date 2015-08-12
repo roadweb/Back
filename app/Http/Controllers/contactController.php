@@ -57,7 +57,7 @@ class ContactController extends Controller
             }
 
             $message->from($request->email);
-            $message->to('peyrot.celine@gmail.com', 'Equipe Roadweb')->subject($request->objet);
+            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
             $message->setReplyTo($request->email);
         });
         return \Redirect::route('contact')
