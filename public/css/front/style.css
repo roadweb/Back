@@ -1540,9 +1540,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -1857,22 +1855,21 @@ partie droite de la page
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(1) {
-  -webkit-transform: translateY(-20px) translateX(20px);
-      -ms-transform: translateY(-20px) translateX(20px);
-          transform: translateY(-20px) translateX(20px);
+  -webkit-transform: translateY(-20px) translateX(5px);
+      -ms-transform: translateY(-20px) translateX(5px);
+          transform: translateY(-20px) translateX(5px);
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(2) {
   -webkit-transform: translateY(20px);
       -ms-transform: translateY(20px);
           transform: translateY(20px);
-  z-index: 1;
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img img:nth-of-type(3) {
-  -webkit-transform: translateY(-20px) translateX(-20px);
-      -ms-transform: translateY(-20px) translateX(-20px);
-          transform: translateY(-20px) translateX(-20px);
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-txt-pres {

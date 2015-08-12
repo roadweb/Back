@@ -1,0 +1,170 @@
+@import'sass/base/reset';
+@import'sass/base/base';
+@import'sass/base/variables';
+/*@import'sass/rw-pp-layout';*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900);
+
+.rw-pp-main-container {
+  width: 100%;
+  height: 100vh;
+
+  .rw-pp-header {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+
+    text-align: center;
+    background-color: $Color2;
+    box-shadow: 0 0.2em 0.3em $Color1;
+
+    h1, h2 {
+      font-size: 2em;
+      margin: auto;
+      text-transform: uppercase;
+      color: $Color3;
+      font-weight: bold;
+    }
+    img {
+      display: block;
+      margin: auto;
+      width: 20%;
+    }
+  }
+
+  .rw-pp-main-content {
+    padding: 1%;
+    margin: 5% auto;
+    min-height: 320px;
+
+    text-align: center;
+    p {
+      width: 80%;
+      margin: 1% auto;
+
+      padding: 2%;
+    }
+
+    .rw-pp-btn-prop {
+      text-align: center;
+
+      .rw-pp-btn-prop-add, .rw-pp-btn-prop-cot {
+        border: none;
+        padding: 3% 5%;
+        margin: 3%;
+        box-shadow: 0 0.2em 0.3em $Color1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .rw-pp-main-btn {
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+
+
+    h2 {
+      text-decoration: underline;
+    }
+
+    p {
+      color: $Color3;
+
+      form {
+        margin: auto;
+      }
+      
+      * {
+        margin: auto;
+        text-transform: capitalize;
+      }
+      
+    }
+  }
+
+  .rw-pp-main-add {
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 150px;
+    margin: auto;
+
+    h2 {
+      margin: auto;
+      text-transform: capitalize;
+      padding: 2% 1%;
+    }
+
+    p {
+      color: $Color3;
+      font-style: italic;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      margin: auto;
+
+      button {
+        border: none;
+        padding: 3% 5%;
+        cursor: pointer;
+        width: 200px;
+        margin: 2%;
+        box-shadow: 0 0.2em 0.3em $Color1;
+      }
+    }
+  }
+
+  .active {
+    color: $Color3;
+    font-weight: bold;
+  }
+
+  footer {
+    text-align: center;
+    background-color: $Color2;
+    box-shadow: 0 0.2em 0.3em $Color1;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+
+
+
+    form {
+      margin: auto;
+    }
+    div {
+      margin: auto;
+      h2 {
+        font-weight: bold;
+      }
+      p {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 750px) {
+
+  .rw-pp-header img {
+    max-width: 15%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+
+  .rw-pp-header img {
+    max-width: 10%;
+  }
+}

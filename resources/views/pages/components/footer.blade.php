@@ -41,7 +41,7 @@
                 <ul>
                     <li><a href="{{ url('/mentions') }}">Mentions légales</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
-                    <li><a href="{{ url('/') }}">Adhésion</a></li>
+                    <li><a href="{{ url('/adhesion') }}" target="_blank" >Adhésion</a></li>
                 </ul>
             </div>
         </div>
