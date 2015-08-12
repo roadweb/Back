@@ -392,9 +392,9 @@ footer {
 .rw-index-footer-nav .rw-index-footer-nav-list ul li a {
   display: block;
   margin: auto;
-  padding: 20px 50px;
-  color: #ccc;
-  font-size: 1.25em;
+  padding: 30px 50px;
+  color: #bf382a;
+  font-size: 1.15em;
 }
 
 .rw-index-footer-nav .rw-index-footer-nav-list ul li a:last-child {
@@ -2781,6 +2781,7 @@ partie droite de la page
   font-size: 1em;
   line-height: 1.5em;
   text-align: center;
+  width: 100%;
 }
 
 .rw-contact-container ul.rw-contact-error {

@@ -35,7 +35,7 @@
 
             <img src="{{asset('images/picto-avantage2.png')}}" alt="icône apprentissage"/>
 
-            <p>Road-Web se propose d’être une épaule sur laquelle s’appuyer pour approfondir les connaissances et les compétences liées aux métiers du web. Que vous soyez autodidacte ou faisant partie de l’EmWeb, vous trouverez ici des conseils et des informations qui pourront compléter vos connaissances. Et tout peut se faire à votre rythme !
+            <p>Road-Web se propose d’être une épaule sur laquelle s’appuyer pour approfondir les connaissances et les compétences liées aux métiers du web. Que vous soyez autodidacte ou faisant partie de l’EmWeb, vous trouverez ici des conseils et des informations qui pourront compléter vos connaissances à votre rythme !
             </p>
 
         </div>

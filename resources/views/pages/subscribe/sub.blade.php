@@ -8,15 +8,15 @@
         <div class="rw-sub-header">
             <h1>Bienvenue sur le site de <span>Road-Web</span></h1>
 
-            <h2>Tu veux faire partie de la communauté? <br/>
-                Incris toi vite.</h2>
+            <h2>Vous souhaitez faire partie de la communauté? <br/>
+                Rejoignez nous.</h2>
 
         </div>
 
         <div class="rw-sub-content">
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
-                    <strong>Whoops!</strong> Il semble qu'il y a un problème.<br><br>
+                    <strong>Whoops!</strong> Il semble qu'il y ai un problème.<br><br>
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -101,8 +101,7 @@
 
                 <p>Road-Web se propose d’être une épaule sur laquelle s’appuyer pour approfondir les connaissances et
                     les compétences liées aux métiers du web. Que vous soyez autodidacte ou faisant partie de l’EmWeb,
-                    vous trouverez ici des conseils et des informations qui pourront compléter vos connaissances. Et
-                    tout peut se faire à votre rythme !
+                    vous trouverez ici des conseils et des informations qui pourront compléter vos connaissances à votre rythme !
                 </p>
 
             </div>
