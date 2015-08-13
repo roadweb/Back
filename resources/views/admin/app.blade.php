@@ -38,6 +38,7 @@
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
                 @if (Auth::user()->right_id == '4')
                 <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des utilisateurs</a></li>
+                <li {{ active('metiers') }}><a href="{{ route('admin.metiers.index') }}">Fiches métiers</a></li>
                 @endif
                 {{--<li {{ active('questions') }}><a href="{{ route('admin.questions.index') }}">Questions</a></li>--}}
                 @endif
