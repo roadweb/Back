@@ -79,9 +79,12 @@ class Post extends Model
      * Permet de moduler la date au format français
      * @param $value
      * @return bool|string
-     */
+     */ 
+
+    /* fonction commentée pour afficher les $post->updated_at->format :
     public function getUpdatedAtAttribute($value)
     {
         return date('d-m-Y \à H:i:s', strtotime($value));
     }
+    */
 }

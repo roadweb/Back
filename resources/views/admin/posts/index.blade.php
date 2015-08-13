@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid rw-articles-index-container">
         <div class="row">
             <div class="col-sm-12">
                 @if(Auth::user()->right_id >= '3' && count($posts) > 0)
