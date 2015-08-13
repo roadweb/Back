@@ -12,7 +12,7 @@
                 {!! Form::open(array('route' => 'gestion_utilisateur')) !!}
                
 
-                <h4>Groupe <span style="color:red;">{{$groupe->name}}</span> : </h4>
+                <h4>Groupe <span class="green">{{$groupe->name}}</span> : </h4>
 
                 <table class="table-bordered table-striped table-condensed col-lg-12">
 

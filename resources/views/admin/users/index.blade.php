@@ -45,12 +45,12 @@
                         <tr>
                             <th class="col-lg-1 skip-filter">Pseudo</th>
                             <th class="col-lg-1 skip-filter">Avatar</th>
-                            <th class="col-lg-1 skip-filter">Nom </th>
-                            <th class="col-lg-1 skip-filter">Date d'inscription</th>
-                            <th class="col-lg-1 skip-filter">Email</th>
+                            <th class="col-lg-2 skip-filter">Nom </th>
+                            <th class="col-lg-2 skip-filter">Date d'inscription</th>
+                            <th class="col-lg-2 skip-filter">Email</th>
                             {{--<th class="col-lg-1 skip-filter">Blog</th>--}}
                             <th class="col-lg-1 skip-filter">Articles</th>
-                            <th class="col-lg-1">Formation</th>
+                            <th class="col-lg-2">Formation</th>
                             <th class="col-lg-1">Statut</th>
                         </tr>
                     </thead>

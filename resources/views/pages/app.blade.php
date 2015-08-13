@@ -15,8 +15,6 @@
 
 @include('pages.components.header')
 
-@include('pages.lognews.lognews')
-
 @yield('content')
 
 @include('pages.components.footer')
