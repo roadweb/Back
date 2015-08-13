@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/', ['as' => 'admin.home', 'uses' => 'Admin\HomeController@index']);
         Route::resource('posts', 'Admin\PostsController');
-        Route::resource('metiers', 'Admin\MetiersController');
+        Route::resource('metiers', 'Admin\JobsController');
         Route::resource('users', 'Admin\UsersController');
         Route::resource('questions', 'Admin\QuestionsController');
         Route::resource('stats', 'Admin\StatsController');
