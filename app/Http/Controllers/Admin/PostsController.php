@@ -28,10 +28,14 @@ class PostsController extends Controller
 //        $posts = $req->get();
 
         $user = Auth::user();
-        $posts = Post::orderBy('updated_at', 'desc')->get();
+
+        $posts = Post::all();
+        $posts_on = Post::where('published', 'on')->orderBy('updated_at', 'desc')->get();
+        $posts_uc = Post::where('published', 'uc')->orderBy('updated_at', 'desc')->get();
+        $posts_off = Post::where('published', '0')->orderBy('updated_at', 'desc')->get();
 
         $post_user = Post::where('user_id', $user->id)->get();
-        return view('admin.posts.index', compact('posts', 'post_user'));
+        return view('admin.posts.index', compact('posts', 'posts_on', 'posts_uc', 'posts_off', 'post_user'));
 
     }
 
@@ -112,7 +116,8 @@ class PostsController extends Controller
         if ($request->has('publication')) {
             $post->published = $request->get('publication');
             $post->save();
-        } else {
+        } 
+        else {
             $post->update($request->all());
         }
 
