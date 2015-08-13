@@ -1,17 +1,35 @@
-@foreach($fiches as $fiche)
-    <div class="row">
+    <div class="row rw-metiers-fiches">
 
 
-        <div class="col-sm-8">
-            <div class="panel panel-default) }}">
+        @foreach($fiches as $fiche)
+        <div class="col-sm-4">
+            <div class="panel panel-default)">
 
-                <div class="panel-heading">
+                <div class="panel-heading rw-job-color-bgc-{{$fiche->id}}">
                     {{ $fiche->name }}
-                    <span class="pull-right label">Mis à jour : {{ $fiche->updated_at }}</span>
+
+                    <span class="pull-right label">Mis à jour :
+                        {{$fiche->updated_at->format('d')}}
+                        {{dateConvert($fiche->updated_at->format('F'))}}
+                        {{$fiche->updated_at->format('Y')}}
+                    </span>
                 </div>
 
                 <div class="panel-body">
                     {{ $fiche->resume }}
+                </div>
+
+                <div class="panel-footer">
+
+                    {!! Form::open(['url' => route('admin.metiers.update', $fiche->id)]) !!}
+                    <a href="{{ route('admin.metiers.edit', $fiche->id) }}"
+                       class="btn btn-sm btn-default"
+                       data-toggle="tooltip"
+                       title="Éditer l'article"
+                       data-placement="top">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
@@ -22,24 +40,15 @@
         |--------------------------------------------------------------------------
         *-->
 
-        <div class="col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+        {{--<div class="col-sm-4">--}}
+            {{--<div class="panel panel-default">--}}
+                {{--<div class="panel-heading">--}}
 
-                </div>
-                <div class="panel-body">
-                    {!! Form::open(['url' => route('admin.metiers.update', $fiche->id)]) !!}
-                    <a href="{{ route('admin.metiers.edit', $fiche->id) }}"
-                       class="btn btn-sm btn-warning"
-                       data-toggle="tooltip"
-                       title="Éditer l'article"
-                       data-placement="top">
-                        <span class="glyphicon glyphicon-edit"></span>
-                    </a>
-                    {!! Form::close() !!}
+                {{--</div>--}}
+                {{--<div class="panel-body">--}}
 
-                </div>
-            </div>
-        </div>
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        @endforeach
     </div>
-@endforeach

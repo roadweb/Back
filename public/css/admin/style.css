@@ -976,3 +976,35 @@ section table td .thumbnail {
   color: #FFFFFF;
   background-color: #037E69 !important;
 }
+.rw-metiers-create h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.rw-metiers-create .rw-metiers-create-img {
+  text-align: center;
+  height: 42px;
+  display: block;
+  margin: auto;
+}
+.rw-metiers-create .rw-metiers-create-date {
+  text-align: center;
+}
+.rw-metiers-create .rw-metiers-create-date p {
+  margin: 0;
+  color: #FFFFFF;
+}
+.rw-metiers-create .rw-metiers-create-date p span {
+  font-weight: 500;
+}
+
+.rw-metiers-fiches .panel-heading {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.rw-metiers-fiches .panel-heading span {
+  color: #000;
+}
+.rw-metiers-fiches .panel-footer form {
+  text-align: right;
+}
