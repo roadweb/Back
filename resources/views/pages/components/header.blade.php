@@ -15,6 +15,9 @@
         </div>--}}
     </div>
     <div class="rw-clear"></div>
+
+    @include('pages.lognews.lognews')
+
     <nav id="rw-nav">
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
         <div class="rw-logo-fix">
