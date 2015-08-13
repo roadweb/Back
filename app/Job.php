@@ -4,7 +4,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model {
 
-	protected $fillable = ['name', 'job_icon', 'slide_img'];
+	protected $fillable = [
+        'name',
+        'job_icon',
+        'slide_img',
+        'resume',
+        'content'
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
