@@ -6,12 +6,16 @@
             <div class="panel panel-{{ sticky($post->is_sticky, 'danger') }}">
 
                 <div class="panel-heading">
+                    <!--<span class="pull-right label label-success">{{$post->published}}</span>-->
                     {{ str_limit($post->title, $limit = 40, $end = '...') }}
-                    @if($post->published)
+                    @if($post->published === 'on')
                         <span class="pull-right label label-success">Publié</span>
-                    @else
+                    @elseif($post->published === 'uc')
+                        <span class="pull-right label label-default">Soumis à validation</span>
+                    @else 
                         <span class="pull-right label label-default">Non publié</span>
                     @endif
+                
                     <span class="pull-right label">Mis à jour : {{ $post->updated_at }}</span>
                 </div>
 
