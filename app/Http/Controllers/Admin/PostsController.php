@@ -31,8 +31,8 @@ class PostsController extends Controller
         $posts = Post::orderBy('updated_at', 'desc')->get();
 
         $post_user = Post::where('user_id', $user->id)->get();
-
         return view('admin.posts.index', compact('posts', 'post_user'));
+
     }
 
     /**
@@ -96,8 +96,7 @@ class PostsController extends Controller
         $jobs = Job::lists('name', 'id');
         $technos = Techno::orderBy('name', 'asc')->get();
 
-
-        return view('admin.posts.create', compact('auth_id', 'categories', 'jobs', 'post', 'technos'));
+        return view('admin.posts.edit', compact('auth_id', 'categories', 'jobs', 'post', 'technos'));
     }
 
     /**

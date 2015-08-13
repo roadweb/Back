@@ -61,6 +61,11 @@ class Post extends Model
         return $query->where('published', 'on');
     }
 
+    public function scopeValid($query)
+    {
+        return $query->where('published', 'uc');
+    }
+
     /**
      * @param $query
      * @return mixed

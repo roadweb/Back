@@ -6,7 +6,7 @@
             <div class="col-sm-12">
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.posts.index') }}">Articles</a></li>
-                    <li class="active">Création</li>
+                    <li class="active">Edition</li>
                 </ol>
             </div>
         </div>
@@ -25,10 +25,10 @@
                         </ul>
                     </div>
                 @endif
-
-                {!! Form::open(['route' => ['admin.posts.store'], 'id' => 'form-main']) !!}
-               
-                    {!! Form::hidden('user_id',$auth_id) !!}
+                @if(isset($post))
+                    {!! Form::model($post, ['route' => ['admin.posts.update', $post->id], 'method' => 'patch', 'id' =>
+                    'form-main']) !!}
+                @endif
 
                 <!--
                 |--------------------------------------------------------------------------
@@ -83,6 +83,7 @@
                         <div class="form-group">
                             {!! Form::label('sticky', 'Fin de mise en avant') !!}
                             {!! Form::input('date', 'sticky_end', null, ["class" => "form-control", "placeholder" => "aaaa/mm/jj"])!!}
+
                         </div>
                     </div>
                 </div>
@@ -104,7 +105,7 @@
                         </div>
                         <div class="form-group">
                             {!! Form::label('content','Le résumé de l\'article (200 max)') !!}
-                            {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200", "required"])!!}
+                                     {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200", "required"])!!}
                         </div>
                         <div class="form-group" ng-app="app" ng-controller="textArea">
                             {!! Form::label('text','Le texte de l\'article') !!}
@@ -117,8 +118,8 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('image','Le lien de l\'image') !!}
                             {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale", "required"])!!}
+                            {!! Form::label('image','Le lien de l\'image') !!}
                         </div>
 
 
@@ -127,8 +128,9 @@
                             {{--@if( Auth::user()->right_id >= '3' )--}}
 
                                 <div class="checkbox checkbox-success">
-                                    {!! Form::checkbox('published', 'uc', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
-                                    {!! Form::label('checkbox1','Soumettre à validation ?') !!}
+                                    {!! Form::checkbox('published', 'on', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
+
+                                    {!! Form::label('checkbox1','Publier l\'article ?') !!}
                                 </div>
 
                             {{--@endif--}}
