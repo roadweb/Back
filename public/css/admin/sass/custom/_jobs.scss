@@ -5,4 +5,45 @@
     background-color:$colorOpenHover !important;
   }
 
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .rw-metiers-create-img {
+    text-align: center;
+    height: 42px;
+    display: block;
+    margin: auto;
+  }
+
+  .rw-metiers-create-date {
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: #FFFFFF;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.rw-metiers-fiches {
+  .panel-heading {
+    font-size: $fontSize + 0.2;
+    font-weight: 500;
+
+    span {
+      color: #000;
+    }
+  }
+
+  .panel-footer {
+    form {
+      text-align: right;
+    }
+  }
 }

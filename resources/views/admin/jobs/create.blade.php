@@ -4,7 +4,7 @@
 
     <div class="container-fluid rw-metiers-create">
         <div class="row">
-            <div class="col-xs-9">
+            <div class="col-xs-12">
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
                         <strong>Whoops!</strong> Il y'a un problème avec les données envoyées!<br><br>
@@ -32,13 +32,32 @@
                 <div class="panel panel-default" id="infos">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                  <img src="{{ asset($fiches->job_icon) }}" alt=""/>
+                            <div class="col-sm-2">
+                                    <img src="{{ asset($fiches->job_icon) }}" alt="{{$fiches->name}}" class="rw-metiers-create-img"/>
+                            </div>
+                            <div class="col-sm-8">
                                     <h1 class="rw-job-color-txt-{{$fiches->id}}">
                                         {{ $fiches->name }}
                                     </h1>
-                                </div>
+                            </div>
+                            <div class="col-sm-2 rw-metiers-create-date">
+                                    <p>
+                                        <span>
+                                            Création :
+                                        </span>
+                                        {{$fiches->created_at->format('d')}}
+                                        {{dateConvert($fiches->created_at->format('F'))}}
+                                        {{$fiches->created_at->format('Y')}}
+                                    </p>
+                                    <p>
+                                        <span>
+                                        Mise à jour :
+                                        </span>
+                                        {{$fiches->updated_at->format('d')}}
+                                        {{dateConvert($fiches->updated_at->format('F'))}}
+                                        {{$fiches->updated_at->format('Y')}}
+
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -78,9 +97,8 @@
                 {!! Form::close() !!}
             </div>
 
-            <div class="col-xs-3">
-                <div class="panel panel-default" data-spy="affix" data-offset-top="100">
-                    <div class="panel-heading">Action</div>
+            <div class="col-xs-12">
+                <div class="panel panel-default">
                     <div class="panel-body">
                         <button type="submit" form="form-fiches" class="btn btn-success center-block">
                             <span class="glyphicon glyphicon-download-alt"></span> Sauvegarder
