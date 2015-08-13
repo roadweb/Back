@@ -32,6 +32,14 @@
 }
 
 .rw-metiers-fiches {
+
+  h2 {
+    text-align: center;
+
+    span {
+      color: $red;
+    }
+  }
   .panel-heading {
     font-size: $fontSize + 0.2;
     font-weight: 500;
@@ -39,6 +47,14 @@
     span {
       color: #000;
     }
+  }
+
+  .panel {
+    margin: 20px auto;
+  }
+
+  .panel-body {
+    min-height: 90px;
   }
 
   .panel-footer {

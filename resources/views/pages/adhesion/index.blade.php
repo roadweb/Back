@@ -80,8 +80,8 @@
     </footer>
 </div>
 
-<script src="app/jquery.min.js"></script>
-<script src="app/app.js"></script>
+<script src="{{asset('bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('javascript/front/app.adhesion.js')}}"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

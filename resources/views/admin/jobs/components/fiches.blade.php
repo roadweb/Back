@@ -1,5 +1,11 @@
     <div class="row rw-metiers-fiches">
 
+        <h2>
+            <span>
+                {{$fiches->count()}} fiches métiers
+            </span>
+             sur Road Web
+        </h2>
 
         @foreach($fiches as $fiche)
         <div class="col-sm-4">
