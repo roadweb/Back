@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use App\User;
-use App\Right;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
@@ -20,8 +18,7 @@ class CompteController extends Controller
     {
         if(Auth::check()){
             $user = Auth::user();
-//            $right = Right::all()->where('id', $user->right_id)->take('name');
-            return view('pages.compte.index', compact('user'));
+            return view('pages.compte.index', compact('user', 'rsx'));
         }
     }
 
@@ -36,7 +33,8 @@ class CompteController extends Controller
     {
         $users = Auth::user()->id;
 
-        return view('compte.create', compact('users'));
+
+        return view('compte.create', compact('users', 'rsx'));
 
     }
 
@@ -49,7 +47,6 @@ class CompteController extends Controller
     {
 
         User::create($request->all());
-        dd($request);
 
         return redirect(route('compte'));
     }
@@ -75,8 +72,7 @@ class CompteController extends Controller
         $user = User::find($id);
         $auth_id = Auth::user()->id;
 
-
-        return view('compte.create', compact('auth_id', 'user'));
+        return view('compte.create', compact('auth_id', 'user', 'rsx'));
 
     }
 
@@ -89,8 +85,7 @@ class CompteController extends Controller
     public function update($id, Request $request)
     {
         $user = User::findOrFail($id);
-
-            $user->update($request->all());
+        $user->update($request->all());
 
         return redirect(route('compte'));
     }

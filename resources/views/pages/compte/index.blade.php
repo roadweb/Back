@@ -8,6 +8,12 @@
             <h1>Compte de <span>{{ $user->first_name }}</span></h1>
             <p class="rw-cpt-created">Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}</p>
                 <p class="rw-cpt-created">
+                    @if($user->asso != 0)
+                    <span class="rw-job-color-txt-{{$user->job_id}}">
+                        Road Web asso
+                    </span>
+                    @else
+                    @endif
                     <span class="rw-right-color-bgc-{{$user->right_id}}">
                         {{ $user->right->name }}
                     </span> | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
@@ -62,10 +68,25 @@
                 </div>
 
                 <div>
+                    {!! Form::text('skype', null, ["class" => "rw-cpt-input", "placeholder" => "Skype"])!!}
+                </div>
+
+                <div>
+                    {!! Form::text('facebook', null, ["class" => "rw-cpt-input", "placeholder" => "Facebook"])!!}
+                </div>
+
+                <div>
+                    {!! Form::text('twitter', null, ["class" => "rw-cpt-input", "placeholder" => "Twitter"])!!}
+                </div>
+
+                <div>
+                    {!! Form::text('linkedin', null, ["class" => "rw-cpt-input", "placeholder" => "Linkedin"])!!}
+                </div>
+
+                <div>
                     {{--{!! Form::label('email','Email') !!}--}}
                     {!! Form::text('email', null, ["class" => "rw-cpt-input", "placeholder" => "Email de contact", "required"])!!}
                 </div>
-
 
 
                 <div>
@@ -76,46 +97,9 @@
 
                 {!! Form::close() !!}
 
-            </div>        <div class="rw-cpt-content">
-            {{--<div class="rw-cpt-content-profil">--}}
-
-                {{--<h2>Mes réseaux sociaux</h2>--}}
-
-
-                {{--<button id="rw-cpt-button-rsx">Editer mes informations</button>--}}
-
-            {{--@if(isset($user))--}}
-                {{--{!! Form::model($user, ['route' => ['compte.update', $user->id], 'method' => 'patch']) !!}--}}
-
-                {{--@else--}}
-                    {{--{!! Form::open(['route' => ['compte.store']]) !!}--}}
-                {{--@endif--}}
-
-
-                {{--<div>--}}
-                    {{--{!! Form::text('skype', null, ["class" => "rw-cpt-input", "placeholder" => "Skype"])!!}--}}
-                {{--</div>--}}
-
-                {{--<div>--}}
-                    {{--{!! Form::text('facebook', null, ["class" => "rw-cpt-input", "placeholder" => "Facebook"])!!}--}}
-                {{--</div>--}}
-
-                {{--<div>--}}
-                    {{--{!! Form::text('twitter', null, ["class" => "rw-cpt-input", "placeholder" => "Twitter"])!!}--}}
-                {{--</div>--}}
-
-                {{--<div>--}}
-                    {{--{!! Form::text('linkedin', null, ["class" => "rw-cpt-input", "placeholder" => "Linkedin"])!!}--}}
-                {{--</div>--}}
-
-                {{--{!! Form::submit('Sauvegarder les informations', ["id" => "rw-cpt-btn-submit-rsx"]) !!}--}}
-
-                {{--{!! Form::close() !!}--}}
-
-            {{--</div>--}}
-
-
-            <div class="rw-cpt-content-profil">
+            </div>
+            <div class="rw-cpt-content">
+                <div class="rw-cpt-content-profil">
 
 
                 <h2>Mon avatar</h2>

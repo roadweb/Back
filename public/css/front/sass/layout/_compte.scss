@@ -61,7 +61,7 @@
   .rw-cpt-content {
     margin: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     height: auto;
     width: 100%;
 

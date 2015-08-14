@@ -30,9 +30,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         'first_name',
         'job_id',
         'emweb',
+        'asso',
         'right_id',
         'bio',
-        'avatar'
+        'avatar',
+        'www',
+        'skype',
+        'facebook',
+        'twitter',
+        'instagram',
+        'pinterest',
+        'behance',
+        'linkedin',
+        'viadeo',
+        'youtube',
+        'googleplus'
     ];
 
     /**
@@ -59,10 +71,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasMany('App\Question');
     }
 
-    public function reseaux()
-    {
-        return $this->hasMany('App\Reseaux');
-    }
+//    public function socials()
+//    {
+//        return $this->hasMany('App\Social');
+//    }
 
     /*
     |--------------------------------------------------------------------------

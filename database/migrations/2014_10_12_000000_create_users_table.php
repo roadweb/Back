@@ -29,13 +29,23 @@ class CreateUsersTable extends Migration {
             $table->date('subscribe_date');
 			$table->rememberToken();
 			$table->timestamps();
-            $table->string('blogrw')->default('null');
+            $table->string('blogrw');
             $table->string('avatar')->default('images/avatars/avatar-base.png');
             $table->longText('bio');
+            $table->string('asso')->default(false);
+            $table->string('www');
+            $table->string('skype');
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->string('instagram');
+            $table->string('pinterest');
+            $table->string('behance');
+            $table->string('linkedin');
+            $table->string('viadeo');
+            $table->string('youtube');
+            $table->string('googleplus');
 
-
-
-		});
+        });
 
         Schema::table('users', function(Blueprint $table){
             $table->integer('job_id')->unsigned()->index();
