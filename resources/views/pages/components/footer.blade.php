@@ -30,7 +30,7 @@
                         <a href="{{ url('https://plus.google.com/+RoadWebfr/posts') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="google +"/></a>
                     </li>
                     <li>
-                        <a href="{{ url('https://twitter.com/road_web/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="youtube"/></a>
+                        <a href="{{ url('https://www.youtube.com/channel/UC29cmztuUzb7CLjqfE6865A/feed') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="youtube"/></a>
                     </li>
                     <li class="rw-hidden">
                         <a href="{{ url('https://www.youtube.com/channel/UC29cmztuUzb7CLjqfE6865A/feed') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="behance"/></a>
