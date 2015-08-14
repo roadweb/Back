@@ -76,7 +76,43 @@
 
                 {!! Form::close() !!}
 
-            </div>
+            </div>        <div class="rw-cpt-content">
+            {{--<div class="rw-cpt-content-profil">--}}
+
+                {{--<h2>Mes réseaux sociaux</h2>--}}
+
+
+                {{--<button id="rw-cpt-button-rsx">Editer mes informations</button>--}}
+
+            {{--@if(isset($user))--}}
+                {{--{!! Form::model($user, ['route' => ['compte.update', $user->id], 'method' => 'patch']) !!}--}}
+
+                {{--@else--}}
+                    {{--{!! Form::open(['route' => ['compte.store']]) !!}--}}
+                {{--@endif--}}
+
+
+                {{--<div>--}}
+                    {{--{!! Form::text('skype', null, ["class" => "rw-cpt-input", "placeholder" => "Skype"])!!}--}}
+                {{--</div>--}}
+
+                {{--<div>--}}
+                    {{--{!! Form::text('facebook', null, ["class" => "rw-cpt-input", "placeholder" => "Facebook"])!!}--}}
+                {{--</div>--}}
+
+                {{--<div>--}}
+                    {{--{!! Form::text('twitter', null, ["class" => "rw-cpt-input", "placeholder" => "Twitter"])!!}--}}
+                {{--</div>--}}
+
+                {{--<div>--}}
+                    {{--{!! Form::text('linkedin', null, ["class" => "rw-cpt-input", "placeholder" => "Linkedin"])!!}--}}
+                {{--</div>--}}
+
+                {{--{!! Form::submit('Sauvegarder les informations', ["id" => "rw-cpt-btn-submit-rsx"]) !!}--}}
+
+                {{--{!! Form::close() !!}--}}
+
+            {{--</div>--}}
 
 
             <div class="rw-cpt-content-profil">
