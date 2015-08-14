@@ -124,16 +124,6 @@
 
 
                         <div class="form-group">
-
-                            {{--@if( Auth::user()->right_id >= '3' )--}}
-
-                                <div class="checkbox checkbox-success">
-                                    {!! Form::checkbox('published', 'on', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
-
-                                    {!! Form::label('checkbox1','Publier l\'article ?') !!}
-                                </div>
-
-                            {{--@endif--}}
                         </div>
                     </div>
                 </div>

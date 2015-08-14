@@ -129,6 +129,10 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        a img {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
