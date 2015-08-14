@@ -53,11 +53,42 @@
 
         span {
           margin: auto;
-          width: 100%;
 
-          font-size: $fontSize + 0.3;
-          text-transform: capitalize;
+          font-size: $fontSize;
 
+          &:nth-of-type(1) {
+            font-size: $fontSize + 0.3;
+            text-transform: capitalize;
+          }
+
+          i {
+            color: $grey-light;
+            text-shadow: 0 0 2px #000;
+          }
+        }
+
+        .rw-allartus-label-state {
+          padding: 5px;
+          margin: 0 5px;
+          color: #fff;
+          border-radius: 20px;
+          box-shadow: 1px 1px 3px $grey-dark;
+
+          font-size: $fontSize - 0.3 !important;
+        }
+
+        .rw-allartus-label-emweb {
+          @extend .rw-allartus-label-state;
+          border: 1px solid $colorOpen;
+          color: #000000;
+        }
+
+        .rw-allartus-label-post, .rw-allartus-label-inscrit {
+          font-size: $fontSize - 0.05;
+        }
+
+        .rw-allartus-label-post {
+          margin: 30px 0 0 0;
         }
 
         .rw-allartus-header-content-job {

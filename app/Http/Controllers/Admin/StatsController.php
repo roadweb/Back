@@ -22,7 +22,7 @@ class StatsController extends Controller
 	public function index()
 	{
 		$posts_published = Post::published()->count();
-        $posts_editing = Post::where('published', '0')->count();
+        $posts_editing = Post::where('published', 'uc')->count();
         $posts_sticky = Post::where('is_sticky', 'on')->count();
         $posts = Post::count();
 

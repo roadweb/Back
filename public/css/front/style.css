@@ -224,6 +224,23 @@ EXTENDS
   display: none !important;
 }
 
+/*couleurs right background*/
+.rw-right-color-bgc-1 {
+  background-color: #72CFF5 !important;
+}
+
+.rw-right-color-bgc-2 {
+  background-color: #F59E36 !important;
+}
+
+.rw-right-color-bgc-3 {
+  background-color: #B76DAB !important;
+}
+
+.rw-right-color-bgc-4 {
+  background-color: #bf382a !important;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -1545,9 +1562,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -2639,7 +2654,15 @@ partie droite de la page
 .rw-cpt-main-container .rw-cpt-header .rw-cpt-created {
   font-size: 0.9em;
   color: #7e8b8c;
-  font-style: italic;
+}
+
+.rw-cpt-main-container .rw-cpt-header .rw-cpt-created span {
+  padding: 5px;
+  margin: 0 5px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px #7e8b8c;
+  font-size: 0.8em !important;
 }
 
 .rw-cpt-main-container .rw-cpt-header button {
@@ -3198,9 +3221,39 @@ partie droite de la page
 
 .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content span {
   margin: auto;
-  width: 100%;
+  font-size: 1em;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content span:nth-of-type(1) {
   font-size: 1.3em;
   text-transform: capitalize;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content span i {
+  color: #ebebe6;
+  text-shadow: 0 0 2px #000;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-state, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-emweb {
+  padding: 5px;
+  margin: 0 5px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px #7e8b8c;
+  font-size: 0.7em !important;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-emweb {
+  border: 1px solid #16A086;
+  color: #000000;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-post, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-inscrit {
+  font-size: 0.95em;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-post {
+  margin: 30px 0 0 0;
 }
 
 .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-header-content-job {

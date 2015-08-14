@@ -58,9 +58,41 @@
                     alias {{$user->username}}
                     </span>
 
-                    <p class="rw-allartus-header-content-job">
+                    <div>
+                        <span class="rw-allartus-label-state rw-right-color-bgc-{{$user->right_id}}">
+                            {{$user->right->name}}
+                        </span>
+                        @if($user->emweb === 'on')
+                            <span class="rw-allartus-label-emweb">
+                                Emweb
+                            </span>
+                        @endif
+                    </div>
+
+                    <span class="rw-allartus-label-post">
+
+                        @if($user->right_id >= 2)
+                            @if(count($user->posts->where('published', 'on')) === 1)
+                                <i class="fa fa-trophy"></i> {{count($user->posts->where('published', 'on'))}} article publié.
+                            @elseif(count($user->posts->where('published', 'on')) > 1)
+                                <i class="fa fa-trophy"></i> {{count($user->posts->where('published', 'on'))}} articles publiés.
+                            @else
+                                Aucun article publié pour l'instant.
+
+                            @endif
+                        @else
+                        @endif
+
+                    </span>
+
+                    <span class="rw-allartus-label-inscrit">
+                        <i class="fa fa-info-circle"></i>
+                        Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}
+                    </span>
+
+                    <span class="rw-allartus-header-content-job rw-job-color-{{$user->job_id}}">
                         {{$user->job->name}}
-                    </p>
+                    </span>
 
                     <div class="rw-allartus-header-avatar">
                         <img src="{{ asset( $user->avatar)}}" alt="avatar"/>

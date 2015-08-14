@@ -5,10 +5,12 @@
     <div class="rw-cpt-main-container">
         <div class="rw-cpt-header">
 
-            <h1>Compte de <span>{{ $user->username }}</span></h1>
-            <p class="rw-cpt-created">( Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}} )</p>
+            <h1>Compte de <span>{{ $user->first_name }}</span></h1>
+            <p class="rw-cpt-created">Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}</p>
                 <p class="rw-cpt-created">
-                    Status : {{ $user->right->name }} | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
+                    <span class="rw-right-color-bgc-{{$user->right_id}}">
+                        {{ $user->right->name }}
+                    </span> | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
                 </p>
             <!---------------------
              Bouton en attendant de faire la page plume!
