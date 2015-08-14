@@ -67,6 +67,12 @@
                                 Emweb
                             </span>
                         @endif
+                        @if($user->asso != 0)
+                            <span class="rw-job-color-txt-{{$user->job_id}} rw-allartus-label-state">
+                                        Road Web Asso
+                                    </span>
+                        @else
+                        @endif
                     </div>
 
                     <span class="rw-allartus-label-post">
