@@ -15,13 +15,13 @@
     </div>
 </div>
 
-{{--<div class="rw-lognews-newsletter">--}}
-{{--<div class="rw-newsletter">--}}
-{{--<div class="rw-square">--}}
-{{--<img class="rw-icon-newsletter" src="{{ asset('images/newsletter.png')}}" alt="Newsletter"/>--}}
-{{--</div>--}}
-{{--<div class="rw-newsletter-container">--}}
-{{--            @include('pages.lognews.form.newsform')--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</div>--}}
+<div class="rw-lognews-newsletter">
+<div class="rw-newsletter">
+<div class="rw-square">
+<img class="rw-icon-newsletter" src="{{ asset('images/newsletter.png')}}" alt="Newsletter"/>
+</div>
+<div class="rw-newsletter-container">
+            @include('pages.lognews.form.newsform')
+</div>
+</div>
+</div>

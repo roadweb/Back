@@ -17,9 +17,20 @@
     
     <div class="rw-lognews-form-group">
         <div class="rw-lognews-container">  
-            <a class="rw-lognews-myaccompt" href="{{ url('/compte') }}">Mon compte</a>
+            <a class="rw-lognews-myaccompt" href="{{ url('/compte') }}">
+                <i class="fa fa-hand-o-right"></i>
+                Mon compte
+            </a>
         </div>
-    </div>  
+        @if(Auth::user()->right_id >= 2)
+            <div class="rw-lognews-container">
+                <a class="rw-lognews-myaccompt" href="{{ url('/admin') }}">
+                    <i class="fa fa-hand-o-right"></i>
+                    Accès back office
+                </a>
+            </div>
+        @endif
+    </div>
 
     
     <div class="rw-lognews-form-group">

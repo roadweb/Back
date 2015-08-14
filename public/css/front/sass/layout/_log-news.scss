@@ -179,7 +179,7 @@
     .rw-lognews-container {
 
       h1 {
-        display: flex;
+//        display: flex;
         height: auto;
         width: 100%;
         margin: 8px 0;
@@ -190,26 +190,31 @@
         font-weight: 600;
       }
       .rw-lognews-create-accompte,
+
       .rw-lognews-myaccompt {
         line-height: 60px;
         font-size: $fontSize + 0.25em;
         height: 60px;
       }
+
       input[type="email"],
       input[type="password"] {
         border-bottom: 1px solid #333;
         line-height: $lineHeight + 0.125em;
         font-size: $fontSize + 0.125em;
       }
+
       a {
         height: auto;
         width: 100%;
         color: #333;
       }
+
       a:hover {
         color: $colorCloseHover;
         @include transition(all, 0.2s, ease-in-out);
       }
+
       .rw-lognews-pwd-forgoten,
       .rw-lognews-remember {
         font-size: $fontSize - 0.25em; /////////////////////////////////////
@@ -217,6 +222,7 @@
         height: 20px;
         text-align: left;
       }
+
       input[type="checkbox"] {
         width: 16px;
         margin-left: 20px;
