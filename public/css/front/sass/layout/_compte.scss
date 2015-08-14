@@ -29,7 +29,16 @@
     .rw-cpt-created {
       font-size: $fontSize - 0.1;
       color: $grey-dark;
-      font-style: italic;
+
+      span {
+        padding: 5px;
+        margin: 0 5px;
+        color: #fff;
+        border-radius: 20px;
+        box-shadow: 1px 1px 3px $grey-dark;
+
+        font-size: $fontSize - 0.2 !important;
+      }
     }
 
     button {

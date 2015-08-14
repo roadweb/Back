@@ -160,3 +160,20 @@ EXTENDS
 .rw-hidden {
   display:none !important;
 }
+
+/*couleurs right background*/
+.rw-right-color-bgc-1 {
+  background-color: $colorDesignClair !important;
+}
+
+.rw-right-color-bgc-2 {
+  background-color: $colorMarket !important;
+}
+
+.rw-right-color-bgc-3 {
+  background-color: $colorRefClair !important;
+}
+
+.rw-right-color-bgc-4 {
+  background-color: $red !important;
+}
