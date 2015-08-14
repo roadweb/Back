@@ -97,10 +97,60 @@
 
 
                 <div class="rw-blog-band-auth-rsx">
-                    <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>
-                    <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
-                    <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter"/>
-                    <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Twitter"/>
+                    @if(($post->user->facebook) != '')
+                        <a href="{{$post->user->facebook}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook" title="Facebook {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->linkedin) != '')
+                        <a href="{{$post->user->linkedin}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin" title="Linkedin {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->twitter) != '')
+                        <a href="{{$post->user->twitter}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter" title="Twitter {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->googleplus) != '')
+                        <a href="{{$post->user->googleplus}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Google plus" title="Google+ {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->pinterest) != '')
+                        <a href="{{$post->user->pinterest}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="Pinterest" title="Pinterest {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->behance) != '')
+                        <a href="{{$post->user->behance}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="Behance" title="Behance {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->youtube) != '')
+                        <a href="{{$post->user->youtube}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="Youtube" title="Youtube {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->viadeo) != '')
+                        <a href="{{$post->user->viadeo}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/viadeo.png')}}" alt="Viadeo" title="Viadeo {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
+                    @if(($post->user->instagram) != '')
+                        <a href="{{$post->user->instagram}}" target="_blank">
+                            <img src="{{ asset('images/reseaux-icon/instagram.png')}}" alt="Instagram" title="Instagram {{$post->user->username}}"/>
+                        </a>
+                    @else
+                    @endif
                 </div>
             </div>
             <hr/>

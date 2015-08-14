@@ -84,18 +84,42 @@
         display: flex;
         flex-flow: column nowrap;
         margin: 0 auto;
-        text-align: right;
 
 
+        .rw-cpt-label {
+          color: $colorOpenHover;
+          width: 400px;
+          display: inline;
+        }
+
+        .rw-cpt-label-container {
+
+          margin: 10px 0;
+
+          .rw-cpt-label-no {
+            color: $red;
+          }
+          .rw-cpt-label-textarea {
+            @extend .rw-cpt-label;
+            width: 300px;
+            display: block;
+          }
+          label {
+            padding: 0 5px;
+          }
+
+        }
         .rw-cpt-input, .rw-cpt-textarea {
           margin: 10px auto;
-
+          display: none;
           border: none;
           background-color: $grey-light;
           padding: 5px;
-          width: 240px;
+          width: 300px;
           color: darken($grey-dark, 20);
           font-style: italic;
+          transition: all 0.5s ease-in-out;
+
         }
         #rw-cpt-btn-submit-infos, #rw-cpt-btn-submit-avatar {
           @extend .rw-cpt-input;
@@ -103,7 +127,7 @@
           color: #FFFFFF;
           margin: 10px auto;
           opacity:0;
-          transition: all 0.5s ease-in-out;
+          display: block;
           border-radius: 20px;
         }
       }

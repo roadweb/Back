@@ -1382,9 +1382,15 @@ partie droite de la page
   margin: auto;
 }
 
-.rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-rsx img {
+.rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-rsx a {
+  margin: auto;
+}
+
+.rw-blog-band-container .rw-blog-band-auth .rw-blog-band-auth-rsx a img {
   padding: 0;
   margin: auto;
+  width: 30px;
+  height: 30px;
 }
 
 .rw-blog-band-container .rw-blog-band-others-sameAuth {
@@ -2716,17 +2722,42 @@ partie droite de la page
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   margin: 0 auto;
-  text-align: right;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
+  color: #037E69;
+  width: 400px;
+  display: inline;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container {
+  margin: 10px 0;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-no {
+  color: #bf382a;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
+  width: 300px;
+  display: block;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container label {
+  padding: 0 5px;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-input, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-infos, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-avatar, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-textarea {
   margin: 10px auto;
+  display: none;
   border: none;
   background-color: #ebebe6;
   padding: 5px;
-  width: 240px;
+  width: 300px;
   color: #4d5657;
   font-style: italic;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-infos, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-avatar {
@@ -2734,8 +2765,7 @@ partie droite de la page
   color: #FFFFFF;
   margin: 10px auto;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
+  display: block;
   border-radius: 20px;
 }
 
@@ -3293,6 +3323,11 @@ partie droite de la page
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-rs a img {
+  width: 30px;
+  height: 30px;
 }
 
 /*
