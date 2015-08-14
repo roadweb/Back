@@ -3,7 +3,13 @@
 <div class="row">
 
     <div class="col-lg-4 col-md-6 col-sm-6">
-        <h2 class="text-center">Articles non publiés</h2>
+        @if(count($posts_off) == 1)
+            <h2 class="text-center">{{$posts_off->count()}} article non publié</h2>
+        @elseif(count($posts_off) >= 2)
+            <h2 class="text-center">{{$posts_off->count()}} articles non publiés</h2>
+        @else
+            <h2 class="text-center">Aucun article non publié</h2>
+        @endif
 
         @foreach($posts_off as $post)
         <div class="col-sm-12">
@@ -83,7 +89,14 @@
     </div>
 
     <div class="col-md-4">
-        <h2 class="text-center">Articles en attente de validation</h2>
+        @if(count($posts_uc) == 1)
+            <h2 class="text-center">{{$posts_uc->count()}} article en attente de validation</h2>
+        @elseif(count($posts_uc) >= 2)
+            <h2 class="text-center">{{$posts_uc->count()}} articles en attente de validation</h2>
+        @else
+            <h2 class="text-center">Aucun article en attente de validation</h2>
+        @endif
+
         @foreach($posts_uc as $post)
         <div class="col-sm-12">
             <div class="panel panel-default }}">
@@ -174,7 +187,14 @@
     </div>
 
     <div class="col-md-4">
-        <h2 class="text-center">Articles publiés</h2>
+        @if(count($posts_on) == 1)
+            <h2 class="text-center">{{$posts_on->count()}} article publié</h2>
+        @elseif(count($posts_on) >= 2)
+            <h2 class="text-center">{{$posts_on->count()}} articles publiés</h2>
+        @else
+            <h2 class="text-center">Aucun article publié</h2>
+        @endif
+
         @foreach($posts_on as $post)
         <div class="col-sm-12">
             <div class="panel panel-default">
