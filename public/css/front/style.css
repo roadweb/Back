@@ -2494,10 +2494,6 @@ partie droite de la page
 }
 
 .rw-lognews-form .rw-lognews-form-group .rw-lognews-container h1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: auto;
   width: 100%;
   margin: 8px 0;
