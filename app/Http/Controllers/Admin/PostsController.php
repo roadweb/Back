@@ -35,7 +35,11 @@ class PostsController extends Controller
         $posts_off = Post::where('published', '0')->orderBy('updated_at', 'desc')->get();
 
         $post_user = Post::where('user_id', $user->id)->get();
-        return view('admin.posts.index', compact('posts', 'posts_on', 'posts_uc', 'posts_off', 'post_user'));
+        $post_on_user = Post::where('published', 'on')->where('user_id', $user->id)->get();
+        $post_off_user = Post::where('published', '0')->where('user_id', $user->id)->get();
+        $post_uc_user = Post::where('published', 'uc')->where('user_id', $user->id)->get();
+        
+        return view('admin.posts.index', compact('posts', 'posts_on', 'posts_uc', 'posts_off', 'post_user', 'post_on_user', 'post_off_user', 'post_uc_user'));
 
     }
 
