@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb">
-                    <li><a href="{{ route('admin.posts.index') }}">Articles</a></li>
+                    <li><a href="{{ route('admin.posts.index') }}">Articles</a> </li>
                     <li class="active">Création</li>
                 </ol>
             </div>

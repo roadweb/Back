@@ -1177,7 +1177,7 @@ section table td .thumbnail {
 /* line 2, sass/custom/_header.scss */
 .rw-adm-logo img {
   height: 35px;
-  margin: 5px auto;
+  margin: 5px 10px 5px 5px;
 }
 
 /* line 3, sass/custom/_jobs.scss */
