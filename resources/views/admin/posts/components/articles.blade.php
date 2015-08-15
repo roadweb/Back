@@ -2,7 +2,7 @@
 
 <div class="row">
 
-    <div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
         @if(count($posts_off) == 1)
             <h2 class="text-center">{{$posts_off->count()}} article non publié</h2>
         @elseif(count($posts_off) >= 2)
@@ -12,17 +12,16 @@
         @endif
 
         @foreach($posts_off as $post)
-        <div class="col-sm-12">
+        <div class="col-sm-12 center-block">
             <div class="panel panel-default }}">
 
-                <div class="panel-heading rw-job-color-bgc-{{ $post->job->id}}">
+                <div class="panel-heading rw-job-color-bcg-test-{{ $post->job->id}}">
                     <h3>{{ str_limit($post->title, $limit = 40, $end = '...') }}
                         @if ($post->is_sticky === 'on')
-                            <span class="pull-right label label-sticky">Mis en avant</span>
+                            <span class="inline-block label label-sticky">Mis en avant</span>
                         @endif
-                        <span class="pull-right label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
-
-                    </h3>                    
+                        <span class="inline-block label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
+                    </h3>       
                 </div>
 
                 <div class="panel-body">
@@ -32,7 +31,7 @@
                 <div class="panel-footer">
                     
                     <p class="rw-articles-index-maj inline-block">
-                        Dernière édition le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
+                        Édité le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
                     </p>
                     
                     {!! Form::open([
@@ -88,7 +87,7 @@
         @endforeach
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
         @if(count($posts_uc) == 1)
             <h2 class="text-center">{{$posts_uc->count()}} article en attente de validation</h2>
         @elseif(count($posts_uc) >= 2)
@@ -101,14 +100,13 @@
         <div class="col-sm-12">
             <div class="panel panel-default }}">
 
-                <div class="panel-heading rw-job-color-bgc-{{ $post->job->id}}">
+                <div class="panel-heading rw-job-color-bcg-test-{{ $post->job->id}}">
                     <h3>{{ str_limit($post->title, $limit = 40, $end = '...') }}
                         @if ($post->is_sticky === 'on')
-                        <span class="pull-right label label-sticky">Mis en avant</span>
-                    @endif
-                        <span class="pull-right label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
-
-                    </h3>                    
+                            <span class="inline-block label label-sticky">Mis en avant</span>
+                        @endif
+                        <span class="inline-block label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
+                    </h3>        
                 </div>
 
                 <div class="panel-body">
@@ -118,7 +116,7 @@
                 <div class="panel-footer">
                     
                     <p class="rw-articles-index-maj inline-block">
-                        Dernière édition le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
+                        Édité le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
                     </p>
                     
                     {!! Form::open([
@@ -186,7 +184,7 @@
         @endforeach
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
         @if(count($posts_on) == 1)
             <h2 class="text-center">{{$posts_on->count()}} article publié</h2>
         @elseif(count($posts_on) >= 2)
@@ -199,13 +197,12 @@
         <div class="col-sm-12">
             <div class="panel panel-default">
 
-                <div class="panel-heading rw-job-color-bgc-{{ $post->job->id}}">
+                <div class="panel-heading rw-job-color-bcg-test-{{ $post->job->id}}">
                     <h3>{{ str_limit($post->title, $limit = 40, $end = '...') }}
                         @if ($post->is_sticky === 'on')
-                            <span class="pull-right label label-sticky">Mis en avant</span>
+                            <span class="inline-block label label-sticky">Mis en avant</span>
                         @endif
-                        <span class="pull-right label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
-
+                        <span class="inline-block label label-info">Auteur : <strong>{{ $post->user->username }}</strong></span>
                     </h3>                    
                 </div>
 
@@ -216,7 +213,7 @@
                 <div class="panel-footer">
 
                     <p class="rw-articles-index-maj inline-block">
-                        Dernière édition le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
+                        Édité le {{ $post->updated_at->format('d') . ' ' . dateConvert($post->updated_at->format('F')) . ' ' . $post->updated_at->format('Y') }}
                     </p>
 
                     {!! Form::open([
