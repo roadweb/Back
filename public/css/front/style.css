@@ -719,6 +719,30 @@ footer {
 
 /*
 |--------------------------------------------------------------------------
+| Errors
+|--------------------------------------------------------------------------
+*/
+.rw-error-401-container, .rw-error-403-container, .rw-error-404-container, .rw-error-500-container, .rw-error-503-container, .rw-error-504-container {
+  min-height: 300px;
+  padding: 50px 20px;
+}
+
+.rw-error-401-container p, .rw-error-403-container p, .rw-error-404-container p, .rw-error-500-container p, .rw-error-503-container p, .rw-error-504-container p {
+  padding: 10px 0;
+  font-size: 1.5em;
+}
+
+.rw-error-401-container p.rw-error-explication, .rw-error-403-container p.rw-error-explication, .rw-error-404-container p.rw-error-explication, .rw-error-500-container p.rw-error-explication, .rw-error-503-container p.rw-error-explication, .rw-error-504-container p.rw-error-explication {
+  font-size: 1.1em;
+}
+
+.rw-error-401-container .rw-error-red, .rw-error-403-container .rw-error-red, .rw-error-404-container .rw-error-red, .rw-error-500-container .rw-error-red, .rw-error-503-container .rw-error-red, .rw-error-504-container .rw-error-red {
+  color: #bf382a;
+  font-weight: 500;
+}
+
+/*
+|--------------------------------------------------------------------------
 | Layouts
 |--------------------------------------------------------------------------
 */
