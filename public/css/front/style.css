@@ -977,6 +977,7 @@ footer {
 
 .rw-jobs-index .rw-jobs-index-fiche-content-balises > * {
   padding: 8px 0;
+  line-height: 1.5em;
 }
 
 .rw-jobs-index .rw-jobs-index-fiche-content-balises h1 {
