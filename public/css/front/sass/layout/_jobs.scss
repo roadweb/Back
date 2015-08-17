@@ -124,6 +124,7 @@
     font-size: $fontSize;
     & > * {
       padding: 8px 0;
+      line-height: $lineHeight;
     }
 
     h1 {
