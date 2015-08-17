@@ -23,7 +23,7 @@ class CreateRightsTable extends Migration
         Right::create(['name' => 'Membre']);
 
         /*membre inscrit droit de vision + proposer articles*/
-        Right::create(['name' => 'Emweb']);
+        Right::create(['name' => 'Auteur']);
 
         /*modos relecteurs accès tous les articles, choisis par Admin*/
         Right::create(['name' => 'Modérateur']);
