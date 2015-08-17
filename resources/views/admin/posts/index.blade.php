@@ -8,7 +8,7 @@
                 @if(Auth::user()->right_id >= '3' && count($posts) > 0)
                     @include('admin.posts.components.articles', ['posts' => $posts])
                 @elseif(Auth::user()->right_id == '2' && count($posts_off) > 0 or count($posts_on) > 0 or count($posts_uc) > 0)
-                    @include ('admin.posts.components.articles')
+                    @include ('admin.posts.components.articles',  ['posts' => $post_user])
                 @else
                     <div class="alert alert-info">
                         Aucun article n'a encore été publié.
