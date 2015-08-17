@@ -21,7 +21,7 @@
 <img class="rw-icon-newsletter" src="{{ asset('images/newsletter.png')}}" alt="Newsletter"/>
 </div>
 <div class="rw-newsletter-container">
-            @include('pages.lognews.form.newsform')
+    @include('pages.lognews.form.newsform')
 </div>
 </div>
 </div>

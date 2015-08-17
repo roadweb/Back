@@ -44,6 +44,10 @@
     </div>
 </div>
 
+@foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+@endforeach
+
 {{--<div class="rw-lognews-form-group">--}}
 {{--<div class="rw-lognews-container">--}}
 {{--<a class="rw-lognews-create-accompte" href="#">Créer un compte</a> <!-- value="{{ old('email') }}" -->--}}
