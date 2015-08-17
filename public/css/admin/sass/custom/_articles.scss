@@ -4,8 +4,8 @@
 	h3 {
 		margin:0;
 		font-size:18px;
-		font-weight:300;
-		color:#000;
+		font-weight:500;
+		color:#fff;
 	}
 
 	.rw-articles-index-maj {
@@ -36,7 +36,8 @@
     	margin: 30px auto;
 	}
 
-	.panel-heading{
+	
+	.panel-heading {
 		padding:10px;
 	}
 
@@ -59,8 +60,8 @@
 				margin:-2px 0 0 0;
 			}
 
-			.btn-primary {
-				margin-left:3px !important;
+			.btn-primary, .btn-success {
+				margin-left:2px !important;
 			}
 		}
 	}

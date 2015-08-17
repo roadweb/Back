@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container rw-gestion-groupe">
 
         <!-- gestion développé par Pauline & Céline -->
         <div class="row"> 

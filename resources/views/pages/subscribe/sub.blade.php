@@ -16,7 +16,7 @@
         <div class="rw-sub-content">
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
-                    <strong>Whoops!</strong> Il semble qu'il y ai un problème.<br><br>
+                    <strong>Whoops !</strong> Il semble qu'il y ait un problème.<br><br>
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
