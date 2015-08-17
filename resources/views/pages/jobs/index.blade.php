@@ -27,9 +27,9 @@
                         </p>
 
                         <div  class="rw-jobs-index-fiche-{{$job->id}} rw-jobs-hide">
-                            <p>
+                            <div class="rw-jobs-index-fiche-content-balises">
                                 {!!$job->content!!}
-                            </p>
+                            </div>
                         </div>
 
                         <a href="#rw-jobs-index-{{$job->id}}">           <button class="rw-jobs-click-view-{{$job->id}} rw-job-color-txt-{{$job->id}}">
