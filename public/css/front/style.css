@@ -971,6 +971,114 @@ footer {
           transition: all 0.5s ease-in-out;
 }
 
+.rw-jobs-index .rw-jobs-index-fiche-content-balises {
+  font-size: 1em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises > * {
+  padding: 8px 0;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h1 {
+  font-size: 2.3em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h2 {
+  font-size: 2em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h3 {
+  font-size: 1.8em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h3 {
+  font-size: 1.6em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h4 {
+  font-size: 1.4em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h5 {
+  font-size: 1.2em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises h6 {
+  font-size: 1em;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises pre {
+  color: #ff1010;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises blockquote {
+  border-left: 2px solid #7e8b8c;
+  padding: 10px;
+  letter-spacing: 3px;
+  font-size: 0.9em;
+  background-color: #ebebe6;
+  width: 80%;
+  margin: auto;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises blockquote:before, .rw-jobs-index .rw-jobs-index-fiche-content-balises blockquote:after {
+  content: "\"";
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p {
+  padding: 10px;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p b {
+  font-weight: 400;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p i {
+  font-style: italic;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p u {
+  text-decoration: underline;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p strike {
+  text-decoration: line-through;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises p img {
+  margin: auto;
+  max-width: 100%;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises ul {
+  list-style: circle inside;
+  width: 90%;
+  margin: auto;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises ul li {
+  padding: 5px 0;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises ol {
+  list-style: normal inside;
+  width: 90%;
+  margin: auto;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises ol li {
+  padding: 5px 0;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises img {
+  margin: auto;
+  max-width: 100%;
+}
+
+.rw-jobs-index .rw-jobs-index-fiche-content-balises a {
+  text-decoration: underline;
+}
+
 .rw-jobs-index .rw-jobs-index-triangle {
   border-width: 0 0 40px 40px;
 }
@@ -1592,9 +1700,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
