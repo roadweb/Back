@@ -84,7 +84,7 @@
 <script src="{{asset('/bower_components/textAngular/dist/textAngular.min.js')}}"></script>
 
  {{--CKEditor--}}
-<script src="{{asset('/bower_components/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('/bower_components/ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace( 'article-ckeditor' );
 </script>
