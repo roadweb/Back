@@ -23,6 +23,10 @@
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-around;
+
+    & > * {
+      flex:0 1 auto;
+    }
 }
 
 .rw-jobs-index {
@@ -34,6 +38,11 @@
 
   background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
   position:relative;
+  height: 100%;
+
+  & > * {
+    flex: 0 1 auto;
+  }
 
   div {
     float:left;
@@ -42,6 +51,7 @@
     position:relative;
     padding:5px 0;
 	}
+
   .rw-jobs-index-icon {
     width:80px;
 
@@ -62,6 +72,10 @@
 
   .rw-jobs-index-description-width {
     width: 885px!important;
+    height: auto;
+    min-height: 1600px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .rw-jobs-index-description-1, .rw-jobs-index-description-2, .rw-jobs-index-description-3, .rw-jobs-index-description-4, .rw-jobs-index-description-5, .rw-jobs-index-description-6, {
@@ -71,6 +85,11 @@
     flex-flow: column nowrap;
 
     transition: all 1s ease;
+
+    & > * {
+      flex: 0 1 auto;
+    }
+
 
     h1 {
       font-size:26px;
@@ -85,7 +104,7 @@
       width:100%;
       font-size:$fontSize - 0.1em;
       line-height:$lineHeight - 0.1em;
-      text-align: justify;
+      text-align: left;
 
     }
     a {
@@ -98,9 +117,13 @@
     button {
       margin: auto 0;
       padding: 0 40px;
+      position:absolute;
+      bottom:5px;
+      right: 0;
+
 
       border: none;
-      background: none;
+      background-color: transparent;
       cursor: pointer;
 
       text-align: right;
@@ -113,7 +136,6 @@
         font-weight:600 !important;
         font-size: $fontSize + 0.2;
 
-        background-color: $grey-light;
         transition: all 0.5s ease-in-out;
 
       }
@@ -169,6 +191,7 @@
 
     p {
       padding: 10px;
+
       b {
         font-weight: 400;
       }

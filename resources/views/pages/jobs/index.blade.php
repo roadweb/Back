@@ -32,9 +32,11 @@
                             </div>
                         </div>
 
-                        <a href="#rw-jobs-index-{{$job->id}}">           <button class="rw-jobs-click-view-{{$job->id}} rw-job-color-txt-{{$job->id}}">
-               <i class="fa fa-angle-down"></i>
-           </button></a>
+                        <a href="#rw-jobs-index-{{$job->id}}">
+                            <button class="rw-jobs-click-view-{{$job->id}} rw-job-color-txt-{{$job->id}}">
+                                <i class="fa fa-angle-down"></i>
+                            </button>
+                        </a>
 
     	    		</div>
 

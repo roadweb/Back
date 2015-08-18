@@ -106,14 +106,22 @@
                             {!! Form::label('content','Le résumé de l\'article (200 max)') !!}
                             {!! Form::textarea('resume', null, ["class" => "form-control", "placeholder" => "Entrez le resume ici...", "size" => "30x3", "maxlength" => "200", "required"])!!}
                         </div>
-                        <div class="form-group" ng-app="app" ng-controller="textArea">
-                            {!! Form::label('text','Le texte de l\'article') !!}
+                        {{--<div class="form-group" ng-app="app" ng-controller="textArea">--}}
+                            {{--{!! Form::label('text','Le texte de l\'article') !!}--}}
 
-                            <div name="content" text-angular="text-angular">
-                                @if(isset($post))
-                                    {!! $post->content !!}
-                                @endif
-                            </div>
+                            {{--<div name="content" text-angular="text-angular">--}}
+                                {{--@if(isset($post))--}}
+                                    {{--{!! $post->content !!}--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        <div class="form-group">
+                            {!! Form::label('content', 'Contenu de la page') !!}
+
+                            {!! Form::textarea('content', null, ['class' => 'form-control', 'id' => 'article-ckeditor',
+                            'placeholder' => 'Entrez le contenu ici...', 'size' => '30x100', 'required'] )!!}
+
                         </div>
 
                         <div class="form-group">
