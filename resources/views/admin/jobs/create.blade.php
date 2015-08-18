@@ -78,18 +78,27 @@
                             {!! Form::label('resume','Résumé en une phrase (100 max)') !!}
                             {!! Form::text('resume', null, ["class" => "form-control", "placeholder" => "$fiches->resume", "required"])!!}
                         </div>
-                        <div class="form-group" ng-app="app" ng-controller="textArea">
+                        {{--<div class="form-group" ng-app="app" ng-controller="textArea">--}}
 
-                            {!! Form::label('text','Le contenu de la fiche') !!}
+                            {{--{!! Form::label('text','Le contenu de la fiche') !!}--}}
 
-                            <div name="content" text-angular="text-angular">
+                            {{--<div name="content" text-angular="text-angular">--}}
 
-                                @if(isset($fiches))
-                                    {!! $fiches->content !!}
-                                @endif
+                                {{--@if(isset($fiches))--}}
+                                    {{--{!! $fiches->content !!}--}}
+                                {{--@endif--}}
 
-                            </div>
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        <div class="form-group">
+                            {!! Form::label('content', 'Contenu de la page') !!}
+
+                            {!! Form::textarea('content', null, ['class' => 'form-control', 'id' => 'article-ckeditor',
+                            'placeholder' => 'Entrez le contenu ici...', 'size' => '30x100', 'required'] )!!}
+
                         </div>
+
 
                     </div>
                 </div>

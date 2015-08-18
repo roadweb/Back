@@ -83,6 +83,12 @@
 <script src="{{asset('/bower_components/textAngular/dist/textAngular-sanitize.min.js')}}"></script>
 <script src="{{asset('/bower_components/textAngular/dist/textAngular.min.js')}}"></script>
 
+ {{--CKEditor--}}
+<script src="{{asset('/bower_components/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+<script>
+    CKEDITOR.replace( 'article-ckeditor' );
+</script>
+
 <script src="{{ asset('/javascript/admin/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/admin/app.js') }}"></script>
 <script src="{{ asset('javascript/admin/userstable.js') }}"></script>
