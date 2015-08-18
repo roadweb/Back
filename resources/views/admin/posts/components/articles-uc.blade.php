@@ -1,7 +1,7 @@
 @if(count($posts_uc) == 1)
-            <h2 class="text-center">{{$posts_uc->count()}} article en attente de validation</h2>
+            <h2 class="text-center"><span class="red">{{$posts_uc->count()}} article</span> à valider</h2>
         @elseif(count($posts_uc) >= 2)
-            <h2 class="text-center">{{$posts_uc->count()}} articles en attente de validation</h2>
+            <h2 class="text-center"><span class="red">{{$posts_uc->count()}} articles</span> à valider</h2>
         @else
             <h2 class="text-center">Aucun article en attente de validation</h2>
         @endif

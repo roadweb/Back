@@ -1,7 +1,7 @@
 @if(count($posts_off) == 1)
-            <h2 class="text-center">{{$posts_off->count()}} article non publié</h2>
+            <h2 class="text-center"><span class="red">{{$posts_off->count()}} article</span>  non publié</h2>
         @elseif(count($posts_off) >= 2)
-            <h2 class="text-center">{{$posts_off->count()}} articles non publiés</h2>
+            <h2 class="text-center"><span class="red">{{$posts_off->count()}} articles</span> non publiés</h2>
         @else
             <h2 class="text-center">Aucun article non publié</h2>
         @endif
