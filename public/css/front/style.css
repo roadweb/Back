@@ -868,6 +868,13 @@ footer {
           justify-content: space-around;
 }
 
+.rw-jobs-index-container-flex > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 .rw-jobs-index {
   margin: 20px;
   display: -webkit-box;
@@ -884,6 +891,14 @@ footer {
   background: linear-gradient(to bottom, white 0%, #ebebe6 100%);
   /* W3C */
   position: relative;
+  height: 100%;
+}
+
+.rw-jobs-index > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .rw-jobs-index div {
@@ -916,6 +931,10 @@ footer {
 
 .rw-jobs-index .rw-jobs-index-description-width {
   width: 885px !important;
+  height: auto;
+  min-height: 1600px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .rw-jobs-index .rw-jobs-index-description-1, .rw-jobs-index .rw-jobs-index-description-2, .rw-jobs-index .rw-jobs-index-description-3, .rw-jobs-index .rw-jobs-index-description-4, .rw-jobs-index .rw-jobs-index-description-5, .rw-jobs-index .rw-jobs-index-description-6 {
@@ -931,6 +950,13 @@ footer {
           transition: all 1s ease;
 }
 
+.rw-jobs-index .rw-jobs-index-description-1 > *, .rw-jobs-index .rw-jobs-index-description-2 > *, .rw-jobs-index .rw-jobs-index-description-3 > *, .rw-jobs-index .rw-jobs-index-description-4 > *, .rw-jobs-index .rw-jobs-index-description-5 > *, .rw-jobs-index .rw-jobs-index-description-6 > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 .rw-jobs-index .rw-jobs-index-description-1 h1, .rw-jobs-index .rw-jobs-index-description-2 h1, .rw-jobs-index .rw-jobs-index-description-3 h1, .rw-jobs-index .rw-jobs-index-description-4 h1, .rw-jobs-index .rw-jobs-index-description-5 h1, .rw-jobs-index .rw-jobs-index-description-6 h1 {
   font-size: 26px;
   color: #F59E36;
@@ -943,7 +969,7 @@ footer {
   width: 100%;
   font-size: 0.9em;
   line-height: 1.4em;
-  text-align: justify;
+  text-align: left;
 }
 
 .rw-jobs-index .rw-jobs-index-description-1 a, .rw-jobs-index .rw-jobs-index-description-2 a, .rw-jobs-index .rw-jobs-index-description-3 a, .rw-jobs-index .rw-jobs-index-description-4 a, .rw-jobs-index .rw-jobs-index-description-5 a, .rw-jobs-index .rw-jobs-index-description-6 a {
@@ -956,8 +982,11 @@ footer {
 .rw-jobs-index .rw-jobs-index-description-1 button, .rw-jobs-index .rw-jobs-index-description-2 button, .rw-jobs-index .rw-jobs-index-description-3 button, .rw-jobs-index .rw-jobs-index-description-4 button, .rw-jobs-index .rw-jobs-index-description-5 button, .rw-jobs-index .rw-jobs-index-description-6 button {
   margin: auto 0;
   padding: 0 40px;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
   border: none;
-  background: none;
+  background-color: transparent;
   cursor: pointer;
   text-align: right;
 }
@@ -966,7 +995,6 @@ footer {
   padding: 2px;
   font-weight: 600 !important;
   font-size: 1.2em;
-  background-color: #ebebe6;
   -webkit-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
 }
