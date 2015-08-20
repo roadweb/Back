@@ -84,17 +84,15 @@
 <script src="{{asset('/bower_components/textAngular/dist/textAngular.min.js')}}"></script>
 
  {{--CKEditor--}}
-<script src="{{asset('/bower_components/unisharp/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('/unisharp/ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace( 'article-ckeditor', {
-        {{--filebrowserBrowseUrl: '{{asset('/bower_components/unisharp/kcfinder/browse.php')}}',--}}
-        {{--filebrowserUploadUrl: '{{asset('/bower_components/unisharp/kcfinder/upload.php')}}'--}}
-        filebrowserBrowseUrl: '{{asset('/bower_components/unisharp/kcfinder/browse.php?opener=ckeditor&type=files')}}',
-        filebrowserImageBrowseUrl: '{{asset('/bower_components/unisharp/kcfinder/browse.php?opener=ckeditor&type=images')}}',
-        filebrowserFlashBrowseUrl: '{{asset('/bower_components/unisharp/kcfinder/browse.php?opener=ckeditor&type=flash')}}',
-        filebrowserUploadUrl: '{{asset('/bower_components/unisharp/kcfinder/upload.php?opener=ckeditor&type=files')}}',
-        filebrowserImageUploadUrl: '{{asset('/bower_components/unisharp/kcfinder/upload.php?opener=ckeditor&type=images')}}',
-        filebrowserFlashUploadUrl: '{{asset('/bower_components/unisharp/kcfinder/upload.php?opener=ckeditor&type=flash')}}'
+        filebrowserBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=files')}}',
+        filebrowserImageBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=images')}}',
+        filebrowserFlashBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=flash')}}',
+        filebrowserUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=files')}}',
+        filebrowserImageUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=images')}}',
+        filebrowserFlashUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=flash')}}'
     });
 </script>
 
