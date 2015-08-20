@@ -31,12 +31,12 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                @if (Auth::user()->right_id >= '2')
+                @if (Auth::user() && Auth::user()->right_id >= '2')
                 <li {{ active('home') }}><a href="{{ route('admin.home') }}">Accueil</a></li>
                 <li {{ active('posts') }}><a href="{{ route('admin.posts.index') }}">Articles</a></li>
                 <li {{ active('users') }}><a href="{{ route('admin.users.index') }}">Utilisateurs</a></li>
                 <li {{ active('stats') }}><a href="{{ route('admin.stats.index') }}">Statistiques</a></li>
-                @if (Auth::user()->right_id == '4')
+                @if (Auth::user() && Auth::user()->right_id == '4')
                 <li {{ active('gestion') }}><a href="{{ route('admin.gestion.index') }}">Gestion des utilisateurs</a></li>
                 <li {{ active('metiers') }}><a href="{{ route('admin.metiers.index') }}">Fiches métiers</a></li>
                 @endif
@@ -45,7 +45,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                @if (Auth::user()->right_id >= '2')
+                @if (Auth::user() && Auth::user()->right_id >= '2')
                 <li class="bg-success">
                     <a href="{{ route('admin.posts.create') }}">
                         <span class="glyphicon glyphicon-plus"></span>
