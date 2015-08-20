@@ -129,8 +129,8 @@
 
 
                         <div class="form-group">
+                            {!! Form::label('image','Le lien de l\'image d\'illustration de l\'article') !!}
                             {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale", "required"])!!}
-                            {!! Form::label('image','Le lien de l\'image') !!}
                         </div>
 
 
@@ -191,34 +191,53 @@
             </div>
 
             <div class="col-xs-3">
-                <div class="panel panel-default" data-spy="affix" data-offset-top="100">
-                    <div class="panel-heading">Action</div>
-                    <div class="panel-body" id="list">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li role="presentation">
-                                <a href="#infos"><span class="glyphicon glyphicon-question-sign"></span> Infos</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#sticky"><span class="glyphicon glyphicon-question-sign"></span> Mise en avant</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#referencement"><span class="glyphicon glyphicon-screenshot"></span>
-                                    Référencement
-                                </a>
-                            </li>
-                        </ul>
+                <div data-spy="affix" data-offset-top="100">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Action</div>
+                        <div class="panel-body" id="list">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li role="presentation">
+                                    <a href="#infos"><span class="glyphicon glyphicon-question-sign"></span> Infos</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#sticky"><span class="glyphicon glyphicon-question-sign"></span> Mise en avant</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#content"><span class="glyphicon glyphicon-pencil"></span> Contenu</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#referencement"><span class="glyphicon glyphicon-screenshot"></span>
+                                        Référencement
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" form="form-main" class="btn btn-success">
+                                <span class="glyphicon glyphicon-download-alt"></span> Sauvegarder
+                            </button>
+                            <button type="reset" form="form-main" class="btn btn-default rw-btn-red" href="#">Reset</button>
+                        </div>
                     </div>
-                    <div class="panel-footer">
-                        <button type="submit" form="form-main" class="btn btn-success">
-                            <span class="glyphicon glyphicon-download-alt"></span> Sauvegarder
-                        </button>
-                        <button type="reset" form="form-main" class="btn btn-default rw-btn-red" href="#">Reset</button>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Informations</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <span class="glyphicon glyphicon-pushpin"></span> Nous vous offrons la possibilité de mettre votre article en avant : pour cela, indiquez la date de fin de mise en avant dans le champ prévu à cet effet. La date doit être au format <span class="green">aaaa/mm/jj</span>.
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="glyphicon glyphicon-picture"></span> Pour illustrer votre article, copiez-collez le lien de votre image dans le champ prévu à cet effet. Vous pouvez utiliser des sites comme <a href="http://imgur.com/" target="_blank">Imgur</a> ou <a href="http://fr.tinypic.com/" target="_blank">Tinypic</a> pour héberger vos images et récupérer leur lien ('lien direct pour affichage' sur tynipic et 'Direct Link' sur Imgur).
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="glyphicon glyphicon-check"></span> Une fois votre article terminé, ce dernier est sauvegardé sur votre espace utilisateur. Pour qu'un article soit visible sur le site, vous devez le soumettre à validation afin qu'il soit publié par un modérateur ou administrateur du site.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 @endsection()
