@@ -6,7 +6,7 @@
         <div class="rw-cpt-header">
 
             @if(Session::has('message'))
-            <p class="rw-contact-success">
+            <p class="rw-cpt-success">
                 {{Session::get('message')}}
             </p>
             @endif
