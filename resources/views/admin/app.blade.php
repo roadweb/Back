@@ -84,9 +84,16 @@
 <script src="{{asset('/bower_components/textAngular/dist/textAngular.min.js')}}"></script>
 
  {{--CKEditor--}}
-<script src="{{asset('/bower_components/ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('/unisharp/ckeditor/ckeditor.js')}}"></script>
 <script>
-    CKEDITOR.replace( 'article-ckeditor' );
+    CKEDITOR.replace( 'article-ckeditor', {
+        filebrowserBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=files')}}',
+        filebrowserImageBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=images')}}',
+        filebrowserFlashBrowseUrl: '{{asset('/unisharp/kcfinder/browse.php?opener=ckeditor&type=flash')}}',
+        filebrowserUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=files')}}',
+        filebrowserImageUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=images')}}',
+        filebrowserFlashUploadUrl: '{{asset('/unisharp/kcfinder/upload.php?opener=ckeditor&type=flash')}}'
+    });
 </script>
 
 <script src="{{ asset('/javascript/admin/jquery.confirm.js') }}"></script>
