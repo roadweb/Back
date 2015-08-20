@@ -1,5 +1,5 @@
 // ajout de la classe JS à HTML
-document.querySelector(".rw-sub-checkbox").classList.add('rw-sub-js');
+document.querySelector("html").classList.add('rw-sub-js');
 
 // initialisation des variables
 var fileInput  = document.querySelector( ".rw-sub-input-file" ),

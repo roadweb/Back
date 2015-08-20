@@ -17,10 +17,10 @@
     @if($user->emweb === 'on')
     <div class="rw-sub-form-container">
         <p>Vous avez déclaré être élève de l'emweb, vous pouvez donc publier sur le blog de Road-Web. 
-        Pour cela, envoyez-nous votre attestation de scolarité afin que nous puissions valider vos droits d'accès.
+        Pour cela, envoyez-nous votre attestation de scolarité afin que nous puissions valider vos droits d'accès :
         </p>
 
-        <ul class="rw-contact-error">
+        <ul class="rw-sub-error">
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
@@ -32,13 +32,13 @@
             {!! Form::hidden('email', $user->email) !!}
 
             <div class="rw-sub-input-file-container">
-                        <div>
-                            {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
-                            array('class' => 'rw-sub-input-file-trigger',
-                                'tabindex' => '0' )) !!}
-                            {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
-                            <p class="rw-sub-file-return"></p>
-                        </div>
+                <div>
+                    {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
+                    array('class' => 'rw-sub-input-file-trigger',
+                    'tabindex' => '0' )) !!}
+                    {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
+                    <p class="rw-sub-file-return"></p>
+                </div>
             </div>
 
             {!! Form::submit('Envoyer', 

@@ -11,6 +11,16 @@
     color: inherit;
   }
 
+  p.rw-cpt-success {
+    color: #16A086;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom:30px;
+  }
+
   .rw-cpt-header {
     margin: 20px auto;
     text-align: center;
@@ -24,7 +34,6 @@
         font-weight: 600;
         text-transform: capitalize;
       }
-
     }
     .rw-cpt-created {
       font-size: $fontSize - 0.1;
