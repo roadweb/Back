@@ -37,13 +37,36 @@
             {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
 
             <fieldset>
-                <input type="text" name="last_name" placeholder="Nom" value="{{ old('last_name') }}"/>
-                <input type="text" name="first_name" placeholder="Prénom" value="{{ old('first_name') }}"/>
+                {!! Form::label('nom', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::text('last_name', old('last_name'), 
+                    ['required', 
+                    'placeholder'=>'Nom']
+                ) !!}
+
+                {!! Form::label('prenom', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::text('first_name', old('first_name'), 
+                    ['required', 
+                    'placeholder'=>'Nom']
+                ) !!}
+               
+                {{--<input type="text" name="last_name" placeholder="Nom" value="{{ old('last_name') }}"/>--}}
+                {{--<input type="text" name="first_name" placeholder="Prénom" value="{{ old('first_name') }}"/>--}}
             </fieldset>
 
             <fieldset>
-                <input type="text" name="username" placeholder="Pseudonyme" value="{{ old('username') }}"/>
-                <input type="email" name="email" placeholder="Adresse mail" value=" {{old('email')}}"/>
+                {!! Form::label('pseudo', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::text('username', old('username'), 
+                    ['required', 
+                    'placeholder'=>'Pseudonyme']
+                ) !!}
+
+                {!! Form::label('email', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::email('email', old('email'), 
+                    ['required', 
+                    'placeholder'=>'Adresse mail']
+                ) !!}
+                {{--<input type="text" name="username" placeholder="Pseudonyme" value="{{ old('username') }}"/>--}}
+                {{--<input type="email" name="email" placeholder="Adresse mail" value=" {{old('email')}}"/>--}}
             </fieldset>
 
 
