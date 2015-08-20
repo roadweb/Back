@@ -1,0 +1,4 @@
+.idea/*
+upload/.htaccess
+[Tt]humbs.db
+*.DS_Store
