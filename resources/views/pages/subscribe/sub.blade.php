@@ -33,9 +33,7 @@
                 'method' => 'POST',
                 'class' => 'rw-sub-form'
             ]) !!}
-            {{--<form action="{{url('/admin/auth/register')}}" role="form" method="POST" class="rw-sub-form">--}}
-            {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
-
+           
             <fieldset>
                 {!! Form::label('nom', '', ['class' => 'rw-hidden']) !!}
                 {!! Form::text('last_name', old('last_name'), 
@@ -49,8 +47,6 @@
                     'placeholder'=>'Nom']
                 ) !!}
                
-                {{--<input type="text" name="last_name" placeholder="Nom" value="{{ old('last_name') }}"/>--}}
-                {{--<input type="text" name="first_name" placeholder="Prénom" value="{{ old('first_name') }}"/>--}}
             </fieldset>
 
             <fieldset>
@@ -65,19 +61,28 @@
                     ['required', 
                     'placeholder'=>'Adresse mail']
                 ) !!}
-                {{--<input type="text" name="username" placeholder="Pseudonyme" value="{{ old('username') }}"/>--}}
-                {{--<input type="email" name="email" placeholder="Adresse mail" value=" {{old('email')}}"/>--}}
             </fieldset>
 
 
             <fieldset>
-                <input type="password" name="password" placeholder="Mot de passe"/>
-                <input type="password" name="password_confirmation" placeholder="Confirmation de mot de passe"/>
+                {!! Form::label('password', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::password('password',
+                    ['required', 
+                    'placeholder'=>'Mot de passe']
+                ) !!}
+
+                {!! Form::label('password_confirmation', '', ['class' => 'rw-hidden']) !!}
+                {!! Form::password('password_confirmation', 
+                    ['required', 
+                    'placeholder'=>'Confirmation du passe']
+                ) !!}
+
             </fieldset>
 
             <fieldset class="rw-sub-select">
-                <label for="job_id"></label>
+                {!! Form::label('job_id', '', ['class' => 'rw-hidden']) !!}
                 {!! Form::select('job_id', $jobs, null, ['id' => 'job_id']) !!}
+                <!--<label for="job_id"></label>-->
 
             </fieldset>
             <fieldset class="rw-sub-checkbox">
@@ -91,6 +96,17 @@
             </span>Je suis ou j'ai été élève de l'EMWeb</label>
                 </p>
             </fieldset>
+
+            <div class="rw-sub-input-file-container">
+                    <p>Capture d'écran :</p>
+                    <div>
+                        {!! Form::label('my-file', 'Joindre votre justificatif...', 
+                        array('class' => 'rw-sub-input-file-trigger',
+                            'tabindex' => '0' )) !!}
+                        {!! Form::file('file', ['class' => 'rw-sub-input-file', 'id' => 'my-file']) !!}
+                        <p class="rw-sub-file-return"></p>
+                    </div>
+            </div>
             <!---------------------
              validation du formulaire
             ----------------------->
