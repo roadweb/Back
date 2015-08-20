@@ -5,6 +5,12 @@
     <div class="rw-cpt-main-container">
         <div class="rw-cpt-header">
 
+            @if(Session::has('message'))
+            <p class="rw-contact-success">
+                {{Session::get('message')}}
+            </p>
+            @endif
+
             <h1>Compte de <span>{{ $user->first_name }}</span></h1>
             <p class="rw-cpt-created">Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}</p>
                 <p class="rw-cpt-created">

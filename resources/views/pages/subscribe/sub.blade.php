@@ -25,9 +25,6 @@
                 </div>
             @endif
 
-
-
-
             {!! Form::open([
                 'url' => url('/admin/auth/register'),
                 'method' => 'POST',
@@ -97,16 +94,6 @@
                 </p>
             </fieldset>
 
-            <div class="rw-sub-input-file-container">
-                    <p>Capture d'écran :</p>
-                    <div>
-                        {!! Form::label('my-file', 'Joindre votre justificatif...', 
-                        array('class' => 'rw-sub-input-file-trigger',
-                            'tabindex' => '0' )) !!}
-                        {!! Form::file('file', ['class' => 'rw-sub-input-file', 'id' => 'my-file']) !!}
-                        <p class="rw-sub-file-return"></p>
-                    </div>
-            </div>
             <!---------------------
              validation du formulaire
             ----------------------->
