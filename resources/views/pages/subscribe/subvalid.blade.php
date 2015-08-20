@@ -2,19 +2,53 @@
 
 @section('content')
 
-    <!---------------------
- développé par Pauline: Inscription : validation d'inscription
------------------------>
+    <!--
+ développé par Pauline: Inscription : validation d'inscription-->
 
 
 <div class="rw-sub-container">
 
     <div class="rw-sub-header rw-subvalid-header">
-       <h1>Félicitations <span>{{$user->username}}</span>, nous t'invitons à profiter de nos avantages. </h1>
+        <h1>Félicitations <span>{{$user->username}}</span>, nous vous invitons à profiter de nos avantages. </h1>
         <h2>A tout de suite.</h2>
 
     </div>
 
+    @if($user->emweb === 'on')
+    <div class="rw-sub-form-container">
+        <p>Vous avez déclaré être élève de l'emweb, vous pouvez donc publier sur le blog de Road-Web. 
+        Pour cela, envoyez-nous votre attestation de scolarité afin que nous puissions valider vos droits d'accès.
+        </p>
+
+        <ul class="rw-contact-error">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+
+        {!! Form::open(array('route' => 'envoi_justificatif', 'files' => 'true', 'enctype' => 'multipart/form-data')) !!}
+
+            {!! Form::hidden('username', $user->username) !!}
+            {!! Form::hidden('email', $user->email) !!}
+
+            <div class="rw-sub-input-file-container">
+                        <div>
+                            {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
+                            array('class' => 'rw-sub-input-file-trigger',
+                                'tabindex' => '0' )) !!}
+                            {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
+                            <p class="rw-sub-file-return"></p>
+                        </div>
+            </div>
+
+            {!! Form::submit('Envoyer', 
+                ['required', 
+                'name' => 'envoyer', 
+                'id' => 'envoyer']
+            ) !!}
+        {!! Form::close() !!}
+    </div>
+    @endif
 
     <div class="rw-sub-advantages">
 

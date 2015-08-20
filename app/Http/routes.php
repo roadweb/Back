@@ -72,6 +72,7 @@ Route::get('/mentions', 'MotionsController@index');
 Route::get('/inscription', 'SubController@sub');
 
 Route::get('/inscription/validation', 'SubController@subvalid');
+Route::post('/inscription/validation', ['as' => 'envoi_justificatif', 'uses' => 'SubController@send']);
 
 Route::get('/apropos', 'AboutusController@index');
 
