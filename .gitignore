@@ -1,9 +1,7 @@
 /vendor
 .env
 .idea/
-bower_components/textAngular
-bower_components/rangy
-
+bower_components/
 .sass-cache/
 prepros.cfg
 
