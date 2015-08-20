@@ -6,7 +6,7 @@
             <img src="{{ asset('images/connexion.png') }}" alt="login"/>
         </div>
 
-        {!! Form::text('email', '', ['placeholder' => 'Identifiant']) !!}
+        {!! Form::text('email', '', ['placeholder' => 'Email']) !!}
 
     </div>
 </div>
@@ -39,8 +39,7 @@
         <button type="submit">Se connecter</button>
     </div>
     <div class="rw-lognews-container">
-        <a class="rw-lognews-pwd-forgoten" href="#">Mot de passe oublié ?</a>
-        <!-- {{ url('/admin/password/email') }} -->
+        <a class="rw-lognews-pwd-forgoten" href="{{ url('/admin/password/email') }}">Mot de passe oublié ?</a>
     </div>
 </div>
 
