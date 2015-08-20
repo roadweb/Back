@@ -1,6 +1,14 @@
+.list-group {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    background-color: inherit;
+}
+
 .green {
-  color:$colorOpen;
-  font-weight:400;
+    color:$colorOpen;
+    font-weight:400;
 }
 
 .red {
@@ -118,12 +126,12 @@ body {
 }
 
 a {
-    color: #e35252;
+    color: $colorOpen;
     &:hover {
-    	color: #e35252;
+    	color: $colorOpenHover;
     }
     &:focus {
-    	color: #e35252;
+    	color: $colorOpenHover;
     }
 }
 
