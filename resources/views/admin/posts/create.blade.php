@@ -125,7 +125,7 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('image','Le lien de l\'image') !!}
+                            {!! Form::label('image','Le lien de l\'image d\'illustration de l\'article') !!}
                             {!! Form::url('img_link', null, ["class" => "form-control", "placeholder" => "lien de votre image au format http://nomdelimage.jpg ou http://nomdelimage.png", "required"])!!}
                         </div>
 
@@ -229,7 +229,7 @@
                         <div class="panel-body">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <span class="glyphicon glyphicon-pushpin"></span> Nous vous offrons la possibilité de mettre votre article en avant : pour cela, indiquez la date de fin de mise en avant dans le champ prévu à cet effet. La date doit être au format aaaa/mm/jj. 
+                                    <span class="glyphicon glyphicon-pushpin"></span> Nous vous offrons la possibilité de mettre votre article en avant : pour cela, indiquez la date de fin de mise en avant dans le champ prévu à cet effet. La date doit être au format <span class="green">aaaa/mm/jj</span>.
                                 </li>
                                 <li class="list-group-item">
                                     <span class="glyphicon glyphicon-picture"></span> Pour illustrer votre article, copiez-collez le lien de votre image dans le champ prévu à cet effet. Vous pouvez utiliser des sites comme <a href="http://imgur.com/" target="_blank">Imgur</a> ou <a href="http://fr.tinypic.com/" target="_blank">Tinypic</a> pour héberger vos images et récupérer leur lien ('lien direct pour affichage' sur tynipic et 'Direct Link' sur Imgur).

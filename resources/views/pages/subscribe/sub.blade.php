@@ -26,7 +26,7 @@
             @endif
 
             {!! Form::open([
-                'url' => url('/admin/auth/register'),
+                'url' => url('/auth/register'),
                 'method' => 'POST',
                 'class' => 'rw-sub-form'
             ]) !!}
