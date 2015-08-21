@@ -1,7 +1,10 @@
 <?php namespace App\Http\Controllers\Admin;
 
+use App\Job;
+use App\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller as Controller;
+use App\User;
 
 class HomeController extends Controller {
 
@@ -33,7 +36,12 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('admin.home');
+        $user = Auth::user();
+
+        $posts = Post::where('user_id', $user->id)->orderBy('created_at', 'desc')->take(6)->get();
+        $rwposts = Post::orderBy('created_at', 'desc')->take(6)->get();
+
+		return view('admin.home', compact('user', 'posts', 'jobs', 'charts', 'rwposts'));
 	}
 
 }
