@@ -84,6 +84,9 @@
                 <li>
                     <img src="{{ asset('images/avatars/emmanuellehommet.jpg') }}" alt="Emmanuelle Hommet" title="Emmanuelle Hommet" />
                 </li>
+                <li>
+                    <img src="{{ asset('images/avatars/kevinmarques.jpg') }}" alt="Kevin Marques" title="Kevin Marques" />
+                </li>
 
             </ul>
 
