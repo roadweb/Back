@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
+                        <li role="presentation">
                             <a href="#rw-perso" aria-controls="rw-perso" role="tab" data-toggle="tab">
                                 <i class="fa fa-dashboard"></i>
                                 <span>
@@ -24,7 +24,7 @@
                             </a>
                         </li>
                         @if(Auth::user() && Auth::user()->right_id == '4')
-                            <li role="presentation">
+                            <li role="presentation" class="active">
                                 <a href="#rw-users " aria-controls="rw-users" role="tab" data-toggle="tab">
                                     <i class="fa fa-dashboard"></i>
                                 <span>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="tab-content">
-                    <div role="tabpanel" class="panel-body tab-pane fade in active" id="rw-perso">
+                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-perso">
                         <h3 class="panel-title">Vos publications :</h3>
                         <p class="panel-info green">Total : {{$user->posts->count()}}</p>
                         <div class="col-md-3">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
 
-                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">
+                    <div role="tabpanel" class="panel-body tab-pane fade in active" id="rw-users">
                         <h2 class="panel-title">Les utilisateurs de Road-Web</h2>
                         <p class="panel-info green">Inscrits : {{$charts->count()}}</p>
                         <div class="col-md-3">
@@ -263,6 +263,7 @@
                                 administrateurs
                             </p>
                         </div>
+
                         <h2 class="panel-title">Les <span class="red">4</span> derniers inscrits :</h2>
                         <div class="col-md-12">
                             <div class="">
@@ -310,6 +311,35 @@
                                 </div>
                             </div>
                         </div>
+
+                        <h2 class="panel-title">Inscrits par formation :</h2>
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="panel-heading col-md-12 col-sm-12 col-lg-12">
+                                    <ul class=" list-group list-inline col-md-12 rw-joblist">
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-1">
+                                            Développeur : {{$usersdev->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-2">
+                                            Designer : {{$usersdesign->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-3">
+                                            Community Manager : {{$userscm->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-4">
+                                            Webmarketeur : {{$userswm->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-5">
+                                            Intégrateur : {{$usersinte->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-6">
+                                            Référenceur : {{$usersref->count()}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -1218,3 +1218,28 @@ section table td .thumbnail {
 .txt-user {
   color: #7e8b8c;
 }
+
+/*couleurs border left job*/
+.rw-job-color-brd-left-1 {
+  border-left: 10px solid #F6D432;
+}
+
+.rw-job-color-brd-left-2 {
+  border-left: 10px solid #36A7DE;
+}
+
+.rw-job-color-brd-left-3 {
+  border-left: 10px solid #F59E36;
+}
+
+.rw-job-color-brd-left-4 {
+  border-left: 10px solid #EB6441;
+}
+
+.rw-job-color-brd-left-5 {
+  border-left: 10px solid #38AA49;
+}
+
+.rw-job-color-brd-left-6 {
+  border-left: 10px solid #B76DAB;
+}
