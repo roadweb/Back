@@ -105,7 +105,7 @@
                                                     <li class="list-group-item">
                                                 <span>
                                                     <i class="fa fa-angle-double-left"></i>
-                                                    {{str_limit($post->title, $limit = 50, $end = '...')}}
+                                                    {{str_limit($post->title, $limit = 38, $end = '...')}}
                                                     <i class="fa fa-angle-double-right"></i>
                                                 </span>
                                                     </li>
@@ -220,10 +220,97 @@
                         </div>
                     </div>
 
-                    {{--<div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">--}}
-                        {{--<h3 class="panel-title">Les utilisateurs de Road-Web</h3>--}}
+                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">
+                        <h2 class="panel-title">Les utilisateurs de Road-Web</h2>
+                        <p class="panel-info green">Inscrits : {{$charts->count()}}</p>
+                        <div class="col-md-3">
+                            <div class="user-arrond rw-job-color-bgc-1">
+                                <span>
+                                    {{$chartmembre->count()}}
+                                </span>
+                            </div>
+                            <p class="txt-user">
+                                membres
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="user-arrond rw-job-color-bgc-2">
+                                <span>
+                                    {{ $chartauteur->count()}}
+                                </span>
+                            </div>
+                            <p class="txt-user">
+                                auteurs
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="user-arrond rw-job-color-bgc-3">
+                                <span>
+                                    {{ $chartmodo->count() }}
+                                </span>
+                            </div>
+                            <p class="txt-user">
+                                Modérateurs
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="user-arrond rw-job-color-bcg-test-4">
+                                <span>
+                                    {{ $chartadmin->count() }}
+                                </span>
+                            </div>
+                            <p class="txt-user">
+                                administrateurs
+                            </p>
+                        </div>
+                        <h2 class="panel-title">Les <span class="red">4</span> derniers inscrits :</h2>
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    @foreach($chartslast as $chartlast)
+                                        <div class="col-md-6 col-sm-12 col-lg-6 panel-body">
+                                            <div class="rw-charts-cards">
+                                                <i class="fa fa-bookmark rw-job-color-txt-{{$chartlast->right_id}}"></i>
+                                                {{($chartlast->right->name)}}
 
-                    {{--</div>--}}
+                                                @if($chartlast->emweb == 'on')
+                                                    <span class="label label-info pull-right">
+                                                        Emweb <i class="fa fa-check"></i>
+                                                    </span>
+                                                @else
+                                                @endif
+                                                @if($chartlast->asso == '1')
+                                                    <span class="label label-default pull-right ">
+                                                        Adhérent RW
+                                                    </span>
+                                                @else
+                                                @endif
+
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <i class="glyphicon glyphicon-user "></i>
+                                                        {{$chartlast->first_name}} {{$chartlast->last_name}}
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>
+                                                            <i class="fa fa-user"></i>
+                                                            {{$chartlast->username}}
+                                                        </span>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>
+                                                            <i class="fa fa-pencil-square-o"></i>
+                                                            {{$chartlast->posts->count()}}
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

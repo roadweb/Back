@@ -15,6 +15,12 @@
     box-sizing: border-box;
     padding: 10px 15px;
 
+    .label-default {
+      background-color: transparent;
+      color: $colorOpen;
+      box-shadow: 1px 1px 1px $grey-dark;
+      margin: auto 5px;
+    }
     .label-danger {
       font-weight: 300;
       background-color: $red;
@@ -29,6 +35,23 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      box-shadow: 1px 1px 3px $grey-dark;
+      color: $grey-light;
+
+      margin: auto;
+
+      span {
+        margin: auto;
+        text-align: center;
+        font-size: $fontSize + 1.5;
+        font-weight: 600;
+        line-height: 100px;
+      }
+    }
+    .user-arrond {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
       box-shadow: 1px 1px 3px $grey-dark;
       color: $grey-light;
 
@@ -68,6 +91,10 @@
   background-color: $red;
 }
 
+.bgc-publi-grey {
+  background-color: $grey-light;
+}
+
 .txt-publi-on {
   color: #62b3d4;
 }
@@ -76,5 +103,8 @@
 }
 .txt-publi-0 {
   color: $colorOpen;
+}
+.txt-user {
+  color: $grey-dark;
 }
 

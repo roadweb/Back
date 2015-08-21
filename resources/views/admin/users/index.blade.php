@@ -35,7 +35,22 @@
         -->
 
          <!-- users développé par Céline -->
-        <div class="row"> 
+        <div class="row">
+            <section class="col-md-4 col-lg-4 col-sm-4 pull-right">
+                {{--{!! Form::open(['route' => ['admin.users.index'], 'id' => 'form-serach']) !!}--}}
+                <div class="col-lg-12 pull-right">
+                    <div class="input-group">
+                        {!! Form::text('my_search', null, ["class" => "form-control", "placeholder" => "Entrez un pseudo"])!!}
+
+                        <span class="input-group-btn">
+                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+                {{--{!! Form::close() !!}--}}
+
+            </section>
+
             <section class="col-lg-12">
                 <table id="filter" class="table-bordered table-striped table-condensed col-lg-12">
                     <caption>
@@ -46,7 +61,7 @@
                             <th class="col-lg-1 skip-filter">Pseudo</th>
                             <th class="col-lg-1 skip-filter">Avatar</th>
                             <th class="col-lg-2 skip-filter">Nom </th>
-                            <th class="col-lg-2 skip-filter">Date d'inscription</th>
+                            <th class="col-lg-2">Date d'inscription</th>
                             <th class="col-lg-2 skip-filter">Email</th>
                             {{--<th class="col-lg-1 skip-filter">Blog</th>--}}
                             <th class="col-lg-1 skip-filter">Articles</th>

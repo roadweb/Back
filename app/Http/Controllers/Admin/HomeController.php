@@ -2,6 +2,7 @@
 
 use App\Job;
 use App\Post;
+use App\Right;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller as Controller;
 use App\User;
@@ -40,8 +41,26 @@ class HomeController extends Controller {
 
         $posts = Post::where('user_id', $user->id)->orderBy('created_at', 'desc')->take(6)->get();
         $rwposts = Post::orderBy('created_at', 'desc')->take(6)->get();
+        $charts = User::all();
+        $chartmembre = User::where('right_id', '1')->get();
+        $chartauteur = User::where('right_id', '2')->get();
+        $chartmodo = User::where('right_id', '3')->get();
+        $chartadmin = User::where('right_id', '4')->get();
+        $chartslast = User::orderBy('created_at', 'desc')->take(4)->get();
+        $rights = Right::all();
 
-		return view('admin.home', compact('user', 'posts', 'jobs', 'charts', 'rwposts'));
+		return view('admin.home', compact(
+            'user',
+            'posts',
+            'charts',
+            'chartmembre',
+            'rwposts',
+            'rights',
+            'chartauteur',
+            'chartmodo',
+            'chartadmin',
+            'chartslast'
+        ));
 	}
 
 }
