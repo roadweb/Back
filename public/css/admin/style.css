@@ -1118,3 +1118,74 @@ section table td .thumbnail {
 .rw-gestion-groupe .label {
   padding: 10px;
 }
+
+.rw-admin-charts .nav-tabs li a span {
+  text-transform: capitalize;
+}
+.rw-admin-charts .list-group-item {
+  text-transform: capitalize;
+}
+.rw-admin-charts .rw-charts-cards {
+  box-shadow: 1px 1px 3px #7e8b8c;
+  border-radius: 15px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+.rw-admin-charts .rw-charts-cards .label-danger {
+  font-weight: 300;
+  background-color: #bf382a;
+}
+.rw-admin-charts .col-md-3 {
+  text-align: center;
+  margin: 20px auto;
+}
+.rw-admin-charts .col-md-3 .publi-on-rond {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px #7e8b8c;
+  color: #ebebe6;
+  margin: auto;
+}
+.rw-admin-charts .col-md-3 .publi-on-rond span {
+  margin: auto;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 100px;
+}
+.rw-admin-charts .col-md-3 p {
+  padding: 5px;
+}
+.rw-admin-charts .col-md-3 p::first-letter {
+  text-transform: uppercase;
+}
+
+.bgc-publi-on {
+  background-color: #62b3d4;
+}
+
+.bgc-publi-uc {
+  background-color: #B76DAB;
+}
+
+.bgc-publi-0 {
+  background-color: #16A086;
+}
+
+.bgc-publi-sticky {
+  background-color: #bf382a;
+}
+
+.txt-publi-on {
+  color: #62b3d4;
+}
+
+.txt-publi-uc {
+  color: #B76DAB;
+}
+
+.txt-publi-0 {
+  color: #16A086;
+}
