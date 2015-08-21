@@ -1132,6 +1132,12 @@ section table td .thumbnail {
   box-sizing: border-box;
   padding: 10px 15px;
 }
+.rw-admin-charts .rw-charts-cards .label-default {
+  background-color: transparent;
+  color: #16A086;
+  box-shadow: 1px 1px 1px #7e8b8c;
+  margin: auto 5px;
+}
 .rw-admin-charts .rw-charts-cards .label-danger {
   font-weight: 300;
   background-color: #bf382a;
@@ -1149,6 +1155,21 @@ section table td .thumbnail {
   margin: auto;
 }
 .rw-admin-charts .col-md-3 .publi-on-rond span {
+  margin: auto;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 100px;
+}
+.rw-admin-charts .col-md-3 .user-arrond {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px #7e8b8c;
+  color: #ebebe6;
+  margin: auto;
+}
+.rw-admin-charts .col-md-3 .user-arrond span {
   margin: auto;
   text-align: center;
   font-size: 2.5em;
@@ -1178,6 +1199,10 @@ section table td .thumbnail {
   background-color: #bf382a;
 }
 
+.bgc-publi-grey {
+  background-color: #ebebe6;
+}
+
 .txt-publi-on {
   color: #62b3d4;
 }
@@ -1188,4 +1213,8 @@ section table td .thumbnail {
 
 .txt-publi-0 {
   color: #16A086;
+}
+
+.txt-user {
+  color: #7e8b8c;
 }
