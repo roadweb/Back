@@ -23,16 +23,16 @@
                                 </span>
                             </a>
                         </li>
-                        @if(Auth::user() && Auth::user()->right_id == '4')
-                            <li role="presentation">
-                                <a href="#rw-users " aria-controls="rw-users" role="tab" data-toggle="tab">
-                                    <i class="fa fa-dashboard"></i>
-                                <span>
-                                    utilisateurs
-                                </span>
-                                </a>
-                            </li>
-                        @endif
+                        {{--@if(Auth::user() && Auth::user()->right_id == '4')--}}
+                            {{--<li role="presentation">--}}
+                                {{--<a href="#rw-users " aria-controls="rw-users" role="tab" data-toggle="tab">--}}
+                                    {{--<i class="fa fa-dashboard"></i>--}}
+                                {{--<span>--}}
+                                    {{--utilisateurs--}}
+                                {{--</span>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
+                        {{--@endif--}}
                     </ul>
                 </div>
 
@@ -220,10 +220,11 @@
                         </div>
                     </div>
 
-                    {{--<div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">--}}
-                        {{--<h3 class="panel-title">Les utilisateurs de Road-Web</h3>--}}
+                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">
+                        <h3 class="panel-title">Les utilisateurs de Road-Web</h3>
 
-                    {{--</div>--}}
+                    </div>
+
                 </div>
             </div>
         </div>
