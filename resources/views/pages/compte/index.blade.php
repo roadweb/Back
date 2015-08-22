@@ -246,9 +246,9 @@
                         @endforeach
                     </ul>
 
-                    @if(Session::has('message'))
+                    @if(Session::has('message-avatar'))
                         <p class="rw-contact-success">
-                            {{Session::get('message')}}
+                            {{Session::get('message-avatar')}}
                         </p>
                     @endif
                     <button id="rw-cpt-button-avatar" class="rw-cpt-button-avatar">Modifier mon avatar</button>

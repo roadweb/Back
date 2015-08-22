@@ -109,7 +109,7 @@ class CompteController extends Controller
             $user->save();
         }
         return \Redirect::route('compte')
-        ->with('message', 'Votre avatar a bien été modifié !');
+        ->with('message-avatar', 'Votre avatar a bien été modifié !');
     
     }
 
