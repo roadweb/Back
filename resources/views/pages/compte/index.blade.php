@@ -24,17 +24,17 @@
                         {{ $user->right->name }}
                     </span> | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
                 </p>
-            <!---------------------
+            <!--
              Bouton en attendant de faire la page plume!
-            ----------------------->
+            -->
             @if (Auth::user()->right_id >= '2')
                 <a href="{{url('/admin/posts')}}">
                     <button id="rw-cpt-button" title="Accès au CMS">Ecrire un article</button>
                 </a>
                 @endif
-                        <!---------------------
+                        <!--
                  fin bouton en attendant la page plume!
-                ----------------------->
+                -->
 
                 <a href="{{URL::to('/monblog', ['id' => $user->id, 'username' => $user->username])}}">
                     <button id="rw-cpt-button" title="Accès à mon blog RW">Ma vue publique</button>
@@ -218,27 +218,41 @@
 
                 <h2>Mon avatar</h2>
 
-
-                {{--{!! Form::model($user, ['route' => ['admin.users.update', $user->id], 'method' => 'patch', 'id' => '', 'files' => true ]) !!}--}}
-
-
                 <div class="rw-cpt-content-avatar">
 
                     <img class="rw-cpt-avatar" src="{{$user->avatar}}" alt="{{$user->username}}"/>
 
-                    {{--{!! Form::submit('Sauvegarder les informations', ["id" => "rw-cpt-btn-submit-avatar"]) !!}--}}
+                 </div>
 
-                    
+                    {!! Form::model($user, ['route' => ['avatar_update'], 'method' => 'patch', 'files' => true, 'enctype' => 'multipart/form-data' ]) !!}
 
-                    {{--{!! Form::close() !!}--}}
+                        {!! Form::hidden('id', $user->id) !!}
 
+                        <div class="rw-cpt-input-file-container">
+                            {!! Form::label('avatar', 'Joindre une image...', 
+                                ['class' => 'rw-cpt-input-file-trigger',
+                                'tabindex' => '0']
+                            ) !!}
+                            {!! Form::file('avatar', ['class' => 'rw-cpt-input-file', 'id' => 'avatar']) !!}
+                        </div>
 
-                </div>
+                    {!! Form::submit('Enregistrer l\'avatar', ['id' => 'rw-cpt-btn-submit-avatar']) !!}
+                   
 
+                    {!! Form::close() !!}
+                    <ul class="rw-cpt-error">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
 
+                    @if(Session::has('message'))
+                        <p class="rw-contact-success">
+                            {{Session::get('message')}}
+                        </p>
+                    @endif
+                    <button id="rw-cpt-button-avatar" class="rw-cpt-button-avatar">Modifier mon avatar</button>
 
-
-                {{--<button id="rw-cpt-button-avatar">Editer mes informations</button>--}}
             </div>
 
 

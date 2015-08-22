@@ -5,6 +5,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
+use App\Http\Requests\AvatarFormRequest;
 
 class CompteController extends Controller
 {
@@ -88,6 +89,28 @@ class CompteController extends Controller
         $user->update($request->all());
 
         return redirect(route('compte'));
+    }
+
+    public function avatar(AvatarFormRequest $request)
+    {
+        $id = $request->id;
+        $avatar = $request->file('avatar');
+        $user = User::findOrFail($id);
+        $username = $user->username;
+        
+        if($avatar->isValid())
+        {
+            $path = config('images.avatar');      
+            $extension = $avatar->getClientOriginalExtension();
+            $name = $username . '.' . $extension;
+            $avatar->move($path, $name);
+            $file = $path . '/' . $name;
+            $user->avatar = $file;
+            $user->save();
+        }
+        return \Redirect::route('compte')
+        ->with('message', 'Votre avatar a bien été modifié !');
+    
     }
 
     /**

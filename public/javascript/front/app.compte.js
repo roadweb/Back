@@ -16,11 +16,15 @@ $(document).ready(function(){
 
     $('#rw-cpt-button-avatar').click(function(){
         $('#rw-cpt-btn-submit-avatar').css("opacity", "1");
-        $(this).css("opacity", "0.3");
+        //$('.rw-cpt-input').css("display", "block");
+        $('.rw-cpt-input-file-container').css("display", "block");
+        $(this).css("opacity", "0");
     });
 
     $('#rw-cpt-btn-submit-avatar').click(function(){
         $('#rw-cpt-button-avatar').css("opacity", "1");
+        //$('.rw-cpt-input-file').css("display", "none");
+        $('.rw-cpt-input-file-container').css("display", "none");
         $(this).css("opacity", "0");
     });
 });

@@ -2990,6 +2990,27 @@ partie droite de la page
   text-align: center;
 }
 
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil ul.rw-cpt-error {
+  width: 100%;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil ul.rw-cpt-error li {
+  color: #bf382a;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil p.rw-contact-success {
+  color: #16A086;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3046,6 +3067,10 @@ partie droite de la page
   border-radius: 20px;
 }
 
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-avatar {
+  width: 240px !important;
+}
+
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil button {
   margin: 10px auto;
   border: none;
@@ -3082,6 +3107,78 @@ partie droite de la page
   border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+
+/*************************
+      design du bouton upload de fichier
+    **************************/
+/* styles de base si JS est activé */
+.rw-sub-js .rw-cpt-input-file-container {
+  position: relative;
+  width: auto;
+  height: 50px;
+  display: none;
+}
+
+.rw-sub-js .rw-cpt-input-file-trigger {
+  display: block;
+  padding: 2px 0px;
+  background: #16A086;
+  color: #ebebe6;
+  font-weight: 500;
+  font-size: 0.9em;
+  text-align: center;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 240px;
+  margin: 20px auto;
+}
+
+.rw-sub-js .rw-cpt-input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  padding: 14px 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* quelques styles d'interactions */
+.rw-sub-js .rw-cpt-input-file:hover + .rw-cpt-input-file-trigger,
+.rw-sub-js .rw-cpt-input-file:focus + .rw-cpt-input-file-trigger,
+.rw-sub-js .rw-cpt-input-file-trigger:hover,
+.rw-sub-js .rw-cpt-input-file-trigger:focus {
+  background: #E84C3D;
+}
+
+/* styles du retour visuel */
+.rw-cpt-file-return {
+  margin: 0;
+}
+
+.rw-cpt-file-return:not(:empty) {
+  margin: 0;
+}
+
+.rw-sub-js .rw-cpt-file-return {
+  font-style: italic;
+  font-size: .9em;
+  color: #16A086;
+  text-align: center;
+  width: auto;
+}
+
+/* on complète l'information d'un contenu textuel
+    uniquement lorsque le paragraphe n'est pas vide */
+.rw-sub-js .rw-cpt-file-return:not(:empty):before {
+  content: "Fichier choisi :  ";
+  font-weight: normal;
+  color: #037E69;
+  margin: auto;
+  padding: 0 10px;
 }
 
 .rw-contact-container {
