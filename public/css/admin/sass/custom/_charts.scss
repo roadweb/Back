@@ -1,0 +1,110 @@
+.rw-admin-charts {
+
+  .nav-tabs li a span {
+      text-transform: capitalize;
+  }
+
+  .list-group-item {
+    text-transform: capitalize;
+  }
+
+  .rw-charts-cards {
+    box-shadow: 1px 1px 3px $grey-dark;
+    border-radius: 15px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding: 10px 15px;
+
+    .label-default {
+      background-color: transparent;
+      color: $colorOpen;
+      box-shadow: 1px 1px 1px $grey-dark;
+      margin: auto 5px;
+    }
+    .label-danger {
+      font-weight: 300;
+      background-color: $red;
+    }
+  }
+  .col-md-3 {
+
+    text-align: center;
+    margin: 20px auto;
+
+    .publi-on-rond {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 1px 1px 3px $grey-dark;
+      color: $grey-light;
+
+      margin: auto;
+
+      span {
+        margin: auto;
+        text-align: center;
+        font-size: $fontSize + 1.5;
+        font-weight: 600;
+        line-height: 100px;
+      }
+    }
+    .user-arrond {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px $grey-dark;
+      color: $grey-light;
+
+      margin: auto;
+
+      span {
+        margin: auto;
+        text-align: center;
+        font-size: $fontSize + 1.5;
+        font-weight: 600;
+        line-height: 100px;
+      }
+    }
+
+    p {
+
+      padding: 5px;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+.bgc-publi-on {
+  background-color: #62b3d4;
+}
+.bgc-publi-uc {
+  background-color: $colorRefClair;
+}
+.bgc-publi-0 {
+  background-color: $colorOpen;
+}
+.bgc-publi-sticky {
+  background-color: $red;
+}
+
+.bgc-publi-grey {
+  background-color: $grey-light;
+}
+
+.txt-publi-on {
+  color: #62b3d4;
+}
+.txt-publi-uc {
+  color: $colorRefClair;
+}
+.txt-publi-0 {
+  color: $colorOpen;
+}
+.txt-user {
+  color: $grey-dark;
+}
+
