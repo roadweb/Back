@@ -47,7 +47,12 @@ class HomeController extends Controller {
         $chartmodo = User::where('right_id', '3')->get();
         $chartadmin = User::where('right_id', '4')->get();
         $chartslast = User::orderBy('created_at', 'desc')->take(4)->get();
-        $rights = Right::all();
+        $usersdev = User::where('job_id', '1')->get();
+        $usersdesign = User::where('job_id', '2')->get();
+        $userscm = User::where('job_id', '3')->get();
+        $userswm = User::where('job_id', '4')->get();
+        $usersinte = User::where('job_id', '5')->get();
+        $usersref = User::where('job_id', '6')->get();
 
 		return view('admin.home', compact(
             'user',
@@ -55,11 +60,16 @@ class HomeController extends Controller {
             'charts',
             'chartmembre',
             'rwposts',
-            'rights',
             'chartauteur',
             'chartmodo',
             'chartadmin',
-            'chartslast'
+            'chartslast',
+            'usersdev',
+            'usersdesign',
+            'userscm',
+            'userswm',
+            'usersinte',
+            'usersref'
         ));
 	}
 

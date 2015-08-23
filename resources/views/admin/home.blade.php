@@ -263,6 +263,7 @@
                                 administrateurs
                             </p>
                         </div>
+
                         <h2 class="panel-title">Les <span class="red">4</span> derniers inscrits :</h2>
                         <div class="col-md-12">
                             <div class="">
@@ -310,6 +311,35 @@
                                 </div>
                             </div>
                         </div>
+
+                        <h2 class="panel-title">Inscrits par formation :</h2>
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="panel-heading col-md-12 col-sm-12 col-lg-12">
+                                    <ul class=" list-group list-inline col-md-12 rw-joblist">
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-1">
+                                            Développeur : {{$usersdev->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-2">
+                                            Designer : {{$usersdesign->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-3">
+                                            Community Manager : {{$userscm->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-4">
+                                            Webmarketeur : {{$userswm->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-5">
+                                            Intégrateur : {{$usersinte->count()}}
+                                        </li>
+                                        <li class="list-group-item-text col-md-2 rw-job-color-brd-left-6">
+                                            Référenceur : {{$usersref->count()}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
