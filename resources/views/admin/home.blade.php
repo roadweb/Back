@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation">
+                        <li role="presentation" class="active">
                             <a href="#rw-perso" aria-controls="rw-perso" role="tab" data-toggle="tab">
                                 <i class="fa fa-dashboard"></i>
                                 <span>
@@ -24,7 +24,7 @@
                             </a>
                         </li>
                         @if(Auth::user() && Auth::user()->right_id == '4')
-                            <li role="presentation" class="active">
+                            <li role="presentation">
                                 <a href="#rw-users " aria-controls="rw-users" role="tab" data-toggle="tab">
                                     <i class="fa fa-dashboard"></i>
                                 <span>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="tab-content">
-                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-perso">
+                    <div role="tabpanel" class="panel-body tab-pane fade in active" id="rw-perso">
                         <h3 class="panel-title">Vos publications :</h3>
                         <p class="panel-info green">Total : {{$user->posts->count()}}</p>
                         <div class="col-md-3">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
 
-                    <div role="tabpanel" class="panel-body tab-pane fade in active" id="rw-users">
+                    <div role="tabpanel" class="panel-body tab-pane fade" id="rw-users">
                         <h2 class="panel-title">Les utilisateurs de Road-Web</h2>
                         <p class="panel-info green">Inscrits : {{$charts->count()}}</p>
                         <div class="col-md-3">
