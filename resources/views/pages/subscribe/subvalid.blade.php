@@ -31,13 +31,13 @@
             {!! Form::hidden('username', $user->username) !!}
             {!! Form::hidden('email', $user->email) !!}
 
-            <div class="rw-sub-input-file-container">
+            <div class="rw-subvalid-input-file-container">
                 <div>
                     {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
-                    array('class' => 'rw-sub-input-file-trigger',
+                    array('class' => 'rw-subvalid-input-file-trigger',
                     'tabindex' => '0' )) !!}
-                    {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
-                    <p class="rw-sub-file-return"></p>
+                    {!! Form::file('justificatif', ['class' => 'rw-subvalid-input-file', 'id' => 'justificatif']) !!}
+                    <p class="rw-subvalid-file-return"></p>
                 </div>
             </div>
 

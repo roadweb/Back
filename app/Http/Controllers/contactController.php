@@ -43,13 +43,8 @@ class ContactController extends Controller
                 if($img->isValid())
                 {
                     $path = config('images.contact');
-                    
                     $extension = $img->getClientOriginalExtension();
-                    do 
-                    {
-                        $name = str_random(10) . '.' . $extension;
-                    } 
-                    while(file_exists($path . '/' . $name));
+                    $name = 'capture.' . $extension;
                     $img->move($path, $name);
                 }
                 $file = $path . '/' . $name;
