@@ -1731,9 +1731,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -3069,6 +3067,7 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form #rw-cpt-btn-submit-avatar {
   width: 240px !important;
+  margin-top: 70px;
 }
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil button {
@@ -3120,7 +3119,7 @@ partie droite de la page
   display: none;
 }
 
-.rw-sub-js .rw-cpt-input-file-trigger {
+.rw-sub-js .rw-sub-input-file-trigger {
   display: block;
   padding: 2px 0px;
   background: #16A086;
@@ -3136,7 +3135,7 @@ partie droite de la page
   margin: 20px auto;
 }
 
-.rw-sub-js .rw-cpt-input-file {
+.rw-sub-js .rw-sub-input-file {
   position: absolute;
   top: 0;
   left: 0;
@@ -3147,23 +3146,23 @@ partie droite de la page
 }
 
 /* quelques styles d'interactions */
-.rw-sub-js .rw-cpt-input-file:hover + .rw-cpt-input-file-trigger,
-.rw-sub-js .rw-cpt-input-file:focus + .rw-cpt-input-file-trigger,
-.rw-sub-js .rw-cpt-input-file-trigger:hover,
-.rw-sub-js .rw-cpt-input-file-trigger:focus {
+.rw-sub-js .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+.rw-sub-js .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+.rw-sub-js .rw-sub-input-file-trigger:hover,
+.rw-sub-js .rw-sub-input-file-trigger:focus {
   background: #E84C3D;
 }
 
 /* styles du retour visuel */
-.rw-cpt-file-return {
+.rw-sub-file-return {
   margin: 0;
 }
 
-.rw-cpt-file-return:not(:empty) {
+.rw-sub-file-return:not(:empty) {
   margin: 0;
 }
 
-.rw-sub-js .rw-cpt-file-return {
+.rw-sub-js .rw-sub-file-return {
   font-style: italic;
   font-size: .9em;
   color: #16A086;
@@ -3173,7 +3172,7 @@ partie droite de la page
 
 /* on complète l'information d'un contenu textuel
     uniquement lorsque le paragraphe n'est pas vide */
-.rw-sub-js .rw-cpt-file-return:not(:empty):before {
+.rw-sub-js .rw-sub-file-return:not(:empty):before {
   content: "Fichier choisi :  ";
   font-weight: normal;
   color: #037E69;
