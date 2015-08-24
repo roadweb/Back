@@ -2942,6 +2942,10 @@ partie droite de la page
   font-size: 0.8em !important;
 }
 
+.rw-cpt-main-container .rw-cpt-header .rw-cpt-created .rw-cpt-created-asso {
+  color: #16A086;
+}
+
 .rw-cpt-main-container .rw-cpt-header button {
   margin: 10px auto;
   border: none;
@@ -3633,7 +3637,7 @@ partie droite de la page
   text-shadow: 0 0 2px #000;
 }
 
-.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-state, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-emweb {
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-state, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-emweb, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-state-asso {
   padding: 5px;
   margin: 0 5px;
   color: #fff;
@@ -3645,6 +3649,10 @@ partie droite de la page
 .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-emweb {
   border: 1px solid #16A086;
   color: #000000;
+}
+
+.rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-state-asso {
+  color: #16A086;
 }
 
 .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-post, .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content .rw-allartus-label-inscrit {

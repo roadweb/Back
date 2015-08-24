@@ -15,14 +15,17 @@
             <p class="rw-cpt-created">Inscrit depuis le {{$user->created_at->format('d') . ' ' . dateConvert($user->created_at->format('F')) . ' ' . $user->created_at->format('Y')}}</p>
                 <p class="rw-cpt-created">
                     @if($user->asso != 0)
-                    <span class="rw-job-color-txt-{{$user->job_id}}">
+                    <span class="rw-cpt-created-asso">
                         Road Web asso
                     </span>
                     @else
                     @endif
                     <span class="rw-right-color-bgc-{{$user->right_id}}">
                         {{ $user->right->name }}
-                    </span> | Mon blog Road-Web : http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
+                    </span> | Mon blog Road-Web : <a
+                                href="http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}">
+                            http://road-web.fr/monblog/{{$user->id}}/{{$user->username}}
+                        </a>
                 </p>
             <!--
              Bouton en attendant de faire la page plume!
