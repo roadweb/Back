@@ -221,6 +221,7 @@
                 <div class="rw-cpt-content-avatar">
 
                     <img class="rw-cpt-avatar" src="{{$user->avatar}}" alt="{{$user->username}}"/>
+                    <button id="rw-cpt-button-avatar" class="rw-cpt-button-avatar">Modifier mon avatar</button>
 
                  </div>
 
@@ -230,10 +231,12 @@
 
                         <div class="rw-cpt-input-file-container">
                             {!! Form::label('avatar', 'Joindre une image...', 
-                                ['class' => 'rw-cpt-input-file-trigger',
+                                ['class' => 'rw-sub-input-file-trigger',
                                 'tabindex' => '0']
                             ) !!}
-                            {!! Form::file('avatar', ['class' => 'rw-cpt-input-file', 'id' => 'avatar']) !!}
+                            {!! Form::file('avatar', ['class' => 'rw-sub-input-file', 'id' => 'avatar']) !!}
+                            <p class="rw-sub-file-return"></p>
+
                         </div>
 
                     {!! Form::submit('Enregistrer l\'avatar', ['id' => 'rw-cpt-btn-submit-avatar']) !!}
@@ -251,7 +254,6 @@
                             {{Session::get('message-avatar')}}
                         </p>
                     @endif
-                    <button id="rw-cpt-button-avatar" class="rw-cpt-button-avatar">Modifier mon avatar</button>
 
             </div>
 

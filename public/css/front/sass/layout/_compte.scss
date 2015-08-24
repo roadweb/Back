@@ -161,6 +161,7 @@
 
         #rw-cpt-btn-submit-avatar {
           width:240px !important;
+          margin-top: 70px;
         }
       }
 
@@ -216,7 +217,7 @@
       height:50px;
       display: none;
     }
-    .rw-sub-js .rw-cpt-input-file-trigger {
+    .rw-sub-js .rw-sub-input-file-trigger {
       display: block;
       padding: 2px 0px;
       background: $colorOpen;
@@ -230,7 +231,7 @@
       width: 240px;
       margin:20px auto;
     }
-    .rw-sub-js .rw-cpt-input-file {
+    .rw-sub-js .rw-sub-input-file {
       position: absolute;
       top: 0; left: 0;
       width: 210px;
@@ -240,21 +241,21 @@
     }
 
     /* quelques styles d'interactions */
-    .rw-sub-js .rw-cpt-input-file:hover + .rw-cpt-input-file-trigger,
-    .rw-sub-js .rw-cpt-input-file:focus + .rw-cpt-input-file-trigger,
-    .rw-sub-js .rw-cpt-input-file-trigger:hover,
-    .rw-sub-js .rw-cpt-input-file-trigger:focus {
+    .rw-sub-js .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+    .rw-sub-js .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+    .rw-sub-js .rw-sub-input-file-trigger:hover,
+    .rw-sub-js .rw-sub-input-file-trigger:focus {
       background: $colorClose;
       //color: #FFFFFF;
     }
     /* styles du retour visuel */
-    .rw-cpt-file-return {
+    .rw-sub-file-return {
       margin: 0;
     }
-    .rw-cpt-file-return:not(:empty) {
+    .rw-sub-file-return:not(:empty) {
       margin: 0;
     }
-    .rw-sub-js .rw-cpt-file-return {
+    .rw-sub-js .rw-sub-file-return {
       font-style: italic;
       font-size: .9em;
       color: $colorOpen;
@@ -263,7 +264,7 @@
     }
     /* on complète l'information d'un contenu textuel
     uniquement lorsque le paragraphe n'est pas vide */
-    .rw-sub-js .rw-cpt-file-return:not(:empty):before {
+    .rw-sub-js .rw-sub-file-return:not(:empty):before {
       content: "Fichier choisi :  ";
       font-weight: normal;
       color: $colorOpenHover;
