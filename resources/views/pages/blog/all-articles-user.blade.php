@@ -50,7 +50,7 @@
                                 </span>
                             @endif
                             @if($user->asso != 0)
-                                <span class="rw-job-color-txt-{{$user->job_id}} rw-allartus-label-state">
+                                <span class="rw-allartus-label-state-asso">
                                     Road Web Asso
                                 </span>
                             @else

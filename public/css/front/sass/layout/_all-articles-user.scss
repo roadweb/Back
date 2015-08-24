@@ -83,6 +83,11 @@
           color: #000000;
         }
 
+        .rw-allartus-label-state-asso {
+          @extend .rw-allartus-label-state;
+          color: $colorOpen;
+        }
+
         .rw-allartus-label-post, .rw-allartus-label-inscrit {
           font-size: $fontSize - 0.05;
         }
