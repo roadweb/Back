@@ -2,57 +2,11 @@
 
 @section('content')
 
-    <div class="container">
-        <!-- users développé par Kevin
-
+    <div class="container rw-users-table">
+        <!-- users développé par Céline -->
         <div class="row">
-            @foreach($users as $user)
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail">
-                        <div class="clearfix">
-                            <div class="label label-primary">Admin</div>
-                            <strong class="small pull-right">{{ $user->username }}</strong>
-                        </div>
-                        <img src="http://i2.wp.com/forum.frandroid.com/public/style_images/Humanoid_Reset/profile/default_large.png"
-                             alt="..." class="img-circle">
-
-                        <div class="caption">
-                            <h4>{{ $user->last_name }} {{ $user->first_name }}</h4>
-
-                            <p>{{ $user->email }}</p>
-
-                            <button class="btn btn-default" 
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Les articles qu'il a publiés">
-                                <span class="glyphicon glyphicon-edit"></span>  {{ $user->posts->count() }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-        -->
-
-         <!-- users développé par Céline -->
-        <div class="row">
-            <section class="col-md-4 col-lg-4 col-sm-4 pull-right">
-                {{--{!! Form::open(['route' => ['admin.users.index'], 'id' => 'form-serach']) !!}--}}
-                <div class="col-lg-12 pull-right">
-                    <div class="input-group">
-                        {!! Form::text('my_search', null, ["class" => "form-control", "placeholder" => "Entrez un pseudo"])!!}
-
-                        <span class="input-group-btn">
-                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </div>
-                {{--{!! Form::close() !!}--}}
-
-            </section>
-
-            <section class="col-lg-12">
-                <table id="filter" class="table-bordered table-striped table-condensed col-lg-12">
+                <section class="col-lg-12" id="filter">
+                <table id="example" class="table-bordered table-condensed col-lg-12">
                     <caption>
                         <h4>Les utilisateurs de Roadweb</h4>
                     </caption>
@@ -61,7 +15,7 @@
                             <th class="col-lg-1 skip-filter">Pseudo</th>
                             <th class="col-lg-1 skip-filter">Avatar</th>
                             <th class="col-lg-2 skip-filter">Nom </th>
-                            <th class="col-lg-2">Date d'inscription</th>
+                            <th class="col-lg-2 skip-filter">Date d'inscription</th>
                             <th class="col-lg-2 skip-filter">Email</th>
                             {{--<th class="col-lg-1 skip-filter">Blog</th>--}}
                             <th class="col-lg-1 skip-filter">Articles</th>
@@ -84,7 +38,7 @@
                             <td>{{$user->job->name}}</td>
                             <td>{{$user->right->name}}</td>
                         </tr>
-                         @endforeach
+                        @endforeach
                     </tbody>
                 </table>
             </section>

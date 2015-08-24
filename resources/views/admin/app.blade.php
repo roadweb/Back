@@ -9,6 +9,10 @@
     <link href="{{ asset('/bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/bootstrap.theme.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/DataTables/media/css/jquery.DataTables.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/DataTables/media/css/jquery.dataTables_themeroller.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/DataTables/media/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/DataTables/media/css/dataTables.jqueryui.min.css') }}" rel="stylesheet">
 </head>
 <body class="relative">
 
@@ -99,8 +103,20 @@
 <script src="{{ asset('/javascript/admin/jquery.confirm.js') }}"></script>
 <script src="{{ asset('/javascript/admin/app.js') }}"></script>
 <script src="{{ asset('javascript/admin/userstable.js') }}"></script>
+<script src="{{ asset('/bower_components/DataTables/media/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('/bower_components/DataTables/media/js/dataTables.jqueryui.min.js') }}"></script>
+<script src="{{ asset('/bower_components/DataTables/media/js/dataTables.foundation.min.js') }}"></script>
+<script src="{{ asset('/bower_components/DataTables/media/js/dataTables.bootstrap.min.js') }}"></script>
+
  <script type="text/javascript">
-    $('#filter').ddTableFilter()
+    $('#example').ddTableFilter()
+
+    $('#example').dataTable( {
+      "aoColumnDefs": [
+          { 'bSortable': false, 'aTargets': [ 1, 6, 7 ] }
+       ]
+});
+
   </script>
 
 </body>
