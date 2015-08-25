@@ -1,12 +1,12 @@
 function myLine(id){ 
 
-	var navLine = $('.rw-carrous-navbar-line');
-	var baseWidth = 150;
+	var navLine = $('.rw-blog-jf-line');
+	var baseWidth = 100/7;
 	var newWidth;
 
 
 	newWidth = baseWidth * id;
 
-	navLine.css('width', newWidth + 'px');
+	navLine.css('width', newWidth + '%');
 
 };
