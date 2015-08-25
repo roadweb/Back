@@ -93,7 +93,7 @@
             
             
             
-        rw-carrous-navbar-job-a{
+        .rw-carrous-navbar-job-a{
             width:auto;
             min-width:calc(80px*1.2);
             display:flex;
@@ -140,12 +140,12 @@
         position: absolute;
         top:50px;
         left:0;
-        border: 1px solid green;
+        //border: 1px solid $red;
 
         
         .rw-carrous-navbar-line{
             position: absolute;
-            //width:1050px;
+            width:1050px;
             height: 4px;
             background-color:$red;
         }

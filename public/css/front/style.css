@@ -833,6 +833,144 @@ footer {
           justify-content: space-around;
 }
 
+/******************FILTRES METIERS******************/
+.rw-blog-jf {
+  position: relative;
+  margin: auto;
+  max-width: 1100px;
+  min-height: 180px;
+  padding-top: 30px;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job {
+  float: left;
+  margin-left: 7px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: -webkit-calc(100%/7);
+  width: calc(100%/7);
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job a {
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  margin-left: 50%;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job a img {
+  width: 80px;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: relative;
+  overflow: hidden;
+  min-width: -webkit-calc(80px*1.2);
+  min-width: calc(80px*1.2);
+  height: 0;
+  margin-top: -14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label span {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 8px;
+  left: 0;
+  opacity: 0;
+  font-size: 12px;
+  line-height: auto;
+  color: #333;
+  background-color: white;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label .rw-blog-jf-navbar-vertical-line {
+  width: 4px;
+  height: 40px;
+  background-color: #bf382a;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job:hover .rw-blog-jf-navbar-job-label {
+  height: 60px;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job:hover span {
+  opacity: 1;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job:hover a img {
+  width: 90px;
+}
+
+.rw-blog-jf .rw-blog-jf-line {
+  z-index: -1;
+  margin: auto;
+  width: 100%;
+  height: 4px;
+  background-color: #bf382a;
+  position: absolute;
+  top: 36%;
+}
+
+.rw-blog-jf .rw-blog-jf-hexagone {
+  position: absolute;
+  background-image: url("../../images/exagone-rouge.png");
+  background-repeat: no-repeat;
+  top: 30%;
+  margin-left: -26px;
+  width: -webkit-calc(100%/7);
+  width: calc(100%/7);
+  height: 50px;
+}
+
+.rw-blog-jf .rw-blog-jf-hexagone:last-of-type {
+  position: absolute;
+  background-image: url("../../images/exagone-rouge.png");
+  background-repeat: no-repeat;
+  top: 30%;
+  margin-left: 1075px;
+  width: -webkit-calc(100%/7);
+  width: calc(100%/7);
+  height: 50px;
+}
+
 /*INDEX DES METIERS*/
 .rw-jobs-index-container {
   width: 100%;
@@ -1731,7 +1869,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -2351,7 +2491,7 @@ partie droite de la page
   height: 24px;
 }
 
-.rw-carrous-navbar-job rw-carrous-navbar-job-a {
+.rw-carrous-navbar-job .rw-carrous-navbar-job-a {
   width: auto;
   min-width: -webkit-calc(80px*1.2);
   min-width: calc(80px*1.2);
@@ -2366,7 +2506,7 @@ partie droite de la page
   text-decoration: none;
 }
 
-.rw-carrous-navbar-job rw-carrous-navbar-job-a .rw-icon-job {
+.rw-carrous-navbar-job .rw-carrous-navbar-job-a .rw-icon-job {
   width: 80px;
   height: 70px;
   display: -webkit-box;
@@ -2377,7 +2517,7 @@ partie droite de la page
   transition: all 0.2s ease-in-out;
 }
 
-.rw-carrous-navbar-job rw-carrous-navbar-job-a .rw-icon-job:hover {
+.rw-carrous-navbar-job .rw-carrous-navbar-job-a .rw-icon-job:hover {
   width: -webkit-calc(80px*1.2);
   width: calc(80px*1.2);
   height: -webkit-calc(70px*1.2);
@@ -2406,11 +2546,11 @@ partie droite de la page
   position: absolute;
   top: 50px;
   left: 0;
-  border: 1px solid green;
 }
 
 .rw-carrous-navbar-path .rw-carrous-navbar-line {
   position: absolute;
+  width: 1050px;
   height: 4px;
   background-color: #bf382a;
 }
