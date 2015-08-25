@@ -9,8 +9,6 @@
 
 </head>
 <body>
-<div id="fb-root"></div>
-
 <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
 
 @include('pages.components.header')

@@ -41,7 +41,7 @@
                 {!! Form::label('prenom', '', ['class' => 'rw-hidden']) !!}
                 {!! Form::text('first_name', old('first_name'), 
                     ['required', 
-                    'placeholder'=>'Nom']
+                    'placeholder'=>'Prénom']
                 ) !!}
                
             </fieldset>
