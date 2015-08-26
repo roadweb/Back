@@ -4,10 +4,10 @@
     </div>
   
     @foreach ($jobs as $job)
-        <div class="rw-blog-jf-navbar-job"
-        	onClick="myLine({{$job->id}})" 
-            onMouseOver="myLine({{$job->id}})"
-            onMouseOut="myLine(7)">
+        <div class="rw-blog-jf-navbar-job" id="rw-blog-jf-job-{{$job->id}}"
+        	{{--onClick="myLine({{$job->id}})"--}}
+            {{--onMouseOver="myLine({{$job->id}})"--}}
+            {{--onMouseOut="myLine(7)"--}}>
 
             <a href="#">  
                 <img src="{{ asset($job->job_icon)}}" alt=""/> 
@@ -16,7 +16,7 @@
             <div class="rw-blog-jf-navbar-job-label">
                 <span>{{$job->name}}</span>  
                 <div class="rw-blog-jf-navbar-vertical-line"></div>
-                <img class="rw-icon-exagone" src="images/exagone-rouge.png"/>
+                <img class="rw-blog-jf-icon-exagone" src="images/exagone-rouge.png"/>
             </div>
 
         </div>
@@ -25,7 +25,7 @@
     <div class="rw-blog-jf-line">
     </div>
 
-    <div class="rw-blog-jf-hexagone">
+    <div class="rw-blog-jf-hexagone" id="rw-blog-jf-hexagone-end">
     </div>
 
 </div>

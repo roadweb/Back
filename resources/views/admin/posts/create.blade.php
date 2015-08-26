@@ -76,7 +76,7 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]) !!}
                                 {!! Form::label('sticky-check', 'Mettre en avant ?') !!}
                             </div>
                         </div>
@@ -125,21 +125,19 @@
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('image','Le lien de l\'image d\'illustration de l\'article') !!}
+                            {!! Form::label('image','Le lien de l\'image principale d\'illustration de l\'article') !!}
                             {!! Form::url('img_link', null, ["class" => "form-control", "placeholder" => "lien de votre image au format http://nomdelimage.jpg ou http://nomdelimage.png", "required"])!!}
                         </div>
 
 
                         <div class="form-group">
 
-                            {{--@if( Auth::user()->right_id >= '3' )--}}
 
                                 <div class="checkbox checkbox-success">
-                                    {!! Form::checkbox('published', 'uc', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]); !!}
+                                    {!! Form::checkbox('published', 'uc', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]) !!}
                                     {!! Form::label('checkbox1','Soumettre à validation ?') !!}
                                 </div>
 
-                            {{--@endif--}}
                         </div>
                     </div>
                 </div>
@@ -156,7 +154,7 @@
                                 @foreach($technos as $techno)
                                 <div class="radio radio-success">
 
-                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success", "required"]); !!}
+                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success", "required"]) !!}
                                     {!! Form::label($techno->id,$techno->name) !!}
                                 </div>
 
@@ -179,16 +177,16 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            {!! Form::label('','Mots clés référencement de l\'image principale') !!}
+                            {!! Form::label('','Balises alt & title de l\'image principale') !!}
                             {!! Form::text('ref_thumb', null, ["class" => "form-control", "placeholder" => "balise alt de l'image principale de l'article", "required"])!!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('','Balise alt du titre principal de l\'article') !!}
+                            {!! Form::label('','Balises alt & title du titre principal de l\'article') !!}
                             {!! Form::text('ref_title', null, ["class" => "form-control", "placeholder" => "balise alt du titre de l'article", "required"])!!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('','Balise description') !!}
-                            {!! Form::textarea('ref_description', null, ["class" => "form-control", "placeholder" => "mots clefs séparés par une virgule", "row" => "5"])!!}
+                            {!! Form::label('','Balise Meta keywords') !!}
+                            {!! Form::textarea('ref_description', null, ["class" => "form-control", "placeholder" => "mots clefs séparés par une virgule", "required", "size" => "30x3"])!!}
                         </div>
                     </div>
                 </div>
