@@ -22,13 +22,12 @@
 <script type="text/javascript" src="{{ asset('javascript/front/app.header.js') }}" ></script>
 <script src="{{asset('bower_components/dw-bxslider-4/dist/jquery.bxslider.js')}}"></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.carrousel.js') }}" ></script>
-<script type="text/javascript" src="{{ asset('javascript/front/app.jobmenu.js') }}" ></script>
+{{--<script type="text/javascript" src="{{ asset('javascript/front/app.jobmenu.js') }}" ></script>--}}
 <script type="text/javascript" src="{{ asset('javascript/front/app.article.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.aboutus.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.sub.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.compte.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.jobs.js') }}" ></script>
 <script type="text/javascript" src="{{ asset('javascript/front/app.jobfilter.js') }}" ></script>
-
 </body>
 </html>

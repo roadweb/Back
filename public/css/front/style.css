@@ -874,6 +874,8 @@ footer {
 
 .rw-blog-jf .rw-blog-jf-navbar-job a img {
   width: 80px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label {
@@ -890,6 +892,7 @@ footer {
   min-width: calc(80px*1.2);
   height: 0;
   margin-top: -14px;
+  margin-left: 49%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -899,6 +902,7 @@ footer {
   -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
+  margin: auto;
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label span {
@@ -907,9 +911,8 @@ footer {
   height: auto;
   top: 8px;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   font-size: 12px;
-  line-height: auto;
   color: #333;
   background-color: white;
   -webkit-box-pack: center;
@@ -917,26 +920,57 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label .rw-blog-jf-navbar-vertical-line {
-  width: 4px;
-  height: 40px;
-  background-color: #bf382a;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job .rw-blog-jf-navbar-job-label .rw-blog-jf-icon-exagone {
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job:hover .rw-blog-jf-navbar-job-label {
   height: 60px;
 }
 
-.rw-blog-jf .rw-blog-jf-navbar-job:hover span {
+.rw-blog-jf .rw-blog-jf-navbar-job:hover .rw-blog-jf-navbar-job-label span {
   opacity: 1;
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job:hover a img {
   width: 90px;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job-hover .rw-blog-jf-navbar-job-label {
+  height: 60px;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job-hover .rw-blog-jf-navbar-job-label span {
+  opacity: 1;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job-hover .rw-blog-jf-navbar-job-label .rw-blog-jf-navbar-vertical-line {
+  visibility: visible;
+  width: 4px;
+  height: 40px;
+  background-color: #bf382a;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job-hover .rw-blog-jf-navbar-job-label .rw-blog-jf-icon-exagone {
+  visibility: visible;
+}
+
+.rw-blog-jf .rw-blog-jf-navbar-job-hover a img {
+  width: 90px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .rw-blog-jf .rw-blog-jf-line {
@@ -947,12 +981,13 @@ footer {
   background-color: #bf382a;
   position: absolute;
   top: 36%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .rw-blog-jf .rw-blog-jf-hexagone {
   position: absolute;
-  background-image: url("../../images/exagone-rouge.png");
-  background-repeat: no-repeat;
+  background: url("../../images/exagone-rouge.png") no-repeat;
   top: 30%;
   margin-left: -26px;
   width: -webkit-calc(100%/7);
@@ -962,13 +997,14 @@ footer {
 
 .rw-blog-jf .rw-blog-jf-hexagone:last-of-type {
   position: absolute;
-  background-image: url("../../images/exagone-rouge.png");
-  background-repeat: no-repeat;
+  background: url("../../images/exagone-rouge.png") no-repeat;
   top: 30%;
   margin-left: 1075px;
   width: -webkit-calc(100%/7);
   width: calc(100%/7);
   height: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /*INDEX DES METIERS*/
@@ -1869,9 +1905,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
