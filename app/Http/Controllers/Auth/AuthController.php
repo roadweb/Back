@@ -58,12 +58,33 @@ class AuthController extends Controller
             "email"                 => "required",
             "password"              => "required",
             "password_confirmation" => "required",
+            "emweb",
             "job_id"                => "required"
         ]);
 
         if ($validator->fails()) {
             return redirect('/inscription')->withErrors($validator);
         }
+
+        $emweb = $request->get('emweb');
+        if ($emweb === 'on') {
+            $m_emweb = 'Ce membre a indiqué faire partie de l\'Emweb.';
+        }
+        else {
+            $m_emweb = '';
+        }
+
+        \Mail::send('emails.inscription',
+        array(
+            'last_name' => $request->get('last_name'),
+            'first_name' => $request->get('first_name'),
+            'username' => $request->get('username'),
+            'emweb' => $m_emweb
+        ), function($message) use ($request)
+        {
+            $message->from('hello@road-web.fr');
+            $message->to('plateulere@gmail.com', 'Equipe Roadweb')->subject('nouvelle inscription');
+        });
 
         $this->auth->login($this->registrar->create($request->all()));
 
