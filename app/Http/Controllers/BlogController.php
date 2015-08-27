@@ -19,8 +19,41 @@ class BlogController extends Controller
     public function index()
     {
         $jobs = Job::all();
-        $posts = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->get()->take(3);
-        $vignettes = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->skip(3)->take(1000)->get();
+
+        $posts = Post::published()
+            ->orderBy('updated_at', 'desc')
+            ->where('category_id', '1')
+            ->get()
+            ->take(3);
+
+        $vignettes = Post::published()
+            ->orderBy('updated_at', 'desc')
+            ->where('category_id', '1')
+            ->skip(3)
+            ->take(1000)
+            ->get();
+
+        if(isset($_GET['jobid']) && ($_GET['jobid'] > '0' && $_GET['jobid'] < '8')  ){
+
+            $jobid = $_GET['jobid'];
+
+            $posts = Post::published()
+                ->take(3)
+                ->orderBy('updated_at', 'desc')
+                ->where('job_id', $_GET['jobid'])
+                ->where('category_id', '1')
+                ->get();
+
+            $vignettes = Post::published()
+                ->orderBy('updated_at', 'desc')
+                ->where('job_id', $_GET['jobid'])
+                ->where('category_id', '1')
+                ->skip(3)
+                ->take(1000)
+                ->get();
+        }
+
+//        si jobid <1 ou >7 is_int
 
         return view('pages.blog.index', compact('posts', 'vignettes', 'jobs'));
     }

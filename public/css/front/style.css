@@ -964,6 +964,14 @@ footer {
   width: 90px;
 }
 
+.rw-blog-jf .active a {
+  background-color: green;
+}
+
+.rw-blog-jf .active a img {
+  width: 100px;
+}
+
 .rw-blog-jf .rw-blog-jf-navbar-job-hover .rw-blog-jf-navbar-job-label {
   height: 60px;
 }
