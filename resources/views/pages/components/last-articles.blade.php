@@ -12,9 +12,9 @@
             </a>
             @endforeach
         @else
-            <p>
-                Aucun article n'a encore été publié dans ce domaine
-            </p>
+            <span>
+                Aucun article n'a encore Ã©tÃ© publiÃ© dans ce domaine
+            </span>
         @endif
     </div>
 </section>

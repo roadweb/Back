@@ -78,14 +78,18 @@
 
             <fieldset class="rw-sub-select">
                 {!! Form::label('job_id', '', ['class' => 'rw-hidden']) !!}
-                {!! Form::select('job_id', $jobs, null, ['id' => 'job_id']) !!}
-                <!--<label for="job_id"></label>-->
+                {{--{!! Form::select('job_id', $jobs->name, null, ['id' => 'job_id']) !!}--}}
+                <select name="job_id" id="job_id">
+                    @foreach($jobs as $job)
+                        <option value="{{$job->id}}">{{$job->name}}</option>
+                    @endforeach
+                </select>
 
             </fieldset>
             <fieldset class="rw-sub-checkbox">
 
                 <p>
-                    {!! Form::checkbox('emweb', 'on', false, ["id" => "emweb"]); !!}
+                    {!! Form::checkbox('emweb', 'on', false, ["id" => "emweb"]) !!}
 
                     <label for="emweb">
             <span class="ui">

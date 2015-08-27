@@ -20,7 +20,7 @@ class SubController extends Controller
     public function sub()
     {
         $this->middleware('auth');
-        $jobs = Job::lists('name', 'id');
+        $jobs = Job::take(6)->get();
 
         return view('pages.subscribe.sub', compact('jobs'));
     }
