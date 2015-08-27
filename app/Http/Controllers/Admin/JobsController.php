@@ -14,7 +14,7 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $fiches = Job::all();
+        $fiches = Job::take(6)->get();
 
         return view('admin.jobs.index', compact('fiches'));
     }
@@ -56,6 +56,6 @@ class JobsController extends Controller
         $fiches = Job::where('id', $id)->update(['resume' => $resume, 'content' => $content]);
 
 
-        return redirect(route('admin.metiers.index'));
+        return redirect(route('admin.metiers.index', compact('fiches')));
     }
 }

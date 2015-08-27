@@ -39,6 +39,8 @@
   background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
   position:relative;
   height: 100%;
+  min-height: 120px;
+
 
   & > * {
     flex: 0 1 auto;
@@ -80,7 +82,7 @@
 
   .rw-jobs-index-description-1, .rw-jobs-index-description-2, .rw-jobs-index-description-3, .rw-jobs-index-description-4, .rw-jobs-index-description-5, .rw-jobs-index-description-6, {
 
-    width:315px;
+    width:320px;
     display: flex;
     flex-flow: column nowrap;
 
@@ -94,7 +96,7 @@
     h1 {
       font-size:26px;
       color:$colorMarket;
-      margin:2px;
+      margin:2px 2px 2px 0;
     }
 
     p {
@@ -118,7 +120,7 @@
       margin: auto 0;
       padding: 0 40px;
       position:absolute;
-      bottom:5px;
+      bottom:0;
       right: 0;
 
 

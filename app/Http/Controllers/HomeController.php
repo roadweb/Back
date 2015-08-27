@@ -18,7 +18,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all();
+        $jobs = Job::take(6)->get();
         $posts = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1')->get()->take(3);
         $vignettes = Post::published()->orderBy('created_at', 'desc')->where('category_id', '1' and 'is_sticky', '0')->skip(3)->take(6)->get();
         return view('pages.home.index', compact('jobs', 'posts', 'vignettes'));

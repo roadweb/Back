@@ -28,7 +28,7 @@
 		z-index:999;
 		display:flex;
 		flex-flow:column nowrap;
-		width: calc(100%/7);
+		width: calc(100%/8);
 		& > * {
 			flex: 0 1 auto;
 		}
@@ -149,14 +149,14 @@
 	background: url('../../images/exagone-rouge.png') no-repeat;
 	top:30%;
 	margin-left:-26px;
-	width:calc(100%/7);
+	width:calc(100%/8);
 	height:50px;
 	&:last-of-type {
 	  position:absolute;
 	  background: url('../../images/exagone-rouge.png') no-repeat;
 	  top:30%;
 	  margin-left:1075px;
-	  width:calc(100%/7);
+	  width:calc(100%/8);
 	  height:50px;
 	  @include transition(all, 0.2s, ease-in);
 	}
