@@ -145,6 +145,10 @@ EXTENDS
   border-color: transparent transparent #B76DAB transparent !important;
 }
 
+.rw-job-color-triangle-7 {
+  border-color: transparent transparent #1075bc transparent !important;
+}
+
 /*couleurs job bordures*/
 .rw-job-color-1 {
   border: 2px solid #F6D432 !important;
@@ -168,6 +172,10 @@ EXTENDS
 
 .rw-job-color-6 {
   border: 2px solid #B76DAB !important;
+}
+
+.rw-job-color-7 {
+  border: 2px solid #1075bc !important;
 }
 
 /*couleurs job background*/
@@ -195,6 +203,10 @@ EXTENDS
   background-color: #B76DAB !important;
 }
 
+.rw-job-color-bgc-7 {
+  background-color: #1075bc !important;
+}
+
 /*couleurs job pour du texte*/
 .rw-job-color-txt-1 {
   color: #F6D432 !important;
@@ -218,6 +230,10 @@ EXTENDS
 
 .rw-job-color-txt-6 {
   color: #B76DAB !important;
+}
+
+.rw-job-color-txt-7 {
+  color: #1075bc !important;
 }
 
 .rw-hidden {
@@ -853,8 +869,8 @@ footer {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  width: -webkit-calc(100%/7);
-  width: calc(100%/7);
+  width: -webkit-calc(100%/8);
+  width: calc(100%/8);
 }
 
 .rw-blog-jf .rw-blog-jf-navbar-job > * {
@@ -990,8 +1006,8 @@ footer {
   background: url("../../images/exagone-rouge.png") no-repeat;
   top: 30%;
   margin-left: -26px;
-  width: -webkit-calc(100%/7);
-  width: calc(100%/7);
+  width: -webkit-calc(100%/8);
+  width: calc(100%/8);
   height: 50px;
 }
 
@@ -1000,8 +1016,8 @@ footer {
   background: url("../../images/exagone-rouge.png") no-repeat;
   top: 30%;
   margin-left: 1075px;
-  width: -webkit-calc(100%/7);
-  width: calc(100%/7);
+  width: -webkit-calc(100%/8);
+  width: calc(100%/8);
   height: 50px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -1066,6 +1082,7 @@ footer {
   /* W3C */
   position: relative;
   height: 100%;
+  min-height: 120px;
 }
 
 .rw-jobs-index > * {
@@ -1112,7 +1129,7 @@ footer {
 }
 
 .rw-jobs-index .rw-jobs-index-description-1, .rw-jobs-index .rw-jobs-index-description-2, .rw-jobs-index .rw-jobs-index-description-3, .rw-jobs-index .rw-jobs-index-description-4, .rw-jobs-index .rw-jobs-index-description-5, .rw-jobs-index .rw-jobs-index-description-6 {
-  width: 315px;
+  width: 320px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1134,7 +1151,7 @@ footer {
 .rw-jobs-index .rw-jobs-index-description-1 h1, .rw-jobs-index .rw-jobs-index-description-2 h1, .rw-jobs-index .rw-jobs-index-description-3 h1, .rw-jobs-index .rw-jobs-index-description-4 h1, .rw-jobs-index .rw-jobs-index-description-5 h1, .rw-jobs-index .rw-jobs-index-description-6 h1 {
   font-size: 26px;
   color: #F59E36;
-  margin: 2px;
+  margin: 2px 2px 2px 0;
 }
 
 .rw-jobs-index .rw-jobs-index-description-1 p, .rw-jobs-index .rw-jobs-index-description-2 p, .rw-jobs-index .rw-jobs-index-description-3 p, .rw-jobs-index .rw-jobs-index-description-4 p, .rw-jobs-index .rw-jobs-index-description-5 p, .rw-jobs-index .rw-jobs-index-description-6 p {
@@ -1157,7 +1174,7 @@ footer {
   margin: auto 0;
   padding: 0 40px;
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   right: 0;
   border: none;
   background-color: transparent;

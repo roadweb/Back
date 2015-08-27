@@ -24,6 +24,10 @@ $colorInteFonce: #38AA49;
 $colorCmClair: #EB6441;
 $colorCmFonce: #E72E2D;
 
+//couleur pour icone "autour du web"
+$colorWeb: #1075bc;
+
+
 /* colors: connexion, deconnexion, newsletter */
 
 $colorOpen: #16A086;
@@ -88,6 +92,10 @@ EXTENDS
   border:2px solid $colorRefClair !important;
 }
 
+.rw-job-color-7 {
+  border:2px solid $colorWeb !important;
+}
+
 /*couleurs job background*/
 .rw-job-color-bgc-1 {
   background-color: $colorDev !important;
@@ -111,6 +119,10 @@ EXTENDS
 
 .rw-job-color-bgc-6 {
   background-color: $colorRefClair !important;
+}
+
+.rw-job-color-bgc-7 {
+  background-color: $colorWeb !important;
 }
 
 /*couleurs bcg test*/
@@ -139,6 +151,10 @@ EXTENDS
   background-color: $colorRefClair !important;
 }
 
+.rw-job-color-bcg-test-7 {
+  background-color: $colorWeb !important;
+}
+
 
 /*couleurs txt job*/
 .rw-job-color-txt-1 {
@@ -163,4 +179,8 @@ EXTENDS
 
 .rw-job-color-txt-6 {
   color: $colorRefClair !important;
+}
+
+.rw-job-color-txt-7 {
+  color: $colorWeb !important;
 }

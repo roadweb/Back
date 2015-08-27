@@ -347,6 +347,10 @@ EXTENDS
   border: 2px solid #B76DAB !important;
 }
 
+.rw-job-color-7 {
+  border: 2px solid #1075bc !important;
+}
+
 /*couleurs job background*/
 .rw-job-color-bgc-1 {
   background-color: #F6D432 !important;
@@ -370,6 +374,10 @@ EXTENDS
 
 .rw-job-color-bgc-6 {
   background-color: #B76DAB !important;
+}
+
+.rw-job-color-bgc-7 {
+  background-color: #1075bc !important;
 }
 
 /*couleurs bcg test*/
@@ -397,6 +405,10 @@ EXTENDS
   background-color: #B76DAB !important;
 }
 
+.rw-job-color-bcg-test-7 {
+  background-color: #1075bc !important;
+}
+
 /*couleurs txt job*/
 .rw-job-color-txt-1 {
   color: #F6D432 !important;
@@ -420,6 +432,10 @@ EXTENDS
 
 .rw-job-color-txt-6 {
   color: #B76DAB !important;
+}
+
+.rw-job-color-txt-7 {
+  color: #1075bc !important;
 }
 
 .form-control {
@@ -741,6 +757,10 @@ section table th select.form-control {
 
 .rw-job-color-triangle-6 {
   border-color: transparent transparent #B76DAB transparent !important;
+}
+
+.rw-job-color-triangle-7 {
+  border-color: transparent transparent #1075bc transparent !important;
 }
 
 .rw-blog-article-main-container {

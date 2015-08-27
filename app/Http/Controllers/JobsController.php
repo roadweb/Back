@@ -17,7 +17,7 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all();
+        $jobs = Job::take(6)->get();
         return view('pages.jobs.index', compact('jobs'));
     }
 

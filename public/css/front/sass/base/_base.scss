@@ -81,6 +81,9 @@ EXTENDS
 .rw-job-color-triangle-6 {
 	border-color: transparent transparent $colorRefClair transparent !important;
 }
+.rw-job-color-triangle-7 {
+	border-color: transparent transparent $colorWeb transparent !important;
+}
 
 /*couleurs job bordures*/
 .rw-job-color-1 {
@@ -105,6 +108,9 @@ EXTENDS
 
 .rw-job-color-6 {
   border:2px solid $colorRefClair !important;
+}
+.rw-job-color-7 {
+  border:2px solid $colorWeb !important;
 }
 
 /*couleurs job background*/
@@ -131,6 +137,9 @@ EXTENDS
 .rw-job-color-bgc-6 {
   background-color: $colorRefClair !important;
 }
+.rw-job-color-bgc-7 {
+  background-color: $colorWeb !important;
+}
 
 /*couleurs job pour du texte*/
 .rw-job-color-txt-1 {
@@ -155,6 +164,10 @@ EXTENDS
 
 .rw-job-color-txt-6 {
   color: $colorRefClair !important;
+}
+
+.rw-job-color-txt-7 {
+  color: $colorWeb !important;
 }
 
 .rw-hidden {
