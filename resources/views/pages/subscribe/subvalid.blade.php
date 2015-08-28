@@ -6,7 +6,7 @@
  développé par Pauline: Inscription : validation d'inscription-->
 
 
-<div class="rw-sub-container">
+<div class="rw-sub-container ">
 
     <div class="rw-sub-header rw-subvalid-header">
         <h1>Félicitations <span>{{$user->username}}</span>, nous vous invitons à profiter de nos avantages. </h1>
@@ -34,10 +34,10 @@
             <div class="rw-subvalid-input-file-container">
                 <div>
                     {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
-                    array('class' => 'rw-subvalid-input-file-trigger',
+                    array('class' => 'rw-sub-input-file-trigger',
                     'tabindex' => '0' )) !!}
-                    {!! Form::file('justificatif', ['class' => 'rw-subvalid-input-file', 'id' => 'justificatif']) !!}
-                    <p class="rw-subvalid-file-return"></p>
+                    {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
+                    <p class="rw-sub-file-return"></p>
                 </div>
             </div>
 

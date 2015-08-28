@@ -146,7 +146,7 @@ EXTENDS
 }
 
 .rw-job-color-triangle-7 {
-  border-color: transparent transparent #1075bc transparent !important;
+  border-color: transparent transparent #1b75bb transparent !important;
 }
 
 /*couleurs job bordures*/
@@ -175,7 +175,7 @@ EXTENDS
 }
 
 .rw-job-color-7 {
-  border: 2px solid #1075bc !important;
+  border: 2px solid #1b75bb !important;
 }
 
 /*couleurs job background*/
@@ -204,7 +204,7 @@ EXTENDS
 }
 
 .rw-job-color-bgc-7 {
-  background-color: #1075bc !important;
+  background-color: #1b75bb !important;
 }
 
 /*couleurs job pour du texte*/
@@ -233,7 +233,7 @@ EXTENDS
 }
 
 .rw-job-color-txt-7 {
-  color: #1075bc !important;
+  color: #1b75bb !important;
 }
 
 .rw-hidden {
@@ -2218,7 +2218,7 @@ partie droite de la page
   width: auto;
 }
 
-.rw-sub-js .rw-subvalid-input-file-trigger {
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger {
   display: block;
   padding: 8px;
   background: #16A086;
@@ -2232,7 +2232,7 @@ partie droite de la page
   margin: 20px auto;
 }
 
-.rw-sub-js .rw-subvalid-input-file {
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file {
   position: absolute;
   top: 0;
   left: 0;
@@ -2243,23 +2243,23 @@ partie droite de la page
 }
 
 /* quelques styles d'interactions */
-.rw-sub-js .rw-subvalid-input-file:hover + .rw-subvalid-input-file-trigger,
-.rw-sub-js .rw-subvalid-input-file:focus + .rw-subvalid-input-file-trigger,
-.rw-sub-js .rw-subvalid-input-file-trigger:hover,
-.rw-sub-js .rw-subvalid-input-file-trigger:focus {
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger:hover,
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger:focus {
   background: #E84C3D;
 }
 
 /* styles du retour visuel */
-.rw-subvalid-file-return {
+.rw-subvalid-input-file-container .rw-sub-file-return {
   margin: 0;
 }
 
-.rw-subvalid-file-return:not(:empty) {
+.rw-subvalid-input-file-container .rw-sub-file-return:not(:empty) {
   margin: 0;
 }
 
-.rw-sub-js .rw-subvalid-file-return {
+.rw-subvalid-input-file-container .rw-sub-js .rw-sub-file-return {
   font-style: italic;
   font-size: .9em;
   color: #16A086;
@@ -2268,8 +2268,8 @@ partie droite de la page
 }
 
 /* on complète l'information d'un contenu textuel
-    uniquement lorsque le paragraphe n'est pas vide */
-.rw-sub-js .rw-subvalid-file-return:not(:empty):before {
+  uniquement lorsque le paragraphe n'est pas vide */
+.rw-sub-js .rw-subvalid-input-file-container .rw-sub-file-return:not(:empty):before {
   content: "Fichier choisi :  ";
   font-weight: normal;
   color: #037E69;
@@ -3684,7 +3684,7 @@ partie droite de la page
   cursor: pointer;
   border-radius: 50px;
   width: 250px;
-  margin: auto;
+  margin: auto auto auto -130px;
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file {
@@ -3731,7 +3731,8 @@ partie droite de la page
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: auto;
+  width: 100%;
+  padding: 10px 161px 5px 1px;
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return:not(:empty):before {
