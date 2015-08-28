@@ -326,58 +326,61 @@
       position: relative;
       width: auto;
     }
-    .rw-sub-js .rw-subvalid-input-file-trigger {
-      display: block;
-      padding: 8px;
-      background: $colorOpen;
-      color: $grey-light;
-      font-size: 1em;
-      transition: all .4s;
-      cursor: pointer;
-      border-radius: 50px;
-      width: 480px;
-      margin:20px auto;
-    }
-    .rw-sub-js .rw-subvalid-input-file {
-      position: absolute;
-      top: 0; left: 0;
-      width: 210px;
-      padding: 14px 0;
-      opacity: 0;
-      cursor: pointer;
-    }
 
-    /* quelques styles d'interactions */
-    .rw-sub-js .rw-subvalid-input-file:hover + .rw-subvalid-input-file-trigger,
-    .rw-sub-js .rw-subvalid-input-file:focus + .rw-subvalid-input-file-trigger,
-    .rw-sub-js .rw-subvalid-input-file-trigger:hover,
-    .rw-sub-js .rw-subvalid-input-file-trigger:focus {
-      background: $colorClose;
-      //color: #FFFFFF;
-    }
-    /* styles du retour visuel */
-    .rw-subvalid-file-return {
-      margin: 0;
-    }
-    .rw-subvalid-file-return:not(:empty) {
-      margin: 0;
-    }
-    .rw-sub-js .rw-subvalid-file-return {
-      font-style: italic;
-      font-size: .9em;
-      color: $colorOpen;
-      text-align: center;
-      width: auto;
-    }
-    /* on complète l'information d'un contenu textuel
-    uniquement lorsque le paragraphe n'est pas vide */
-    .rw-sub-js .rw-subvalid-file-return:not(:empty):before {
-      content: "Fichier choisi :  ";
-      font-weight: normal;
-      color: $colorOpenHover;
-      margin: auto;
-      padding: 0 10px;
-    }
+
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger {
+    display: block;
+    padding: 8px;
+    background: $colorOpen;
+    color: $grey-light;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 480px;
+    margin: 20px auto;
+  }
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    padding: 14px 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* quelques styles d'interactions */
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger:hover,
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger:focus {
+    background: $colorClose;
+    //color: #FFFFFF;
+  }
+  /* styles du retour visuel */
+.rw-subvalid-input-file-container .rw-sub-file-return {
+    margin: 0;
+  }
+.rw-subvalid-input-file-container  .rw-sub-file-return:not(:empty) {
+    margin: 0;
+  }
+.rw-subvalid-input-file-container  .rw-sub-js .rw-sub-file-return {
+    font-style: italic;
+    font-size: .9em;
+    color: $colorOpen;
+    text-align: center;
+    width: auto;
+  }
+  /* on complète l'information d'un contenu textuel
+  uniquement lorsque le paragraphe n'est pas vide */
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-file-return:not(:empty):before {
+    content: "Fichier choisi :  ";
+    font-weight: normal;
+    color: $colorOpenHover;
+    margin: auto;
+    padding: 0 10px;
+  }
 
 @media screen and (max-width: 750px){
   .rw-subvalid-container {
