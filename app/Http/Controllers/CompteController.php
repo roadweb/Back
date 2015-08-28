@@ -100,7 +100,22 @@ class CompteController extends Controller
         
         if($avatar->isValid())
         {
-            $path = config('images.avatar');      
+            $path = config('images.avatar');
+
+            $files = \File::files($path);
+            $newfile = $path . '/' . $username;
+
+            foreach ($files as $file) 
+            {
+                $fileWithoutExtension =  substr($file, 0, -4);
+                if ($fileWithoutExtension === $newfile) 
+                {
+                    \File::Delete($fileWithoutExtension . '.png');
+                    \File::Delete($fileWithoutExtension . '.gif');
+                    \File::Delete($fileWithoutExtension . '.jpg');
+                }
+            }
+            
             $extension = $avatar->getClientOriginalExtension();
             $name = $username . '.' . $extension;
             $avatar->move($path, $name);
@@ -108,9 +123,9 @@ class CompteController extends Controller
             $user->avatar = $file;
             $user->save();
         }
+
         return \Redirect::route('compte')
         ->with('message-avatar', 'Votre avatar a bien été modifié !');
-    
     }
 
     /**
