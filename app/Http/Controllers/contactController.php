@@ -37,6 +37,10 @@ class ContactController extends Controller
                 $message->to($request->email, $request->firstname)->subject('copie de mon message à roadweb');
             }
 
+            $message->from($request->email);
+            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
+            $message->setReplyTo($request->email);
+
             /*si l'utilisateur a envoyé une capture d'écran :*/
             if(file_exists($request->file('file'))) {
                 $img = $request->file('file');
@@ -51,13 +55,16 @@ class ContactController extends Controller
                 $message->attach($file);  
             }
 
-            $message->from($request->email);
-            $message->to('hello@road-web.fr', 'Equipe Roadweb')->subject($request->objet);
-            $message->setReplyTo($request->email);
         });
+
+        $path = config('images.contact');
+        \File::cleanDirectory($path);
+
         return \Redirect::route('contact')
         ->with('message', 'Votre email a bien été envoyé ! L\'équipe Roadweb vous répondra dans les plus brefs délais.');
     }
+
+    
 }
 
 /*File::delete($file); + FileControllerhello@road-web.fr
