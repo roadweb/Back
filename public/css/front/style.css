@@ -3684,7 +3684,7 @@ partie droite de la page
   cursor: pointer;
   border-radius: 50px;
   width: 250px;
-  margin: auto;
+  margin: auto auto auto -130px;
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-input-file {
@@ -3731,7 +3731,8 @@ partie droite de la page
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: auto;
+  width: 100%;
+  padding: 10px 161px 5px 1px;
 }
 
 .rw-contact-container form fieldset .rw-sub-input-file-container .rw-sub-file-return:not(:empty):before {
