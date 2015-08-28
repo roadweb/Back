@@ -80,6 +80,7 @@
                 {!! Form::label('job_id', '', ['class' => 'rw-hidden']) !!}
                 {{--{!! Form::select('job_id', $jobs->name, null, ['id' => 'job_id']) !!}--}}
                 <select name="job_id" id="job_id">
+                        <option selected value="" disabled>Indiquez votre métier / formation</option>
                     @foreach($jobs as $job)
                         <option value="{{$job->id}}">{{$job->name}}</option>
                     @endforeach

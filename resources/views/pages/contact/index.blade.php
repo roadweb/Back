@@ -52,7 +52,7 @@
                 <div class="rw-contact-field">
                     {!! Form::label('objet', 'Objet de votre Email :') !!}
                     {!! Form::select('objet', array (
-                    'Site web' => array('bug sur le site' => 'Je veux signaler un bug', 'problème d\'accès au site' => 'Je n\'ai pas accès au site', 'problème d\'inscription au site' => 'Je n\'arrive pas à m\'inscrire au site', 'à propos du site' => 'Autre'),
+                    'Site web' => array('Demande d\'informations' => 'Demande d\'informations', 'bug sur le site' => 'Je veux signaler un bug', 'problème d\'accès au site' => 'Je n\'ai pas accès au site', 'problème d\'inscription au site' => 'Je n\'arrive pas à m\'inscrire au site', 'à propos du site' => 'Autre'),
                     'Blog' => array('remarque sur un article' => 'J\'ai une remarque à faire concernant un article', 'à propos du blog' => 'Autre'),
                     'Association' => array('demande d\'infos sur l\'association' => 'J\'aimerais obtenir plus de renseignements sur l\'association', 'à propos de l\'association' => 'Autre'),
                     'Autre' => array('sans objet' => 'Autre')
@@ -88,7 +88,6 @@
                         array('id'=>'copie')) !!}
                     {!! HTML::decode(Form::label('copie', '<span class="ui"></span> Je désire recevoir une copie de mon message par email')) !!}
                         
-                    </label>
                 </div>
                 <div class="rw-contact-field">
                     {!! Form::submit('Envoyer', 

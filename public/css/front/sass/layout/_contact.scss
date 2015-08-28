@@ -219,7 +219,7 @@
 			        cursor: pointer;
 			        border-radius: 50px;
 			        width: 250px;
-			        margin: auto;
+			        margin: auto auto auto -130px;
 			    }
 	      		.rw-sub-input-file {
 			        top: 0; 
@@ -253,7 +253,8 @@
 			        flex-flow: column wrap;
 			        justify-content: center;
 			        text-align: center;
-			        width: auto;
+			        width: 100%;
+				  padding: 10px 161px 5px 1px;
 		      	}
 		        /* on complète l'information d'un contenu textuel
 		        uniquement lorsque le paragraphe n'est pas vide */
