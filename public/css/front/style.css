@@ -146,7 +146,7 @@ EXTENDS
 }
 
 .rw-job-color-triangle-7 {
-  border-color: transparent transparent #1075bc transparent !important;
+  border-color: transparent transparent #1b75bb transparent !important;
 }
 
 /*couleurs job bordures*/
@@ -175,7 +175,7 @@ EXTENDS
 }
 
 .rw-job-color-7 {
-  border: 2px solid #1075bc !important;
+  border: 2px solid #1b75bb !important;
 }
 
 /*couleurs job background*/
@@ -204,7 +204,7 @@ EXTENDS
 }
 
 .rw-job-color-bgc-7 {
-  background-color: #1075bc !important;
+  background-color: #1b75bb !important;
 }
 
 /*couleurs job pour du texte*/
@@ -233,7 +233,7 @@ EXTENDS
 }
 
 .rw-job-color-txt-7 {
-  color: #1075bc !important;
+  color: #1b75bb !important;
 }
 
 .rw-hidden {
