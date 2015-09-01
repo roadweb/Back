@@ -1,6 +1,7 @@
 @extends('pages.app')
 
 @section('content')
+    @include('pages.components.header')
 
     <div class="rw-cpt-main-container">
         <div class="rw-cpt-header">
@@ -276,6 +277,5 @@ fin content
     ----------------------->
     </div>
 
-
-
+    @include('pages.components.footer')
 @stop

@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <!--
+@include('pages.components.header')
+
+        <!--
  développé par Pauline: Inscription : validation d'inscription-->
 
 
@@ -90,5 +92,6 @@
 
 </div>
 
+@include('pages.components.footer')
 
 @stop

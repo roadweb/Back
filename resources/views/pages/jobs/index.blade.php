@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @include('pages.components.header')
 
 
     <div class="container">
@@ -47,5 +48,7 @@
             </div>
     	</div>
     </div>
+
+    @include('pages.components.footer')
 
 @stop

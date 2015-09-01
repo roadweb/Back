@@ -1,6 +1,7 @@
 @extends('pages.app')
 
 @section('content')
+@include('pages.components.header')
 
     <!---------------------
  développé par Pauline: mentions légales
@@ -41,5 +42,6 @@
 </div>
 
 
+@include('pages.components.footer')
 
 @stop

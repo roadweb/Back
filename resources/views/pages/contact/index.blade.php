@@ -1,6 +1,7 @@
 @extends('pages.app')
 
 @section('content')
+    @include('pages.components.header')
 
 <div class="container">
     <div class="rw-contact-container">
@@ -103,5 +104,7 @@
 
     </div>
 </div>
+
+    @include('pages.components.footer')
 
 @stop
