@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @include('pages.components.header')
 
     <div class="rw-sub-container">
 
@@ -155,5 +156,6 @@
 
     </div>
 
+    @include('pages.components.footer')
 
 @stop

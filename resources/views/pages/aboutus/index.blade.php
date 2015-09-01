@@ -1,6 +1,6 @@
 @extends('pages.app')
-
 @section('content')
+    @include('pages.components.header')
 
 
     <div class="rw-aboutus-container">
@@ -95,5 +95,6 @@
     </div>
 
 
-
+    @include('pages.components.footer')
 @stop
+

@@ -11,11 +11,8 @@
 <body>
 <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
 
-@include('pages.components.header')
 
 @yield('content')
-
-@include('pages.components.footer')
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
