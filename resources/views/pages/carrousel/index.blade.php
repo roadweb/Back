@@ -29,7 +29,7 @@
                         <h1 class="rw-carrous-body-content-article-text-h1 rw-job-color-txt-{{$job->id}}"> {{$job->name}}</h1>
                         <p class="rw-carrous-body-content-article-text-p">
                             {{ $job->resume}}
-                            <a href="{{url('/jobs')}}">
+                            <a href="{{url('/jobs')}}#rw-jobs-index-{{$job->id}}">
                                 <button class="rw-job-color-txt-{{$job->id}}">
                                     <i class="fa fa-hand-o-right"></i> Lire la suite
                                 </button>

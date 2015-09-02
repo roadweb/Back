@@ -1,6 +1,7 @@
 @extends('pages.app')
 
 @section('content')
+    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
 
     @include('pages.components.header')
     @include('pages.blog.components.jobfilter')

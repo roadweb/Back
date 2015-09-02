@@ -55,7 +55,7 @@ Route::group(['prefix' => 'admin'], function() {
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/landing', 'HomeController@landing');
+Route::get('/home', 'HomeController@landing');
 
 Route::get('/blog', 'BlogController@index');
 
