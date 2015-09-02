@@ -1,6 +1,9 @@
 @extends('pages.app')
 
 @section('content')
+    @include('pages.components.header')
+    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
+
 
     <div class="rw-main-container-articleon">
 
@@ -293,5 +296,6 @@
 
     </div>
 
+    @include('pages.components.footer')
 
 @stop

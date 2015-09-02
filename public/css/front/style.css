@@ -1380,6 +1380,206 @@ footer {
   border-color: transparent transparent #F59E36 transparent;
 }
 
+.rw-land-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.rw-land-container .rw-land-container-header {
+  width: 100%;
+  height: 468px;
+  background-color: #C1392B;
+  padding-top: 30px;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-logo {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-logo img {
+  width: 110px;
+  height: 96px;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-title h1 {
+  font-size: 1.8em;
+  margin-left: 30px;
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-title h1 span {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-line {
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+  margin: auto;
+  position: relative;
+  top: 40px;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-line::before, .rw-land-container .rw-land-container-header .rw-land-header-line::after {
+  content: '';
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-line::before {
+  left: -1%;
+}
+
+.rw-land-container .rw-land-container-header .rw-land-header-line::after {
+  left: 100%;
+}
+
+.rw-land-container .rw-land-container-content {
+  width: 100%;
+  height: 398px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.rw-land-container .rw-land-container-content .rw-land-container-bg {
+  background: transparent url("../../landing/communaute.jpg") no-repeat scroll center center;
+  background-size: 1200px;
+  width: 100%;
+  height: 100%;
+}
+
+.rw-land-container .rw-land-container-content .rw-land-container-bg .rw-land-content {
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: rgba(193, 57, 43, 0.6);
+}
+
+.rw-land-container .rw-land-container-content .rw-land-container-bg .rw-land-content > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  top: 75px;
+  position: relative;
+}
+
+.rw-land-container .rw-land-container-content .rw-land-container-bg .rw-land-content img:first-of-type {
+  margin: auto auto 0 0;
+}
+
+.rw-land-container .rw-land-container-content .rw-land-container-bg .rw-land-content img:last-of-type {
+  margin: auto 0 0 auto;
+}
+
+.rw-land-container .rw-land-content-video {
+  background: transparent url("../../landing/ecran.png") no-repeat scroll center center;
+  width: 820px;
+  height: 670px;
+  position: absolute;
+  left: 15.5%;
+  margin: 0;
+  text-align: center;
+  top: 260px;
+}
+
+.rw-land-container .rw-land-content-video video {
+  border-radius: 10px;
+  margin: 55px 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.rw-land-container .rw-land-content-btn {
+  position: absolute;
+  top: 270px;
+  left: 700px;
+  cursor: pointer;
+}
+
+.rw-land-container .rw-land-content-btn .rw-land-btn-arrow {
+  display: inline;
+  float: left;
+  background-color: #16A086;
+  padding: 10px 8px 10px 10px;
+  color: #FFFFFF;
+  height: 37px;
+  margin-right: 2px;
+}
+
+.rw-land-container .rw-land-content-btn .rw-land-btn-btn {
+  border: none;
+  background-color: #16A086;
+  width: 250px;
+  height: 37px;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.rw-land-container .rw-land-container-footer {
+  width: 100%;
+  margin: auto;
+  padding: 100px 0 0 0;
+}
+
+.rw-land-container .rw-land-container-footer h2 {
+  width: 100%;
+  margin: 5px auto 100px auto;
+  text-align: center;
+  font-size: 1.7em;
+  padding: 10px 0;
+  color: #7e8b8c;
+}
+
+.rw-land-container .rw-land-container-footer .rw-icon-rs {
+  float: left;
+  margin: auto 10px;
+  padding: 5px;
+  background-color: #C1392B;
+}
+
+.rw-land-container .rw-land-container-footer h3 {
+  float: left;
+  margin: auto;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #C1392B;
+  font-weight: 600;
+}
+
+.rw-land-container .rw-land-container-footer .rw-land-footer-rs {
+  margin: auto 10px;
+  padding: 5px 10px;
+  line-height: 2.5em;
+}
+
+.rw-land-container .rw-land-container-footer .rw-land-footer-rs a {
+  margin-left: 20px;
+}
+
+.rw-land-container .rw-land-container-footer .rw-land-footer-copy {
+  width: 100%;
+  margin: 5px auto 10px auto;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 10px 0;
+  color: #7e8b8c;
+}
+
 /*************************
 Bloc content page
 **************************/

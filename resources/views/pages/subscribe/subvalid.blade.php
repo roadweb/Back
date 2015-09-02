@@ -3,6 +3,7 @@
 @section('content')
 
 @include('pages.components.header')
+<img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
 
         <!--
  développé par Pauline: Inscription : validation d'inscription-->

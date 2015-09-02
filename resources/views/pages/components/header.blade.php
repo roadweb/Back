@@ -1,4 +1,4 @@
-<header class="rw-header_container">
+<header class="rw-header_container" id="rw-header_container">
     <div class="rw-header_top">
         <p>
             <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
