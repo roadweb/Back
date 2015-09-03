@@ -259,14 +259,46 @@
                             {{Session::get('message-avatar')}}
                         </p>
                     @endif
-
-            </div>
-
+                </div>
 
 
+                @if(($user->emweb === 'on') && ($user->right_id === 1))        
+                <h2>Mon justificatif</h2>
 
+                <p>Vous avez déclaré être inscrit à l'Emweb. Pour que nous puissions gérer vos droits et ainsi vous permettre de publier des articles sur Road-web, merci de nous faire parvenir votre attestation d'inscription à l'école (certificat de scolarité au format png, jpg ou pdf) :)</p>
 
+                <div class="rw-cpt-content-justificatif">
+                    {!! Form::open(array('route' => 'envoi_justif', 'files' => 'true', 'enctype' => 'multipart/form-data')) !!}
 
+                    {!! Form::hidden('username', $user->username) !!}
+                    {!! Form::hidden('email', $user->email) !!}
+
+                    <div class="rw-subvalid-input-file-container">
+                        <div>
+                            {!! Form::label('justificatif', 'Joindre votre justificatif (au format png, jpeg ou pdf)', 
+                            array('class' => 'rw-sub-input-file-trigger',
+                            'tabindex' => '0' )) !!}
+                            {!! Form::file('justificatif', ['class' => 'rw-sub-input-file', 'id' => 'justificatif']) !!}
+                            <p class="rw-sub-file-return"></p>
+                        </div>
+                    </div>
+
+                    {!! Form::submit('Envoyer', 
+                        ['required', 
+                        'name' => 'envoyer', 
+                        'id' => 'envoyer']
+                    ) !!}
+                    {!! Form::close() !!}
+
+                    @if(Session::has('message-justif'))
+                        <p class="rw-contact-success">
+                            {{Session::get('message-justif')}}
+                        </p>
+                    @endif
+
+                </div>
+
+                @endif
 
     <!---------------------
 fin content

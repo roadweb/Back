@@ -87,6 +87,8 @@ Route::resource('compte', 'CompteController');
 
 Route::patch('/compte', ['as' => 'avatar_update', 'uses' => 'CompteController@avatar']);
 
+Route::post('/compte', ['as' => 'envoi_justif', 'uses' => 'CompteController@send']);
+
 Route::get('/adhesion', 'AdhesionController@index');
 
 Route::get('/contact', 

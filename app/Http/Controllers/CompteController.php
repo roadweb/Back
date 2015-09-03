@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\User;
+use App\Http\Requests\JustifFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
@@ -137,6 +138,53 @@ class CompteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function send(JustifFormRequest $request)
+    {    
+        \Mail::send('emails.justificatif',
+        array(
+            'username' => $request->get('username'),
+            'email' => $request->get('email'),
+            'justif'=> $request->get('justificatif')
+        ), function($message) use ($request)
+        {
+            $email = $request->email;
+            $username = $request->username;
+            $justif = $request->file('justificatif');
+
+            if($justif->isValid())
+            {
+                $path = config('images.inscription');
+
+                $files = \File::files($path);
+                $newfile = $path . '/' . $username;
+
+                foreach ($files as $file) 
+                {
+                    $fileWithoutExtension =  substr($file, 0, -4);
+                    if ($fileWithoutExtension === $newfile) 
+                    {
+                        \File::Delete($fileWithoutExtension . '.png');
+                        \File::Delete($fileWithoutExtension . '.pdf');
+                        \File::Delete($fileWithoutExtension . '.jpg');
+                    }
+                }
+                    
+                $extension = $justif->getClientOriginalExtension();
+                $name = $username . '.' . $extension;
+                $justif->move($path, $name);
+            }
+            $file = $path . '/' . $name;
+
+            $message->attach($file);  
+            $message->from($request->email);
+            $message->to('plateulere@gmail.com', 'Equipe Roadweb')->subject('envoi de justificatif');
+            $message->setReplyTo($email);
+        });
+
+        return \Redirect::route('compte')
+        ->with('message-justif', 'Votre justificatif a bien été envoyé ! Vous serez informé de la validation de vos droits dans les 24 à 48h.');
     }
 
 }
