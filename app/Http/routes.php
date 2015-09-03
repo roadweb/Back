@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin'], function() {
         Route::resource('posts', 'Admin\PostsController');
         Route::resource('metiers', 'Admin\JobsController');
         Route::resource('users', 'Admin\UsersController');
+        Route::delete('users/{$id}', ['as' => 'remove_user', 'uses' => 'Admin\UsersController@destroy']);
         Route::resource('questions', 'Admin\QuestionsController');
         Route::resource('stats', 'Admin\StatsController');
         Route::resource('gestion', 'Admin\GestionController');
