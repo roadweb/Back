@@ -102,7 +102,7 @@ class GestionController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function removeUser($id)
 	{
 		//
 	}

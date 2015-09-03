@@ -113,7 +113,7 @@
 
     $('#example').dataTable( {
       "aoColumnDefs": [
-          { 'bSortable': false, 'aTargets': [ 1, 6, 7 ] }
+          { 'bSortable': false, 'aTargets': [ 1, 6, 7, 8 ] }
        ]
 });
 

@@ -2132,7 +2132,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -3511,6 +3513,120 @@ partie droite de la page
   border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif {
+  margin: 0 auto;
+  padding: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background: -webkit-linear-gradient(#FFFFFF, #ebebe6);
+  background: linear-gradient(#FFFFFF, #ebebe6);
+  border-radius: 20px;
+  box-shadow: 1px 1px 2px #7e8b8c;
+  /*************************
+      design du bouton upload de fichier
+      **************************/
+  /* styles de base si JS est activé */
+  /* quelques styles d'interactions */
+  /* styles du retour visuel */
+  /* on complète l'information d'un contenu textuel
+         uniquement lorsque le paragraphe n'est pas vide */
+  /*************************
+      bouton valider
+      **************************/
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file-container {
+  position: relative;
+  width: auto;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  background: #16A086;
+  color: #ebebe6;
+  font-size: 1em;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 230px;
+  margin: auto;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  padding: 14px 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file:hover + .rw-sub-input-file-trigger,
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file:focus + .rw-sub-input-file-trigger,
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file-trigger:hover,
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-input-file-trigger:focus {
+  background: #E84C3D;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-file-return {
+  margin: 0;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-file-return:not(:empty) {
+  margin: 0;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+  color: #16A086;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: auto;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif .rw-sub-js .rw-sub-file-return:not(:empty):before {
+  content: "Fichier choisi :  ";
+  font-weight: normal;
+  color: #037E69;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil .rw-cpt-content-justificatif button {
+  width: 350px;
+  padding: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #bf382a;
+  color: #ffffff;
+  border: none;
 }
 
 /*************************

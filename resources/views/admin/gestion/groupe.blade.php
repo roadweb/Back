@@ -26,8 +26,7 @@
                             <th class="col-lg-1">Pseudo</th>
                             <th class="col-lg-1">Prénom Nom</th>
                             <th class="col-lg-1">Email</th>
-                            <th class="col-lg-1">Emweb</th>                            
-                            <th class="col-lg-1">Supprimer</th>
+                            <th class="col-lg-1">Emweb</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,10 +36,6 @@
                             <td>{{$user->first_name}} {{$user->last_name}}</td>
                             <td>{{$user->email}}</td>
                             <td>{{$user->emweb}}</td>
-                            <td class="checkbox checkbox-success">
-                                {!! Form::checkbox('delete', $user->id, false, ["id" =>"checkbox", "class" => "checkbox checkbox-success", "placeholder" => ''])!!}
-                                {!! Form::label('checkbox', ' ') !!}
-                            </td>
                         </tr>
                          @endforeach
                     </tbody>
