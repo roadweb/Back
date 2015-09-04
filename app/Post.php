@@ -20,7 +20,9 @@ class Post extends Model
         'ref_thumb',
         'ref_title',
         'ref_description',
-        'techno_id'
+        'techno1_id',
+        'techno2_id',
+        'techno3_id'
     ];
 
     /**
@@ -47,10 +49,19 @@ class Post extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function techno()
+    public function techno1()
     {
         return $this->belongsTo('App\Techno');
     }
+    public function techno2()
+    {
+        return $this->belongsTo('App\Techno');
+    }
+    public function techno3()
+    {
+        return $this->belongsTo('App\Techno');
+    }
+
 
     /**
      * @param $query
