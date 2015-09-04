@@ -27,7 +27,13 @@
                                     </a>
                                 </div>
                                 <div class="rw-index-open-article-min-icons">
-                                    <img src="{{ asset( $vignette->techno->img_link) }}" />
+                                    <img src="{{ asset( $vignette->techno1->img_link) }}" />
+                                    @if ($vignette->techno2 != null)
+                                        <img src="{{ asset( $vignette->techno2->img_link) }}" />
+                                    @endif
+                                    @if ($vignette->techno3 != null)
+                                        <img src="{{ asset( $vignette->techno3->img_link) }}" />
+                                    @endif
                                 </div>
                             </div>
                             <div class="rw-index-open-article-min-triangle

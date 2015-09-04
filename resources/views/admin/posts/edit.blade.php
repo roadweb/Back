@@ -149,9 +149,9 @@
                             <div class="form-group form-inline">
 
                                 @foreach($technos as $techno)
-                                <div class="radio radio-success">
+                                <div class="checkbox checkbox-success">
 
-                                    {!! Form::radio('techno_id', $techno->id, false, ["id" => "$techno->id", "class" => "radio radio-success", "required"]); !!}
+                                    {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success"]) !!}
                                     {!! Form::label($techno->id,$techno->name) !!}
                                 </div>
 

@@ -25,5 +25,4 @@ class Techno extends Model {
         return $this->hasMany('App\Post');
     }
 
-
 }

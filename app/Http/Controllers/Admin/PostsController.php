@@ -66,16 +66,35 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            //...
+            'title' => 'required',
+            'resume' => 'required',
+            'techno' => 'required'
         ]);
 
         if($validator->fails()) {
-            redirect(route('admin.posts.create'))->withErrors($validator);
+            return redirect(route('admin.posts.create'))->withErrors($validator);
         }
 
-        Post::create($request->all());
+        else {
+            $post = Post::create($request->all());
 
-        return redirect(route('admin.posts.index'));
+            if (isset($request->techno[0])) {
+                $techno1_id = $request->techno[0];
+                $post->techno1_id = $techno1_id;
+            }
+            if (isset($request->techno[1])) {
+                $techno2_id = $request->techno[1];
+                $post->techno2_id = $techno2_id;
+            }
+            if (isset($request->techno[2])) {
+                $techno3_id = $request->techno[2];
+                $post->techno3_id = $techno3_id;
+            }
+            
+            $post->save();
+            return redirect(route('admin.posts.index'));
+        }
+        
     }
 
     /**
