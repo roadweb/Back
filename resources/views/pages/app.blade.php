@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Roadweb</title>
+    <meta name="description" content="Road-Web est un site communautaire rassemblant des élèves et des professionnels juniors dans les métiers du web : fiches métiers, articles autour du web…">
     <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}"/>
     <link href="{{ asset('bower_components/dw-bxslider-4/dist/jquery.bxslider.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}"/>
