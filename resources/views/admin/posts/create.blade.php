@@ -160,6 +160,7 @@
 
                                 @endforeach
                             </div>
+                            <p>Vous pouvez sélectionner jusqu'à <b>3 thèmes</b> maximum. </p>
 
                         </div>
 
