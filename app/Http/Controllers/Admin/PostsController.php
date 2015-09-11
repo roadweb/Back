@@ -134,14 +134,51 @@ class PostsController extends Controller
      */
     public function update($id, Request $request)
     {
-        $post = Post::findOrFail($id);
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'resume' => 'required',
+            'techno' => 'required'
+        ]);
 
-        if ($request->has('publication')) {
-            $post->published = $request->get('publication');
-            $post->save();
-        } 
-        else {
+        if($validator->fails()) 
+        {
+            return redirect(route('admin.posts.edit'))->withErrors($validator);
+        }
+
+        else 
+        {
+            $post = Post::findOrFail($id);
+
+            if (isset($request->techno[0])) 
+            {
+                $techno1_id = $request->techno[0];
+                $post->techno1_id = $techno1_id;
+            }
+            else 
+            {
+                $post->techno1_id = null;
+            }
+            if (isset($request->techno[1])) 
+            {
+                $techno2_id = $request->techno[1];
+                $post->techno2_id = $techno2_id;
+            }
+            else 
+            {
+                $post->techno2_id = null;
+            }
+            if (isset($request->techno[2])) 
+            {
+                $techno3_id = $request->techno[2];
+                $post->techno3_id = $techno3_id;
+            }
+            else 
+            {
+                $post->techno3_id = null;
+            }
+
             $post->update($request->all());
+            return redirect(route('admin.posts.index'));
         }
 
         return redirect(route('admin.posts.index'));
