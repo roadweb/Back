@@ -150,9 +150,20 @@
 
                                 @foreach($technos as $techno)
                                 <div class="checkbox checkbox-success">
-
-                                    {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success"]) !!}
-                                    {!! Form::label($techno->id,$techno->name) !!}
+                                    @if ($techno->id === $post->techno1_id)
+                                        {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success", "checked" => "checked"]) !!}
+                                        {!! Form::label($techno->id,$techno->name) !!}
+                                    @elseif ($techno->id === $post->techno2_id)
+                                        {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success", "checked" => "checked"]) !!}
+                                        {!! Form::label($techno->id,$techno->name) !!}
+                                    @elseif ($techno->id === $post->techno3_id)
+                                        {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success", "checked" => "checked"]) !!}
+                                        {!! Form::label($techno->id,$techno->name) !!}
+                                    @else
+                                        {!! Form::checkbox('techno[]', $techno->id, null, ["id" => "$techno->id", "class" => "checkbox checkbox-success"]) !!}
+                                        {!! Form::label($techno->id,$techno->name) !!}
+                                    @endif
+                                    
                                 </div>
 
                                 @endforeach
