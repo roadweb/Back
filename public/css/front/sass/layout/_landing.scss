@@ -1,38 +1,40 @@
 .rw-land-container {
-  max-width: 1200px;
+  width: 100%;
   margin: auto;
   position: relative;
 
   .rw-land-container-header {
     width: 100%;
-    height: 468px;
+    height: 340px;
     background-color: $colorCloseHover;
-    padding-top: 30px;
+  }
 
-    .rw-land-header-logo {
+  .rw-land-header-logo {
 
-      padding-top: 30px;
-      padding-left: 30px;
 
-      img {
-        width: 110px;
-        height: 96px;
-      }
+
+    img {
+      margin: 20px 0 20px 20px ;
+      width: 110px;
+      height: 96px;
+      display: inline;
+      float: left;
+
     }
+  }
 
-    .rw-land-header-title {
+  .rw-land-header-title {
 
-      h1 {
-        font-size: $fontSize + 0.8;
-        margin-left: 30px;
-        padding: 5px 0;
-        font-weight: 500;
+    h1 {
+      font-size: $fontSize + 1;
+      margin: auto 100px;
+      padding: 37px 45px;
+      font-weight: 500;
 
-        span {
-          font-size: $fontSize + 0.5;
-          color: #FFFFFF;
-          font-weight: 600;
-        }
+      span {
+        font-size: $fontSize + 0.5;
+        color: #FFFFFF;
+        font-weight: 600;
       }
     }
 
@@ -71,18 +73,16 @@
     background-color: rgba(#000000, 0.5);
 
     .rw-land-container-bg {
-      //background-color: $colorCloseHover;
       background: transparent url("../../landing/communaute.jpg") no-repeat scroll center center;
-      background-size: 1200px;
+      background-size: cover;
       width: 100%;
       height: 100%;
-      //opacity: 0.4;
 
       .rw-land-content {
         margin: auto;
         display: flex;
         height: 100%;
-        background-color: rgba($colorCloseHover, 0.6);
+        background-color: rgba($colorCloseHover, 0.5);
 
         & > * {
           flex: 0 1 auto;
@@ -92,10 +92,10 @@
         }
 
         img:first-of-type {
-          margin: auto auto 0 0;
+          margin: auto auto 0 160px;
         }
         img:last-of-type {
-          margin: auto 0 0 auto;
+          margin: auto 160px 0 auto;
         }
       }
     }
@@ -103,15 +103,18 @@
 
   .rw-land-content-video {
     background: transparent url("../../landing/ecran.png") no-repeat scroll center center;
-    width: 820px;
+    background-size: 100%;
+    width: 830px;
     height: 670px;
     position: absolute;
-    left: 15.5%;
+    left: 24%;
     margin: 0;
     text-align: center;
-    top: 260px;
+    top: 143px;
 
     video {
+      width:800 px;
+      height: 600px;
       border-radius: 10px;
       margin: 55px 0 0;
       border: 1px solid rgba(#000000, 0.5);
@@ -120,8 +123,8 @@
 
   .rw-land-content-btn {
     position: absolute;
-    top: 270px;
-    left: 700px;
+    top: 153px;
+    left: 870px;
     cursor: pointer;
 
     .rw-land-btn-arrow {
@@ -150,7 +153,6 @@
 
   .rw-land-container-footer {
     width: 100%;
-    //background-color: green;
     margin: auto;
     padding: 100px 0 0 0;
 
@@ -197,6 +199,139 @@
       padding: 10px 0;
       color: $grey-dark;
     }
+  }
+}
 
+@media all and (max-width:955px){
+
+  .rw-land-container {
+
+    .rw-land-container-header {
+      width: 100%;
+      height: 200px;
+      background-color: $colorCloseHover;
+    }
+
+    .rw-land-header-logo {
+
+      img {
+        width: 90px;
+        height: 76px;
+      }
+    }
+
+    .rw-land-header-title {
+
+      h1 {
+        font-size: $fontSize + 0.5;
+        margin: auto 80px;
+
+        span {
+          font-size: $fontSize + 0.3;
+        }
+      }
+
+    }
+
+    .rw-land-container-content {
+      height: 200px;
+
+      .rw-land-container-bg {
+
+        .rw-land-content {
+          background-color: rgba($colorCloseHover, 0.5);
+
+          & > img {
+            flex: 0 1 auto;
+            top: 70px;
+            position: relative;
+
+          }
+
+          img:first-of-type {
+            margin: auto auto 0 50px;
+            height: 133px;
+          }
+          img:last-of-type {
+            margin: auto 50px 0 auto;
+            height: 97px;
+          }
+        }
+      }
+    }
+
+    .rw-land-content-video {
+      width: 415px;
+      height: 335px;
+      left: 22%;
+      top: 135px;
+
+      video {
+        width: 400px;
+        height: 300px;
+        margin: 30px 0 0;
+      }
+    }
+
+    .rw-land-content-btn {
+      position: absolute;
+      top: 140px;
+      left: 412px;
+      cursor: pointer;
+
+      .rw-land-btn-arrow {
+        padding: 5px 4px 5px 5px;
+        height: 21px;
+        font-size: $fontSize - 0.2;
+
+      }
+
+      .rw-land-btn-btn {
+        width: 125px;
+        height: 21px;
+        font-size: $fontSize - 0.2;
+      }
+
+    }
+
+    .rw-land-container-footer {
+      width: 100%;
+      margin: auto;
+      padding: 50px 0 0 0;
+
+      h2 {
+        margin: 20px auto 50px auto;
+        font-size: $fontSize - 0.2;
+      }
+
+      .rw-icon-rs {
+        margin: auto 5px;
+        padding: 2px;
+        height: 27px;
+      }
+
+      h3 {
+        font-size: $fontSize;
+        line-height: $lineHeight;
+      }
+
+      .rw-land-footer-rs {
+        margin: auto 5px;
+        padding: 2px 5px;
+        line-height: $lineHeight;
+        a {
+          margin-left: 10px;
+          img {
+            height: 20px;
+          }
+        }
+      }
+
+      .rw-land-footer-copy {
+        margin: 2px auto 5px auto;
+        font-size: $fontSize - 0.3;
+        padding: 5px 0;
+      }
+    }
   }
 }

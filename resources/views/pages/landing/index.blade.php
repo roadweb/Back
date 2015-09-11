@@ -5,16 +5,10 @@
     {{--mettre en relatif--}}
     <div class="rw-land-container">
 
-        <div class="rw-land-container-header">
+        <div class="rw-land-container-header rw-land-header-title rw-land-header-logo">
 
-            <div class="rw-land-header-logo">
                 <img src="{{asset('images/logo.png')}}" alt="road web">
-            </div>
-            <div class="rw-land-header-title">
-                <h1>Bienvenue sur <br>
-                    <span>road-web</span>.fr
-                </h1>
-            </div>
+                <h1>Bienvenue sur <span>road-web</span>.fr</h1>
 
             <div class="rw-land-header-line"></div>
 
@@ -40,7 +34,7 @@
         {{-- mettre en absolute--}}
         <div class="rw-land-content-video">
 
-            <video width="800" height="600" autoplay>
+            <video autoplay>
                 <source src="{{asset('landing/landing.mp4')}}" type="video/mp4">
                 Votre navigateur ne supporte pas le format vidéo.
             </video>

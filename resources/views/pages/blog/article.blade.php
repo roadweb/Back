@@ -14,7 +14,7 @@
                         {{--<i class="fa fa-clock-o"></i>--}}
                     </span>
 
-                <span>
+                <span style="visibility: hidden;">
                     <p>
                         Partagez !
                     </p>
@@ -191,8 +191,13 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset($userPost->techno->img_link)}}" alt="html5"/>
-
+                        <img src="{{ asset( $userPost->techno1->img_link) }}" />
+                        @if ($userPost->techno2 != null)
+                            <img src="{{ asset( $userPost->techno2->img_link) }}" />
+                        @endif
+                        @if ($userPost->techno3 != null)
+                            <img src="{{ asset( $userPost->techno3->img_link) }}" />
+                        @endif
                     </div>
 
                     <div class="rw-bdc-triangle rw-job-color-triangle-{{$userPost->job_id}}">
@@ -242,8 +247,13 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{asset( $jobPost->techno->img_link)}}" alt="photoshop"/>
-
+                        <img src="{{ asset( $jobPost->techno1->img_link) }}" />
+                        @if ($jobPost->techno2 != null)
+                            <img src="{{ asset( $jobPost->techno2->img_link) }}" />
+                        @endif
+                        @if ($jobPost->techno3 != null)
+                            <img src="{{ asset( $jobPost->techno3->img_link) }}" />
+                        @endif
 
                     </div>
                     <div class="rw-bdc-triangle rw-job-color-triangle-{{$jobPost->job_id}}"></div>
@@ -278,11 +288,11 @@
             </div>
 
             @endforeach
-            <div class="rw-blog-band-auth">
+            <div class="rw-blog-band-auth" style="visibility: hidden;">
                 <h3><a href="">Partager l'article</a></h3>
             </div>
 
-            <div class="rw-blog-band-rsx">
+            <div class="rw-blog-band-rsx" style="visibility:hidden;">
                 <img src="{{asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"/>
                 <img src="{{asset('images/reseaux-icon/twitter.png')}}" alt="Twietter"/>
                 <img src="{{asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"/>

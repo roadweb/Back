@@ -348,7 +348,7 @@ EXTENDS
 }
 
 .rw-job-color-7 {
-  border: 2px solid #1075bc !important;
+  border: 2px solid #1b75bb !important;
 }
 
 /*couleurs job background*/
@@ -377,7 +377,7 @@ EXTENDS
 }
 
 .rw-job-color-bgc-7 {
-  background-color: #1075bc !important;
+  background-color: #1b75bb !important;
 }
 
 /*couleurs bcg test*/
@@ -406,7 +406,7 @@ EXTENDS
 }
 
 .rw-job-color-bcg-test-7 {
-  background-color: #1075bc !important;
+  background-color: #1b75bb !important;
 }
 
 /*couleurs txt job*/
@@ -435,7 +435,7 @@ EXTENDS
 }
 
 .rw-job-color-txt-7 {
-  color: #1075bc !important;
+  color: #1b75bb !important;
 }
 
 .form-control {
@@ -760,7 +760,7 @@ section table th select.form-control {
 }
 
 .rw-job-color-triangle-7 {
-  border-color: transparent transparent #1075bc transparent !important;
+  border-color: transparent transparent #1b75bb transparent !important;
 }
 
 .rw-blog-article-main-container {
