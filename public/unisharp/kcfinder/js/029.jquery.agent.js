@@ -29,7 +29,7 @@
                 keys: ["opera", "msie", "firefox", "android"]
             }, {
                 expr: /[ \/\(]([a-z0-9_]+)[ ;\)\/]/ig,
-                keys: "i386|i486|i586|i686|x86|x64|x86_64|intel|ppc|powerpc|windows|macintosh|darwin|unix|linux|sunos|android|iphone|ipad|ipod|amiga|amigaos|beos|wii|playstation|gentoo|fedora|slackware|ubuntu|archlinux|debian|mint|mageia|mandriva|freebsd|openbsd|netbsd|solaris|opensolaris|x11|mobile|phone".split('|'),
+                keys: "i386|i486|i586|i686|x86|x64|x86_64|intel|ppc|powerpc|windows|macintosh|darwin|unix|linux|sunos|android|iphone|ipad|ipod|amiga|amigaos|beos|wii|playstation|gentoo|fedora|slackware|ubuntu|archlinux|debian|mint|mageia|mandriva|freebsd|openbsd|netbsd|solaris|opensolaris|x11|tablette|phone".split('|'),
                 sub: "platform"
             }
         ];
@@ -73,9 +73,9 @@
     if (!$.agent.platform)
         $.agent.platform = {};
 
-    // Check for mobile device
+    // Check for tablette device
     $.mobile = false;
-    var keys = "mobile|android|iphone|ipad|ipod|iemobile|phone".split('|');
+    var keys = "tablette|android|iphone|ipad|ipod|iemobile|phone".split('|');
         a = $.agent;
 
     $.each([a, a.platform], function(i, p) {
