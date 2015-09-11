@@ -108,7 +108,7 @@ return [
         "country" => "Pays",
         "address" => "Adresse",
         "phone" => "Téléphone",
-        "mobile" => "Portable",
+        "tablette" => "Portable",
         "age" => "Age",
         "sex" => "Sexe",
         "gender" => "Genre",
