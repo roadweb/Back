@@ -76,7 +76,7 @@
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="checkbox checkbox-success">
-                                {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]); !!}
+                                {!! Form::checkbox('is_sticky', 'on', false, ["id" => "sticky-check", "class" => "checkbox checkbox-success"]) !!}
                                 {!! Form::label('sticky-check', 'Mettre en avant ?') !!}
                             </div>
                         </div>

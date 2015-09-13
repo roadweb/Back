@@ -9,6 +9,11 @@
         <ul class="bxslider rw-carrous-body">
 
             <li class="rw-carrous-body-content">
+                <a href="http://www.road-web.fr/blog/8"><img class="rw-carrous-body-content-article-slide-img" src="{{asset('images/road-web-welcome.jpg') }}"/></a>
+
+            </li>
+
+            <li class="rw-carrous-body-content">
                 <img class="rw-carrous-body-content-article-screen" src="{{asset('images/ecran_slide/ecran-metiers.png') }}"/>
 
                 <div class="rw-carrous-body-content-article">
