@@ -6,7 +6,7 @@
             <p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="{{ url('/contact') }}">formulaire</a>
                 du site. Nous vous répondrons le plus rapidement possible.</p>
         </div>
-        <div class="rw-index-footer-btn-subscription">
+        <div class="rw-index-footer-btn-subscription" style="display: none;">
             <a href="{{ url('/') }}">Vos demandes</a>
         </div>
         <div class="rw-index-footer-nav">
