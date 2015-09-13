@@ -133,9 +133,17 @@
                             {!! Form::text('img_link', null, ["class" => "form-control", "placeholder" => "Copiez ici l'url de votre image principale", "required"])!!}
                         </div>
 
-
+                        @if ($post->published === '0')
                         <div class="form-group">
+
+
+                                <div class="checkbox checkbox-success">
+                                    {!! Form::checkbox('published', 'uc', false, ["id" => "checkbox1", "class" => "checkbox checkbox-success"]) !!}
+                                    {!! Form::label('checkbox1','Soumettre à validation ?') !!}
+                                </div>
+
                         </div>
+                        @endif
                     </div>
                 </div>
 
