@@ -13,4 +13,4 @@
 
     @include('pages.components.footer')
 
-@endsection()
+@stop()

@@ -75,3 +75,14 @@
 */
 
 @import "sass/responsive/smartphone/base/base_smartphone";
+@import "sass/responsive/smartphone/components/footer_responsive";
+
+/*
+|--------------------------------------------------------------------------
+| Dependances
+|--------------------------------------------------------------------------
+*/
+
+$fa-font-path: '../../fonts';
+@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../../bower_components/dw-bxslider-4/dist/jquery.bxslider.css";

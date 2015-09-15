@@ -1,5 +1,4 @@
 /vendor
-.env
 .idea/
 bower_components/
 .sass-cache/
@@ -10,3 +9,4 @@ public/css/front/css
 
 .DS_Store
 npm-debug.log
+.env
