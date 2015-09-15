@@ -1,3 +1,42 @@
 @media screen and (max-width: 360px){
 
+/*-------Variables-----*/
+  *{
+    $font-size: 0.6em;
+  }
+
+
+
+  /*-------Element à cacher pour smartphone-----*/
+  .not_mobile{
+    display: none;
+  }
+
+  /*   Supprime les floats  */
+  .dont_float_mobile {
+    float: none;
+  }
+
+
+  /*   Imposer une largeur max aux images  */
+  img {
+    max-width: 100%;
+  }
+
+
+
+
+
+  /*-------Règle générale pour smartphone-----*/
+  *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+
 }

@@ -1,18 +1,18 @@
 <footer>
-    <img class="rw-index-footer-bcg" src="{{ asset('images/fond-exa-footer.png')}}">
+    <img class="rw-index-footer-bcg not_mobile" src="{{ asset('images/fond-exa-footer.png')}}">
 
     <div class="rw-index-footer-container">
-        <div class="rw-index-footer-contact">
+        <div class="rw-index-footer-contact not_mobile">
             <p>Pour écrire à l'équipe de Roadweb, remplissez le <a href="{{ url('/contact') }}">formulaire</a>
                 du site. Nous vous répondrons le plus rapidement possible.</p>
         </div>
-        <div class="rw-index-footer-btn-subscription" style="display: none;">
+        <div class="rw-index-footer-btn-subscription not_mobile" style="display: none;">
             <a href="{{ url('/') }}">Vos demandes</a>
         </div>
         <div class="rw-index-footer-nav">
             <div class="rw-index-footer-nav-networks">
-                <div class="rw-index-footer-nav-bcg-icon"></div>
-                <p>Nos Réseaux Sociaux</p>
+                <div class="rw-index-footer-nav-bcg-icon not_mobile"></div>
+                <p class="not_mobile">Nos Réseaux Sociaux</p>
                 <ul>
                     <li class="rw-hidden">
                         <a href="{{ url('/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="linkedin"/></a>
@@ -25,7 +25,7 @@
                     </li>
                     <li class="rw-hidden">
                         <a href="{{ url('/') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="pinterest"/></a>
-                   </li>
+                    </li>
                     <li>
                         <a href="{{ url('https://plus.google.com/+RoadWebfr/posts') }}" target="_blank"><img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="google +"/></a>
                     </li>
@@ -39,9 +39,9 @@
             </div>
             <div class="rw-index-footer-nav-list">
                 <ul>
-                    <li><a href="{{ url('/mentions') }}">Mentions légales</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
-                    <li><a href="{{ url('/adhesion') }}" target="_blank" >Adhésion</a></li>
+                    <li><a href="{{ url('/mentions') }}">Mentions légales</a></li>
+                    <li class="not_mobile"><a href="{{ url('/adhesion') }}" target="_blank" >Adhésion</a></li>
                 </ul>
             </div>
         </div>
