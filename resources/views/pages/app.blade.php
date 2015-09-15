@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    {{--<meta name="viewport" content="width=device-width, user-scalable=yes" />--}}
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
     {{--meta facebook--}}
