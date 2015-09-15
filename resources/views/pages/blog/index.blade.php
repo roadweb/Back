@@ -1,6 +1,6 @@
 {{-- Balises HEAD --}}
-@section('title')Le blog de RoadWeb parle des métiers du web et des actualités.@endsection()
-@section('description')Le blog Road-Web regroupe des articles sur les métiers du web ou sur tout sujet d'actualité web pour apprendre, échanger nos connaissances et astuces.@endsection()
+@section('title')Le blog de RoadWeb parle des mÃ©tiers du web et des actualitÃ©s.@endsection()
+@section('description')Le blog Road-Web regroupe des articles sur les mÃ©tiers du web ou sur tout sujet d'actualitÃ© web pour apprendre, Ã©changer nos connaissances et astuces.@endsection()
 
 @extends('pages.app')
 
