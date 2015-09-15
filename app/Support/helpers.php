@@ -70,5 +70,12 @@ function dateConvert($month) {
 	}
 }
 
-
-?>
+/**
+ * Ajouter des "-" aux espaces pour les titres dans l'url
+ * @param $title
+ * @return string
+ */
+function urlBeautify($title) {
+    $explode = explode(' ', $title);
+    return join('-', $explode);
+}

@@ -3,7 +3,7 @@
     <div class="rw-index-last-articles-container-flex">
        @if(count($posts) > 0)
             @foreach($posts as $post)
-            <a href="blog/{{ $post->id }}">
+            <a href="blog/{{ $post->id }}/{{urlBeautify($post->title)}}">
                 <article class="rw-index-last-article">
                     <h1>{{ str_limit($post->title, $limit = 70, $end = '...') }}</h1>
                     <img src="{{$post->img_link}}" alt="{{$post->img_alt}}" />

@@ -74,17 +74,17 @@ class AuthController extends Controller
             $m_emweb = '';
         }
 
-        \Mail::send('emails.inscription',
-        array(
-            'last_name' => $request->get('last_name'),
-            'first_name' => $request->get('first_name'),
-            'username' => $request->get('username'),
-            'emweb' => $m_emweb
-        ), function($message) use ($request)
-        {
-            $message->from('hello@road-web.fr');
-            $message->to('plateulere@gmail.com', 'Equipe Roadweb')->subject('nouvelle inscription');
-        });
+//        \Mail::send('emails.inscription',
+//        array(
+//            'last_name' => $request->get('last_name'),
+//            'first_name' => $request->get('first_name'),
+//            'username' => $request->get('username'),
+//            'emweb' => $m_emweb
+//        ), function($message) use ($request)
+//        {
+//            $message->from('hello@road-web.fr');
+//            $message->to('plateulere@gmail.com', 'Equipe Roadweb')->subject('nouvelle inscription');
+//        });
 
         $this->auth->login($this->registrar->create($request->all()));
 
