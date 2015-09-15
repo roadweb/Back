@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Formulaire de contact de roadweb.@endsection()
+@section('description')Pour toute demande ou suggestion sur Road-Web, remplissez ce formulaire.@endsection()
+
 @extends('pages.app')
 
 @section('content')

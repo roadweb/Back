@@ -9,3 +9,4 @@ public/css/front/css
 
 .DS_Store
 npm-debug.log
+.env

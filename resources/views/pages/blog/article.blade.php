@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title'){{$post->title}}@endsection()
+@section('description'){{$post->resume}}@endsection()
+
 @extends('pages.app')
 
 @section('content')
@@ -310,6 +314,3 @@
 
 @stop
 
-{{-- Balises HEAD --}}
-@section('title'){{$post->title}}@endsection()
-@section('description'){{$post->resume}}@endsection()
