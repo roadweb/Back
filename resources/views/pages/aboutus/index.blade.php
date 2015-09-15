@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Présentation de Road Web et de sa création.@endsection()
+@section('description')Un groupe d'élèves de l'EMWeb ont mené le projet Road-Web afin de créer ensemble un site communautaire dédié aux métiers du web pour s'entraider et partager leurs connaissances.@endsection()
+
 @extends('pages.app')
 @section('content')
     @include('pages.components.header')

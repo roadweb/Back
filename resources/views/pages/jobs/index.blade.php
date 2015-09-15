@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Descriptions des métiers du web selon Road Web.@endsection()
+@section('description')Pour en savoir plus sur les métiers du web, lisez nos fiches métiers : webdesigner, developer front-end, référenceur, community manager, webmarketer, webmaster.@endsection()
+
 @extends('pages.app')
 
 @section('content')

@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Mentions légales de Road Web.@endsection()
+@section('description')@endsection()
+
 @extends('pages.app')
 
 @section('content')

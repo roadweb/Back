@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
     {{--meta facebook--}}
@@ -17,7 +17,7 @@
     <meta name="twitter:site" content="@roadweb"/>
     <meta name="twitter:title" content="RoadWeb"/>
     <meta name="twitter:description"
-          content="Road-Web est un site communautaire rassemblant des élèves et des professionnels juniors dans les métiers du web : fiches métiers, articles autour du web…"/>
+          content="@yield('description')"/>
     <meta name="twitter:image" content="http://road-web.fr/images/logo.png"/>
 
     {{--<link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}"/>--}}

@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Road Web le site collaboratif des méiers du numérique. @endsection()
+@section('description')Road-Web est un site communautaire rassemblant des élèves et des professionnels juniors dans les métiers du web : fiches métiers, articles autour du web…@endsection()
+
 @extends('pages.app')
 
 @section('content')
