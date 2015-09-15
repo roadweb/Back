@@ -10,7 +10,6 @@ use App\Job;
 
 class BlogController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
