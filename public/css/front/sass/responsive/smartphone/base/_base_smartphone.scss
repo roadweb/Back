@@ -1,8 +1,8 @@
-@media screen and (max-width: 360px){
+@media screen and (max-width: 320px){
 
 /*-------Variables-----*/
   *{
-    $font-size: 0.6em;
+    $font-size: 0.85em;
   }
 
 
@@ -10,6 +10,9 @@
   /*-------Element à cacher pour smartphone-----*/
   .not_mobile{
     display: none;
+  }
+  .not_screen{
+    display: block;
   }
 
   /*   Supprime les floats  */
