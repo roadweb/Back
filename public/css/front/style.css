@@ -258,6 +258,10 @@ EXTENDS
   background-color: #bf382a !important;
 }
 
+.not_screen {
+  display: none;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -2239,7 +2243,9 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -4361,11 +4367,14 @@ partie droite de la page
 | Responsive
 |--------------------------------------------------------------------------
 */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 320px) {
   /*-------Variables-----*/
   /*-------Element à cacher pour smartphone-----*/
   .not_mobile {
     display: none;
+  }
+  .not_screen {
+    display: block;
   }
   /*   Supprime les floats  */
   .dont_float_mobile {
@@ -4384,10 +4393,42 @@ partie droite de la page
   }
 }
 
-@media screen and (max-width: 360px) {
-  .not_mobile {
-    display: none;
+@media screen and (max-width: 320px) {
+  .rw-header_top {
+    position: static;
+    padding: 0;
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
   }
+  .rw-header_top a {
+    width: 30%;
+    float: left;
+  }
+  .rw-logo {
+    position: static;
+    height: 70px;
+    margin: auto;
+  }
+  .rw-slogan {
+    overflow: hidden;
+    float: left;
+    position: static;
+    padding: 0;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    line-height: 35px;
+    height: 70px;
+    width: 70%;
+    font-size: 1.5em;
+  }
+  .rw-slogan strong {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
   .rw-index-footer-container {
     padding: 0;
     height: 86px;

@@ -1,0 +1,41 @@
+@media screen and (max-width: 320px){
+
+  .rw-header_top {
+    position: static;
+    padding: 0;
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    a{
+      width:30%;
+      float:left;
+    }
+  }
+
+  .rw-logo {
+  position: static;
+    height:70px;
+    margin: auto;
+}
+
+.rw-slogan {
+  overflow: hidden;
+  float:left;
+  position: static;
+  padding: 0;
+  bottom: auto;
+  left: auto;
+  text-align: center;
+  line-height: 35px;
+  height:70px;
+  width:70%;
+  font-size: $fontSize + 0.5 ;
+
+  strong {
+    display: block;
+  }
+}
+
+
+
+}
