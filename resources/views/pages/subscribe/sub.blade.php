@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Inscrivez vous et rejoignez la communauté RoadWeb.@endsection()
+@section('description')Rejoindre Road-Web c’est intégrer une communauté active dans l’apprentissage et l’évolution des métiers du web.@endsection()
+
 @extends('pages.app')
 
 @section('content')

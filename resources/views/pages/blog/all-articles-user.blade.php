@@ -1,3 +1,7 @@
+{{-- Balises HEAD --}}
+@section('title')Le blog road-web de {{$user->username}}@endsection()
+@section('description')Retrouvez tous les articles écrit par {{$user->first_name}} {{$user->last_name}} sur le bog road-web.fr@endsection()
+
 @extends('pages.app')
 @section('content')
     @include('pages.components.header')
