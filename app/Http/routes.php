@@ -61,7 +61,6 @@ Route::get('/home', 'HomeController@landing');
 Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/{id}/{title?}', 'BlogController@article');
-
 Route::get('/monblog/{id}/{username}', 'BlogController@allArticlesUser');
 
 Route::get('/jobs', 'JobsController@index');
