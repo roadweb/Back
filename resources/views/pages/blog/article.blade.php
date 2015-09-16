@@ -8,7 +8,7 @@
     <div class="rw-main-container-articleon">
 
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
-           <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
+            <div class="rw-blog-article-content-fct rw-job-color-bgc-{{$post->job_id}}">
 
                     <span>
                         {{--<i class="fa fa-clock-o"></i>--}}
@@ -50,7 +50,6 @@
             <div class="rw-blog-article-content">
 
 
-
                 <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 
                 <p> {!! $post->content !!} </p>
@@ -68,19 +67,22 @@
                     var disqus_shortname = 'roadweb';
 
                     /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    (function () {
+                        var dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
                         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                     })();
                 </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                                                                  rel="nofollow">comments powered by Disqus.</a>
+                </noscript>
 
 
                 <div class="rw-bdc-triangle rw-job-color-triangle-{{$post->job_id}}"></div>
             </div>
         </div>
-
 
 
         <!---------------------
@@ -90,7 +92,8 @@
         <div class="rw-blog-band-container">
 
             <div class="rw-blog-band-auth">
-                <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias <span>{{$post->user->username}}</span></a></h3>
+                <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias
+                        <span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
                     <img src="{{ asset( $post->user->avatar )}}" alt="avatar"/>
@@ -102,55 +105,64 @@
                 <div class="rw-blog-band-auth-rsx">
                     @if(($post->user->facebook) != '')
                         <a href="{{$post->user->facebook}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook" title="Facebook {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/facebook.png')}}" alt="Facebook"
+                                 title="Facebook {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->linkedin) != '')
                         <a href="{{$post->user->linkedin}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin" title="Linkedin {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/linkedin.png')}}" alt="Linkedin"
+                                 title="Linkedin {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->twitter) != '')
                         <a href="{{$post->user->twitter}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter" title="Twitter {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/twitter.png')}}" alt="Twitter"
+                                 title="Twitter {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->googleplus) != '')
                         <a href="{{$post->user->googleplus}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Google plus" title="Google+ {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/google-plus.png')}}" alt="Google plus"
+                                 title="Google+ {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->pinterest) != '')
                         <a href="{{$post->user->pinterest}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="Pinterest" title="Pinterest {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/pinterest.png')}}" alt="Pinterest"
+                                 title="Pinterest {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->behance) != '')
                         <a href="{{$post->user->behance}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="Behance" title="Behance {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/behance.png')}}" alt="Behance"
+                                 title="Behance {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->youtube) != '')
                         <a href="{{$post->user->youtube}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="Youtube" title="Youtube {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/youtube.png')}}" alt="Youtube"
+                                 title="Youtube {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->viadeo) != '')
                         <a href="{{$post->user->viadeo}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/viadeo.png')}}" alt="Viadeo" title="Viadeo {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/viadeo.png')}}" alt="Viadeo"
+                                 title="Viadeo {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
                     @if(($post->user->instagram) != '')
                         <a href="{{$post->user->instagram}}" target="_blank">
-                            <img src="{{ asset('images/reseaux-icon/instagram.png')}}" alt="Instagram" title="Instagram {{$post->user->username}}"/>
+                            <img src="{{ asset('images/reseaux-icon/instagram.png')}}" alt="Instagram"
+                                 title="Instagram {{$post->user->username}}"/>
                         </a>
                     @else
                     @endif
@@ -159,7 +171,9 @@
             <hr/>
 
             <div class="rw-blog-band-auth">
-                <h3>Autres articles de <span>{{$post->user->username}}</span></h3>
+                <a class="rw-blog-band-others-sameAuth-all-articles"
+                   href="{{URL::to('/monblog', ['id' => $post->user->id, 'username' => $post->user->username])}}">
+                    <h3>Autres articles de <span>{{$post->user->username}}</span></h3>
             </div>
 
 
@@ -191,12 +205,12 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{ asset( $userPost->techno1->img_link) }}" />
+                        <img src="{{ asset( $userPost->techno1->img_link) }}"/>
                         @if ($userPost->techno2 != null)
-                            <img src="{{ asset( $userPost->techno2->img_link) }}" />
+                            <img src="{{ asset( $userPost->techno2->img_link) }}"/>
                         @endif
                         @if ($userPost->techno3 != null)
-                            <img src="{{ asset( $userPost->techno3->img_link) }}" />
+                            <img src="{{ asset( $userPost->techno3->img_link) }}"/>
                         @endif
                     </div>
 
@@ -207,7 +221,9 @@
 
             @endforeach
             <div class="rw-blog-band-others-sameAuth">
-                <a class="rw-blog-band-others-sameAuth-all-articles" href="{{URL::to('/monblog', ['id' => $post->user->id, 'username' => $post->user->username])}}">Tous les articles de <span>{{$post->user->username}}
+                <a class="rw-blog-band-others-sameAuth-all-articles"
+                   href="{{URL::to('/monblog', ['id' => $post->user->id, 'username' => $post->user->username])}}">Tous
+                    les articles de <span>{{$post->user->username}}
 
                     </span>
                 </a>
@@ -217,7 +233,8 @@
             <hr/>
 
             <div class="rw-blog-band-auth">
-                <h3><a href="">Autres articles <span>{{$post->job->name}}</span></a></h3>
+                <h3><a href="{{URL::to('/blog?jobid=')}}{{$post->job->id}}">Autres articles
+                        <span>{{$post->job->name}}</span></a></h3>
             </div>
             @foreach($jobPosts as $jobPost)
                 <div class="rw-blog-band-others-sameAuth rw-job-color-{{$jobPost->job_id}}">
@@ -247,12 +264,12 @@
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
-                        <img src="{{ asset( $jobPost->techno1->img_link) }}" />
+                        <img src="{{ asset( $jobPost->techno1->img_link) }}"/>
                         @if ($jobPost->techno2 != null)
-                            <img src="{{ asset( $jobPost->techno2->img_link) }}" />
+                            <img src="{{ asset( $jobPost->techno2->img_link) }}"/>
                         @endif
                         @if ($jobPost->techno3 != null)
-                            <img src="{{ asset( $jobPost->techno3->img_link) }}" />
+                            <img src="{{ asset( $jobPost->techno3->img_link) }}"/>
                         @endif
 
                     </div>
@@ -269,23 +286,23 @@
             </div>
             @foreach($postSticky as $postStic)
 
-            <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
-                <a href="{{$postStic->id}}">
-                <div class="rw-blog-band-others-Une-illus">
+                <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
+                    <a href="{{$postStic->id}}">
+                        <div class="rw-blog-band-others-Une-illus">
 
-                    <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>
+                            <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>
+
+                        </div>
+
+
+                        <div class="rw-blog-band-others-Une-header">
+
+                            <h3> {{ $postStic->title }} </h3>
+
+                        </div>
+                    </a>
 
                 </div>
-
-
-                <div class="rw-blog-band-others-Une-header">
-
-                    <h3> {{ $postStic->title }} </h3>
-
-                </div>
-                </a>
-
-            </div>
 
             @endforeach
             <div class="rw-blog-band-auth" style="visibility: hidden;">
