@@ -194,7 +194,11 @@ Bloc contenu de l'article
     u {
       text-decoration: underline;
     }
-    
+
+    strong {
+      font-weight: bold;
+    }
+
     strike {
       text-decoration: line-through;
     }

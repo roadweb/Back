@@ -1907,6 +1907,10 @@ Bloc contenu de l'article
   text-decoration: underline;
 }
 
+.rw-blog-article-content p strong {
+  font-weight: bold;
+}
+
 .rw-blog-article-content p strike {
   text-decoration: line-through;
 }
@@ -2235,9 +2239,7 @@ partie droite de la page
   color: #888;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
