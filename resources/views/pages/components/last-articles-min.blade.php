@@ -13,7 +13,7 @@
         <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">
             <div class="rw-index-open-article-min-title">
 
-                <a href="blog/{{$vignette->id}}" >{{ str_limit($vignette->title, $limit = 37, $end = '...') }}</a>
+                <a href="blog/{{ $vignette->id }}/{{urlBeautify($vignette->title)}}" >{{ str_limit($vignette->title, $limit = 37, $end = '...') }}</a>
 
             </div>
             <div class="rw-index-open-article-min-icons">

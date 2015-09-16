@@ -177,13 +177,14 @@
             <div class="rw-blog-band-auth">
                 <a class="rw-blog-band-others-sameAuth-all-articles"
                    href="{{URL::to('/monblog', ['id' => $post->user->id, 'username' => $post->user->username])}}">
-                    <h3>Autres articles de <span>{{$post->user->username}}</span></h3>
+                    <h3>Autres articles de <span>{{$post->user->username}}</span></h3></a>
             </div>
 
 
             @foreach($userPosts as $userPost)
 
                 <div class="rw-blog-band-others-sameAuth rw-job-color-{{$userPost->job_id}}">
+                    <a href="../{{ $userPost->id }}/{{urlBeautify($userPost->title)}}">
                     <div class="rw-blog-band-others-sameAuth-header">
 
                         <div class="rw-blog-band-others-sameAuth-header-date">
@@ -200,12 +201,11 @@
                             </p>
                         </div>
                         <h3>
-                            <a href="{{ $userPost->id }}">
                                 {{ str_limit($userPost->title, $limit = 57, $end = '...') }}
-                            </a>
                         </h3>
 
                     </div>
+                </a>
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
@@ -242,6 +242,7 @@
             </div>
             @foreach($jobPosts as $jobPost)
                 <div class="rw-blog-band-others-sameAuth rw-job-color-{{$jobPost->job_id}}">
+                    <a href="../{{ $jobPost->id }}/{{urlBeautify($jobPost->title)}}">
 
                     <div class="rw-blog-band-others-sameAuth-header">
 
@@ -259,12 +260,11 @@
                             </p>
                         </div>
                         <h3>
-                            <a href="{{$jobPost->id}}">
                                 {{ str_limit($jobPost->title, $limit = 57, $end = '...') }}
-                            </a>
                         </h3>
 
-                    </div>
+                </div>
+                    </a>
 
                     <div class="rw-blog-band-others-sameAuth-header-picto">
 
@@ -291,7 +291,7 @@
             @foreach($postSticky as $postStic)
 
                 <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
-                    <a href="{{$postStic->id}}">
+                    <a href="blog/{{ $postStic->id }}/{{urlBeautify($postStic->title)}}">
                         <div class="rw-blog-band-others-Une-illus">
 
                             <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>

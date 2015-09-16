@@ -1907,6 +1907,10 @@ Bloc contenu de l'article
   text-decoration: underline;
 }
 
+.rw-blog-article-content p strong {
+  font-weight: bold;
+}
+
 .rw-blog-article-content p strike {
   text-decoration: line-through;
 }

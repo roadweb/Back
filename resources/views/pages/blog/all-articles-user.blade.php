@@ -1,6 +1,6 @@
 {{-- Balises HEAD --}}
 @section('title')Le blog road-web de {{$user->username}}@endsection()
-@section('description')Retrouvez tous les articles écrit par {{$user->first_name}} {{$user->last_name}} sur le bog road-web.fr@endsection()
+@section('description')Retrouvez tous les articles écrit par {{$user->first_name}} {{$user->last_name}} sur le bog road-web.fr @endsection()
 
 @extends('pages.app')
 @section('content')
@@ -26,7 +26,7 @@
                             </div>
                             <div class="rw-index-open-article-min-link rw-job-color-{{ $vignette->job_id }}">
                                 <div class="rw-index-open-article-min-title">
-                                    <a href="../../blog/{{$vignette->id}}" >
+                                    <a href="../../blog/{{ $vignette->id }}/{{urlBeautify($vignette->title)}}" >
                                         {{ str_limit($vignette->title, $limit = 37, $end = '...') }}
                                     </a>
                                 </div>
