@@ -9,6 +9,10 @@
         <ul class="bxslider rw-carrous-body">
 
             <li class="rw-carrous-body-content">
+                <a href="http://www.road-web.fr/blog/9/Trouvez-votre-voie,-prenez-le-pouvoir-!"><img class="rw-carrous-body-content-article-slide-img" src="{{asset('images/banniere-roadweb.jpg') }}"/></a>
+
+            </li>
+            <li class="rw-carrous-body-content">
                 <a href="http://www.road-web.fr/blog/8"><img class="rw-carrous-body-content-article-slide-img" src="{{asset('images/road-web-welcome.jpg') }}"/></a>
 
             </li>

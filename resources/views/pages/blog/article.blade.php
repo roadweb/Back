@@ -291,7 +291,7 @@
             @foreach($postSticky as $postStic)
 
                 <div class="rw-blog-band-others-Une rw-blog-article-Une-design">
-                    <a href="blog/{{ $postStic->id }}/{{urlBeautify($postStic->title)}}">
+                    <a href="../{{ $postStic->id }}/{{urlBeautify($postStic->title)}}">
                         <div class="rw-blog-band-others-Une-illus">
 
                             <img src="{{ $postStic->img_link }}" alt="{{ $postStic->img_alt }}"/>
