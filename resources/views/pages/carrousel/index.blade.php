@@ -1,5 +1,5 @@
 <!-- dev: mathieu -->
-<div class="rw-carrous">
+<div class="rw-carrous not_mobile">
 
 
 

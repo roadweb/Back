@@ -1,10 +1,8 @@
-<header class="rw-header_container not_mobile" id="rw-header_container">
+<header class="rw-header_container" id="rw-header_container">
     <div class="rw-header_top">
-        <p>
-            <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
-        </p>
+        <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
 
-        <h1 class="rw-slogan">Bienvenue sur <em>road-web</em></h1>
+        <h1 class="rw-slogan">Bienvenue sur <em>road-web</em>.fr</h1>
 
         {{--<div id="rw-search">
 
@@ -20,7 +18,7 @@
 
     <nav id="rw-nav">
         {{--ajoute la classe fixNavigation quand il y a un scroll--}}
-        <div class="rw-logo-fix">
+        <div class="rw-logo-fix not_mobile">
             <img alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
         </div>
         <ul class="rw-ul_grey">
@@ -47,54 +45,56 @@
     </nav>
     {{--<div class="rw-clear"></div>--}}
 </header>
+
 {{--header pour smarthpone caché pour desktop--}}
-<header class="rw-header_container not_screen">
-    <div class="rw-header_top">
-        <a href="#">
-            <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
-        </a>
+{{--<header class="rw-header_container not_screen">--}}
+    {{--<div class="rw-header_top">--}}
+        {{--<a href="#">--}}
+            {{--<img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>--}}
+        {{--</a>--}}
 
-        <h1 class="rw-slogan">Bienvenue sur <strong>road-web</strong>.fr</h1>
+        {{--<h1 class="rw-slogan">Bienvenue sur <strong>road-web</strong>.fr</h1>--}}
 
-        {{--<div id="rw-search">
+        {{--<div id="rw-search">--}}
 
-            <form action="" class="rw-searchbar" method="post">
-                <input name="" type="search" placeholder="Rechercher sur Roadweb"/>
-            </form>
-            <p><img class="rw-loupe" alt="loupe" src="{{asset('images/loupe.png')}}" height="90px"></p>
-        </div>--}}
-    </div>
-    <div class="rw-clear"></div>
+            {{--<form action="" class="rw-searchbar" method="post">--}}
+                {{--<input name="" type="search" placeholder="Rechercher sur Roadweb"/>--}}
+            {{--</form>--}}
+            {{--<p><img class="rw-loupe" alt="loupe" src="{{asset('images/loupe.png')}}" height="90px"></p>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="rw-clear"></div>--}}
 
     {{--@include('pages.lognews.lognews')--}}
 
-    <nav id="rw-nav">
-        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+    {{--<nav id="rw-nav">--}}
 
-        @if(Auth::check())
-            <a href="{{ route('compte') }}"><i class="fa fa-user fa-2x"></i></a>
-        @else()
-            <a href="{{ url('/inscription') }}"><i class="fa fa-user fa-2x"></i></a>
-        @endif
-        <a href="#"><i class="fa fa-search fa-2x"></i></a>
+        {{--@if(Auth::check())--}}
+            {{--<a href="{{ route('compte') }}"><i class="fa fa-user fa-2x"></i></a>--}}
+        {{--@else()--}}
+            {{--<a href="{{ url('/inscription') }}"><i class="fa fa-user fa-2x"></i></a>--}}
+        {{--@endif--}}
+        {{--<a href="#"><i class="fa fa-search fa-2x"></i></a>--}}
 
-        <ul class="rw-ul_red not_mobile">
-            <li class="{{ Request::is( '/') ? 'active' : '' }}">
-                <a href="{{ URL::to( '/') }}">Accueil</a>
-            </li>
-            <li class="{{ Request::is('blog') ? 'active' : '' }}">
-                <a href="{{ URL::to( 'blog') }}">Blog</a>
-            </li>
-            <li class="{{ Request::is( 'jobs') ? 'active' : '' }}">
-                <a href="{{ URL::to( 'jobs')  }}">Nos métiers</a>
-            </li>
-            <li class="{{ Request::is('apropos') ? 'active' : '' }}">
-                <a href="{{ URL::to( 'apropos')  }}">Qui sommes nous</a>
-            </li>
-        </ul>
+        {{--<a href="#"><i class="fa fa-bars fa-2x"></i></a>--}}
 
-    </nav>
+        {{--<ul class="rw-ul_red ">--}}
+            {{--<li class="{{ Request::is( '/') ? 'active' : '' }}">--}}
+                {{--<a href="{{ URL::to( '/') }}">Accueil</a>--}}
+            {{--</li>--}}
+            {{--<li class="{{ Request::is('blog') ? 'active' : '' }}">--}}
+                {{--<a href="{{ URL::to( 'blog') }}">Blog</a>--}}
+            {{--</li>--}}
+            {{--<li class="{{ Request::is( 'jobs') ? 'active' : '' }}">--}}
+                {{--<a href="{{ URL::to( 'jobs')  }}">Nos métiers</a>--}}
+            {{--</li>--}}
+            {{--<li class="{{ Request::is('apropos') ? 'active' : '' }}">--}}
+                {{--<a href="{{ URL::to( 'apropos')  }}">Qui sommes nous</a>--}}
+            {{--</li>--}}
+        {{--</ul>--}}
+    {{--</nav>--}}
+
     {{--<div class="rw-clear"></div>--}}
-</header>
+{{--</header>--}}
 
 
