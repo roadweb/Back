@@ -656,7 +656,7 @@ footer {
   position: relative;
   height: 90px;
   width: 400px;
-  margin: 10px 0;
+  margin: 10px auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3037,10 +3037,10 @@ partie droite de la page
 
 .rw-lognews-login,
 .rw-lognews-newsletter {
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   right: 0;
-  top: 105px;
+  top: 0;
   min-width: 50px;
   height: inherit;
   display: -webkit-box;
@@ -4370,6 +4370,188 @@ partie droite de la page
 | Responsive
 |--------------------------------------------------------------------------
 */
+/*************************
+HEADER
+**************************/
+@media all and (max-width: 480px) {
+  header .rw-header_top {
+    height: 60px;
+    margin: 10px auto;
+    top: 70px;
+  }
+  header .rw-logo {
+    height: 50px;
+    left: 20px;
+    bottom: 50px;
+  }
+  header .rw-slogan {
+    left: 105px;
+    bottom: 50px;
+    line-height: 1;
+    font-size: 1.5em;
+  }
+  header #rw-nav {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    position: static;
+    font-size: 1em;
+    height: auto;
+    text-align: center;
+  }
+  header #rw-nav li a {
+    line-height: 1.5;
+  }
+  header #rw-nav .rw-ul_grey {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 100%;
+  }
+  header #rw-nav .rw-ul_red {
+    width: 100%;
+  }
+  /*************************
+   LOG NEWS
+  **************************/
+  .rw-lognews-login {
+    z-index: 99999;
+    right: 10px;
+    top: 0;
+  }
+  .rw-lognews-newsletter {
+    display: none;
+  }
+  /*************************
+    Derniers articles
+  **************************/
+  .rw-index-last-articles-container h1 {
+    font-size: 1.6em;
+  }
+  /*************************
+    articles min vignettes
+    **************************/
+  .rw-index-open-articles-container-min {
+    width: 100%;
+  }
+  .rw-index-open-articles-container-min .rw-index-open-article-min {
+    width: 100%;
+  }
+  .rw-index-open-articles-container-min .rw-index-open-article-min .rw-index-open-article-min-date {
+    width: 20%;
+  }
+  .rw-index-open-articles-container-min .rw-index-open-article-min .rw-index-open-article-min-link {
+    width: 80%;
+  }
+  .rw-index-open-articles-container-min .rw-index-open-article-min .rw-index-open-article-min-link .rw-index-open-article-min-title {
+    width: 100%;
+  }
+  /*************************
+   filtre metiers
+    **************************/
+  .rw-blog-jf {
+    min-height: 80px;
+  }
+  .rw-blog-jf .rw-blog-jf-navbar-job {
+    margin: 0 0.8%;
+  }
+  .rw-blog-jf .rw-blog-jf-navbar-job a {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+  }
+  .rw-blog-jf .rw-blog-jf-navbar-job a img {
+    width: 40px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media all and (max-width: 955px) {
+  body {
+    font-size: 0.85em;
+  }
+  #rw-nav {
+    font-size: 1em;
+    height: auto;
+  }
+  #rw-nav li a {
+    line-height: 2;
+    width: 100%;
+  }
+  .rw-logo-fix {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  /*-------Variables-----*/
+  /*-------Element à cacher pour smartphone-----*/
+  .not_mobile {
+    display: none;
+  }
+  .not_screen {
+    display: block;
+  }
+  /*   Supprime les floats  */
+  .dont_float_mobile {
+    float: none;
+  }
+  /*   Imposer une largeur max aux images  */
+  img {
+    max-width: 100%;
+  }
+  /*-------Règle générale pour smartphone-----*/
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .rw-index-footer-container {
+    padding: 0;
+    height: 86px;
+  }
+  .rw-index-footer-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .rw-index-footer-nav .rw-index-footer-nav-list {
+    background-color: #bf382a;
+    width: 100%;
+    height: 50px;
+  }
+  .rw-index-footer-nav .rw-index-footer-nav-list ul {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .rw-index-footer-nav .rw-index-footer-nav-list ul li a {
+    margin: 0 auto;
+    font-size: 1.0em;
+    color: #ffffff;
+  }
+}
+
 /*
 |--------------------------------------------------------------------------
 | Dependances

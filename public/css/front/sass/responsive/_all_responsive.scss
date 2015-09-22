@@ -1,0 +1,142 @@
+/*************************
+HEADER
+**************************/
+
+@media all and (max-width: 480px){
+  header {
+
+    .rw-header_top {
+      height: 60px;
+      margin: 10px auto;
+      top: 70px;
+    }
+
+    .rw-logo {
+      height: 50px;
+      left: 20px;
+      bottom: 50px;
+    }
+
+    .rw-slogan {
+      left: 105px;
+      bottom: 50px;
+      line-height: 1;
+      font-size: $fontSize + 0.5;
+    }
+
+    #rw-nav {
+      flex-flow: column nowrap;
+      position: static;
+      font-size: $fontSize;
+      height: auto;
+      text-align: center;
+
+      li {
+
+        a {
+          line-height: 1.5;
+        }
+      }
+
+      .rw-ul_grey {
+        flex-flow: column nowrap;
+        width: 100%;
+      }
+
+      .rw-ul_red {
+        width: 100%;
+      }
+    }
+
+    }
+
+    /*************************
+   LOG NEWS
+  **************************/
+    .rw-lognews-login {
+      z-index: 99999;
+      right: 10px;
+      top: 0;
+    }
+    .rw-lognews-newsletter {
+      display: none;
+    }
+
+  /*************************
+    Derniers articles
+  **************************/
+
+  .rw-index-last-articles-container h1 {
+    font-size: 1.6em;
+  }
+    /*************************
+    articles min vignettes
+    **************************/
+
+    .rw-index-open-articles-container-min {
+      width: 100%;
+
+      .rw-index-open-article-min {
+        width: 100%;
+
+        .rw-index-open-article-min-date {
+          width: 20%;
+        }
+
+        .rw-index-open-article-min-link {
+          width: 80%;
+
+          .rw-index-open-article-min-title {
+            width: 100%;
+          }
+        }
+      }
+    }
+  /*************************
+   filtre metiers
+    **************************/
+  .rw-blog-jf {
+
+    min-height: 80px;
+
+    .rw-blog-jf-navbar-job {
+      margin: 0 0.8%;
+
+      a {
+        width: 50px;
+        height: 50px;
+        margin-left: 0;
+        img {
+          width: 40px;
+          @include transition(all, 0.3s, ease-in-out);
+
+        }
+      }
+    }
+  }
+
+}
+
+
+@media all and (max-width: 955px) {
+
+  body {
+    font-size: 0.85em;
+  }
+  #rw-nav {
+    font-size: $fontSize;
+    height: auto;
+
+    li a {
+      line-height: 2;
+      width: 100%;
+    }
+
+  }
+
+  .rw-logo-fix {
+    display: none;
+  }
+
+
+}

@@ -1,9 +1,10 @@
-@media screen and (max-width: 320px){
+@media screen and (max-width: 480px){
+ .rw-header_container {
 
   .rw-header_top {
     position: static;
     padding: 0;
-    margin-top: 60px;
+    margin-top: 70px;
     width: 100%;
     height: auto;
     a{
@@ -13,29 +14,79 @@
   }
 
   .rw-logo {
-  position: static;
+    position: static;
     height:70px;
     margin: auto;
-}
-
-.rw-slogan {
-  overflow: hidden;
-  float:left;
-  position: static;
-  padding: 0;
-  bottom: auto;
-  left: auto;
-  text-align: center;
-  line-height: 35px;
-  height:70px;
-  width:70%;
-  font-size: $fontSize + 0.5 ;
-
-  strong {
-    display: block;
   }
-}
+  
+  .rw-slogan {
+    overflow: hidden;
+    float:left;
+    position: static;
+    padding: 0;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    line-height: 1.5;
+    height:70px;
+    width:70%;
+    font-size: 1.5em;
+  
+    strong {
+      color: #bf382a;
+      font-weight: 400;
+    }
+  }
+    
+  #rw-nav {
+    background-color: #BF382A;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    flex-flow:row wrap;
+    transition: all 0.5s ease-in-out;
+    &>* {
+      line-height: normal;
+      margin: auto;
+      padding: 10px;
+    }
 
+    a {
+      color: #FFFFFF;
+      font-weight: 300;
 
+      &:nth-of-type(1){
+      //  flex-grow: 0;
+      }
+      &:nth-of-type(2){
+        //flex-grow: 0;
+      }
+      &:nth-of-type(3){
+        flex-grow: 2;
+        text-align: right;
+        width: 22%;
+      }
+    }
+
+    .rw-ul_red {
+      margin-right: 0;
+      background-color: #EBEBE6;
+      border-right: 4px solid #BF382A;
+      top: 4px;
+      display: block;
+      li {
+        display: block;
+        font-size: 0.85em;
+        line-height: normal;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+
+ }
 
 }

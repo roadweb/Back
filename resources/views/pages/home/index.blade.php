@@ -9,7 +9,7 @@
     @include('pages.components.header')
     <img class="rw-fond-exagone-top not_mobile" src="{{ asset('images/exagonefond.png')}}"/>
 
-    <div class="container not_mobile">
+    <div class="container">
         @include('pages.carrousel.index')
         @include('pages.components.last-articles')
         @include('pages.components.last-articles-min')
