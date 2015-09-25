@@ -2,7 +2,7 @@
 
 @section('content')
     @include('pages.components.header')
-    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
+    <img class="rw-fond-exagone-top not_mobile" src="{{ asset('images/exagonefond.png')}}"/>
 
     <div class="rw-cpt-main-container">
         <div class="rw-cpt-header">

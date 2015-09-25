@@ -20,10 +20,11 @@
 
        ul {
          justify-content: flex-start;
-         align-items: flex-end;
+         align-items: center;
+         width: 100%;
 
          li {
-
+           margin: 0 auto;
          }
        }
 
@@ -34,6 +35,7 @@
     margin: 0 auto;
     font-size: 1.0em;
     color: #ffffff;
+
   }
 
 

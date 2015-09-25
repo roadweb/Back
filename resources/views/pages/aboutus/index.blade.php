@@ -5,7 +5,7 @@
 @extends('pages.app')
 @section('content')
     @include('pages.components.header')
-    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
+    <img class="rw-fond-exagone-top not_mobile" src="{{ asset('images/exagonefond.png')}}"/>
 
 
     <div class="rw-aboutus-container">
@@ -16,9 +16,9 @@
 
 
             <div class="rw-aboutus-content-img">
-                <img src="{{asset('images/avatars/florian.png')}}" alt=""/>
-                <img src="{{asset('images/avatars/stephanie.png')}}" alt=""/>
-                <img src="{{asset('images/avatars/kevin.png')}}" alt=""/>
+                <img src="{{asset('images/avatars/florian.png')}}" alt="" class="not_mobile"/>
+                <img src="{{asset('images/avatars/stephanie.png')}}" alt="" class="not_mobile"/>
+                <img src="{{asset('images/avatars/kevin.png')}}" alt="" class="not_mobile"/>
             </div>
 
 
@@ -45,7 +45,7 @@
 
             </p>
 
-            <img class="rw-aboutus-content-txt-pres" src="{{asset('images/avatars/pauline.png')}}" alt=""/>
+            <img class="rw-aboutus-content-txt-pres not_mobile" src="{{asset('images/avatars/pauline.png')}}" alt=""/>
 
 
             <h2>

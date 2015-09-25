@@ -7,7 +7,7 @@
 @section('content')
 
     @include('pages.components.header')
-    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
+    <img class="rw-fond-exagone-top not_mobile" src="{{ asset('images/exagonefond.png')}}"/>
 
     <div class="rw-sub-container">
 
@@ -101,7 +101,7 @@
                     <label for="emweb">
             <span class="ui">
 
-            </span>Je suis ou j'ai été élève de l'EMWeb</label>
+            </span><span class="labelEmweb">Je suis ou j'ai été élève de l'EMWeb</span></label>
                 </p>
             </fieldset>
 

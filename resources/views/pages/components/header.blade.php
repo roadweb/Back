@@ -2,7 +2,7 @@
     <div class="rw-header_top">
         <img class="rw-logo" alt="logo hexagonal roadweb" src="{{asset('images/logo.png')}}"/>
 
-        <h1 class="rw-slogan">Bienvenue sur <em>road-web</em>.fr</h1>
+        <h1 class="rw-slogan">Bienvenue sur <br/> <em>road-web</em>.fr</h1>
 
         {{--<div id="rw-search">
 
