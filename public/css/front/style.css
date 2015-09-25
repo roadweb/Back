@@ -69,6 +69,7 @@ body {
   font-weight: 300;
   margin: 0 auto;
   padding-top: 0;
+  color: #333;
 }
 
 body > * {
@@ -81,7 +82,6 @@ body.has-nav-fixed {
 }
 
 .container {
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -2602,9 +2602,10 @@ partie droite de la page
 }
 
 .rw-mentions-container {
-  width: 1200px;
+  width: 90%;
   height: auto;
   margin: 50px auto;
+  background-color: #fff;
   border: 2px solid #7e8b8c;
   box-shadow: 2px 3px 3px #7e8b8c;
 }
@@ -2648,14 +2649,28 @@ partie droite de la page
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p {
-  text-align: justify;
-  padding: 2%;
+  text-align: left;
+  padding: 4% 2%;
   line-height: 1.5em;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p::first-letter {
+  color: #16A086;
+  font-weight: 400;
+  padding: 0 2px 0 10px;
+  font-size: 1.4em;
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p:nth-of-type(6) {
   font-weight: 600;
   padding: 3%;
+}
+
+.rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt p:nth-of-type(6):first-letter {
+  color: #333;
+  font-weight: 600;
+  padding: 0;
+  font-size: 1em;
 }
 
 .rw-aboutus-container .rw-aboutus-content .rw-aboutus-content-txt .rw-aboutus-content-img {
@@ -2692,7 +2707,7 @@ partie droite de la page
 }
 
 .rw-aboutus-container .rw-aboutus-slide {
-  margin: 250px auto 0;
+  margin: 100px auto 0;
 }
 
 .rw-aboutus-container .rw-aboutus-slide h3 {
@@ -3411,7 +3426,7 @@ partie droite de la page
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 1.5em;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 50px auto;
 }
 
@@ -3822,9 +3837,9 @@ partie droite de la page
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -4397,6 +4412,43 @@ HEADER
   .rw-logo-fix {
     display: none;
   }
+  .rw-index-last-article:last-child {
+    margin-right: 5px;
+    padding: 10px;
+  }
+  .rw-index-last-articles-container {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+  }
+  .rw-index-last-article {
+    height: 390px;
+    margin: 5px;
+  }
+  .rw-mentions-container .rw-mentions-header h1 {
+    font-size: 1em;
+  }
+  .rw-mentions-container .rw-mentions-header h1 {
+    font-size: 1em;
+  }
+  .rw-mentions-container .rw-mentions-content {
+    text-align: left;
+  }
+  .rw-contact-container form fieldset {
+    padding-right: 0;
+    margin: 0 auto 20px;
+  }
+  .rw-contact-field-mobile > * {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .rw-cpt-main-container .rw-cpt-content {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 80%;
+  }
 }
 
 @media all and (max-width: 479px) {
@@ -4437,6 +4489,28 @@ HEADER
   }
   header #rw-nav .rw-ul_red {
     width: 100%;
+  }
+  header .rw-contact-container form fieldset {
+    padding-right: 0;
+    margin: 0 auto 20px;
+  }
+  header .rw-contact-field-mobile > * {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  header .rw-sub-container .rw-sub-content .rw-sub-form button {
+    width: 90%;
+    border-radius: 4px;
+  }
+  header .rw-sub-container .rw-sub-header h1, header .rw-sub-container .rw-sub-header h2 {
+    font-size: 1.1em;
+  }
+  header .rw-sub-container .rw-sub-header h1 br, header .rw-sub-container .rw-sub-header h2 br {
+    display: none;
+  }
+  header .rw-sub-container .rw-sub-content .rw-sub-form input {
+    width: 90%;
   }
   /*************************
    LOG NEWS
@@ -4497,6 +4571,81 @@ HEADER
     width: 40px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+  .rw-index-open-article-min-date p {
+    font-size: 0.65em;
+  }
+  .rw-index-last-articles-container {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+  }
+  .rw-index-last-article:last-child {
+    margin-right: 5px;
+    padding: 10px;
+  }
+  .rw-index-last-article {
+    height: 390px;
+    margin: 5px;
+  }
+  .rw-mentions-container .rw-mentions-header h1 {
+    font-size: 1em;
+  }
+  .rw-mentions-container .rw-mentions-content {
+    text-align: left;
+  }
+  .rw-contact-container form fieldset {
+    padding-right: 0;
+    margin: 0 auto 20px;
+  }
+  .rw-contact-field-mobile > * {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .rw-sub-container .rw-sub-content .rw-sub-form button {
+    width: 90%;
+    border-radius: 4px;
+  }
+  .rw-sub-container .rw-sub-header h1, .rw-sub-container .rw-sub-header h2 {
+    font-size: 1.2em;
+  }
+  .rw-sub-container .rw-sub-header h1 br, .rw-sub-container .rw-sub-header h2 br {
+    display: none;
+  }
+  .rw-sub-container .rw-sub-content .rw-sub-form input {
+    width: 90%;
+  }
+  .labelEmweb {
+    font-size: 0.8em;
+  }
+  .rw-sub-container {
+    max-width: 100%;
+  }
+  .rw-sub-container .rw-subvalid-header {
+    width: 100%;
+    padding: 10px;
+  }
+  .rw-sub-js .rw-subvalid-input-file-container .rw-sub-input-file-trigger {
+    width: 100%;
+  }
+  .rw-cpt-main-container .rw-cpt-content {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 90%;
+  }
+  .rw-allartus-main .rw-allartus-container {
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .rw-allartus-main .rw-allartus-container .rw-allartus-header {
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    margin: 0 auto;
+    width: 90%;
   }
 }
 

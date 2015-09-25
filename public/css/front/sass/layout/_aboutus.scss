@@ -13,13 +13,27 @@
       }
       p {
 
-        text-align: justify;
-        padding: 2%;
+        text-align: left;
+        padding: 4% 2%;
         line-height: $lineHeight;
+
+        &::first-letter{
+          color: $colorOpen;
+          font-weight: 400;
+          padding: 0 2px 0 10px;
+          font-size: $fontSize + 0.4;
+        }
 
         &:nth-of-type(6) {
           font-weight: 600;
           padding: 3%;
+
+          &:first-letter{
+            color: #333;
+            font-weight: 600;
+            padding: 0;
+            font-size: $fontSize;
+          }
         }
       }
       .rw-aboutus-content-img {
@@ -65,7 +79,7 @@
 
   .rw-aboutus-slide {
 
-    margin: 250px auto 0;
+    margin: 100px auto 0;
 
     h3 {
       color: $red;

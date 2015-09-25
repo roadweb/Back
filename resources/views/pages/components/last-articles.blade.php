@@ -4,7 +4,7 @@
        @if(count($posts) > 0)
             @foreach($posts as $post)
             <a href="blog/{{ $post->id }}/{{urlBeautify($post->title)}}">
-                <article class="rw-index-last-article" style="background: url('{{$post->img_link}}') no-repeat center center scroll; background-size: 300px;">
+                <article class="rw-index-last-article" style="background: url('{{$post->img_link}}') no-repeat center center scroll; background-size: 200px;">
                     <h1>{{ str_limit($post->title, $limit = 33, $end = '...') }}</h1>
                        <img src="{{$post->img_link}}" alt="{{$post->img_alt}}" />
                     <p>{{ str_limit($post->resume, $limit = 70, $end = '...') }}</p>
