@@ -1,40 +1,81 @@
 /*************************
 HEADER
 **************************/
+@media all and (min-width:480px) and  (max-width: 955px) {
 
-@media all and (max-width: 480px){
+
+  header {
+    .rw-header_top {
+      top: -10px;
+
+      .rw-slogan {
+        line-height: 1;
+        bottom: 31px;
+        font-size: $fontSize + 1.5;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  #rw-nav {
+    font-size: $fontSize;
+    height: auto;
+    margin-top: 15px;
+
+    li a {
+      line-height: 2;
+      width: 100%;
+    }
+
+  }
+
+  .rw-logo-fix {
+    display: none;
+  }
+
+
+}
+
+
+@media all and (max-width: 479px){
   header {
 
     .rw-header_top {
       height: 60px;
-      margin: 10px auto;
-      top: 70px;
+      margin: 10px 15px 10px -10px;
+      top: 50px;
     }
 
     .rw-logo {
-      height: 50px;
+      height: 60px;
       left: 20px;
       bottom: 50px;
     }
 
     .rw-slogan {
-      left: 105px;
-      bottom: 50px;
+      left: 98px;
+      bottom: 55px;
       line-height: 1;
-      font-size: $fontSize + 0.5;
+      font-size: $fontSize + 0.6;
+
     }
 
     #rw-nav {
       flex-flow: column nowrap;
       position: static;
-      font-size: $fontSize;
+      font-size: $fontSize + 0.2;
       height: auto;
       text-align: center;
+      margin-top: 10px;
 
       li {
 
         a {
-          line-height: 1.5;
+          line-height: 2;
         }
       }
 
@@ -55,7 +96,7 @@ HEADER
   **************************/
     .rw-lognews-login {
       z-index: 99999;
-      right: 10px;
+      right: 8px;
       top: 0;
     }
     .rw-lognews-newsletter {
@@ -85,7 +126,12 @@ HEADER
 
         .rw-index-open-article-min-link {
           width: 80%;
-
+          .rw-index-open-article-min-icons {
+            height: 20px;
+            img {
+              height: 30px;
+            }
+          }
           .rw-index-open-article-min-title {
             width: 100%;
           }
@@ -118,25 +164,3 @@ HEADER
 }
 
 
-@media all and (max-width: 955px) {
-
-  body {
-    font-size: 0.85em;
-  }
-  #rw-nav {
-    font-size: $fontSize;
-    height: auto;
-
-    li a {
-      line-height: 2;
-      width: 100%;
-    }
-
-  }
-
-  .rw-logo-fix {
-    display: none;
-  }
-
-
-}
