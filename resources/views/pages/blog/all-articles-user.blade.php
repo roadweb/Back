@@ -5,7 +5,7 @@
 @extends('pages.app')
 @section('content')
     @include('pages.components.header')
-    <img class="rw-fond-exagone-top" src="{{ asset('images/exagonefond.png')}}"/>
+    <img class="rw-fond-exagone-top not_mobile" src="{{ asset('images/exagonefond.png')}}"/>
 
     <div class="container">
         <div class="rw-allartus-main">
@@ -14,7 +14,7 @@
                 <span>{{$user->username}}</span>
             </h1>
             <div class="rw-allartus-container">
-                <section class="rw-allartus-header-flex">
+                <section class="rw-allartus-header-flex ">
                     @foreach ($vignettes as $vignette)
                         <article class="rw-index-open-article-min">
                             <div class="rw-index-open-article-min-date">
