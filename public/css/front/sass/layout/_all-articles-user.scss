@@ -1,6 +1,5 @@
 .rw-allartus-main {
-
-  max-width: 1200px;
+  width: 90%;
 
   .rw-allartus-title {
     margin: 30px auto;
@@ -16,33 +15,28 @@
   }
 
   .rw-allartus-container {
-    margin: auto;
-    display: flex;
-    flex-flow: row nowrap;
-
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
     .rw-allartus-header-flex {
 
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-
-      width: 96%;
+      display: inline-block;
+      width: 69%;
       height: 100%;
       margin: 0 auto;
 
       article {
-        margin: 0 15px 15px;
+        margin: 0 auto 15px;
       }
     }
     .rw-allartus-header {
 
       background-color: $grey-light;
 
-      width: 35%;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-around;
+      width: 30%;
+      display: inline-block;
       padding: 0 15px;
+      vertical-align: top;
 
       .rw-allartus-header-content {
         display: flex;
