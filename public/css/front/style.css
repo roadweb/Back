@@ -3558,7 +3558,6 @@ partie droite de la page
 
 .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
   color: #037E69;
-  width: 400px;
   display: inline;
 }
 
@@ -4530,6 +4529,10 @@ HEADER
   .rw-index-open-articles-container-min .rw-index-open-article-min .rw-index-open-article-min-link .rw-index-open-article-min-title {
     width: 100%;
   }
+  .rw-index-open-articles-container-min .rw-index-open-article-min .rw-index-open-article-min-link .rw-index-open-article-min-title a {
+    line-height: 1;
+    padding: 0 5px;
+  }
   /*************************
    filtre metiers
     **************************/
@@ -4859,6 +4862,9 @@ HEADER
   }
   .rw-allartus-main .rw-allartus-container .rw-allartus-header .rw-allartus-header-content {
     margin: 0 auto;
+  }
+  .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
+    font-size: 0.8em;
   }
 }
 
