@@ -200,6 +200,10 @@ HEADER
         }
         .rw-index-open-article-min-title {
           width: 100%;
+          a {
+            line-height: 1;
+            padding: 0 5px;
+          }
         }
       }
     }
@@ -617,5 +621,10 @@ HEADER
       }
       }
     }
+
+
+  .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
+    font-size: 0.8em;
+  }
 }
 
