@@ -40,10 +40,10 @@ bloc de l'article
     padding: 0;
     color: #FFFFFF;
 
-    span {
+    span, p {
       margin: auto 0;
       padding: 5px 10px;
-
+      font-weight: 400;
       p {
         display: inline;
       }
@@ -182,7 +182,7 @@ Bloc contenu de l'article
     }
   }
 
-  p {
+  #rw-article-content-bdd {
     b {
       font-weight: 400;
     }
