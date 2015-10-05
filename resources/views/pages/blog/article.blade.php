@@ -14,9 +14,7 @@
         <div class="rw-blog-article-container rw-job-color-{{$post->job_id}}">
             <div class="rw-blog-article-content-fct not_mobile rw-job-color-bgc-{{$post->job_id}}">
 
-                    <span>
-                        {{--<i class="fa fa-clock-o"></i>--}}
-                    </span>
+                    <p id="timeVal"></p>
 
                 <span style="visibility: hidden;">
                     <p>
@@ -56,7 +54,7 @@
 
                 <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 
-                <p> {!! $post->content !!} </p>
+                <div id="rw-article-content-bdd"> {!! $post->content !!} </div>
 
                 <p class="rw-blog-article-content-auth rw-job-color-txt-{{$post->job_id}}"> {{ $post->user->username }}</p>
 
@@ -333,6 +331,10 @@
         <div class="rw_m_article_container rw-job-color-{{$post->job_id}}">
 
             <div class="rw_header_article">
+                <div class="rw-header-article-mobile-time rw-job-color-bgc-{{$post->job_id}}">
+                <p id="timeValbis"></p>
+
+                </div>
                 <div class="rw_article_date">
                     <p>
                         <span>{{$post->created_at->format('d')}}</span>
@@ -340,14 +342,16 @@
                         <span>{{ $post->created_at->format('Y') }}</span>
                     </p>
                 </div>
-                <h3> {{ $post->title }}</h3>
+                <h3> {{ $post->title }}
+                </h3>
 
             </div>
             <div class="rw_article_content">
 
+
                 <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 
-                <div> {!! $post->content !!} </div>
+                <div id="rw-article-content-bddbis"> {!! $post->content !!} </div>
 
                 <p class="rw-blog-article-content-auth rw-job-color-txt-{{$post->job_id}}"> {{ $post->user->username }}</p>
 

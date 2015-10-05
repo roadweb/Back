@@ -82,6 +82,7 @@ body.has-nav-fixed {
 }
 
 .container {
+  max-width: 1280px;
   margin: auto;
 }
 
@@ -1741,30 +1742,31 @@ bloc de l'article
   color: #FFFFFF;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span {
+.rw-blog-article-container .rw-blog-article-content-fct span, .rw-blog-article-container .rw-blog-article-content-fct p {
   margin: auto 0;
   padding: 5px 10px;
+  font-weight: 400;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span p {
+.rw-blog-article-container .rw-blog-article-content-fct span p, .rw-blog-article-container .rw-blog-article-content-fct p p {
   display: inline;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(2) i {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(2) i, .rw-blog-article-container .rw-blog-article-content-fct p:nth-child(2) i {
   cursor: pointer;
   padding: 0 2px;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i, .rw-blog-article-container .rw-blog-article-content-fct p:nth-child(3) i {
   cursor: pointer;
   padding: 0 2px;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(1), .rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(3) {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(1), .rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(3), .rw-blog-article-container .rw-blog-article-content-fct p:nth-child(3) i:nth-child(1), .rw-blog-article-container .rw-blog-article-content-fct p:nth-child(3) i:nth-child(3) {
   font-size: 1.25em;
 }
 
-.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(2) {
+.rw-blog-article-container .rw-blog-article-content-fct span:nth-child(3) i:nth-child(2), .rw-blog-article-container .rw-blog-article-content-fct p:nth-child(3) i:nth-child(2) {
   font-size: 0.8em;
   padding: 0;
 }
@@ -1904,27 +1906,27 @@ Bloc contenu de l'article
   content: "\"";
 }
 
-.rw-blog-article-content p b {
+.rw-blog-article-content #rw-article-content-bdd b {
   font-weight: 400;
 }
 
-.rw-blog-article-content p i {
+.rw-blog-article-content #rw-article-content-bdd i {
   font-style: italic;
 }
 
-.rw-blog-article-content p u {
+.rw-blog-article-content #rw-article-content-bdd u {
   text-decoration: underline;
 }
 
-.rw-blog-article-content p strong {
+.rw-blog-article-content #rw-article-content-bdd strong {
   font-weight: bold;
 }
 
-.rw-blog-article-content p strike {
+.rw-blog-article-content #rw-article-content-bdd strike {
   text-decoration: line-through;
 }
 
-.rw-blog-article-content p img {
+.rw-blog-article-content #rw-article-content-bdd img {
   margin: auto;
   max-width: 100%;
 }
@@ -4432,6 +4434,17 @@ HEADER
     width: 95%;
     margin: 20px auto;
   }
+  .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw-header-article-mobile-time {
+    width: 100%;
+    height: 20px;
+    padding: 0 10px;
+    text-align: right;
+  }
+  .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw-header-article-mobile-time p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+  }
   .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw_article_date {
     background-color: #ebebe6;
     padding: 10px;
@@ -4872,6 +4885,17 @@ HEADER
   .rw_article_mobile_container {
     width: 95%;
     margin: 20px auto;
+  }
+  .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw-header-article-mobile-time {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    padding: 0 10px;
+  }
+  .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw-header-article-mobile-time p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
   }
   .rw_article_mobile_container .rw_m_article_container .rw_header_article .rw_article_date {
     background-color: #ebebe6;
