@@ -9,7 +9,7 @@
         <ul class="bxslider rw-carrous-body">
 
             <li class="rw-carrous-body-content">
-                <a href="http://www.road-web.fr/blog/9/Trouvez-votre-voie,-prenez-le-pouvoir-!"><img class="rw-carrous-body-content-article-slide-img" src="{{asset('images/banniere-roadweb.jpg') }}"/></a>
+                <a href="http://road-web.fr/blog/10/S%E2%80%99installer-en-freelance,-mode-d%E2%80%99emploi"><img class="rw-carrous-body-content-article-slide-img" src="http://i.imgur.com/lGr2hi1.jpg"/></a>
 
             </li>
             <li class="rw-carrous-body-content">
