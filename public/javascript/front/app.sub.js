@@ -2,9 +2,9 @@
 document.querySelector("html").classList.add('rw-sub-js');
 
 // initialisation des variables
-var fileInput  = document.querySelector( ".rw-sub-input-file" ),
-    button     = document.querySelector( ".rw-sub-input-file-trigger" ),
-    the_return = document.querySelector(".rw-sub-file-return");
+var fileInput  = document.querySelector( ".rw-sub-input-file" );
+var button     = document.querySelector( ".rw-sub-input-file-trigger" );
+var the_return = document.querySelector(".rw-sub-file-return");
 
 // action lorsque la "barre d'espace" ou "Entrée" est pressée
 button.addEventListener( "keydown", function( event ) {
