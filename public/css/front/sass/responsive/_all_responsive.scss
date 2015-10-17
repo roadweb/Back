@@ -398,6 +398,50 @@ HEADER
   .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
     font-size: 0.8em;
   }
+
+  /*fiches metiers*/
+  .rw-jobs-index-container {
+    padding:10px;
+    h1.rw-jobs-title {
+      font-size:1.3em!important;
+      padding: 5px 0!important;
+      margin:0 10px;
+    }
+    nav {
+      width: 30%;
+
+      a {
+
+        img {
+          width: 30px;
+        }
+        h2 {
+          margin: 5px auto;
+          font-size: $fontSize - 0.1;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rw-job-view {
+      width: 61%;
+
+      h2.rw-jobs-title-h2 {
+        font-size: $fontSize + 0.3;
+      }
+
+      .rw-jobs-content {
+        padding: 5px;
+
+        p {
+          padding: 5px;
+          font-size: $fontSize - 0.1;
+        }
+      }
+    }
+  }
 }
 
 
@@ -958,6 +1002,50 @@ HEADER
 
   .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label, .rw-cpt-main-container .rw-cpt-content .rw-cpt-content-profil form .rw-cpt-label-container .rw-cpt-label-textarea {
     font-size: 0.8em;
+  }
+
+  /*fiches metiers*/
+  .rw-jobs-index-container {
+    padding:10px;
+    h1.rw-jobs-title {
+      font-size:1.3em!important;
+      padding: 5px 0!important;
+      margin:0 10px;
+    }
+    nav {
+      width: 30%;
+
+      a {
+
+        img {
+          width: 30px;
+        }
+        h2 {
+          margin: 5px auto;
+          font-size: $fontSize - 0.1;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rw-job-view {
+      width: 61%;
+
+      h2.rw-jobs-title-h2 {
+        font-size: $fontSize + 0.3;
+      }
+
+      .rw-jobs-content {
+        padding: 5px;
+
+        p {
+          padding: 5px;
+          font-size: $fontSize - 0.1;
+        }
+      }
+    }
   }
 }
 

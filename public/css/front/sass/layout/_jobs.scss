@@ -1,321 +1,94 @@
-/*INDEX DES METIERS*/
-
 .rw-jobs-index-container {
-	width:100%;
-	padding:30px;
-	h1 {
-		font-size:30px;
-		color:$red;
-		text-align:center;
-		margin:0 20px;
-	}
-	p {
-		text-align:center;
-		font-size:$fontSize;
-		line-height:$lineHeight;
-		width:100%;
-		padding:50px;
-		margin:0 auto;
-	}
-}
-
-.rw-jobs-index-container-flex {
-	display:flex;
-	flex-flow:row wrap;
-	justify-content:space-around;
-
-    & > * {
-      flex:0 1 auto;
-    }
-}
-
-.rw-jobs-index {
-  margin:20px;
-
-  display:flex;
-  flex-flow:row nowrap;
-  justify-content:space-around;
-
-  background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
-  position:relative;
-  height: 100%;
-  min-height: 120px;
-
-
-  & > * {
-    flex: 0 1 auto;
+  width:100%;
+  padding:30px;
+  h1.rw-jobs-title {
+    font-size:30px;
+    color:$red;
+    text-align:center;
+    margin:0 20px;
   }
-
-  div {
-    float:left;
-    vertical-align:top;
-    height:100%;
-    position:relative;
-    padding:5px 0;
-	}
-
-  .rw-jobs-index-icon {
-    width:80px;
-
-    img {
-      padding:12px 0;
-      position:absolute;
-      left:-35px;
-      top: 8px;
-      width:90px;
-    }
-  }
-
   .rw-jobs-hide {
     display: none;
   }
+  nav {
+    width: 20%;
+    display: inline-block;
 
-  .rw-jobs-rotate {
-    transform: rotate(180deg);
-  }
-
-  .rw-jobs-index-description-width {
-    width: 885px!important;
-    height: auto;
-    min-height: 1600px;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .rw-jobs-index-description-1, .rw-jobs-index-description-2, .rw-jobs-index-description-3, .rw-jobs-index-description-4, .rw-jobs-index-description-5, .rw-jobs-index-description-6, {
-
-    width:320px;
-    display: flex;
-    flex-flow: column nowrap;
-
-    transition: all 1s ease;
-
-    & > * {
-      flex: 0 1 auto;
-    }
-
-
-    h1 {
-      font-size:26px;
-      color:$colorMarket;
-      margin:2px 2px 2px 0;
-    }
-
-    p {
-      margin:0;
-
-      padding:10px 15px 0 0;
-      width:100%;
-      font-size:$fontSize - 0.1em;
-      line-height:$lineHeight - 0.1em;
-      text-align: left;
-
-    }
     a {
-      color: inherit;
+      display: block;
       width: 100%;
-      margin: auto 0;
-
-      text-align: right;
-    }
-    button {
-      margin: auto 0;
-      padding: 0 40px;
-      position:absolute;
-      bottom:0;
-      right: 0;
-
-
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-
-      text-align: right;
-
-
-
-      i {
-        padding: 2px;
-
-        font-weight:600 !important;
-        font-size: $fontSize + 0.2;
-
-        transition: all 0.5s ease-in-out;
-
-      }
-    }
-  }
-
-  .rw-jobs-index-fiche-content-balises {
-    font-size: $fontSize;
-    & > * {
-      padding: 8px 0;
-      line-height: $lineHeight;
-    }
-
-    h1 {
-      font-size: $fontSize + 1.3;
-    }
-    h2 {
-      font-size: $fontSize + 1;
-    }
-    h3 {
-      font-size: $fontSize + 0.8;
-    }
-    h3 {
-      font-size: $fontSize + 0.6;
-    }
-    h4 {
-      font-size: $fontSize + 0.4;
-    }
-    h5 {
-      font-size: $fontSize + 0.2;
-    }
-    h6 {
-      font-size: $fontSize;
-    }
-
-    pre {
-      color: #ff1010;
-    }
-
-    blockquote {
-      border-left: 2px solid $grey-dark;
+      margin: 10px auto;
+      box-shadow: 1px 1px 3px $grey-dark;
       padding: 10px;
-      letter-spacing: 3px;
-      font-size: $fontSize - 0.1;
-      background-color: $grey-light;
-      width: 80%;
-      margin: auto;
-
-      &:before, &:after {
-        content:"\"";
-      }
-    }
-
-    p {
-      padding: 10px;
-
-      b {
-        font-weight: 400;
-      }
-
-      i {
-        font-style: italic;
-      }
-
-      u {
-        text-decoration: underline;
-      }
-
-      strike {
-        text-decoration: line-through;
-      }
+      border-radius: 10px;
+      background-image: linear-gradient(to bottom, white, $grey-light);
 
       img {
+        width: 50px;
+        display: block;
         margin: auto;
-        max-width: 100%;
       }
-    }
-
-    ul {
-      list-style: circle inside;
-      width: 90%;
-      margin: auto;
-
-      li {
-        padding: 5px 0;
+      h2 {
+        margin: 10px auto;
+        font-size: $fontSize + 0.2;
+        text-align: center;
+        span {
+          display: inline-block;
+          padding: 0 2px;
+        }
       }
-    }
 
-    ol {
-      list-style: normal inside;
-      width: 90%;
-      margin: auto;
-
-      li {
-        padding: 5px 0;
+      p {
+        padding: 10px;
+        font-size: $fontSize - 0.2;
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-image: linear-gradient(to right,  transparent, $grey-dark, transparent);
+          border-radius: 10px;
+          margin: 5px auto;
+        }
       }
-    }
 
-    img {
-      margin: auto;
-      max-width: 100%;
-    }
-
-    a {
-      text-decoration: underline;
     }
   }
 
-  .rw-jobs-index-triangle {
-    @extend %arrow;
-    border-width: 0 0 40px 40px;
+  .rw-job-view {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 4px $grey-dark;
+    width: 77%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    & > div {
+      border-radius: 10px;
+    }
+    h2.rw-jobs-title-h2 {
+      padding: 10px;
+      text-align: center;
+      font-size: $fontSize +1.5;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      text-transform: capitalize;
+      font-variant: small-caps;
+
+    }
+
+    .rw-jobs-content {
+      padding: 20px;
+
+      @extend %balisageText;
+
+      p {
+        padding: 10px;
+        text-align: left;
+        @extend %balisageText;
+      }
+    }
   }
 }
-
-
-
-
-
-
-/*FICHE METIER*/
-
-.rw-jobs-job-description {
-	margin:30px;
-	width:100%;
-	border:2px solid $colorMarket;
-	position:relative;
-		h1 {
-			color:$colorMarket;
-			font-size:30px;
-			line-height:70px;
-			height:70px;
-			width:100%;
-			text-align:center;
-			background: white; /* Old browsers */
-			background: -moz-linear-gradient(top, white 0%, $grey-light 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, $grey-light)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, white 0%, $grey-light 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, white 0%, $grey-light 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, white 0%, $grey-light 100%); /* IE10+ */
-			background: linear-gradient(to bottom, white 0%, $grey-light 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='$grey-light', GradientType=0); /* IE6-9 */
-		}
-	.rw-jobs-job-text{
-		margin:40px;
-		h2 {
-			color:$colorMarket;
-			font-size:20px;
-			margin:30px 0 10px 0;
-			font-weight:600;
-			border-bottom:1px solid $colorMarket;
-			padding-bottom:5px;
-		}
-		h3 {
-			font-size:16px;
-			color:black;
-			font-weight:600;
-			margin:20px 0 5px 0;
-		}
-		p {
-			line-height:$lineHeight;
-			font-size:$fontSize;
-			text-align:justify;
-		}
-		ul {
-			li {
-				line-height:$lineHeight;
-				font-size:$fontSize;
-				margin-left:30px;
-			}
-		}
-	}
-	.rw-jobs-job-triangle {
-      @extend %arrow;
-      border-width: 0 0 40px 40px;
-      border-color: transparent transparent $colorMarket transparent;
-	}	
-
-}
-
