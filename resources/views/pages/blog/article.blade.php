@@ -94,8 +94,7 @@
         <div class="rw-blog-band-container">
 
             <div class="rw-blog-band-auth">
-                <h3><a href=""><span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias
-                        <span>{{$post->user->username}}</span></a></h3>
+                <h3><a href=""><span>{{$post->user->username}}</span></a></h3>
 
                 <div class="rw-blog-band-auth-avatar">
                     <img src="{{ asset( $post->user->avatar )}}" alt="avatar"/>
@@ -332,7 +331,7 @@
 
             <div class="rw_header_article">
                 <div class="rw-header-article-mobile-time rw-job-color-bgc-{{$post->job_id}}">
-                <p id="timeValbis"></p>
+                <p id="timeValMobile"></p>
 
                 </div>
                 <div class="rw_article_date">
@@ -351,7 +350,7 @@
 
                 <img src="{{$post->img_link}}" alt="{{ $post->ref_thumb }}"/>
 
-                <div id="rw-article-content-bddbis"> {!! $post->content !!} </div>
+                <div id="rw-article-content-bdd-mobile"> {!! $post->content !!} </div>
 
                 <p class="rw-blog-article-content-auth rw-job-color-txt-{{$post->job_id}}"> {{ $post->user->username }}</p>
 
@@ -363,8 +362,7 @@
         <div class="rw_m_article_auth">
 
             <h3>
-                <span>{{$post->user->first_name}} {{$post->user->last_name}}</span> alias
-                    <span>{{$post->user->username}}</span></h3>
+                <span>{{$post->user->username}}</span></h3>
 
             <div class="rw-blog-band-auth-avatar">
                 <img src="{{ asset( $post->user->avatar )}}" alt="avatar"/>

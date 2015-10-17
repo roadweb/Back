@@ -142,91 +142,9 @@ Bloc contenu de l'article
   height: auto;
   font-size: $fontSize;
 
-  h1 {
-    font-size: $fontSize + 1.3;
-  }
-  h2 {
-    font-size: $fontSize + 1;
-  }
-  h3 {
-    font-size: $fontSize + 0.8;
-  }
-  h3 {
-    font-size: $fontSize + 0.6;
-  }
-  h4 {
-    font-size: $fontSize + 0.4;
-  }
-  h5 {
-    font-size: $fontSize + 0.2;
-  }
-  h6 {
-    font-size: $fontSize;
-  }
-
-  pre {
-    color: #ff1010;
-  }
-
-  blockquote {
-    border-left: 2px solid $grey-dark;
-    padding: 10px;
-    letter-spacing: 3px;
-    font-size: $fontSize - 0.1;
-    background-color: $grey-light;
-    width: 80%;
-    margin: auto;
-
-    &:before, &:after {
-      content:"\"";
-    }
-  }
 
   #rw-article-content-bdd {
-    b {
-      font-weight: 400;
-    }
-
-    i {
-      font-style: italic;
-    }
-
-    u {
-      text-decoration: underline;
-    }
-
-    strong {
-      font-weight: bold;
-    }
-
-    strike {
-      text-decoration: line-through;
-    }
-
-    img {
-      margin: auto;
-      max-width: 100%;
-    }
-  }
-
-  ul {
-    list-style: circle inside;
-    width: 90%;
-    margin: auto;
-
-    li {
-      padding: 5px 0;
-    }
-  }
-
-  ol {
-    list-style: normal inside;
-    width: 90%;
-    margin: auto;
-
-    li {
-      padding: 5px 0;
-    }
+   @extend %balisageText;
   }
 
   img {
