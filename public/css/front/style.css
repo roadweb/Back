@@ -1167,7 +1167,6 @@ footer {
   margin: 10px auto;
   box-shadow: 1px 1px 3px #7e8b8c;
   padding: 10px;
-  border-radius: 10px;
   background-image: -webkit-linear-gradient(top, white, #ebebe6);
   background-image: linear-gradient(to bottom, white, #ebebe6);
 }
@@ -1201,7 +1200,6 @@ footer {
   height: 2px;
   background-image: -webkit-linear-gradient(left, transparent, #7e8b8c, transparent);
   background-image: linear-gradient(to right, transparent, #7e8b8c, transparent);
-  border-radius: 10px;
   margin: 5px auto;
 }
 
@@ -1213,11 +1211,6 @@ footer {
   vertical-align: top;
   margin: 10px;
   padding: 10px;
-  border-radius: 10px;
-}
-
-.rw-jobs-index-container .rw-job-view > div {
-  border-radius: 10px;
 }
 
 .rw-jobs-index-container .rw-job-view h2.rw-jobs-title-h2 {
@@ -1236,7 +1229,7 @@ footer {
 
 .rw-jobs-index-container .rw-job-view .rw-jobs-content p {
   padding: 10px;
-  text-align: left;
+  text-align: justify;
 }
 
 .rw-land-container {
