@@ -6,6 +6,5 @@ prepros.cfg
 
 public/css/admin/css
 public/css/front/css
-.env
 .DS_Store
 npm-debug.log
