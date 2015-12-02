@@ -23,6 +23,12 @@ use App\User;
 |
 */
 
+Route::get('api-test', function() {
+    $user = User::find(1)->toArray();
+
+    return Response::json($user);
+});
+
 Route::group(['prefix' => 'admin'], function() {
 
     Route::group(['middleware' => 'auth'], function () {
