@@ -60,24 +60,35 @@ $(document).ready(function() {
 
 $(function timeVal(){
 
+<<<<<<< HEAD
     var content = $('#rw-article-content-bdd').html();
     var content_text = content.replace(/(<([^>]+)>)/ig,"",/\s\s+/g, ' ').trim();
 
     var time=(content_text.length*0.18)/60;
+=======
+    var contentText = $('#rw-article-content-bdd').text();
+    var time=(contentText.length*0.18)/60;
+>>>>>>> 1e1c133aefaa8344ab106b340d47ee244f085755
     var time_val = (Math.round(time)+ ' min '+ Math.floor((time-Math.round(time))*60) + ' sec');
     $('#timeVal').html('<i class="fa fa-clock-o"></i> ' + time_val);
 
 });
-$(function timeValBis(){
 
+<<<<<<< HEAD
     var content = $('#rw-article-content-bddbis').html();
     var content_text = content.replace(/(<([^>]+)>)/ig,"",/\s\s+/g, ' ').trim();
+=======
+$(function timeValMobile(){
+>>>>>>> 1e1c133aefaa8344ab106b340d47ee244f085755
 
-    var time=(content_text.length*0.18)/60;
+    var contentText = $('#rw-article-content-bdd-mobile').text();
+
+    var time=(contentText.length*0.18)/60;
     var time_val = (Math.round(time)+ ' min '+ Math.floor((time-Math.round(time))*60) + ' sec');
-    $('#timeValbis').html('<i class="fa fa-clock-o"></i> ' + time_val);
+    $('#timeValMobile').html('<i class="fa fa-clock-o"></i> ' + time_val);
 
 });
+
 },{}],6:[function(require,module,exports){
 $(document).ready(function(){
     $('.bxslider').bxSlider({
@@ -210,57 +221,14 @@ $(document).ready(function lineFix() {
 },{}],10:[function(require,module,exports){
 $(document).ready(function(){
 
-    $('.rw-jobs-click-view-1').click(function(){
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-1').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-1').toggleClass('rw-jobs-index-description-width');
+    function showHide(event){
+        var target = $(event.target);
+        var id = target.data("name");
+        $(".rw-jobs-content").hide();
+        $(id).toggle();
+    }
 
-    });
-
-    $('.rw-jobs-click-view-2').click(function() {
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-2').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-2').toggleClass('rw-jobs-index-description-width');
-
-    });
-
-    $('.rw-jobs-click-view-3').click(function(){
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-3').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-3').toggleClass('rw-jobs-index-description-width');
-
-    });
-
-    $('.rw-jobs-click-view-4').click(function() {
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-4').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-4').toggleClass('rw-jobs-index-description-width');
-
-    });
-
-
-    $('.rw-jobs-click-view-5').click(function(){
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-5').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-5').toggleClass('rw-jobs-index-description-width');
-
-    });
-
-    $('.rw-jobs-click-view-6').click(function() {
-        $(this).children('i').toggleClass('rw-jobs-rotate');
-        $('.rw-jobs-index-fiche-6').slideToggle('.rw-jobs-hide');
-        $('.rw-jobs-index-description-6').toggleClass('rw-jobs-index-description-width');
-
-    });
-
-    //$('.rw-jobs-click-view-' + $id).on('click', function($id){
-
-      //  $(this).children('i').toggleClass('rw-jobs-rotate');
-       // $('.rw-jobs-index-fiche-' + $id).slideToggle('.rw-jobs-hide');
-        //$('.rw-jobs-index-description-' + $id).toggleClass('rw-jobs-index-description-width');
-    //});
-
-
+        $(".rw-link").on("click", showHide);
 });
 },{}],11:[function(require,module,exports){
 // ajout de la classe JS à HTML

@@ -9,10 +9,13 @@
         <ul class="bxslider rw-carrous-body">
 
             <li class="rw-carrous-body-content">
+<<<<<<< HEAD
                 <a href="http://road-web.fr/blog/10/S%E2%80%99installer-en-freelance,-mode-d%E2%80%99emploi"><img class="rw-carrous-body-content-article-slide-img" src="http://i.imgur.com/lGr2hi1.jpg"/></a>
 
             </li>
             <li class="rw-carrous-body-content">
+=======
+>>>>>>> 1e1c133aefaa8344ab106b340d47ee244f085755
                 <a href="http://www.road-web.fr/blog/8"><img class="rw-carrous-body-content-article-slide-img" src="{{asset('images/road-web-welcome.jpg') }}"/></a>
 
             </li>

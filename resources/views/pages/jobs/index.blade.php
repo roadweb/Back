@@ -11,47 +11,40 @@
 
 
     <div class="container">
-    	<!-- développé par Céline : page "nos métiers" -->
     	<div class="rw-jobs-index-container">
-      
-    		<h1>Les Métiers du Web</h1>
-        	<p>
-        	   Sur Road-Web, nous vous proposons notre vision du web à travers nos différents métiers. 
-        		Retrouvez ici les fiches descriptives des différents métiers que regroupe la création dans 
-        		le monde du digital et du numérique. Et n’oubliez pas que chaque métier existe grâce aux
-        		autres !
-    	    </p>
-            <div class="rw-jobs-index-container-flex">
-                @foreach($jobs as $job)
-        		<div id="rw-jobs-index-{{$job->id}}" class="rw-jobs-index rw-job-color-{{$job->id}}">
-    	    		<div class="rw-jobs-index-icon">
-    	    			<img src="{{ asset($job->job_icon) }} "/>
-    	    		</div>
-                    <div class="rw-jobs-index-description-{{$job->id}}">
-                        <h1 class="rw-job-color-txt-{{$job->id}}">{{$job->name}}</h1>
-                        <p>{{$job->resume}}
-                        </p>
+            <div>
+        		<div>
+                    <nav>
+                    @foreach($jobs as $job)
+                            <a href="#" data-name="#{{$job->id}}" class="rw-link">
+                                <img src="{{ asset($job->job_icon) }} " data-name="#{{$job->id}}"/>
+                                <h2 class="rw-job-color-txt-{{$job->id}}" data-name="#{{$job->id}}">{{$job->name}}
+                                    <span data-name="#{{$job->id}}">
+                                        <i class="fa fa-chevron-circle-right not" data-name="#{{$job->id}}"></i>
+                                    </span>
+                                </h2>
+                                <p class="not_mobile" data-name="#{{$job->id}}">{{$job->resume}}</p>
+                            </a>
+                        @endforeach
+                    </nav>
 
-                        <div  class="rw-jobs-index-fiche-{{$job->id}} rw-jobs-hide">
-                            <div class="rw-jobs-index-fiche-content-balises">
-                                {!!$job->content!!}
-                            </div>
+                    <div class="rw-job-view">
+                        <div class="rw-jobs-content">
+                            <h1 class="rw-jobs-title">Les Métiers du Web</h1>
+                            <p>Sur Road-Web, nous vous proposons notre vision du web à travers nos différents métiers. Retrouvez ici les fiches descriptives des différents métiers que regroupe la création dans  le monde du digital et du numérique. Et n’oubliez pas que chaque métier existe grâce aux autres !
+                            </p>
                         </div>
 
-                        <a href="#rw-jobs-index-{{$job->id}}">
-                            <button class="rw-jobs-click-view-{{$job->id}} rw-job-color-txt-{{$job->id}}">
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                        </a>
-
-    	    		</div>
-
-    	    		<div class="rw-jobs-index-triangle rw-job-color-triangle-{{$job->id}}"></div>
-        		</div>
-                @endforeach
-
+                    @foreach($jobs as $job)
+                            <div id="{{$job->id}}" class="rw-job-color-{{$job->id}} rw-jobs-hide rw-jobs-content">
+                                <h2 class="rw-job-color-txt-{{$job->id}} rw-jobs-title-h2">{{$job->name}}</h2>
+                                {!!$job->content!!}
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
-    	</div>
+        </div>
     </div>
 
     @include('pages.components.footer')

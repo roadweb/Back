@@ -1,6 +1,6 @@
 {{-- Balises HEAD --}}
 @section('title')Le blog road-web de {{$user->username}}@endsection()
-@section('description')Retrouvez tous les articles écrit par {{$user->first_name}} {{$user->last_name}} sur le bog road-web.fr @endsection()
+@section('description')Retrouvez tous les articles écrit par {{$user->username}} sur le bog road-web.fr @endsection()
 
 @extends('pages.app')
 @section('content')
@@ -49,10 +49,7 @@
                 </section>
                 <div class="rw-allartus-header">
                     <div class="rw-allartus-header-content">
-                        <span>{{$user->first_name}}
-                            {{$user->last_name}}
-                            alias {{$user->username}}
-                        </span>
+                        <span>{{$user->username}}</span>
                         <div>
                             <span class="rw-allartus-label-state rw-right-color-bgc-{{$user->right_id}}">
                                 {{$user->right->name}}

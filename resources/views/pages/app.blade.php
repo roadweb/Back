@@ -28,6 +28,9 @@
 
 @yield('content')
 
-<script src="{{ asset('javascript/front/bundle.js') }}" async></script>
+<script src="{{ asset('javascript/front/bundle.js') }} "></script>
+{{--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>--}}
+{{--<script src="{{ asset('javascript/front/app.jobs.js') }}" async></script>--}}
+
 </body>
 </html>
