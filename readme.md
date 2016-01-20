@@ -21,7 +21,7 @@ Si vous vous rendez compte que vous ne pouvez pas afficher les pages php (messag
 
 - une fois rendu à l'adresse correspondante, cliquez sur "fork" en haut à droite et sélectionnez votre profil pour y ajouter le projet (il vous faut bien entendu un compte git).
 - dans votre dossier www si vous utilisez wamp ou dans le dossier de vos projets, ouvrez git bash et tapez
-```git clone https://github.com/roadweb/Back.git``` 
+```git clone https://github.com/nomd'utilisateur/Back.git``` 
 Le projet se télécharge depuis votre compte git dans vos dossiers.
 
 
